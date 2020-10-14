@@ -21,7 +21,7 @@
 
 ### Taille écran:
 
-  - `F` pour basculwer en plein écran,
+  - `F` pour basculer en plein écran,
   - zoom du navigateur pour ajuster la taille de la présentation (typiquement `cmd +/-`),
   - `W` pour basculer en mode "large".
 
