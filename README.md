@@ -6,7 +6,7 @@
 
 ## Bienvenue à l'atelier 1
 
-- [Présentation HTML](https://AntoineBergeron.github.io/AntoineBergeron/Ateliers_ALEA/Atelier_1)
+- [Présentation HTML](https://AntoineBergeron.github.io/Ateliers_ALEA/Atelier_1)
 
 ## Bienvenue à l'atelier 2
 
