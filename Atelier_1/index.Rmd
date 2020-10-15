@@ -27,7 +27,7 @@ class: title-slide, middle
   }
 </style>
 
-# Première journée d'atelier
+# Bienvenue à l'atelier 1
 
 <hr width="65%" align="left" size="0.3" color="orange"></hr>
 
@@ -43,10 +43,22 @@ class: title-slide, middle
 
 ---
 
+# Présentation
+
+
+
+---
+class: inverse, middle, center
+
+# L'idée derrière l'ordinateur!
+<hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"></hr>
+
+---
+
 # Introduction
 
 <div style='text-align:center;'>
-<img src="assets/img/US2016.png" height="400"></img>
+<img src="assets/img/CovidMonde.png" height="400"></img>
 </div>
 
 
