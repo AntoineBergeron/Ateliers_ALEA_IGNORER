@@ -140,6 +140,8 @@ plot(ButsResult)
 Au terme de cet atelier, vous serez en mesure de conceptualiser un problème qui requiert de la programmation scientifique et de réaliser des tâches courantes de programmation.
 
 
+---
+
 # Objectifs spécifiques
 
 1. Charger des données et exporter des résultats d'analyse au moyen du
