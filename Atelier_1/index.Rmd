@@ -84,7 +84,7 @@ head(parties)
 
 # Exercice 1
 
-Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par le canadien en fonction du résultat de la partie.
+Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par les Canadiens de Montréal en fonction du résultat de la partie.
 
 ---
 
@@ -103,9 +103,9 @@ write.table(ButsResult, file="./donnees/ButsResult.txt",sep="\t",quote=TRUE)
 
 # Exercice 2
 
-Ouvrir le fichier [ButsResult](./donnees/ButsResult.xlsx) avec Excel et calculer la corrélation entre toutes les paires de positions.
+Ouvrir le fichier [ButsResult](./donnees/ButsResult.xlsx) avec Excel et calculer la corrélation entre les différents résultats d'une partie.
 
-Petit truc: sur Excel, la fonction pour calculer une corrélation est:
+Indice: sur Excel, la fonction pour calculer une corrélation est:
 
 ```bash
 =COEFFICIENT.CORRELATION(données_1; données_2)
@@ -139,11 +139,10 @@ plot(ButsResult)
 
 Au terme de cet atelier, vous serez en mesure de conceptualiser un problème qui requiert de la programmation scientifique et de réaliser des tâches courantes de programmation.
 
----
 
 # Objectifs spécifiques
 
-1. Charger des données et exporter des résultats d'analyses au moyen du
+1. Charger des données et exporter des résultats d'analyse au moyen du
     logiciel R;
 2. Conceptualiser un problème au moyen de pseudo-code;
 3. Manipuler des données;
@@ -159,7 +158,7 @@ Au terme de cet atelier, vous serez en mesure de conceptualiser un problème qui
 2. Interagir avec R
 3. Les fonctions
 4. Algorithmique I: boucles et conditions
-5. Alogithmique II: simulations de Monte Carlo
+5. Algorithmique II: simulations de Monte Carlo
 
 ---
 
@@ -178,13 +177,13 @@ minimales, l'apprentissage porte davantage sur l'acquisition de
 compétences et le développement de capacités à la résolution de problèmes.
 
 
-L'atelier sera constitué de courtes leçons magistrales sur desz
-notions de bases de programmation, entre-coupées d'exercices spécifiques
+L'atelier sera constitué de courtes leçons magistrales sur des
+notions de base de programmation, entre-coupées d'exercices spécifiques
 destinés à pratiquer les éléments enseignés. L'atelier se terminera avec
 la réalisation d'un exercice intégrateur à compléter à la maison.
 
 L'ensemble du matériel du cours sera disponible sur un dépôt Git à l'adresse :
-https://github.com/ALEA-UdeS/Atelier-R
+https://github.com/AntoineBergeron/Ateliers_ALEA
 
 ---
 class: inverse, center, middle
