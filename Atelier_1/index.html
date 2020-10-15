@@ -104,7 +104,7 @@ head(parties)
 
 # Exercice 1
 
-Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par le canadien en fonction du résultat de la partie.
+Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par les Canadiens de Montréal en fonction du résultat de la partie.
 
 ---
 
@@ -133,9 +133,9 @@ head(ButsResult)
 
 # Exercice 2
 
-Ouvrir le fichier [ButsResult](./donnees/ButsResult.xlsx) avec Excel et calculer la corrélation entre toutes les paires de positions.
+Ouvrir le fichier [ButsResult](./donnees/ButsResult.xlsx) avec Excel et calculer la corrélation entre les différents résultats d'une partie.
 
-Petit truc: sur Excel, la fonction pour calculer une corrélation est:
+Indice: sur Excel, la fonction pour calculer une corrélation est:
 
 ```bash
 =COEFFICIENT.CORRELATION(données_1; données_2)
@@ -176,11 +176,10 @@ plot(ButsResult)
 
 Au terme de cet atelier, vous serez en mesure de conceptualiser un problème qui requiert de la programmation scientifique et de réaliser des tâches courantes de programmation.
 
----
 
 # Objectifs spécifiques
 
-1. Charger des données et exporter des résultats d'analyses au moyen du
+1. Charger des données et exporter des résultats d'analyse au moyen du
     logiciel R;
 2. Conceptualiser un problème au moyen de pseudo-code;
 3. Manipuler des données;
@@ -196,7 +195,7 @@ Au terme de cet atelier, vous serez en mesure de conceptualiser un problème qui
 2. Interagir avec R
 3. Les fonctions
 4. Algorithmique I: boucles et conditions
-5. Alogithmique II: simulations de Monte Carlo
+5. Algorithmique II: simulations de Monte Carlo
 
 ---
 
@@ -215,13 +214,13 @@ minimales, l'apprentissage porte davantage sur l'acquisition de
 compétences et le développement de capacités à la résolution de problèmes.
 
 
-L'atelier sera constitué de courtes leçons magistrales sur desz
-notions de bases de programmation, entre-coupées d'exercices spécifiques
+L'atelier sera constitué de courtes leçons magistrales sur des
+notions de base de programmation, entre-coupées d'exercices spécifiques
 destinés à pratiquer les éléments enseignés. L'atelier se terminera avec
 la réalisation d'un exercice intégrateur à compléter à la maison.
 
 L'ensemble du matériel du cours sera disponible sur un dépôt Git à l'adresse :
-https://github.com/ALEA-UdeS/Atelier-R
+https://github.com/AntoineBergeron/Ateliers_ALEA
 
 ---
 class: inverse, center, middle
@@ -1467,9 +1466,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 55.49118 29.10657 62.24202 38.00761 23.01964
-## [2,] 26.97980 66.93458 74.00615 57.17112  1.60632
+##          [,1]     [,2]      [,3]     [,4]     [,5]
+## [1,] 92.34186 54.13990  5.474908 61.05297 80.65607
+## [2,] 95.10448 75.99895 78.970163 58.19297 56.71604
 ```
 
 ```r
@@ -1477,7 +1476,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 82.47098
+## [1] 187.4463
 ```
 
 
@@ -2029,8 +2028,8 @@ tri
 ```
 
 ```
-##  [1] 42.699680 24.773819  3.253742 73.186234 91.732465 92.255799 14.318545
-##  [8] 79.167834 30.772316 60.469769
+##  [1] 13.82965 55.89813 24.54324 14.80947 94.48922 50.20685 47.81961 14.21841
+##  [9] 78.84482 58.24260
 ```
 
 ```r
@@ -2038,8 +2037,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  3.253742 14.318545 24.773819 30.772316 42.699680 60.469769 73.186234
-##  [8] 79.167834 91.732465 92.255799
+##  [1] 13.82965 14.21841 14.80947 24.54324 47.81961 50.20685 55.89813 58.24260
+##  [9] 78.84482 94.48922
 ```
 
 ---
@@ -2052,8 +2051,8 @@ rang
 ```
 
 ```
-##  [1] 97.31767 11.96651 59.38163 53.26539 73.63115 24.44601 75.42290 45.71850
-##  [9] 87.67224 57.55730
+##  [1] 40.485348 83.158052 41.375411 14.008553 14.391926 48.857928 28.621165
+##  [8]  4.769979 65.401492 97.927292
 ```
 
 ```r
@@ -2061,7 +2060,7 @@ rank(rang)
 ```
 
 ```
-##  [1] 10  1  6  4  7  2  8  3  9  5
+##  [1]  5  9  6  2  3  7  4  1  8 10
 ```
 
 ---
