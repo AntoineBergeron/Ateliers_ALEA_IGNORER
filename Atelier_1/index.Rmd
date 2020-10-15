@@ -67,34 +67,43 @@ class: inverse, middle, center
 # Le type de données
 
 ```{r}
-NHL <- read.table(file = './donnees/NHL.txt', sep="\t", header = TRUE)
-head(NHL)
+can <- read.table(file = './donnees/canadiens.txt', sep="\t", header = TRUE)
+head(can)
+```
+
+---
+
+# Le type de données 
+
+```{r}
+parties <- read.table(file = './donnees/parties.txt', sep="\t", header = TRUE)
+head(parties)
 ```
 
 ---
 
 # Exercice 1
 
-Ouvrir le fichier [NHL](./donnees/NHL.xlsx) avec Excel et trouver le nombre de points marqués en désavantage numérique pour chacune des positions.
+Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par le canadien en fonction du résultat de la partie.
 
 ---
 
 # Exercice 1: solution sur R
 
 ```{r}
-NHL <- read.table(file = './donnees/NHL.txt', header = TRUE, sep="\t")
-ButsDesNumPos <- table(NHL$Shpoints,NHL$pos)
-head(ButsDesNumPos)
+parties <- read.table(file = './donnees/parties.txt', sep="\t", header = TRUE)
+ButsResult <- table(parties$Buts.pour,parties$Resultat)
+head(ButsResult)
 ```
 
 ```{r, echo=FALSE}
-write.table(ButsDesNumPos, file="./donnees/ButsDesNumPos.txt",sep="\t",quote=TRUE)
+write.table(ButsResult, file="./donnees/ButsResult.txt",sep="\t",quote=TRUE)
 ```
 ---
 
 # Exercice 2
 
-Ouvrir le fichier [ButsDesNumPos](./donnees/ButsDesNumPos.xlsx) avec Excel et calculer la corrélation entre toutes les paires de positions.
+Ouvrir le fichier [ButsResult](./donnees/ButsResult.xlsx) avec Excel et calculer la corrélation entre toutes les paires de positions.
 
 Petit truc: sur Excel, la fonction pour calculer une corrélation est:
 
@@ -107,13 +116,13 @@ Petit truc: sur Excel, la fonction pour calculer une corrélation est:
 # Exercice 2: solution sur R
 
 ```{r,eval=FALSE}
-ButsDesNumPos <- read.table(file = './donnees/ButsDesNumPos.txt', header = TRUE, sep= "\t")
-cor(ButsDesNumPos)
+ButsResult <- read.table(file = './donnees/ButsResult.txt', header = TRUE, sep= "\t")
+cor(ButsResult)
 ```
 
 ```{r,eval=TRUE,echo=FALSE}
-ButsDesNumPos <- read.table(file = './donnees/ButsDesNumPos.txt', header = TRUE, sep= "\t")
-round(cor(ButsDesNumPos),6)
+ButsResult <- read.table(file = './donnees/ButsResult.txt', header = TRUE, sep= "\t")
+round(cor(ButsResult),6)
 ```
 
 ---
@@ -121,7 +130,7 @@ round(cor(ButsDesNumPos),6)
 # Exercice 2: visualisation sur R
 
 ```{r,  fig.width= 6, fig.height= 6, fig.align='center'}
-plot(ButsDesNumPos)
+plot(ButsResult)
 ```
 
 ---
