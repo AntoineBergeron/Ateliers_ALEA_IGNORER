@@ -655,6 +655,7 @@ Lorsqu'on écrit un algorithme, on travaille avec des objets (ou encore des vari
 
 Il vaut mieux bien nommer ces objets. sans quoi le code devient rapidement illisible et complexe!
 
+```
 x = xx + xxx
 
 y = y1 + y2
@@ -662,7 +663,7 @@ y = y1 + y2
 z = Z_A + Z_B
 
 a = x * y * z
-
+```
 ---
 
 # Les 10 commandements de la programmation
