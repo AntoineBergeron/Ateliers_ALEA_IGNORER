@@ -58,7 +58,7 @@ class: inverse, middle, center
 # Introduction
 
 <div style='text-align:center;'>
-<img src="assets/img/CovidMonde.png" height="400"></img>
+<img src="assets/img/CovidMonde.PNG" height="400"></img>
 </div>
 
 
@@ -237,11 +237,11 @@ alt="IMAGE ALT TEXT HERE" width="540" height="360" border="1" /></a>
 
 # Utilisation en recherche au quotidien
 
-La programmation est outil indispensable au chercheur 2.0, elle permet:
+La programmation est un outil indispensable au chercheur 2.0, elle permet de réaliser:
 
-- Tâches répétitives et/ou complexes (p.ex. Nettoyage des données, Simulations stochastiques)
+- Tâches répétitives et/ou complexes (p. ex. Nettoyage des données, Simulations stochastiques)
 - Visualisation et exploration des données
-- Analyses statistiques avancées (p. ex. tests par permutations, statistiques bayésiennes)
+- Analyses statistiques avancées (p. ex. Tests par permutations)
 
 ---
 
