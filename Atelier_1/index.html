@@ -56,7 +56,7 @@ class: inverse, middle, center
 # Introduction
 
 &lt;div style='text-align:center;'&gt;
-&lt;img src="assets/img/CovidMonde.png" height="400"&gt;&lt;/img&gt;
+&lt;img src="assets/img/CovidMonde.PNG" height="400"&gt;&lt;/img&gt;
 &lt;/div&gt;
 
 
@@ -274,11 +274,11 @@ alt="IMAGE ALT TEXT HERE" width="540" height="360" border="1" /&gt;&lt;/a&gt;
 
 # Utilisation en recherche au quotidien
 
-La programmation est outil indispensable au chercheur 2.0, elle permet:
+La programmation est un outil indispensable au chercheur 2.0, elle permet de réaliser:
 
-- Tâches répétitives et/ou complexes (p.ex. Nettoyage des données, Simulations stochastiques)
+- Tâches répétitives et/ou complexes (p. ex. Nettoyage des données, Simulations stochastiques)
 - Visualisation et exploration des données
-- Analyses statistiques avancées (p. ex. tests par permutations, statistiques bayésiennes)
+- Analyses statistiques avancées (p. ex. Tests par permutations)
 
 ---
 
@@ -315,12 +315,6 @@ La programmation est outil indispensable au chercheur 2.0, elle permet:
 
 # La programmation en recherche
 
-Screenshot des feuilles corrigés à MF St-C en adaptation scolaire
-
----
-
-# La programmation en recherche
-
 .pull-left[
 ## Inconvénients
 
@@ -333,6 +327,40 @@ Screenshot des feuilles corrigés à MF St-C en adaptation scolaire
 ]
 
 ---
+
+## Exemple
+
+Supposons que l'on cherche à calculer:
+
+
+$$ \dfrac{w \cdot x + y}{z} $$
+
+avec `\(w = 2\)`, `\(x = 6\)`, `\(y = 4\)` et `\(z = 4\)`.
+
+---
+
+## Exemple (suite)
+
+```
+w &lt;- 2
+x &lt;- 6
+y &lt;- 4
+z &lt;- 4
+
+
+Rep1 &lt;- w*x + y / z
+Rep2 &lt;- (w*x + y)/z
+
+
+Rep1 = 13
+Rep2 = 4
+
+```
+Mais, quelle réponse est la bonne? 
+
+
+---
+
 class: inverse, middle, center
 
 # Le Pseudo-Code
@@ -822,8 +850,9 @@ dir()
 ```
 
 ```
-## [1] "assets"        "donnees"       "index.html"    "index.Rmd"    
-## [5] "index_files"   "MaListe.Rdata"
+## [1] "assets"              "databases-incognito" "donnees"            
+## [4] "index.html"          "index.Rmd"           "index_files"        
+## [7] "MaListe.Rdata"
 ```
 
 ## Obtenir la liste des objets en mémoire
@@ -1468,9 +1497,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]      [,2]     [,3]     [,4]     [,5]
-## [1,] 11.50287 34.796096 89.03888 65.00317 28.39659
-## [2,] 27.66237  2.169709 24.48487 40.85410 46.43909
+##          [,1]     [,2]     [,3]     [,4]      [,5]
+## [1,] 63.15438 20.04411 62.64624 29.75691  5.572228
+## [2,] 60.92935  9.68415 95.80791 83.07511 38.279756
 ```
 
 ```r
@@ -1478,7 +1507,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 39.16524
+## [1] 124.0837
 ```
 
 
@@ -2030,8 +2059,8 @@ tri
 ```
 
 ```
-##  [1] 70.19178 13.15570 96.24247 10.66233 93.31090 98.04729 47.70758 57.89870
-##  [9] 42.33059 23.85401
+##  [1] 43.116790  7.902789 61.214683 77.243646 62.907668 12.361663 16.205177
+##  [8] 64.593751 70.769540 79.027123
 ```
 
 ```r
@@ -2039,8 +2068,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 10.66233 13.15570 23.85401 42.33059 47.70758 57.89870 70.19178 93.31090
-##  [9] 96.24247 98.04729
+##  [1]  7.902789 12.361663 16.205177 43.116790 61.214683 62.907668 64.593751
+##  [8] 70.769540 77.243646 79.027123
 ```
 
 ---
@@ -2053,8 +2082,8 @@ rang
 ```
 
 ```
-##  [1] 43.415012 65.782351 29.352438 36.749532 34.994298  6.154807 98.360096
-##  [8] 55.717054 99.197283 95.672452
+##  [1] 16.425070 65.304092 75.993133 76.226288 51.618765 55.077836  1.927467
+##  [8] 78.164390 99.286659 84.757424
 ```
 
 ```r
@@ -2062,7 +2091,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  5  7  2  4  3  1  9  6 10  8
+##  [1]  2  5  6  7  3  4  1  8 10  9
 ```
 
 ---
