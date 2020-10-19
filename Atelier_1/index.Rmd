@@ -338,7 +338,7 @@ class: inverse, middle, center
 
 - *En programmation, le `pseudo-code` est une façon de formuler un <b>algorithme</b> sans référence à un langage de programmation en particulier.*
 
-> - *Un <b>algorithme</b> est une suite d'actions qui sont réalisées dans un ordre précis par l'ordinateur. C'est une séquence d'étapes dans la résolution d'un problème.*
+> - *Un <b>algorithme</b> est une suite d'actions réalisées dans un ordre précis par l'ordinateur. C'est une séquence d'étapes dans la résolution d'un problème.*
 
 ---
 
@@ -349,7 +349,7 @@ class: inverse, middle, center
 ```
 PROGRAM DEMO
   FOR t IN 1:100
-    n_t = n_t * lambda
+    n_t = n_t + n_t * lambda
     PRINT n_t
     IF n_t < 1
       BREAK
@@ -359,7 +359,7 @@ PROGRAM DEMO
   END FOR
 ```
 
-Le programme `DEMO` fait croitre une population de taille initiale $n_t$ à un taux $\lambda$ et affiche à l'utilisateur si la population est éteinte $n_t<1$ ou vivante $n_t>1$.
+Le programme `DEMO` fait croître une population de taille initiale $n_t$ à un taux $\lambda$ et affiche à l'utilisateur si la population est éteinte $n_t<1$ ou vivante $n_t>1$.
 
 ---
 
@@ -370,12 +370,12 @@ Le programme `DEMO` fait croitre une population de taille initiale $n_t$ à un t
 ```
 PROGRAM DEMO
   FOR t IN 1:100 <------------- Opération itérative
-    n_t = n_t * lambda
+    n_t = n_t + n_t * lambda
     PRINT n_t <---------------- Le programme affiche la valeur à l'écran
     IF n_t < 1 <--------------- Opération décisionnelle
-      BREAK <------------------ Le programme arrête son éxécution
+      BREAK <------------------ Le programme arrête son exécution
     ELSE
-      CONTINUE <--------------- Le programme continue son éxécution
+      CONTINUE <--------------- Le programme continue son exécution
     END IF
   END FOR
 ```
@@ -387,7 +387,7 @@ Le programme `DEMO` fait croitre une population de taille initiale $n_t$ à un t
 
 # Les structures de base d'un algorithme
 
-On retrouve 3 familles d'opérations:
+Il existe 3 familles d'opérations:
 
 1. Les opérations séquentielles
 2. Les opérations itératives (`FOR`, `WHILE`)
@@ -402,8 +402,8 @@ Avant de décrire chacune des opérations d'un algorithme, certaines instruction
 - `READ`: Le programme lit un fichier
 - `WRITE`: Le programme écrit un fichier
 - `PRINT`: Le programme écrit un message à l'écran pour l'utilisateur
-- `BREAK`: Le programme stop son éxécution
-- `CONTINUE`: Le programme continue son éxécution
+- `BREAK`: Le programme arrête son exécution
+- `CONTINUE`: Le programme continue son exécution
 
 ---
 
@@ -418,7 +418,7 @@ PROGRAM AIRE_REC
   WRITE hauteur * largeur
 ```
 
-Chaque opération est effectuée l'une après l'autre dans un ordre déterminé.
+Chaque opération est effectuée l'une après l'autre dans un **ordre déterminé**.
 
 ---
 
@@ -429,7 +429,7 @@ Chaque opération est effectuée l'une après l'autre dans un ordre déterminé.
 ```
 PROGRAM DEMO
   FOR t IN 1:100
-    n_t = n_t * lambda
+    n_t = n_t + n_t * lambda
   END FOR
 ```
 
@@ -444,9 +444,11 @@ La population va croître pendant 100 pas de temps.
 ```
 PROGRAM DEMO
   WHILE n_t < K
-    n_t = n_t * lambda
+    n_t = n_t + n_t * lambda
   END WHILE
 ```
+
+La population va croître pour un pas de temps indéterminé. L'arrêt de l'opération itérative est relié à la capacité de support. Tant que la quantité d'être humain (n_t) ne dépassera pas K (valeur prédéfinie), on continue.
 
 ---
 
@@ -462,6 +464,8 @@ PROGRAM DEMO
     PRINT "La population est décroissante"
   ENDIF
 ```
+
+
 
 ---
 
@@ -496,24 +500,23 @@ PROGRAM DEMO
   ENDIF
 ```
 
-Avec la clause `ELSE`, la croissance est nulle
+Avec la clause `IF ELSE`, nous pouvons ajouter tout les cas particuliers qui peuvent survenir: par exemple, notre absence de croissance!
 
 ---
 
 # Les types d'objets
 
-Les objets en programmation sont définis en fonction de leur dimensionalité.
+Les objets en programmation sont définis en fonction de leur dimensionnalité.
 
-## Dimensionalité
+## Dimensionnalité
 
 - **Dimension 0** : Valeur unique (ou scalaire)
 - **Dimension 1** : Vecteur
 - **Dimension 2** : Matrice
 - **Dimension 3** : ...
 
-Bien qu'il n'y ai pas de limite à la dimension d'un objet en programmation,
-pour le cours nous nous limiterons à des objets en deux dimensions
-(c.à.d Matrice)
+Bien qu'il n'y ait pas de limite à la dimension d'un objet en programmation,
+nous nous limiterons pour les différents ateliers à des objets en deux dimensions.
 
 ---
 
@@ -524,11 +527,11 @@ Ces objets ne contiennent qu'une seule information
 ## Exemple
 
 ```
-bobo = "toi"
-coco = 2
-dodo = -3
-fofo = 456457.678
-gogo = TRUE
+Nom = "Antoine"
+Age = 25
+Choco = TRUE
+QI = 456457.678
+Banque = -7000
 ```
 
 ---
@@ -536,7 +539,7 @@ gogo = TRUE
 # Dimension 1:  Les vecteurs
 
 Ces objets contiennent un série d'information. Chaque valeur
-a une position dans le vecteur, laquelle peut être accédée.
+possède une position dans le vecteur, laquelle peut être accédée.
 
 ## Exemple
 
@@ -550,7 +553,8 @@ lettre[3]
 
 # Dimension 2: Les matrices
 
-Ayant deux dimensions, ces objets présentent les données sous forme de matrices et ont des lignes et des colonnes. Pour accéder à une valeur dans une matrice il faut donner la position de la <b>ligne</b> en premier suivit de la position de la <b>colonne</b>.
+Ayant deux dimensions, ces objets présentent les données sous forme de tableaux. Ces tableaux sont représentés par des matrices avec un certain nombre de lignes et de colonnes. Pour accéder à une valeur dans une matrice il faut en premier lieu donner la position de la <b>ligne</b> suivit de la position de la <b>colonne</b>.
+
 
 ## Exemple
 
@@ -566,7 +570,7 @@ lettreTab[2, 1]
 
 # Les règles du `pseudo-code`
 
-## A garder en mémoire
+## À garder en mémoire
 
 1. N'écrivez qu'une seule instruction par ligne de pseudo-code.
 2. Écrivez en lettres majuscules le verbe de chaque opération principale.

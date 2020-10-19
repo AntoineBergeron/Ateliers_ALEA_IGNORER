@@ -375,7 +375,7 @@ class: inverse, middle, center
 
 - *En programmation, le `pseudo-code` est une façon de formuler un &lt;b&gt;algorithme&lt;/b&gt; sans référence à un langage de programmation en particulier.*
 
-&gt; - *Un &lt;b&gt;algorithme&lt;/b&gt; est une suite d'actions qui sont réalisées dans un ordre précis par l'ordinateur. C'est une séquence d'étapes dans la résolution d'un problème.*
+&gt; - *Un &lt;b&gt;algorithme&lt;/b&gt; est une suite d'actions réalisées dans un ordre précis par l'ordinateur. C'est une séquence d'étapes dans la résolution d'un problème.*
 
 ---
 
@@ -386,7 +386,7 @@ class: inverse, middle, center
 ```
 PROGRAM DEMO
   FOR t IN 1:100
-    n_t = n_t * lambda
+    n_t = n_t + n_t * lambda
     PRINT n_t
     IF n_t &lt; 1
       BREAK
@@ -396,7 +396,7 @@ PROGRAM DEMO
   END FOR
 ```
 
-Le programme `DEMO` fait croitre une population de taille initiale `\(n_t\)` à un taux `\(\lambda\)` et affiche à l'utilisateur si la population est éteinte `\(n_t&lt;1\)` ou vivante `\(n_t&gt;1\)`.
+Le programme `DEMO` fait croître une population de taille initiale `\(n_t\)` à un taux `\(\lambda\)` et affiche à l'utilisateur si la population est éteinte `\(n_t&lt;1\)` ou vivante `\(n_t&gt;1\)`.
 
 ---
 
@@ -407,12 +407,12 @@ Le programme `DEMO` fait croitre une population de taille initiale `\(n_t\)` à 
 ```
 PROGRAM DEMO
   FOR t IN 1:100 &lt;------------- Opération itérative
-    n_t = n_t * lambda
+    n_t = n_t + n_t * lambda
     PRINT n_t &lt;---------------- Le programme affiche la valeur à l'écran
     IF n_t &lt; 1 &lt;--------------- Opération décisionnelle
-      BREAK &lt;------------------ Le programme arrête son éxécution
+      BREAK &lt;------------------ Le programme arrête son exécution
     ELSE
-      CONTINUE &lt;--------------- Le programme continue son éxécution
+      CONTINUE &lt;--------------- Le programme continue son exécution
     END IF
   END FOR
 ```
@@ -424,7 +424,7 @@ Le programme `DEMO` fait croitre une population de taille initiale `\(n_t\)` à 
 
 # Les structures de base d'un algorithme
 
-On retrouve 3 familles d'opérations:
+Il existe 3 familles d'opérations:
 
 1. Les opérations séquentielles
 2. Les opérations itératives (`FOR`, `WHILE`)
@@ -439,8 +439,8 @@ Avant de décrire chacune des opérations d'un algorithme, certaines instruction
 - `READ`: Le programme lit un fichier
 - `WRITE`: Le programme écrit un fichier
 - `PRINT`: Le programme écrit un message à l'écran pour l'utilisateur
-- `BREAK`: Le programme stop son éxécution
-- `CONTINUE`: Le programme continue son éxécution
+- `BREAK`: Le programme arrête son exécution
+- `CONTINUE`: Le programme continue son exécution
 
 ---
 
@@ -455,7 +455,7 @@ PROGRAM AIRE_REC
   WRITE hauteur * largeur
 ```
 
-Chaque opération est effectuée l'une après l'autre dans un ordre déterminé.
+Chaque opération est effectuée l'une après l'autre dans un **ordre déterminé**.
 
 ---
 
@@ -466,7 +466,7 @@ Chaque opération est effectuée l'une après l'autre dans un ordre déterminé.
 ```
 PROGRAM DEMO
   FOR t IN 1:100
-    n_t = n_t * lambda
+    n_t = n_t + n_t * lambda
   END FOR
 ```
 
@@ -481,9 +481,11 @@ La population va croître pendant 100 pas de temps.
 ```
 PROGRAM DEMO
   WHILE n_t &lt; K
-    n_t = n_t * lambda
+    n_t = n_t + n_t * lambda
   END WHILE
 ```
+
+La population va croître pour un pas de temps indéterminé. L'arrêt de l'opération itérative est relié à la capacité de support. Tant que la quantité d'être humain (n_t) ne dépassera pas K (valeur prédéfinie), on continue.
 
 ---
 
@@ -499,6 +501,8 @@ PROGRAM DEMO
     PRINT "La population est décroissante"
   ENDIF
 ```
+
+
 
 ---
 
@@ -533,24 +537,23 @@ PROGRAM DEMO
   ENDIF
 ```
 
-Avec la clause `ELSE`, la croissance est nulle
+Avec la clause `IF ELSE`, nous pouvons ajouter tout les cas particuliers qui peuvent survenir: par exemple, notre absence de croissance!
 
 ---
 
 # Les types d'objets
 
-Les objets en programmation sont définis en fonction de leur dimensionalité.
+Les objets en programmation sont définis en fonction de leur dimensionnalité.
 
-## Dimensionalité
+## Dimensionnalité
 
 - **Dimension 0** : Valeur unique (ou scalaire)
 - **Dimension 1** : Vecteur
 - **Dimension 2** : Matrice
 - **Dimension 3** : ...
 
-Bien qu'il n'y ai pas de limite à la dimension d'un objet en programmation,
-pour le cours nous nous limiterons à des objets en deux dimensions
-(c.à.d Matrice)
+Bien qu'il n'y ait pas de limite à la dimension d'un objet en programmation,
+nous nous limiterons pour les différents ateliers à des objets en deux dimensions.
 
 ---
 
@@ -561,11 +564,11 @@ Ces objets ne contiennent qu'une seule information
 ## Exemple
 
 ```
-bobo = "toi"
-coco = 2
-dodo = -3
-fofo = 456457.678
-gogo = TRUE
+Nom = "Antoine"
+Age = 25
+Choco = TRUE
+QI = 456457.678
+Banque = -7000
 ```
 
 ---
@@ -573,7 +576,7 @@ gogo = TRUE
 # Dimension 1:  Les vecteurs
 
 Ces objets contiennent un série d'information. Chaque valeur
-a une position dans le vecteur, laquelle peut être accédée.
+possède une position dans le vecteur, laquelle peut être accédée.
 
 ## Exemple
 
@@ -587,7 +590,8 @@ lettre[3]
 
 # Dimension 2: Les matrices
 
-Ayant deux dimensions, ces objets présentent les données sous forme de matrices et ont des lignes et des colonnes. Pour accéder à une valeur dans une matrice il faut donner la position de la &lt;b&gt;ligne&lt;/b&gt; en premier suivit de la position de la &lt;b&gt;colonne&lt;/b&gt;.
+Ayant deux dimensions, ces objets présentent les données sous forme de tableaux. Ces tableaux sont représentés par des matrices avec un certain nombre de lignes et de colonnes. Pour accéder à une valeur dans une matrice il faut en premier lieu donner la position de la &lt;b&gt;ligne&lt;/b&gt; suivit de la position de la &lt;b&gt;colonne&lt;/b&gt;.
+
 
 ## Exemple
 
@@ -603,7 +607,7 @@ lettreTab[2, 1]
 
 # Les règles du `pseudo-code`
 
-## A garder en mémoire
+## À garder en mémoire
 
 1. N'écrivez qu'une seule instruction par ligne de pseudo-code.
 2. Écrivez en lettres majuscules le verbe de chaque opération principale.
@@ -1497,9 +1501,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]     [,3]     [,4]      [,5]
-## [1,] 63.15438 20.04411 62.64624 29.75691  5.572228
-## [2,] 60.92935  9.68415 95.80791 83.07511 38.279756
+##          [,1]     [,2]     [,3]     [,4]     [,5]
+## [1,] 96.78483 13.40186 41.22027 67.75537 94.55203
+## [2,] 84.92358 44.29364 72.30411 90.80492 94.07871
 ```
 
 ```r
@@ -1507,7 +1511,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 124.0837
+## [1] 181.7084
 ```
 
 
@@ -2059,8 +2063,8 @@ tri
 ```
 
 ```
-##  [1] 43.116790  7.902789 61.214683 77.243646 62.907668 12.361663 16.205177
-##  [8] 64.593751 70.769540 79.027123
+##  [1] 71.477664 74.734138 80.762925 93.881717 43.263247 85.305775 27.936689
+##  [8]  5.860342 88.631299 66.166702
 ```
 
 ```r
@@ -2068,8 +2072,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  7.902789 12.361663 16.205177 43.116790 61.214683 62.907668 64.593751
-##  [8] 70.769540 77.243646 79.027123
+##  [1]  5.860342 27.936689 43.263247 66.166702 71.477664 74.734138 80.762925
+##  [8] 85.305775 88.631299 93.881717
 ```
 
 ---
@@ -2082,8 +2086,8 @@ rang
 ```
 
 ```
-##  [1] 16.425070 65.304092 75.993133 76.226288 51.618765 55.077836  1.927467
-##  [8] 78.164390 99.286659 84.757424
+##  [1] 87.089274  8.505524 45.132923 76.216244 60.040942 23.016392  2.015154
+##  [8] 38.296022  0.683100 52.447539
 ```
 
 ```r
@@ -2091,7 +2095,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  2  5  6  7  3  4  1  8 10  9
+##  [1] 10  3  6  9  8  4  2  5  1  7
 ```
 
 ---
