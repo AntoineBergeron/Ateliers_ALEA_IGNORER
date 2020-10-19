@@ -527,11 +527,12 @@ Ces objets ne contiennent qu'une seule information
 ## Exemple
 
 ```
-Nom = "Antoine"
-Age = 25
-Choco = TRUE
+Nom = "Anthony"
+Age = 32
+Fraise = TRUE
 QI = 456457.678
 Banque = -7000
+Verite = FALSE
 ```
 
 ---
