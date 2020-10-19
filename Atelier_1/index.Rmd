@@ -651,13 +651,16 @@ Le pseudo-code est souvent très utile pour répondre à ce commandement. Celui-
 > <b>4.</b> Plusieurs chiens s'appellent Fido, le tiens tu sauras le nommer
 
 
-\# Lorsqu'on écrit un algorithme, on travaille avec des objets (ou encore des variables).
+Lorsqu'on écrit un algorithme, on travaille avec des objets (ou encore des variables).
 
-\# Il vaut mieux bien nommer ces objets. sans quoi le code devient rapidement illisible et complexe!
+Il vaut mieux bien nommer ces objets. sans quoi le code devient rapidement illisible et complexe!
 
 x = xx + xxx
+
 y = y1 + y2
+
 z = Z_A + Z_B
+
 a = x * y * z
 
 ---
