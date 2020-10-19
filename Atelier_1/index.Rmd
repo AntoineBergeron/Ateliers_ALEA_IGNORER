@@ -278,12 +278,6 @@ La programmation est un outil indispensable au chercheur 2.0, elle permet de ré
 
 # La programmation en recherche
 
-Screenshot des feuilles corrigés à MF St-C en adaptation scolaire
-
----
-
-# La programmation en recherche
-
 .pull-left[
 ## Inconvénients
 
@@ -296,6 +290,40 @@ Screenshot des feuilles corrigés à MF St-C en adaptation scolaire
 ]
 
 ---
+
+## Exemple
+
+Supposons que l'on cherche à calculer:
+
+
+$$ \dfrac{w \cdot x + y}{z} $$
+
+avec $w = 2$, $x = 6$, $y = 4$ et $z = 4$.
+
+---
+
+## Exemple (suite)
+
+```
+w <- 2
+x <- 6
+y <- 4
+z <- 4
+
+
+Rep1 <- w*x + y / z
+Rep2 <- (w*x + y)/z
+
+
+Rep1 = 13
+Rep2 = 4
+
+```
+Mais, quelle réponse est la bonne? 
+
+
+---
+
 class: inverse, middle, center
 
 # Le Pseudo-Code
