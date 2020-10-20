@@ -1224,7 +1224,7 @@ MonVecteur[2]*MonVecteur[4]
 
 # Types d'objets: les `vecteurs`
 
-## On obtient la dimension d'un vecteur ainsi:
+## Il est possible d'obtenir la dimension de notre vecteur à l'aide de la fonction length().
 
 ```{r}
 MonPremierVecteur <- c(1,2,3,4,5)
@@ -1249,7 +1249,7 @@ MaMatrice
 
 # Types d'objets: les `matrices`
 
-## On accède à la ligne `i` et la colonne `j` au moyen de la commande suivante
+## On accède à la ligne `i` et la colonne `j` au moyen de la commande MaMatrice[i,j]. Ainsi, pour accèder à l'élément de la première ligne et de la deuxième colonne, on doit utiliser la commande suivante
 
 ```{r}
 MaMatrice[1,2]
@@ -1275,6 +1275,8 @@ MaMatrice[,1]
 ```{r}
 dim(MaMatrice)
 ```
+
+Dans le cas des matrices, length() nous indiquerait le nombre total d'éléments dans la matrice.
 
 ---
 
@@ -1303,7 +1305,7 @@ MaMatrice
 
 # Exercice  
 
-Créez une matrice de 2 lignes et 5 colonnes remplies de chiffres tirés au hasard. Pour ce faire, vous pouvez utiliser la fonction `runif()`. Calculez la somme de la première colonne au moyen de la fonction `sum()`
+Créez une matrice de 2 lignes et 5 colonnes remplies de chiffres tirés au hasard entre 0 et 100. Pour ce faire, vous pouvez utiliser la fonction `runif()`. Calculez la somme de la première colonne au moyen de la fonction `sum()`
 
 **Astuce** : pour obtenir de l'aide sur une fonction, essayez
 
@@ -1458,14 +1460,14 @@ Pour ce faire, nous utiliserons les fichiers sous format `CSV` (*Comma Separated
 
 # Lire un fichier
 
-Si j'ouvre le fichier [NHL.csv](./donnees/NHL.csv) avec un bloc note, j'obtiens les 5 premières lignes suivantes:
+Si j'ouvre le fichier [Canadiens.csv](./donnees/Canadiens.csv) avec un bloc-notes, j'obtiens les 5 premières lignes suivantes:
 
 ```
-Player;season;team;pos;Offence;PPPoints;Shpoints
-Jakob Silfverberg;2016-17;ANA;R;VRAI;5;1
-Duncan Keith;2016-17;CHI;D;FAUX;10;0
-Pierre-Edouard Bellemare;2016-17;PHI;L;VRAI;0;1
-Ivan Provorov;2016-17;PHI;D;FAUX;3;0
+Joueurs;Buts;Tirs;Points;Parties jouees;Position
+Tomas Tatar;22;162;61;68;AG
+Phillip Danault;13;131;47;71;C
+Max Domi;17;179;44;71;C
+Brendan Gallagher;22;226;43;59;AD
 ```
 
 On voit ici le point virgule comme séparateur de colonne. La première ligne correspond au nom des colonnes.
