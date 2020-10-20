@@ -1584,8 +1584,8 @@ MaListe
 Il est important de vérifier la structure de l'objet après son importation dans l'environnement R.
 
 ```{r}
-head(NHL, n = 3)
-tail(NHL, n = 3)
+head(Canadiens, n = 3)
+tail(Canadiens, n = 3)
 ```
 
 ---
@@ -1595,7 +1595,7 @@ tail(NHL, n = 3)
 Il est important de vérifier la structure de l'objet après son importation dans l'environnement R.
 
 ```{r}
-str(NHL)
+str(Canadiens)
 ```
 
 ---
@@ -1605,7 +1605,7 @@ str(NHL)
 `summary()` permet d'obtenir un résumé du contenu de chaque colonne
 
 ```{r}
-summary(NHL)
+summary(Canadiens)
 ```
 
 ---
@@ -1615,8 +1615,8 @@ summary(NHL)
 Très souvent, on souhaite réaliser un sommaire de nos données. La fonction `summary()` est fort utile, mais parfois on souhaite avoir d'autres informations que la moyenne (p. ex. la variance). Dans ce cas, la fonction `table()` est recommandée.
 
 ```{r}
-PointsAN <- table(NHL$PPPoints)
-PointsAN
+Tirs <- table(Canadiens$Tirs)
+Tirs
 ```
 
 ---
