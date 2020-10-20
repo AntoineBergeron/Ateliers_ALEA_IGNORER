@@ -1201,7 +1201,7 @@ Scol
 ## Levels: Col ind Sec Uni
 ```
 
-Notre échantillon nous indique que soit l'individu à un niveau de scolarité universitaire, collégial ou secondaire. Un seul individu possède une scolarité indéterminé.
+Niveau de scolarité: secondaire, collégial, universitaire, indéterminé.
 
 ---
 class: middle, center, inverse
@@ -1312,7 +1312,7 @@ class: middle, center, inverse
 
 # Les types d'objets
 
-Depuis le début de l'atelier, nous avons assigné une seule valeur à un objet. Lorsqu'un objet contient une seule valeur, on dit que c'est un objet `scalaire`.
+Depuis le début de l'atelier, nous avons très souvent assigné une seule valeur à un objet. Lorsqu'un objet contient une seule valeur, on dit que c'est un objet `scalaire`.
 
 
 ```r
@@ -1324,11 +1324,11 @@ a
 ## [1] 1
 ```
 
-Cependant, un objet peut cependant contenir plusieurs valeurs. Il sera défini alors comme un `vecteur`.
+Cependant, un objet peut contenir plusieurs valeurs. Dans un tel cas, il sera alors défini comme un `vecteur`.
 
 ---
 
-# type d'objets: les `vecteurs`
+# Type d'objets: les `vecteurs`
 
 Le vecteur est un des objets les plus importants de R.
 
@@ -1345,11 +1345,11 @@ MonPremierVecteur
 ```
 
 
-**Note** - D'autres méthodes seront présentées plus loin.
+**Note** - D'autres méthodes seront présentées dans un futur proche.
 
 ---
 
-# type d'objets: les `vecteurs`
+# Type d'objets: les `vecteurs`
 
 La force de R repose dans sa capacité à réaliser des opérations `vectorielles`.
 
@@ -1370,7 +1370,7 @@ MonPremierVecteur + MonDeuxiemeVecteur
 
 # Exercice  
 
-Créez un vecteur contenant les valeurs `[-1,2,5,9]`. Vous pouvez calculer la racine carrée de ces nombres au moyen de la fonction `sqrt()`
+Créez un vecteur contenant les valeurs `[-1,2,5,9]`. Par la suite, calculez la racine carrée de ces nombres au moyen de la fonction `sqrt()`.
 
 ---
 
@@ -1403,6 +1403,14 @@ On peut accéder à une position sur le vecteur au moyen d'un `index`, indiqué 
 
 ```r
 MonPremierVecteur &lt;- c(1,2,3,4,5)
+MonPremierVecteur
+```
+
+```
+## [1] 1 2 3 4 5
+```
+
+```r
 MonPremierVecteur[3]
 ```
 
@@ -1427,6 +1435,15 @@ MonPremierVecteur[6]
 # Exercice  
 
 Au moyen du vecteur créé précédemment, calculer le produit des valeurs aux positions `2` et `4`.
+
+
+```r
+MonVecteur
+```
+
+```
+## [1] -1  2  5  9
+```
 
 ---
 
@@ -1626,9 +1643,9 @@ MaPremiereMatrice
 ```
 
 ```
-##           [,1]     [,2]     [,3]      [,4]     [,5]
-## [1,]  3.174911 83.06731 35.69485  2.633822 22.28356
-## [2,] 29.467057 76.38183 35.01915 12.331072 30.35449
+##          [,1]     [,2]     [,3]     [,4]     [,5]
+## [1,] 91.18413 18.98965 95.82655 38.19106 99.78935
+## [2,] 79.94321 58.62013 66.28748 81.85205 66.09314
 ```
 
 ```r
@@ -1636,7 +1653,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 32.64197
+## [1] 171.1273
 ```
 
 
@@ -2188,8 +2205,8 @@ tri
 ```
 
 ```
-##  [1] 47.729675 77.477968 59.680414 38.655616  7.359209 47.076312 67.494936
-##  [8]  4.202448 91.174625 14.203552
+##  [1] 69.262297 45.050540 47.528775 33.571526 41.815157 21.845256 44.926884
+##  [8]  7.086177 43.758689 71.589798
 ```
 
 ```r
@@ -2197,8 +2214,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  4.202448  7.359209 14.203552 38.655616 47.076312 47.729675 59.680414
-##  [8] 67.494936 77.477968 91.174625
+##  [1]  7.086177 21.845256 33.571526 41.815157 43.758689 44.926884 45.050540
+##  [8] 47.528775 69.262297 71.589798
 ```
 
 ---
@@ -2211,8 +2228,8 @@ rang
 ```
 
 ```
-##  [1] 42.23182 51.83159 34.29234 71.47882 77.05985 37.04422 68.39354 14.88137
-##  [9] 85.23071 98.50082
+##  [1]  7.885319 88.920891 76.944223 98.595244 13.193265 57.228135 99.051878
+##  [8] 24.036822 63.316309 98.848550
 ```
 
 ```r
@@ -2220,7 +2237,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  4  5  2  7  8  3  6  1  9 10
+##  [1]  1  7  6  8  2  4 10  3  5  9
 ```
 
 ---
