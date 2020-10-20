@@ -1224,7 +1224,7 @@ MonVecteur[2]*MonVecteur[4]
 
 # Types d'objets: les `vecteurs`
 
-## Il est possible d'obtenir la dimension de notre vecteur à l'aide de la fonction length().
+Il est possible d'obtenir la dimension de notre vecteur à l'aide de la fonction length().
 
 ```{r}
 MonPremierVecteur <- c(1,2,3,4,5)
@@ -1249,7 +1249,7 @@ MaMatrice
 
 # Types d'objets: les `matrices`
 
-## On accède à la ligne `i` et la colonne `j` au moyen de la commande MaMatrice[i,j]. Ainsi, pour accèder à l'élément de la première ligne et de la deuxième colonne, on doit utiliser la commande suivante
+On accède à la ligne `i` et la colonne `j` au moyen de la commande MaMatrice[i,j]. Ainsi, pour accèder à l'élément de la première ligne et de la deuxième colonne, on doit utiliser la commande suivante
 
 ```{r}
 MaMatrice[1,2]
@@ -1259,7 +1259,7 @@ MaMatrice[1,2]
 
 # Types d'objets: les `matrices`
 
-## On peut aussi accéder à des lignes ou des colonnes entières
+On peut aussi accéder à des lignes ou des colonnes entières
 
 ```{r}
 MaMatrice[1,]
@@ -1270,7 +1270,7 @@ MaMatrice[,1]
 
 # Types d'objets: les `matrices`
 
-## On obtient la dimension de la matrice ainsi
+On obtient la dimension de la matrice ainsi
 
 ```{r}
 dim(MaMatrice)
@@ -1293,7 +1293,7 @@ ncol(MaMatrice)
 
 # Types d'objets: les `matrices`
 
-## Les noms de colonnes et de lignes peuvent être modifiés
+Le nom des colonnes et des lignes peut être modifié
 
 ```{r}
 colnames(MaMatrice) = c("A","B","C")
@@ -1380,13 +1380,13 @@ MaListe
 
 # Type d'objets: les `listes`
 
-### On pourra alors avoir accès à un élément de la liste par indexation avec l'accesseur `[[]]` :
+On pourra alors avoir accès à un élément de la liste par indexation avec l'accesseur `[[]]` :
 
 ```{r}
 MaListe[[2]]
 ```
 
-### ou encore avoir accès à ce même élément de la liste par référence à son nom avec l'accesseur `$` :
+ou encore avoir accès à ce même élément de la liste par référence à son nom avec l'accesseur `$` :
 
 ```{r}
 MaListe$Matrice
@@ -1484,13 +1484,13 @@ Les fichiers `.xlsx` peuvent être lus au moyen de librairies spécialisées, ma
 
 # Ouvrir un fichier `.csv` dans R
 
-Nous allons utiliser le fichier [NHL.csv](./donnees/NHL.csv) pour cet exemple.
+Nous allons utiliser le fichier [Canadiens.csv](./donnees/Canadiens.csv) pour cet exemple.
 
 ## On peut lire le fichier au moyen de la commande
 
 ```{r}
-NHL <- read.table(file = "donnees/NHL.csv", header = T, dec = ".", sep = ";")
-head(NHL)
+Canadiens <- read.table(file = "donnees/Canadiens.csv", header = T, dec = ".", sep = ";")
+head(Canadiens)
 ```
 
 ---
