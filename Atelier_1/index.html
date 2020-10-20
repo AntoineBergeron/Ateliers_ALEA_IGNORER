@@ -690,7 +690,7 @@ Le pseudo-code est souvent très utile pour répondre à ce commandement. Celui-
 
 Lorsqu'on écrit un algorithme, on travaille avec des objets (ou encore des variables).
 
-Il vaut mieux bien nommer ces objets. sans quoi le code devient rapidement illisible et complexe!
+Il vaut mieux bien nommer ces objets, sans quoi le code devient rapidement illisible et complexe!
 
 ```
 x = xx + xxx
@@ -712,7 +712,7 @@ a = x * y * z
 
 &gt; &lt;b&gt;5.&lt;/b&gt; Des pas de bébés permettent aussi d'avancer
 
-On ne se cachera pas que programmer, c'est difficile au début. On doit apprendre une nouvelle langue et penser différemment. C'est important d'être fier et satisfait de nos petites victoires! L'important, c'est de garder une mentalité de marathonien: il s'agit simplement de mettre un pied devant l'autre pour atteindre la ligne d'arrivée!
+On ne se cachera pas que programmer, c'est difficile au début. On doit apprendre une nouvelle langue et penser différemment. C'est important d'être fier et satisfait de nos petites victoires! L'important, c'est de garder une mentalité de marathonien: il ne s'agit que de mettre un pied devant l'autre pour atteindre la ligne d'arrivée!
 ---
 
 # Les 10 commandements de la programmation
@@ -946,9 +946,11 @@ Le problème étant que le backslash est utilisé pour marquer un espace dans le
 Pour les utilisateurs R Studio : 
 
 &gt; RStudio -&gt; session -&gt; set working directory 
+
 Pour les utilisateurs R GUI (Windows):
 
 &gt; file -&gt; set working directory
+
 Pour les utilisateurs R GUI (Mac):
 
 &gt; file -&gt; set working directory
@@ -964,9 +966,8 @@ dir()
 ```
 
 ```
-## [1] "assets"              "databases-incognito" "donnees"            
-## [4] "index.html"          "index.Rmd"           "index_files"        
-## [7] "MaListe.Rdata"
+## [1] "assets"        "donnees"       "index.html"    "index.Rmd"    
+## [5] "index_files"   "MaListe.Rdata"
 ```
 
 ## Obtenir la liste des objets en mémoire
@@ -1030,7 +1031,7 @@ source("MonScript.R")
 
 # Le concept d'objet
 
-Un objet peut contenir de l'information de toute nature: un tableau de données, les résultats d'une analyse, une figure, une fonction
+Un objet peut contenir de l'information de toute nature: un tableau de données, les résultats d'une analyse, une figure, une fonction, ...
 
 ## La commande pour créer un objet `a` est composé de trois parties:
 
@@ -1138,19 +1139,19 @@ test
 
 
 ```r
-collage &lt;- paste("a","b", sep="")
+collage &lt;- paste("R","S","T","U","D","I","O", sep="")
 collage
 ```
 
 ```
-## [1] "ab"
+## [1] "RSTUDIO"
 ```
 
 ---
 
 # Assigner une valeur de type `booléen`
 
-Le type `booléen` (logical) permet de représenter les états `TRUE` (1) et `FALSE` (0) et de faire des opérations mathématiques sur ces objets.
+Le type `booléen` (logical) permet de représenter les états `TRUE` (1) et `FALSE` (0) et de faire des opérations mathématiques sur des objets.
 
 
 ```r
@@ -1175,7 +1176,7 @@ vrai + faux
 
 # Assigner une valeur de type `facteur`
 
-R est d'abord un langage utilisé pour les statistiques, et par conséquent on y retrouve un type de données utilisé pour la réalisation de tests d'hypothèse, qui ne sont pas standard à tous les langages. Les facteurs sont des données catégoriques.
+R est d'abord un langage utilisé pour les statistiques et par conséquent, on y retrouve un type de données utilisé pour la réalisation de tests d'hypothèse, qui ne sont pas standard à tous les langages. Les facteurs sont des données catégoriques.
 
 
 ```r
@@ -1191,14 +1192,16 @@ MesFacteurs
 
 
 ```r
-MesAutresFacteurs &lt;- factor(c("Dem","Rep","Rep","Dem","Rep","Rep","Dem","Indep"))
-MesAutresFacteurs
+Scol &lt;- factor(c("Sec","Col","Uni","Uni","Col","Uni","Col","ind"))
+Scol
 ```
 
 ```
-## [1] Dem   Rep   Rep   Dem   Rep   Rep   Dem   Indep
-## Levels: Dem Indep Rep
+## [1] Sec Col Uni Uni Col Uni Col ind
+## Levels: Col ind Sec Uni
 ```
+
+Notre échantillon nous indique que soit l'individu à un niveau de scolarité universitaire, collégial ou secondaire. Un seul individu possède une scolarité indéterminé.
 
 ---
 class: middle, center, inverse
@@ -1230,6 +1233,18 @@ as.character(c(4,6))
 
 ```
 ## [1] "4" "6"
+```
+
+```r
+as.numeric(c("a","7"))
+```
+
+```
+## Warning: NAs introduits lors de la conversion automatique
+```
+
+```
+## [1] NA  7
 ```
 
 ---
@@ -1611,9 +1626,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 54.13492 60.31517 30.07412 10.62722 20.57433
-## [2,] 99.86313 15.74111 49.47985 69.81240 56.21921
+##           [,1]     [,2]     [,3]      [,4]     [,5]
+## [1,]  3.174911 83.06731 35.69485  2.633822 22.28356
+## [2,] 29.467057 76.38183 35.01915 12.331072 30.35449
 ```
 
 ```r
@@ -1621,7 +1636,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 153.9981
+## [1] 32.64197
 ```
 
 
@@ -1934,9 +1949,9 @@ ls()
 ##  [4] "c"                  "can"                "collage"           
 ##  [7] "df"                 "df2"                "faux"              
 ## [10] "MaListe"            "MaMatrice"          "MaPremiereMatrice" 
-## [13] "mat"                "MesAutresFacteurs"  "MesFacteurs"       
-## [16] "MonDeuxiemeVecteur" "MonPremierVecteur"  "MonVecteur"        
-## [19] "NHL"                "parties"            "test"              
+## [13] "mat"                "MesFacteurs"        "MonDeuxiemeVecteur"
+## [16] "MonPremierVecteur"  "MonVecteur"         "NHL"               
+## [19] "parties"            "Scol"               "test"              
 ## [22] "vrai"
 ```
 
@@ -2173,8 +2188,8 @@ tri
 ```
 
 ```
-##  [1] 78.06142 48.25625 58.13660 82.17731 80.03243 57.06128 25.04176 43.06046
-##  [9] 68.26016 49.53500
+##  [1] 47.729675 77.477968 59.680414 38.655616  7.359209 47.076312 67.494936
+##  [8]  4.202448 91.174625 14.203552
 ```
 
 ```r
@@ -2182,8 +2197,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 25.04176 43.06046 48.25625 49.53500 57.06128 58.13660 68.26016 78.06142
-##  [9] 80.03243 82.17731
+##  [1]  4.202448  7.359209 14.203552 38.655616 47.076312 47.729675 59.680414
+##  [8] 67.494936 77.477968 91.174625
 ```
 
 ---
@@ -2196,8 +2211,8 @@ rang
 ```
 
 ```
-##  [1] 34.203517 33.803104 86.693849 41.586574 58.042205 72.733894 44.042437
-##  [8]  5.306482 24.025862 91.237259
+##  [1] 42.23182 51.83159 34.29234 71.47882 77.05985 37.04422 68.39354 14.88137
+##  [9] 85.23071 98.50082
 ```
 
 ```r
@@ -2205,7 +2220,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  4  3  9  5  7  8  6  1  2 10
+##  [1]  4  5  2  7  8  3  6  1  9 10
 ```
 
 ---

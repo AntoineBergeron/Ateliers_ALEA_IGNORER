@@ -653,7 +653,7 @@ Le pseudo-code est souvent très utile pour répondre à ce commandement. Celui-
 
 Lorsqu'on écrit un algorithme, on travaille avec des objets (ou encore des variables).
 
-Il vaut mieux bien nommer ces objets. sans quoi le code devient rapidement illisible et complexe!
+Il vaut mieux bien nommer ces objets, sans quoi le code devient rapidement illisible et complexe!
 
 ```
 x = xx + xxx
@@ -675,7 +675,7 @@ a = x * y * z
 
 > <b>5.</b> Des pas de bébés permettent aussi d'avancer
 
-On ne se cachera pas que programmer, c'est difficile au début. On doit apprendre une nouvelle langue et penser différemment. C'est important d'être fier et satisfait de nos petites victoires! L'important, c'est de garder une mentalité de marathonien: il s'agit simplement de mettre un pied devant l'autre pour atteindre la ligne d'arrivée!
+On ne se cachera pas que programmer, c'est difficile au début. On doit apprendre une nouvelle langue et penser différemment. C'est important d'être fier et satisfait de nos petites victoires! L'important, c'est de garder une mentalité de marathonien: il ne s'agit que de mettre un pied devant l'autre pour atteindre la ligne d'arrivée!
 ---
 
 # Les 10 commandements de la programmation
@@ -901,9 +901,11 @@ Le problème étant que le backslash est utilisé pour marquer un espace dans le
 Pour les utilisateurs R Studio : 
 
 > RStudio -> session -> set working directory 
+
 Pour les utilisateurs R GUI (Windows):
 
 > file -> set working directory
+
 Pour les utilisateurs R GUI (Mac):
 
 > file -> set working directory
@@ -960,7 +962,7 @@ source("MonScript.R")
 
 # Le concept d'objet
 
-Un objet peut contenir de l'information de toute nature: un tableau de données, les résultats d'une analyse, une figure, une fonction
+Un objet peut contenir de l'information de toute nature: un tableau de données, les résultats d'une analyse, une figure, une fonction, ...
 
 ## La commande pour créer un objet `a` est composé de trois parties:
 
@@ -1033,7 +1035,7 @@ test
 ## Finalement, des séries de caractères peuvent être collées entre elles pour créer des chaines de caractères.
 
 ```{r}
-collage <- paste("a","b", sep="")
+collage <- paste("R","S","T","U","D","I","O", sep="")
 collage
 ```
 
@@ -1041,7 +1043,7 @@ collage
 
 # Assigner une valeur de type `booléen`
 
-Le type `booléen` (logical) permet de représenter les états `TRUE` (1) et `FALSE` (0) et de faire des opérations mathématiques sur ces objets.
+Le type `booléen` (logical) permet de représenter les états `TRUE` (1) et `FALSE` (0) et de faire des opérations mathématiques sur des objets.
 
 ```{r}
 vrai <- TRUE
@@ -1054,7 +1056,7 @@ vrai + faux
 
 # Assigner une valeur de type `facteur`
 
-R est d'abord un langage utilisé pour les statistiques, et par conséquent on y retrouve un type de données utilisé pour la réalisation de tests d'hypothèse, qui ne sont pas standard à tous les langages. Les facteurs sont des données catégoriques.
+R est d'abord un langage utilisé pour les statistiques et par conséquent, on y retrouve un type de données utilisé pour la réalisation de tests d'hypothèse, qui ne sont pas standard à tous les langages. Les facteurs sont des données catégoriques.
 
 ```{r}
 MesFacteurs <- factor(c("Categorie1","Categorie2","Categorie3","Categorie2","Categorie3","Categorie3","Categorie1","Categorie2"))
@@ -1062,9 +1064,11 @@ MesFacteurs
 ```
 
 ```{r}
-MesAutresFacteurs <- factor(c("Dem","Rep","Rep","Dem","Rep","Rep","Dem","Indep"))
-MesAutresFacteurs
+Scol <- factor(c("Sec","Col","Uni","Uni","Col","Uni","Col","ind"))
+Scol
 ```
+
+Notre échantillon nous indique que soit l'individu à un niveau de scolarité universitaire, collégial ou secondaire. Un seul individu possède une scolarité indéterminé.
 
 ---
 class: middle, center, inverse
@@ -1084,6 +1088,7 @@ R permet de convertir des objets en différents types de données lorsque le con
 ```{r}
 as.numeric(c("4","6"))
 as.character(c(4,6))
+as.numeric(c("a","7"))
 ```
 
 ---
