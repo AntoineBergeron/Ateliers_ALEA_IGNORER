@@ -967,7 +967,7 @@ dir()
 
 ```
 ## [1] "assets"        "donnees"       "index.html"    "index.Rmd"    
-## [5] "index_files"   "MaListe.Rdata"
+## [5] "index_files"   "MaListe.Rdata" "mat.csv"
 ```
 
 ## Obtenir la liste des objets en mémoire
@@ -1463,7 +1463,7 @@ MonVecteur[2]*MonVecteur[4]
 
 # Types d'objets: les `vecteurs`
 
-## Il est possible d'obtenir la dimension de notre vecteur à l'aide de la fonction length().
+Il est possible d'obtenir la dimension de notre vecteur à l'aide de la fonction length().
 
 
 ```r
@@ -1500,7 +1500,7 @@ MaMatrice
 
 # Types d'objets: les `matrices`
 
-## On accède à la ligne `i` et la colonne `j` au moyen de la commande MaMatrice[i,j]. Ainsi, pour accèder à l'élément de la première ligne et de la deuxième colonne, on doit utiliser la commande suivante
+On accède à la ligne `i` et la colonne `j` au moyen de la commande MaMatrice[i,j]. Ainsi, pour accèder à l'élément de la première ligne et de la deuxième colonne, on doit utiliser la commande suivante
 
 
 ```r
@@ -1515,7 +1515,7 @@ MaMatrice[1,2]
 
 # Types d'objets: les `matrices`
 
-## On peut aussi accéder à des lignes ou des colonnes entières
+On peut aussi accéder à des lignes ou des colonnes entières
 
 
 ```r
@@ -1538,7 +1538,7 @@ MaMatrice[,1]
 
 # Types d'objets: les `matrices`
 
-## On obtient la dimension de la matrice ainsi
+On obtient la dimension de la matrice ainsi
 
 
 ```r
@@ -1578,7 +1578,7 @@ ncol(MaMatrice)
 
 # Types d'objets: les `matrices`
 
-## Les noms de colonnes et de lignes peuvent être modifiés
+Le nom des colonnes et des lignes peut être modifié
 
 
 ```r
@@ -1645,9 +1645,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 65.93689 41.93618 59.08842 11.70033 42.88829
-## [2,] 99.65770 96.71897 43.57537 94.94145 81.85754
+##          [,1]     [,2]     [,3]     [,4]      [,5]
+## [1,] 53.67658 49.70368 74.11152 61.14900  5.054948
+## [2,] 12.22926 16.21635 36.10702 62.51875 15.518300
 ```
 
 ```r
@@ -1655,7 +1655,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 165.5946
+## [1] 65.90584
 ```
 
 
@@ -1702,7 +1702,7 @@ MaListe
 
 # Type d'objets: les `listes`
 
-### On pourra alors avoir accès à un élément de la liste par indexation avec l'accesseur `[[]]` :
+On pourra alors avoir accès à un élément de la liste par indexation avec l'accesseur `[[]]` :
 
 
 ```r
@@ -1715,7 +1715,7 @@ MaListe[[2]]
 ## [2,] "B"  "D"
 ```
 
-### ou encore avoir accès à ce même élément de la liste par référence à son nom avec l'accesseur `$` :
+ou encore avoir accès à ce même élément de la liste par référence à son nom avec l'accesseur `$` :
 
 
 ```r
@@ -1869,24 +1869,24 @@ Les fichiers `.xlsx` peuvent être lus au moyen de librairies spécialisées, ma
 
 # Ouvrir un fichier `.csv` dans R
 
-Nous allons utiliser le fichier [NHL.csv](./donnees/NHL.csv) pour cet exemple.
+Nous allons utiliser le fichier [Canadiens.csv](./donnees/Canadiens.csv) pour cet exemple.
 
 ## On peut lire le fichier au moyen de la commande
 
 
 ```r
-NHL &lt;- read.table(file = "donnees/NHL.csv", header = T, dec = ".", sep = ";")
-head(NHL)
+Canadiens &lt;- read.table(file = "donnees/Canadiens.csv", header = T, dec = ".", sep = ";")
+head(Canadiens)
 ```
 
 ```
-##                     Player  season team pos Offence PPPoints Shpoints
-## 1        Jakob Silfverberg 2016-17  ANA   R    VRAI        5        1
-## 2             Duncan Keith 2016-17  CHI   D    FAUX       10        0
-## 3 Pierre-Edouard Bellemare 2016-17  PHI   L    VRAI        0        1
-## 4            Ivan Provorov 2016-17  PHI   D    FAUX        3        0
-## 5              Matt Stajan 2016-17  CGY   C    VRAI        0        2
-## 6              Josh Manson 2016-17  ANA   D    FAUX        0        1
+##             Joueurs Buts Tirs Points Parties.jouees Position
+## 1       Tomas Tatar   22  162     61             68       AG
+## 2   Phillip Danault   13  131     47             71        C
+## 3          Max Domi   17  179     44             71        C
+## 4 Brendan Gallagher   22  226     43             59       AD
+## 5       Nick Suzuki   13  138     41             71        C
+## 6        Jeff Petry   11  158     40             71        D
 ```
 
 ---
@@ -1965,11 +1965,11 @@ ls()
 
 ```
 ##  [1] "a"                  "b"                  "ButsResult"        
-##  [4] "c"                  "can"                "collage"           
-##  [7] "df"                 "df2"                "faux"              
-## [10] "MaListe"            "MaMatrice"          "MaPremiereMatrice" 
-## [13] "mat"                "MesFacteurs"        "MonDeuxiemeVecteur"
-## [16] "MonPremierVecteur"  "MonVecteur"         "NHL"               
+##  [4] "c"                  "can"                "Canadiens"         
+##  [7] "collage"            "df"                 "df2"               
+## [10] "faux"               "MaListe"            "MaMatrice"         
+## [13] "MaPremiereMatrice"  "mat"                "MesFacteurs"       
+## [16] "MonDeuxiemeVecteur" "MonPremierVecteur"  "MonVecteur"        
 ## [19] "parties"            "Scol"               "test"              
 ## [22] "vrai"
 ```
@@ -2005,25 +2005,25 @@ Il est important de vérifier la structure de l'objet après son importation dan
 
 
 ```r
-head(NHL, n = 3)
+head(Canadiens, n = 3)
 ```
 
 ```
-##                     Player  season team pos Offence PPPoints Shpoints
-## 1        Jakob Silfverberg 2016-17  ANA   R    VRAI        5        1
-## 2             Duncan Keith 2016-17  CHI   D    FAUX       10        0
-## 3 Pierre-Edouard Bellemare 2016-17  PHI   L    VRAI        0        1
+##           Joueurs Buts Tirs Points Parties.jouees Position
+## 1     Tomas Tatar   22  162     61             68       AG
+## 2 Phillip Danault   13  131     47             71        C
+## 3        Max Domi   17  179     44             71        C
 ```
 
 ```r
-tail(NHL, n = 3)
+tail(Canadiens, n = 3)
 ```
 
 ```
-##          Player  season team pos Offence PPPoints Shpoints
-## 95  Radek Faksa 2016-17  DAL   C    VRAI        0        0
-## 96 Derek Stepan 2016-17  NYR   C    VRAI        9        1
-## 97 David Perron 2016-17  STL   L    VRAI        7        0
+##             Joueurs Buts Tirs Points Parties.jouees Position
+## 8        Joel Armia   16  155     30             58       AD
+## 9  Artturi Lehkonen   13  140     27             70       AG
+## 10     Nick Cousins    9  105     22             58        C
 ```
 
 ---
@@ -2034,18 +2034,17 @@ Il est important de vérifier la structure de l'objet après son importation dan
 
 
 ```r
-str(NHL)
+str(Canadiens)
 ```
 
 ```
-## 'data.frame':	97 obs. of  7 variables:
-##  $ Player  : Factor w/ 97 levels "Aaron Ekblad",..: 40 35 76 38 60 47 72 19 50 83 ...
-##  $ season  : Factor w/ 1 level "2016-17": 1 1 1 1 1 1 1 1 1 1 ...
-##  $ team    : Factor w/ 15 levels "ANA","BOS","CGY",..: 1 4 11 11 3 1 4 1 1 3 ...
-##  $ pos     : Factor w/ 4 levels "C","D","L","R": 4 2 3 2 1 2 4 2 2 1 ...
-##  $ Offence : Factor w/ 2 levels "FAUX","VRAI": 2 1 2 1 2 1 2 1 1 2 ...
-##  $ PPPoints: int  5 10 0 3 0 0 13 11 2 2 ...
-##  $ Shpoints: int  1 0 1 0 2 1 0 0 0 1 ...
+## 'data.frame':	10 obs. of  6 variables:
+##  $ Joueurs       : Factor w/ 10 levels "Artturi Lehkonen",..: 10 8 5 2 7 3 9 4 1 6
+##  $ Buts          : int  22 13 17 22 13 11 15 16 13 9
+##  $ Tirs          : int  162 131 179 226 138 158 185 155 140 105
+##  $ Points        : int  61 47 44 43 41 40 36 30 27 22
+##  $ Parties.jouees: int  68 71 71 59 71 71 65 58 70 58
+##  $ Position      : Factor w/ 4 levels "AD","AG","C",..: 2 3 3 1 3 4 4 1 2 3
 ```
 
 ---
@@ -2056,25 +2055,25 @@ str(NHL)
 
 
 ```r
-summary(NHL)
+summary(Canadiens)
 ```
 
 ```
-##            Player       season        team    pos    Offence      PPPoints     
-##  Aaron Ekblad : 1   2016-17:97   CGY    :11   C:34   FAUX:32   Min.   : 0.000  
-##  Adam Henrique: 1                ANA    : 9   D:32   VRAI:65   1st Qu.: 2.000  
-##  Adam Larsson : 1                EDM    : 8   L:16             Median : 6.000  
-##  Adam Lowry   : 1                FLA    : 8   R:15             Mean   : 6.309  
-##  Alex Chiasson: 1                BOS    : 7                    3rd Qu.:10.000  
-##  Alex Killorn : 1                CHI    : 7                    Max.   :21.000  
-##  (Other)      :91                (Other):47                                    
-##     Shpoints    
-##  Min.   :0.000  
-##  1st Qu.:0.000  
-##  Median :0.000  
-##  Mean   :0.567  
-##  3rd Qu.:1.000  
-##  Max.   :4.000  
+##               Joueurs       Buts            Tirs           Points     
+##  Artturi Lehkonen :1   Min.   : 9.00   Min.   :105.0   Min.   :22.00  
+##  Brendan Gallagher:1   1st Qu.:13.00   1st Qu.:138.5   1st Qu.:31.50  
+##  Jeff Petry       :1   Median :14.00   Median :156.5   Median :40.50  
+##  Joel Armia       :1   Mean   :15.10   Mean   :157.9   Mean   :39.10  
+##  Max Domi         :1   3rd Qu.:16.75   3rd Qu.:174.8   3rd Qu.:43.75  
+##  Nick Cousins     :1   Max.   :22.00   Max.   :226.0   Max.   :61.00  
+##  (Other)          :4                                                  
+##  Parties.jouees Position
+##  Min.   :58.0   AD:2    
+##  1st Qu.:60.5   AG:2    
+##  Median :69.0   C :4    
+##  Mean   :66.2   D :2    
+##  3rd Qu.:71.0           
+##  Max.   :71.0           
 ## 
 ```
 
@@ -2086,14 +2085,14 @@ Très souvent, on souhaite réaliser un sommaire de nos données. La fonction `s
 
 
 ```r
-PointsAN &lt;- table(NHL$PPPoints)
-PointsAN
+Tirs &lt;- table(Canadiens$Tirs)
+Tirs
 ```
 
 ```
 ## 
-##  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 21 
-## 20  4  4  7  7  6  7  7  3  6  6  3  1  3  2  5  2  2  1  1
+## 105 131 138 140 155 158 162 179 185 226 
+##   1   1   1   1   1   1   1   1   1   1
 ```
 
 ---
@@ -2207,8 +2206,8 @@ tri
 ```
 
 ```
-##  [1] 57.75377 50.35176 25.76966 49.87807 91.60951 75.10780 72.07501 67.26470
-##  [9] 25.18647 18.12818
+##  [1] 22.94022 19.96465 82.58034 33.51909 35.56611 69.62168 99.00241 11.42920
+##  [9] 75.81321 33.05365
 ```
 
 ```r
@@ -2216,8 +2215,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 18.12818 25.18647 25.76966 49.87807 50.35176 57.75377 67.26470 72.07501
-##  [9] 75.10780 91.60951
+##  [1] 11.42920 19.96465 22.94022 33.05365 33.51909 35.56611 69.62168 75.81321
+##  [9] 82.58034 99.00241
 ```
 
 ---
@@ -2230,8 +2229,8 @@ rang
 ```
 
 ```
-##  [1] 66.943137 95.649182 94.731044  9.791131 47.269546 84.321704 52.437214
-##  [8]  8.515062 61.956770 68.057237
+##  [1] 55.866434 59.827757 11.448582 13.258479 14.936617 15.466486 25.716272
+##  [8] 12.105967 78.839844  2.579786
 ```
 
 ```r
@@ -2239,7 +2238,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  6 10  9  2  3  8  4  1  5  7
+##  [1]  8  9  2  4  5  6  7  3 10  1
 ```
 
 ---
