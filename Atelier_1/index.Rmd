@@ -1068,7 +1068,7 @@ Scol <- factor(c("Sec","Col","Uni","Uni","Col","Uni","Col","ind"))
 Scol
 ```
 
-Notre échantillon nous indique que soit l'individu à un niveau de scolarité universitaire, collégial ou secondaire. Un seul individu possède une scolarité indéterminé.
+Niveau de scolarité: secondaire, collégial, universitaire, indéterminé.
 
 ---
 class: middle, center, inverse
@@ -1124,18 +1124,18 @@ class: middle, center, inverse
 
 # Les types d'objets
 
-Depuis le début de l'atelier, nous avons assigné une seule valeur à un objet. Lorsqu'un objet contient une seule valeur, on dit que c'est un objet `scalaire`.
+Depuis le début de l'atelier, nous avons très souvent assigné une seule valeur à un objet. Lorsqu'un objet contient une seule valeur, on dit que c'est un objet `scalaire`.
 
 ```{r}
 a <- 1
 a
 ```
 
-Cependant, un objet peut cependant contenir plusieurs valeurs. Il sera défini alors comme un `vecteur`.
+Cependant, un objet peut contenir plusieurs valeurs. Dans un tel cas, il sera alors défini comme un `vecteur`.
 
 ---
 
-# type d'objets: les `vecteurs`
+# Type d'objets: les `vecteurs`
 
 Le vecteur est un des objets les plus importants de R.
 
@@ -1147,11 +1147,11 @@ MonPremierVecteur
 ```
 
 
-**Note** - D'autres méthodes seront présentées plus loin.
+**Note** - D'autres méthodes seront présentées dans un futur proche.
 
 ---
 
-# type d'objets: les `vecteurs`
+# Type d'objets: les `vecteurs`
 
 La force de R repose dans sa capacité à réaliser des opérations `vectorielles`.
 
@@ -1167,7 +1167,7 @@ MonPremierVecteur + MonDeuxiemeVecteur
 
 # Exercice  
 
-Créez un vecteur contenant les valeurs `[-1,2,5,9]`. Vous pouvez calculer la racine carrée de ces nombres au moyen de la fonction `sqrt()`
+Créez un vecteur contenant les valeurs `[-1,2,5,9]`. Par la suite, calculez la racine carrée de ces nombres au moyen de la fonction `sqrt()`.
 
 ---
 
@@ -1190,6 +1190,7 @@ On peut accéder à une position sur le vecteur au moyen d'un `index`, indiqué 
 
 ```{r}
 MonPremierVecteur <- c(1,2,3,4,5)
+MonPremierVecteur
 MonPremierVecteur[3]
 ```
 
@@ -1205,6 +1206,10 @@ MonPremierVecteur[6]
 # Exercice  
 
 Au moyen du vecteur créé précédemment, calculer le produit des valeurs aux positions `2` et `4`.
+
+```{r}
+MonVecteur
+```
 
 ---
 
