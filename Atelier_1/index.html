@@ -104,7 +104,7 @@ head(parties)
 
 # Exercice 1
 
-Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par les Canadiens de Montréal en fonction du résultat de la partie.
+Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par le Canadiens de Montréal en fonction du résultat de la partie.
 
 ---
 
@@ -1645,9 +1645,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 75.68588 17.88860 54.02933 33.41852 65.34013
-## [2,] 61.98658 19.47735 16.24243 59.31199 74.15541
+##           [,1]     [,2]     [,3]     [,4]     [,5]
+## [1,]  9.354666 71.56437 55.09843 16.22707 97.71051
+## [2,] 84.374829 80.51583 66.69928 73.07047 25.48030
 ```
 
 ```r
@@ -1655,7 +1655,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 137.6725
+## [1] 93.72949
 ```
 
 
@@ -2211,8 +2211,8 @@ tri
 ```
 
 ```
-##  [1] 14.891938 63.715851 94.281177  1.582528 23.481898 68.782930 75.651056
-##  [8] 68.461937 79.396190 26.167651
+##  [1] 39.83724 13.07362 86.67440 32.24512 93.75698 69.92436 85.97786 82.03592
+##  [9] 74.87697 71.54608
 ```
 
 ```r
@@ -2220,8 +2220,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  1.582528 14.891938 23.481898 26.167651 63.715851 68.461937 68.782930
-##  [8] 75.651056 79.396190 94.281177
+##  [1] 13.07362 32.24512 39.83724 69.92436 71.54608 74.87697 82.03592 85.97786
+##  [9] 86.67440 93.75698
 ```
 
 ---
@@ -2234,8 +2234,8 @@ rang
 ```
 
 ```
-##  [1] 74.33304 97.90212 72.37503 19.29344 13.38022 20.89881 76.50943 43.20779
-##  [9] 83.67823 11.48059
+##  [1]  1.444287 90.599994 87.486554 49.196112 90.400818 44.684143 16.513568
+##  [8] 17.811086 46.622083 34.632649
 ```
 
 ```r
@@ -2243,7 +2243,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  7 10  6  3  2  4  8  5  9  1
+##  [1]  1 10  8  7  9  5  2  3  6  4
 ```
 
 ---
@@ -2277,15 +2277,15 @@ Ici par exemple, on souhaite étudier seulement les joueurs de centre ayant fait
 
 
 ```r
-NHL &lt;- read.table(file="donnees/NHL.csv", header=TRUE, stringsAsFactors=FALSE, sep = ";")
+NHL &lt;- read.table(file="donnees/Canadiens.csv", header=TRUE, stringsAsFactors=FALSE, sep = ";")
 sub_Centres &lt;- subset(NHL, NHL$pos == "C" &amp; NHL$Shpoints &gt;= 1)
 head(sub_Centres, n=2)
 ```
 
 ```
-##         Player  season team pos Offence PPPoints Shpoints
-## 5  Matt Stajan 2016-17  CGY   C    VRAI        0        2
-## 10 Sam Bennett 2016-17  CGY   C    VRAI        2        1
+## [1] Joueurs        Buts           Tirs           Points         Parties.jouees
+## [6] Position      
+## &lt;0 rows&gt; (or 0-length row.names)
 ```
 
 Le "==" est utilisé pour sélectionner les individus qui sont des joueurs de centre et le symbole "&amp;" pour combiner deux conditions.
