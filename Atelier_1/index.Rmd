@@ -1623,17 +1623,22 @@ Tirs
 
 # Exercice de manipulation des données
 
-- Ouvrir le fichier [ButsDesNumPos.csv](./donnees/ButsDesNumPos.csv) au moyen de Excel ou d'un éditeur de texte
-- Calculer le nombre moyen de buts en désavantage numérique pour chacune des positions
+- Ouvrir le fichier [ButsResult.csv](./donnees/ButsResult.csv) au moyen de Excel ou d'un éditeur de texte
 - Ouvrir le même fichier au moyen de R
+
+Dans Excel: 
+- Calculer le nombre moyen de buts marqué par le Canadiens de Montréal en fonction des résultats de la partie. 
+
+Dans R:
 - Vérifier que le fichier a le format approprié
-- Créer un vecteur `ButsMoyen` d'une longueur correspondant au nombre de positions distinctes dans le fichier de données
+- Créer un vecteur `ButsMoyen` d'une longueur correspondant au nombre de catégories de résultat d'une partie dans le fichier de données
+- Enregistrer le fichier sous forme de fichier `csv` et comparer le avec le fichier Excel.
 
 ---
 
 # Exercice de manipulation des données (suite)
 
-- Calculer le nombre moyen de buts en désavantage numérique pour chacune des positions au moyen de la fonction 'mean' et l'inscrire dans chaque position de `ButsMoyen`
+- Calculer le nombre moyen de buts marqué par le Canadiens de Montréal pour chacun des résultats d'une partie (victoire, Nulle, Défaite). La fonction 'mean' et l'inscrire dans chaque position de `ButsMoyen`
 - Convertir ButsMoyen en `data.frame`
 - Attribuer les noms des positions pour chaque entrée de `ButsMoyen`
 - Enregistrer `ButsMoyen` sous forme de fichier `CSV` (séparateur point-virgule)
