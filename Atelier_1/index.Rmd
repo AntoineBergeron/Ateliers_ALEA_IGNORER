@@ -84,7 +84,7 @@ head(parties)
 
 # Exercice 1
 
-Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par les Canadiens de Montréal en fonction du résultat de la partie.
+Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par le Canadiens de Montréal en fonction du résultat de la partie.
 
 ---
 
@@ -1717,7 +1717,7 @@ Parfois, on souhaite avoir seulement une partie des données contenues dans un o
 Ici par exemple, on souhaite étudier seulement les joueurs de centre ayant fait au moins un but en désavantage numérique:
 
 ```{r}
-NHL <- read.table(file="donnees/NHL.csv", header=TRUE, stringsAsFactors=FALSE, sep = ";")
+NHL <- read.table(file="donnees/Canadiens.csv", header=TRUE, stringsAsFactors=FALSE, sep = ";")
 sub_Centres <- subset(NHL, NHL$pos == "C" & NHL$Shpoints >= 1)
 head(sub_Centres, n=2)
 ```
