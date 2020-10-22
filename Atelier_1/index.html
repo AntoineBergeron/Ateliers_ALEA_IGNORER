@@ -43,7 +43,19 @@ class: title-slide, middle
 
 # Présentation
 
+Cette introduction à la programmation scientifique se fera sous forme de différents ateliers. Plusieurs courtes capsules nous permettront de passer à travers chacun des ateliers. 
 
+Les connaissances requises pour la programmation scientifique sont
+minimales, l'apprentissage portera davantage sur l'acquisition de
+compétences et le développement de capacités à la résolution de problèmes.
+
+Le sujet des capsules portera sur des notions de base de
+programmation, entre-coupées d'exercices spécifiques
+destinés à pratiquer les éléments enseignés. L'atelier se terminera avec
+la réalisation d'un exercice intégrateur à compléter à la maison.
+
+L'ensemble du matériel du cours sera disponible sur un dépôt Git à l'adresse :
+https://github.com/AntoineBergeron/Ateliers_ALEA
 
 ---
 class: inverse, middle, center
@@ -66,7 +78,7 @@ class: inverse, middle, center
 
 
 ```r
-can &lt;- read.table(file = './donnees/canadiens.txt', sep="\t", header = TRUE)
+can &lt;- read.table(file = './donnees/Canadiens.txt', sep="\t", header = TRUE)
 head(can)
 ```
 
@@ -206,23 +218,6 @@ Au terme de cet atelier, vous serez en mesure de conceptualiser un problème qui
 1. Des recettes
 2. Un catalogue de fonctions R
 3. Un cours de statistiques
-
----
-
-# Approche
-
-Les connaissances requises pour la programmation scientifique sont
-minimales, l'apprentissage porte davantage sur l'acquisition de
-compétences et le développement de capacités à la résolution de problèmes.
-
-
-L'atelier sera constitué de courtes leçons magistrales sur des
-notions de base de programmation, entre-coupées d'exercices spécifiques
-destinés à pratiquer les éléments enseignés. L'atelier se terminera avec
-la réalisation d'un exercice intégrateur à compléter à la maison.
-
-L'ensemble du matériel du cours sera disponible sur un dépôt Git à l'adresse :
-https://github.com/AntoineBergeron/Ateliers_ALEA
 
 ---
 class: inverse, center, middle
@@ -1645,9 +1640,9 @@ MaPremiereMatrice
 ```
 
 ```
-##           [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,]  9.354666 71.56437 55.09843 16.22707 97.71051
-## [2,] 84.374829 80.51583 66.69928 73.07047 25.48030
+##          [,1]     [,2]      [,3]      [,4]     [,5]
+## [1,] 59.06494 13.87386 44.333666 92.127022 49.73588
+## [2,] 57.94373 82.40013  1.427125  5.686536 80.96024
 ```
 
 ```r
@@ -1655,7 +1650,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 93.72949
+## [1] 117.0087
 ```
 
 
@@ -2211,8 +2206,8 @@ tri
 ```
 
 ```
-##  [1] 39.83724 13.07362 86.67440 32.24512 93.75698 69.92436 85.97786 82.03592
-##  [9] 74.87697 71.54608
+##  [1] 29.760825 94.089222 51.076746  6.991440 24.343653 32.334055  4.987135
+##  [8] 59.052628 42.573408 77.460475
 ```
 
 ```r
@@ -2220,8 +2215,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 13.07362 32.24512 39.83724 69.92436 71.54608 74.87697 82.03592 85.97786
-##  [9] 86.67440 93.75698
+##  [1]  4.987135  6.991440 24.343653 29.760825 32.334055 42.573408 51.076746
+##  [8] 59.052628 77.460475 94.089222
 ```
 
 ---
@@ -2234,8 +2229,8 @@ rang
 ```
 
 ```
-##  [1]  1.444287 90.599994 87.486554 49.196112 90.400818 44.684143 16.513568
-##  [8] 17.811086 46.622083 34.632649
+##  [1] 32.53397 85.50255 25.86426 68.66538 72.25784 85.97020 84.11184 19.46527
+##  [9] 88.79454 75.35473
 ```
 
 ```r
@@ -2243,7 +2238,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  1 10  8  7  9  5  2  3  6  4
+##  [1]  3  8  2  4  5  9  7  1 10  6
 ```
 
 ---
