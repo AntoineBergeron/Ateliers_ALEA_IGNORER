@@ -577,6 +577,42 @@ lettreTab[2, 1]
 
 <b> Ces règles sont générales, peu importe le langage de programmation utilisé. </b>
 
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 1
+
+La caisse dans laquelle je transporte mes oranges a brisé. Ainsi, j'aimerais transférer chacune de mes oranges vers ma nouvelle caisse.
+
+*Notons qu'ici, je n'ai aucune idée sur la quantité d'oranges dans ma caisse. 
+
+.pull-left[
+<div style='text-align:center;'>
+<img src="assets/img/CaisseOrange.PNG" width="50%"></img>
+]
+
+.pull-right[
+<div style='text-align:center;'>
+<img src="assets/img/CaisseVide.PNG" width="50%"></img>
+]
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 1 (solution)
+
+Comme je n'ai aucune idée du nombre d'oranges, il m'est impossible d'utiliser une opération comme le `for`. Le `while` est donc le grand gagnant.
+
+```
+WHILE NbOrange_1 > 0 <--------------- Tant que le nombre d'orange de la caisse 1 est plus grand que 0
+  NbOrange_1 <- NbOrange_1 - 1 <----- On enlève une orange de la caisse 1
+  NbOrange_2 <- NbOrange_2 + 1 <----- On ajoute une orange dans la caisse 2
+END WHILE  <------------------------- Se termine seulement quand le nombre d'orange de la caisse 1 sera plus petit ou égal à 0 (soit 0)
+```
+
 ---
 class: inverse, middle, center
 

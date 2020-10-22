@@ -614,6 +614,42 @@ lettreTab[2, 1]
 
 &lt;b&gt; Ces règles sont générales, peu importe le langage de programmation utilisé. &lt;/b&gt;
 
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 1
+
+La caisse dans laquelle je transporte mes oranges a brisé. Ainsi, j'aimerais transférer chacune de mes oranges vers ma nouvelle caisse.
+
+*Notons qu'ici, je n'ai aucune idée sur la quantité d'oranges dans ma caisse. 
+
+.pull-left[
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/CaisseOrange.PNG" width="50%"&gt;&lt;/img&gt;
+]
+
+.pull-right[
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/CaisseVide.PNG" width="50%"&gt;&lt;/img&gt;
+]
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 1 (solution)
+
+Comme je n'ai aucune idée du nombre d'oranges, il m'est impossible d'utiliser une opération comme le `for`. Le `while` est donc le grand gagnant.
+
+```
+WHILE NbOrange_1 &gt; 0 &lt;--------------- Tant que le nombre d'orange de la caisse 1 est plus grand que 0
+  NbOrange_1 &lt;- NbOrange_1 - 1 &lt;----- On enlève une orange de la caisse 1
+  NbOrange_2 &lt;- NbOrange_2 + 1 &lt;----- On ajoute une orange dans la caisse 2
+END WHILE  &lt;------------------------- Se termine seulement quand le nombre d'orange de la caisse 1 sera plus petit ou égal à 0 (soit 0)
+```
+
 ---
 class: inverse, middle, center
 
@@ -1640,9 +1676,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]      [,3]      [,4]     [,5]
-## [1,] 59.06494 13.87386 44.333666 92.127022 49.73588
-## [2,] 57.94373 82.40013  1.427125  5.686536 80.96024
+##          [,1]     [,2]     [,3]     [,4]     [,5]
+## [1,] 49.47368 83.69249 37.87925 66.53622  7.44768
+## [2,] 34.74126 12.73842 99.77278 11.23536 43.12504
 ```
 
 ```r
@@ -1650,7 +1686,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 117.0087
+## [1] 84.21494
 ```
 
 
@@ -2206,8 +2242,8 @@ tri
 ```
 
 ```
-##  [1] 29.760825 94.089222 51.076746  6.991440 24.343653 32.334055  4.987135
-##  [8] 59.052628 42.573408 77.460475
+##  [1] 26.00362 13.23635 42.77626 67.47550 48.02426 69.94378 26.82616 42.34735
+##  [9] 80.21984 99.74160
 ```
 
 ```r
@@ -2215,8 +2251,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  4.987135  6.991440 24.343653 29.760825 32.334055 42.573408 51.076746
-##  [8] 59.052628 77.460475 94.089222
+##  [1] 13.23635 26.00362 26.82616 42.34735 42.77626 48.02426 67.47550 69.94378
+##  [9] 80.21984 99.74160
 ```
 
 ---
@@ -2229,8 +2265,8 @@ rang
 ```
 
 ```
-##  [1] 32.53397 85.50255 25.86426 68.66538 72.25784 85.97020 84.11184 19.46527
-##  [9] 88.79454 75.35473
+##  [1] 27.59007 41.00746 39.71159 76.13504 66.78431 47.50672 15.96588 75.82458
+##  [9] 78.54465 99.25360
 ```
 
 ```r
@@ -2238,7 +2274,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  3  8  2  4  5  9  7  1 10  6
+##  [1]  2  4  3  8  6  5  1  7  9 10
 ```
 
 ---
