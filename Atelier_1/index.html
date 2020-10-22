@@ -642,10 +642,12 @@ La caisse dans laquelle je transporte mes oranges a brisé. Ainsi, j'aimerais tr
 Comme je n'ai aucune idée du nombre d'oranges, il m'est impossible d'utiliser une opération comme le `for`. Le `while` est donc le grand gagnant.
 
 ```
-WHILE NbOrange_1 &gt; 0 &lt;--------------- Tant que le nombre d'orange de la caisse 1 est plus grand que 0
-  NbOrange_1 &lt;- NbOrange_1 - 1 &lt;----- On enlève une orange de la caisse 1
-  NbOrange_2 &lt;- NbOrange_2 + 1 &lt;----- On ajoute une orange dans la caisse 2
-END WHILE  &lt;------------------------- Se termine seulement quand le nombre d'orange de la caisse 1 sera plus petit ou égal à 0 (soit 0)
+                                  |--- Tant que le nombre d'orange de la caisse 1 est plus
+WHILE NbOrange_1 &gt; 0 &lt;------------|--- grand que 0
+  NbOrange_1 &lt;- NbOrange_1 - 1 &lt;------ On enlève une orange de la caisse 1
+  NbOrange_2 &lt;- NbOrange_2 + 1 &lt;------ On ajoute une orange dans la caisse 2
+END WHILE  &lt;----------------------|--- Se termine seulement quand le nombre d'orange de la
+                                  |--- caisse 1 sera plus petit ou égal à 0 (soit 0)
 ```
 ---
 
@@ -1718,9 +1720,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]     [,3]      [,4]     [,5]
-## [1,] 55.86065 88.77872 34.27883  9.219546 8.583168
-## [2,] 53.33811 58.83011 35.71540 33.463085 2.269092
+##          [,1]     [,2]     [,3]     [,4]      [,5]
+## [1,] 84.18229 15.87200 4.761504 76.16934 53.080735
+## [2,] 94.46495 91.11827 9.519507  8.66896  7.352275
 ```
 
 ```r
@@ -1728,7 +1730,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 109.1988
+## [1] 178.6472
 ```
 
 
@@ -2284,8 +2286,8 @@ tri
 ```
 
 ```
-##  [1] 39.0521324 83.0827929 53.1500220 26.2162468 40.4209628 80.8916080
-##  [7] 99.2071707  0.6484275 32.4199385 33.6368598
+##  [1] 77.71684 64.40843 87.62551 59.75581 32.26471 93.32489 32.87854 83.00567
+##  [9] 55.40231 86.45197
 ```
 
 ```r
@@ -2293,8 +2295,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  0.6484275 26.2162468 32.4199385 33.6368598 39.0521324 40.4209628
-##  [7] 53.1500220 80.8916080 83.0827929 99.2071707
+##  [1] 32.26471 32.87854 55.40231 59.75581 64.40843 77.71684 83.00567 86.45197
+##  [9] 87.62551 93.32489
 ```
 
 ---
@@ -2307,8 +2309,8 @@ rang
 ```
 
 ```
-##  [1] 26.857765 28.608712 70.717127 23.651967  4.792954 20.873829 90.134018
-##  [8] 29.236569 54.742422 78.942638
+##  [1] 55.01706 81.17709 26.30193 54.08789 45.31161 40.19389 27.87471 60.71375
+##  [9] 90.59274 76.08000
 ```
 
 ```r
@@ -2316,7 +2318,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  4  5  8  3  1  2 10  6  7  9
+##  [1]  6  9  1  5  4  3  2  7 10  8
 ```
 
 ---
