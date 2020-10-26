@@ -676,7 +676,13 @@ On ajoute deux oranges dans la caisse 2
 
 Thomas souhaite lancer un dé équilibré jusqu'attend d'obtenir la valeur 6. Il aimerait précisément savoir en combien de lancer il aura obtenu la valeur 6. 
 
-<img src="assets/img/de6.PNG" width="60%"></img>
+<div style='text-align:center;'>
+<img src="assets/img/de2.PNG" width="10%"></img>
+<img src="assets/img/de5.PNG" width="10%"></img>
+<img src="assets/img/de4.PNG" width="10%"></img>
+<img src="assets/img/de1.PNG" width="10%"></img>
+<img src="assets/img/de3.PNG" width="10%"></img>
+<img src="assets/img/de6.PNG" width="10%"></img>
 
 ---
 
@@ -692,10 +698,10 @@ WHILE result_de != 6
 END WHILE
 PRINT nb_lancer
 
-Tant que je n'ai pas obtenu la valeur 6
-On lance à nouveau le dé
-L'expérience se termine lorsque j'obtiens la valeur 6
-Je peux alors dire combien de lancer(s) ça m'a pris
+Tant qu'il n'a pas obtenu la valeur 6
+Il lance à nouveau le dé
+L'expérience se termine lorsqu'il obtient la valeur 6
+Il peut alors dire combien de lancer(s) ça lui a pris
 ```
 
 ---
@@ -705,6 +711,14 @@ Je peux alors dire combien de lancer(s) ça m'a pris
 ## Exemple 3.1
 
 Étant un peu vantard, Thomas aimerait ajouter à ses amis que d'obtenir 6 en lançant un dé n'est pas une expérience aléatoire (seulement dans son cas). Ainsi, s'il obtient la valeur 6 en un seul lancer, il aimerait leur indiquer: "je suis un maître lanceur!", alors que s'il l'obtient en plus d'un lancer, il aimerait leur mentionner que "le dé est forcément truqué!".
+
+<div style='text-align:center;'>
+<img src="assets/img/de2.PNG" width="10%"></img>
+<img src="assets/img/de5.PNG" width="10%"></img>
+<img src="assets/img/de1.PNG" width="10%"></img>
+<img src="assets/img/de3.PNG" width="10%"></img>
+<img src="assets/img/de4.PNG" width="10%"></img>
+<img src="assets/img/de6.PNG" width="10%"></img>
 
 ---
 
@@ -738,6 +752,14 @@ Thomas indiquera que c'est forcément un dé truqué
 
 Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer à ses amis qu'il a été chanceux si 1 seul lancer fut nécessaire, qu'il n'est pas chanceux lorsque le nombre de lancers fut entre 2 et 6, et qu'il est extrêmement mal chanceux de l'avoir obtenu en plus de 6 lancers.
 
+
+<div style='text-align:center;'>
+<img src="assets/img/de5.PNG" width="10%"></img>
+<img src="assets/img/de4.PNG" width="10%"></img>
+<img src="assets/img/de3.PNG" width="10%"></img>
+<img src="assets/img/de2.PNG" width="10%"></img>
+<img src="assets/img/de1.PNG" width="10%"></img>
+<img src="assets/img/de6.PNG" width="10%"></img>
 ---
 
 # Le `pseudo-code`
@@ -954,6 +976,20 @@ class: inverse, middle, center
 <hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"></hr>
 
 ---
+
+# Exercice 1
+
+Soit le tableau suivant:
+
+```{r}
+can <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(can)
+```
+
+
+---
+
+
 
 # Une situation qui peut arriver tous les jours
 

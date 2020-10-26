@@ -713,7 +713,13 @@ On ajoute deux oranges dans la caisse 2
 
 Thomas souhaite lancer un dé équilibré jusqu'attend d'obtenir la valeur 6. Il aimerait précisément savoir en combien de lancer il aura obtenu la valeur 6. 
 
-&lt;img src="assets/img/de6.PNG" width="60%"&gt;&lt;/img&gt;
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
 
 ---
 
@@ -729,10 +735,10 @@ WHILE result_de != 6
 END WHILE
 PRINT nb_lancer
 
-Tant que je n'ai pas obtenu la valeur 6
-On lance à nouveau le dé
-L'expérience se termine lorsque j'obtiens la valeur 6
-Je peux alors dire combien de lancer(s) ça m'a pris
+Tant qu'il n'a pas obtenu la valeur 6
+Il lance à nouveau le dé
+L'expérience se termine lorsqu'il obtient la valeur 6
+Il peut alors dire combien de lancer(s) ça lui a pris
 ```
 
 ---
@@ -742,6 +748,14 @@ Je peux alors dire combien de lancer(s) ça m'a pris
 ## Exemple 3.1
 
 Étant un peu vantard, Thomas aimerait ajouter à ses amis que d'obtenir 6 en lançant un dé n'est pas une expérience aléatoire (seulement dans son cas). Ainsi, s'il obtient la valeur 6 en un seul lancer, il aimerait leur indiquer: "je suis un maître lanceur!", alors que s'il l'obtient en plus d'un lancer, il aimerait leur mentionner que "le dé est forcément truqué!".
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
 
 ---
 
@@ -775,6 +789,14 @@ Thomas indiquera que c'est forcément un dé truqué
 
 Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer à ses amis qu'il a été chanceux si 1 seul lancer fut nécessaire, qu'il n'est pas chanceux lorsque le nombre de lancers fut entre 2 et 6, et qu'il est extrêmement mal chanceux de l'avoir obtenu en plus de 6 lancers.
 
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
 ---
 
 # Le `pseudo-code`
@@ -991,6 +1013,30 @@ class: inverse, middle, center
 &lt;hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
+
+# Exercice 1
+
+Soit le tableau suivant:
+
+
+```r
+can &lt;- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(can)
+```
+
+```
+##   Etudiant Français Mathematique Anglais Musique Histoire Dance
+## 1        1       41           57      59      73       82    78
+## 2        2       63           92      44      64       54    86
+## 3        3       63           97      57      56       56    71
+## 4        4       59           85      88      98       88    83
+## 5        5       95           43      70      89       93    61
+```
+
+
+---
+
+
 
 # Une situation qui peut arriver tous les jours
 
@@ -1829,9 +1875,9 @@ MaPremiereMatrice
 ```
 
 ```
-##           [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,]  8.056435 88.87268 88.31824 42.86935 59.53592
-## [2,] 37.050663 90.94001 32.82347 34.10251 24.86028
+##          [,1]     [,2]     [,3]     [,4]     [,5]
+## [1,] 12.24593 53.94253 84.03695 46.07010 85.00293
+## [2,] 31.53088 47.55869 23.62850 90.49789 30.99807
 ```
 
 ```r
@@ -1839,7 +1885,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 45.1071
+## [1] 43.77681
 ```
 
 
@@ -2395,8 +2441,8 @@ tri
 ```
 
 ```
-##  [1] 63.31680 97.00740 16.00710 62.11695 72.16900 76.35165 54.79263 72.57283
-##  [9] 13.90308 73.47074
+##  [1] 14.47996 21.90955 75.99762 48.67838 57.09863 19.76172 77.92729 13.23549
+##  [9] 43.25940 47.99532
 ```
 
 ```r
@@ -2404,8 +2450,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 13.90308 16.00710 54.79263 62.11695 63.31680 72.16900 72.57283 73.47074
-##  [9] 76.35165 97.00740
+##  [1] 13.23549 14.47996 19.76172 21.90955 43.25940 47.99532 48.67838 57.09863
+##  [9] 75.99762 77.92729
 ```
 
 ---
@@ -2418,8 +2464,8 @@ rang
 ```
 
 ```
-##  [1] 53.063321  9.898556 49.097322 63.924192 98.610745 70.746242 77.189798
-##  [8] 94.287052 89.634735 30.914024
+##  [1]  6.849851 89.985157 39.145334 21.569321 28.508972 42.884620 57.062627
+##  [8] 35.980880 52.687892 46.368745
 ```
 
 ```r
@@ -2427,7 +2473,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  4  1  3  5 10  6  7  9  8  2
+##  [1]  1 10  5  2  3  6  9  4  8  7
 ```
 
 ---

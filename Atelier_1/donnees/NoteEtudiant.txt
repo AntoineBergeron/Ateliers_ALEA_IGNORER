@@ -1,0 +1,6 @@
+Etudiant	Français	Mathematique	Anglais	Musique	Histoire	Dance
+1	41	57	59	73	82	78
+2	63	92	44	64	54	86
+3	63	97	57	56	56	71
+4	59	85	88	98	88	83
+5	95	43	70	89	93	61
