@@ -766,7 +766,7 @@ Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer 
 
 ## Exemple 3.2 (solution)
 
-On cherche premièrement à reproduire le même pseudo-code que l'exemple initial. Puis, à la suite de l'expérience, on peut conclure dépendamment des `2` cas possibles.
+Dans ce cas-ci, il y a `3` cas possibles.
 
 ```
 WHILE result_de != 6
