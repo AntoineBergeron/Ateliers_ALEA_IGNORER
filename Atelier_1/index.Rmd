@@ -669,6 +669,102 @@ On ajoute deux oranges dans la caisse 2
 ```
 
 ---
+
+# Le `pseudo-code`
+
+## Exemple 3
+
+Thomas souhaite lancer un dé équilibré jusqu'attend d'obtenir la valeur 6. Il aimerait précisément savoir en combien de lancer il aura obtenu la valeur 6. 
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 3 (solution)
+
+On se trouve à nouveau dans un cas où nous ne savons pas le nombre de lancers à effectuer. L'utilisation du while est alors nécessaire. On peut effectivement s'exprimer ainsi: "Tant que je n'ai pas obtenu la valeur 6, je lance mon dé à nouveau".
+
+```
+WHILE result_de != 6
+  nb_lancer <- nb_lancer + 1
+END WHILE
+PRINT nb_lancer
+
+Tant que je n'ai pas obtenu la valeur 6
+On lance à nouveau le dé
+L'expérience se termine lorsque j'obtiens la valeur 6
+Je peux alors dire combien de lancer(s) ça m'a pris
+```
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 3.1
+
+Étant un peu vantard, Thomas aimerait ajouter à ses amis que d'obtenir 6 en lançant un dé n'est pas une expérience aléatoire (seulement dans son cas). Ainsi, s'il obtient la valeur 6 en un seul lancer, il aimerait leur indiquer: "je suis un maître lanceur!", alors que s'il l'obtient en plus d'un lancer, il aimerait leur mentionner que "le dé est forcément truqué!".
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 3.1 (solution)
+
+On cherche premièrement à reproduire le même pseudo-code que l'exemple initial. Puis, à la suite de l'expérience, on peut conclure dépendamment des `2` cas possibles.
+
+```
+WHILE result_de != 6
+  nb_lancer <- nb_lancer + 1
+END WHILE
+IF nb_lancer = 1
+  PRINT "Je suis un maître lanceur"
+ELSE
+  PRINT "Le dé est forcément truqué!"
+ENDIF
+
+Si un seul lancer fut nécessaire afin d'obtenir 6
+Thomas indiquera alors à ses amis qu'il est un maître lanceur
+Dans un cas contraire
+Thomas indiquera que c'est forcément un dé truqué
+```
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 3.2
+
+Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer à ses amis qu'il a été chanceux si 1 seul lancer fut nécessaire, qu'il n'est pas chanceux lorsque le nombre de lancers fut entre 2 et 6, et qu'il est extrêmement mal chanceux de l'avoir obtenu en plus de 6 lancers.
+
+---
+
+# Le `pseudo-code`
+
+## Exemple 3.2 (solution)
+
+On cherche premièrement à reproduire le même pseudo-code que l'exemple initial. Puis, à la suite de l'expérience, on peut conclure dépendamment des `2` cas possibles.
+
+```
+WHILE result_de != 6
+  nb_lancer <- nb_lancer + 1
+END WHILE
+IF nb_lancer = 1
+  PRINT "J'ai été chanceux!"
+IF ELSE nb_lancer > 6
+  PRINT "Je suis extrêmement malchanceux..."
+ELSE 
+  PRINT "Je ne suis pas chanceux."
+ENDIF
+
+Si un seul lancer fut nécessaire afin d'obtenir 6
+Thomas indiquera alors à ses amis qu'il a été chanceux
+Si le nombre de lancers nécessaire fut supérieur à 6
+Il indiquera qu'il a été extrêmement malchanceux
+Autrement (2,3,4,5,6)
+Il indiquera qu'il n'a pas été chanceux
+```
+
+---
 class: inverse, middle, center
 
 # Les bonnes pratiques en programmation scientifique
