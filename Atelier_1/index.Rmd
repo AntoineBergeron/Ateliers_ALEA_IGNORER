@@ -676,6 +676,8 @@ On ajoute deux oranges dans la caisse 2
 
 Thomas souhaite lancer un dé équilibré jusqu'attend d'obtenir la valeur 6. Il aimerait précisément savoir en combien de lancer il aura obtenu la valeur 6. 
 
+<img src="assets/img/de6.PNG" width="60%"></img>
+
 ---
 
 # Le `pseudo-code`
