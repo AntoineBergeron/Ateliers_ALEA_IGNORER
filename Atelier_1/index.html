@@ -803,7 +803,7 @@ Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer 
 
 ## Exemple 3.2 (solution)
 
-On cherche premièrement à reproduire le même pseudo-code que l'exemple initial. Puis, à la suite de l'expérience, on peut conclure dépendamment des `2` cas possibles.
+Dans ce cas-ci, il y a `3` cas possibles.
 
 ```
 WHILE result_de != 6
@@ -1009,7 +1009,7 @@ Quand quelque chose fonctionne, on ne veut surtout pas le briser. C'est pourquoi
 ---
 class: inverse, middle, center
 
-# Exercice 
+# Exercices 
 &lt;hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
@@ -1025,12 +1025,82 @@ head(can)
 ```
 
 ```
-##   Etudiant Français Mathematique Anglais Musique Histoire Dance
-## 1        1       41           57      59      73       82    78
-## 2        2       63           92      44      64       54    86
-## 3        3       63           97      57      56       56    71
-## 4        4       59           85      88      98       88    83
-## 5        5       95           43      70      89       93    61
+##   Francais Mathematique Anglais Musique Histoire Danse
+## 1       41           57      59      73       82    78
+## 2       63           92      44      64       54    86
+## 3       63           97      57      56       56    71
+## 4       59           85      88      98       88    83
+## 5       95           43      70      89       93    61
+```
+
+1- Étant l'étudiant numéro 2, j'aimerais calculer ma moyenne générale. 
+
+2- Étant le professeur d'anglais, j'aimerais calculer la moyenne de ma classe.
+
+---
+
+# Solution de l'exercice 1
+
+.pull-left[
+## Solution 1:
+
+```
+FOR posC IN 1:6
+  SUM Note[2,posC]
+END FOR
+MOY &lt;- SUM/NbDeCours
+```
+
+]
+
+.pull-right[
+
+## Solution 2:
+
+```
+FOR posL IN 1:5
+  SUM Note[posL,3]
+END FOR
+MOY &lt;- SUM/NbEtudiant
+```
+]
+
+
+---
+
+# Exercice 2
+
+Soit le tableau suivant:
+
+
+```r
+can &lt;- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(can)
+```
+
+```
+##   Francais Mathematique Anglais Musique Histoire Danse
+## 1       41           57      59      73       82    78
+## 2       63           92      44      64       54    86
+## 3       63           97      57      56       56    71
+## 4       59           85      88      98       88    83
+## 5       95           43      70      89       93    61
+```
+
+En temps que directeur d'une école, je souhaite obtenir la moyenne générale de mon établissement scolaire. Ainsi, je souhaiterais obtenir la moyenne des moyennes générales de chaque étudiants. À l'aide de boucle `for`, calculer la moyenne de l'établissement scolaire.
+
+---
+
+# Solution de l'exercice 
+
+```
+FOR posL IN 1:5
+  FOR posC IN 1:6
+    SUM Note[posL,posC]
+  END FOR
+  MOY[posL] &lt;- SUM/NbDeCours
+END FOR
+MOYGEN &lt;- SUM(MOY)/NbEtudiant
 ```
 
 
@@ -1876,8 +1946,8 @@ MaPremiereMatrice
 
 ```
 ##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 12.24593 53.94253 84.03695 46.07010 85.00293
-## [2,] 31.53088 47.55869 23.62850 90.49789 30.99807
+## [1,] 95.80551 13.26580 99.52812 98.50966 77.07935
+## [2,] 70.48017 57.53836 37.43455 21.70579 60.39229
 ```
 
 ```r
@@ -1885,7 +1955,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 43.77681
+## [1] 166.2857
 ```
 
 
@@ -2441,8 +2511,8 @@ tri
 ```
 
 ```
-##  [1] 14.47996 21.90955 75.99762 48.67838 57.09863 19.76172 77.92729 13.23549
-##  [9] 43.25940 47.99532
+##  [1] 28.81343 66.98205 50.38391 12.04372 92.17302 35.48893 87.51373 16.83606
+##  [9] 64.86549 28.69258
 ```
 
 ```r
@@ -2450,8 +2520,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 13.23549 14.47996 19.76172 21.90955 43.25940 47.99532 48.67838 57.09863
-##  [9] 75.99762 77.92729
+##  [1] 12.04372 16.83606 28.69258 28.81343 35.48893 50.38391 64.86549 66.98205
+##  [9] 87.51373 92.17302
 ```
 
 ---
@@ -2464,8 +2534,8 @@ rang
 ```
 
 ```
-##  [1]  6.849851 89.985157 39.145334 21.569321 28.508972 42.884620 57.062627
-##  [8] 35.980880 52.687892 46.368745
+##  [1]  2.114835 37.214142 15.715031  4.933433 19.106664 39.842374  8.402881
+##  [8] 84.919521 30.785726 51.416901
 ```
 
 ```r
@@ -2473,7 +2543,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  1 10  5  2  3  6  9  4  8  7
+##  [1]  1  7  4  2  5  8  3 10  6  9
 ```
 
 ---
