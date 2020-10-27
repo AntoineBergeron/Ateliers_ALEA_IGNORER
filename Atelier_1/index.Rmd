@@ -2010,15 +2010,15 @@ unique(uq)
 
 Parfois, on souhaite avoir seulement une partie des données contenues dans un objet. La fonction `subset()` est fort pratique pour réaliser cette opération.
 
-Ici par exemple, on souhaite étudier seulement les joueurs de centre ayant fait au moins un but en désavantage numérique:
+Ici par exemple, on souhaite étudier seulement les joueurs du Canadiens ayant au moins 15 buts et au moins 40 points:
 
 ```{r}
-NHL <- read.table(file="donnees/Canadiens.csv", header=TRUE, stringsAsFactors=FALSE, sep = ";")
-sub_Centres <- subset(NHL, NHL$pos == "C" & NHL$Shpoints >= 1)
-head(sub_Centres, n=2)
+Canad <- read.table(file="donnees/Canadiens.csv", header=TRUE, stringsAsFactors=FALSE, sep = ";")
+sub_Centres <- subset(Canad, Canad$Buts >= 15 & Canad$Points >= 40)
+head(sub_Centres, n=3)
 ```
 
-Le "==" est utilisé pour sélectionner les individus qui sont des joueurs de centre et le symbole "&" pour combiner deux conditions.
+Le ">=" est utilisé pour le `au moins` (plus grand ou égal) et le symbole "&" pour combiner deux conditions. (agit en tant que ET)
 
 ---
 # Exercice 
