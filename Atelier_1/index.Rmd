@@ -1938,9 +1938,9 @@ Dans R:
 - Enregistrer `ButsMoyen` sous forme de fichier `CSV`. (séparateur point-virgule) (`write.table()`)
 - Ouvrir le fichier `CSV` et le comparer au résultat de l'étape 1 dans Excel.
 
-**Note1:** La fonction t() vous permet de transposer un tableau. (3 lignes, 1 colonne devient 1 ligne, 3 colonnes)
-**Note2:** Vous pouvez explorer les données avec `summary`. Les plus avancés peuvent explorer la commande `apply`.
-**Note3:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide sur cette fonction.
+**Note 1:** La fonction t() vous permet de transposer un tableau. (3 lignes, 1 colonne devient 1 ligne, 3 colonnes)
+
+**Note 2:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide sur cette fonction.
 
 ---
 class: middle, center, inverse
