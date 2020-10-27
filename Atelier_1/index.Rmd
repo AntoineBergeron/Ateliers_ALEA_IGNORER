@@ -972,7 +972,7 @@ Quand quelque chose fonctionne, on ne veut surtout pas le briser. C'est pourquoi
 ---
 class: inverse, middle, center
 
-# Exercice 
+# Exercices 
 <hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"></hr>
 
 ---
@@ -984,6 +984,66 @@ Soit le tableau suivant:
 ```{r}
 can <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
 head(can)
+```
+
+1- Étant l'étudiant numéro 2, j'aimerais calculer ma moyenne générale. 
+
+2- Étant le professeur d'anglais, j'aimerais calculer la moyenne de ma classe.
+
+---
+
+# Solution de l'exercice 1
+
+.pull-left[
+## Solution 1:
+
+```
+FOR posC IN 1:6
+  SUM Note[2,posC]
+END FOR
+MOY <- SUM/NbDeCours
+```
+
+]
+
+.pull-right[
+
+## Solution 2:
+
+```
+FOR posL IN 1:5
+  SUM Note[posL,3]
+END FOR
+MOY <- SUM/NbEtudiant
+```
+]
+
+
+---
+
+# Exercice 2
+
+Soit le tableau suivant:
+
+```{r}
+can <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(can)
+```
+
+En temps que directeur d'une école, je souhaite obtenir la moyenne générale de mon établissement scolaire. Ainsi, je souhaiterais obtenir la moyenne des moyennes générales de chaque étudiants. À l'aide de boucle `for`, calculer la moyenne de l'établissement scolaire.
+
+---
+
+# Solution de l'exercice 
+
+```
+FOR posL IN 1:5
+  FOR posC IN 1:6
+    SUM Note[posL,posC]
+  END FOR
+  MOY[posL] <- SUM/NbDeCours
+END FOR
+MOYGEN <- SUM(MOY)/NbEtudiant
 ```
 
 

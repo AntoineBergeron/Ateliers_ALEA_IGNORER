@@ -1009,7 +1009,7 @@ Quand quelque chose fonctionne, on ne veut surtout pas le briser. C'est pourquoi
 ---
 class: inverse, middle, center
 
-# Exercice 
+# Exercices 
 &lt;hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
@@ -1025,12 +1025,82 @@ head(can)
 ```
 
 ```
-##   Etudiant Français Mathematique Anglais Musique Histoire Dance
-## 1        1       41           57      59      73       82    78
-## 2        2       63           92      44      64       54    86
-## 3        3       63           97      57      56       56    71
-## 4        4       59           85      88      98       88    83
-## 5        5       95           43      70      89       93    61
+##   Francais Mathematique Anglais Musique Histoire Danse
+## 1       41           57      59      73       82    78
+## 2       63           92      44      64       54    86
+## 3       63           97      57      56       56    71
+## 4       59           85      88      98       88    83
+## 5       95           43      70      89       93    61
+```
+
+1- Étant l'étudiant numéro 2, j'aimerais calculer ma moyenne générale. 
+
+2- Étant le professeur d'anglais, j'aimerais calculer la moyenne de ma classe.
+
+---
+
+# Solution de l'exercice 1
+
+.pull-left[
+## Solution 1:
+
+```
+FOR posC IN 1:6
+  SUM Note[2,posC]
+END FOR
+MOY &lt;- SUM/NbDeCours
+```
+
+]
+
+.pull-right[
+
+## Solution 2:
+
+```
+FOR posL IN 1:5
+  SUM Note[posL,3]
+END FOR
+MOY &lt;- SUM/NbEtudiant
+```
+]
+
+
+---
+
+# Exercice 2
+
+Soit le tableau suivant:
+
+
+```r
+can &lt;- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(can)
+```
+
+```
+##   Francais Mathematique Anglais Musique Histoire Danse
+## 1       41           57      59      73       82    78
+## 2       63           92      44      64       54    86
+## 3       63           97      57      56       56    71
+## 4       59           85      88      98       88    83
+## 5       95           43      70      89       93    61
+```
+
+En temps que directeur d'une école, je souhaite obtenir la moyenne générale de mon établissement scolaire. Ainsi, je souhaiterais obtenir la moyenne des moyennes générales de chaque étudiants. À l'aide de boucle `for`, calculer la moyenne de l'établissement scolaire.
+
+---
+
+# Solution de l'exercice 
+
+```
+FOR posL IN 1:5
+  FOR posC IN 1:6
+    SUM Note[posL,posC]
+  END FOR
+  MOY[posL] &lt;- SUM/NbDeCours
+END FOR
+MOYGEN &lt;- SUM(MOY)/NbEtudiant
 ```
 
 
@@ -1875,9 +1945,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]      [,3]     [,4]      [,5]
-## [1,] 58.85759 44.46920  8.884368 47.65732 81.599886
-## [2,] 88.25394 74.33045 11.437076 92.49046  8.650506
+##          [,1]     [,2]     [,3]     [,4]     [,5]
+## [1,] 95.80551 13.26580 99.52812 98.50966 77.07935
+## [2,] 70.48017 57.53836 37.43455 21.70579 60.39229
 ```
 
 ```r
@@ -1885,7 +1955,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 147.1115
+## [1] 166.2857
 ```
 
 
@@ -2441,8 +2511,8 @@ tri
 ```
 
 ```
-##  [1] 53.23000 29.97063 34.96845 91.49127 99.05274 73.10441 21.26096 21.21353
-##  [9] 71.13978 42.27000
+##  [1] 28.81343 66.98205 50.38391 12.04372 92.17302 35.48893 87.51373 16.83606
+##  [9] 64.86549 28.69258
 ```
 
 ```r
@@ -2450,8 +2520,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 21.21353 21.26096 29.97063 34.96845 42.27000 53.23000 71.13978 73.10441
-##  [9] 91.49127 99.05274
+##  [1] 12.04372 16.83606 28.69258 28.81343 35.48893 50.38391 64.86549 66.98205
+##  [9] 87.51373 92.17302
 ```
 
 ---
@@ -2464,8 +2534,8 @@ rang
 ```
 
 ```
-##  [1] 91.187527  7.378339 58.052033 98.618771 37.665980 77.551891 51.712405
-##  [8] 29.649102 60.132495 38.035959
+##  [1]  2.114835 37.214142 15.715031  4.933433 19.106664 39.842374  8.402881
+##  [8] 84.919521 30.785726 51.416901
 ```
 
 ```r
@@ -2473,7 +2543,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  9  1  6 10  3  8  5  2  7  4
+##  [1]  1  7  4  2  5  8  3 10  6  9
 ```
 
 ---
