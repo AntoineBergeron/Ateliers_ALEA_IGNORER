@@ -1948,8 +1948,8 @@ MaPremiereMatrice
 
 ```
 ##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 50.05857 85.32682 66.42583 88.45359 22.67499
-## [2,] 16.89869 51.61193 88.88518 35.41982 68.32970
+## [1,] 85.41957 82.75356 51.54374 96.15790 66.55389
+## [2,] 93.24925 81.40787 42.82888 93.33671 50.13154
 ```
 
 ```r
@@ -1957,7 +1957,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 66.95726
+## [1] 178.6688
 ```
 
 
@@ -2435,9 +2435,9 @@ Dans R:
 - Enregistrer `ButsMoyen` sous forme de fichier `CSV`. (séparateur point-virgule) (`write.table()`)
 - Ouvrir le fichier `CSV` et le comparer au résultat de l'étape 1 dans Excel.
 
-**Note1:** La fonction t() vous permet de transposer un tableau. (3 lignes, 1 colonne devient 1 ligne, 3 colonnes)
-**Note2:** Vous pouvez explorer les données avec `summary`. Les plus avancés peuvent explorer la commande `apply`.
-**Note3:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide sur cette fonction.
+**Note 1:** La fonction t() vous permet de transposer un tableau. (3 lignes, 1 colonne devient 1 ligne, 3 colonnes)
+
+**Note 2:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide sur cette fonction.
 
 ---
 class: middle, center, inverse
@@ -2528,8 +2528,8 @@ tri
 ```
 
 ```
-##  [1] 36.107049 98.913747  2.932636 48.670830 27.742219 24.680287 12.316711
-##  [8] 44.842467 68.474007 63.330115
+##  [1] 51.526848 17.347013 43.626679 76.110275 95.535163  8.710017 36.436102
+##  [8] 19.432824 77.166491 51.816033
 ```
 
 ```r
@@ -2537,8 +2537,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  2.932636 12.316711 24.680287 27.742219 36.107049 44.842467 48.670830
-##  [8] 63.330115 68.474007 98.913747
+##  [1]  8.710017 17.347013 19.432824 36.436102 43.626679 51.526848 51.816033
+##  [8] 76.110275 77.166491 95.535163
 ```
 
 ---
@@ -2551,8 +2551,8 @@ rang
 ```
 
 ```
-##  [1] 91.214422 80.369745 21.905576  8.899647 73.222373 44.642070 81.749857
-##  [8] 62.571758 45.104890 29.922281
+##  [1] 95.794317 39.911398 97.378659 36.119626  8.639456 75.607334 14.334953
+##  [8]  7.526812 17.289135 93.748333
 ```
 
 ```r
@@ -2560,7 +2560,7 @@ rank(rang)
 ```
 
 ```
-##  [1] 10  8  2  1  7  4  9  6  5  3
+##  [1]  9  6 10  5  2  7  3  1  4  8
 ```
 
 ---
