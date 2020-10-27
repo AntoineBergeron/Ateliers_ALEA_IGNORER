@@ -1091,7 +1091,7 @@ En temps que directeur d'une école, je souhaite obtenir la moyenne générale d
 
 ---
 
-# Solution de l'exercice 
+# Solution de l'exercice 2
 
 ```
 FOR posL IN 1:5
@@ -1103,21 +1103,22 @@ END FOR
 MOYGEN &lt;- SUM(MOY)/NbEtudiant
 ```
 
-
 ---
 
 
 
-# Une situation qui peut arriver tous les jours
+# Exercice 3
 
 1. On jette en face de vous 5 lettres d'un jeu de scrabble
 2. Un maniac vous demande d'écrire un programme permettant d'ordonner les 5 lettres
 
 Prenez le temps de distinguer les étapes que vous réalisez lorsque vous triez les lettres. Essayez de les décrire sous forme de pseudo-code.
 
+Note: L'utilisation de booléen peut être utile. `is.sort = FALSE` indique que les 5 lettres ne sont pas ordonnées!
+
 ---
 
-# Solutions de l'exercice 
+# Solutions de l'exercice 3 
 
 Ordonner un vecteur `X` composé de 5 lettres de Scrabble
 
@@ -1266,8 +1267,9 @@ dir()
 ```
 
 ```
-## [1] "assets"        "donnees"       "index.html"    "index.Rmd"    
-## [5] "index_files"   "MaListe.Rdata" "mat.csv"       "test.Rdata"
+## [1] "assets"            "ButsMoyenNouv.csv" "donnees"          
+## [4] "index.html"        "index.Rmd"         "index_files"      
+## [7] "MaListe.Rdata"     "mat.csv"           "test.Rdata"
 ```
 
 ## Obtenir la liste des objets en mémoire
@@ -1945,9 +1947,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 95.80551 13.26580 99.52812 98.50966 77.07935
-## [2,] 70.48017 57.53836 37.43455 21.70579 60.39229
+##            [,1]      [,2]     [,3]     [,4]      [,5]
+## [1,]  0.4875017  7.598019 25.37619 29.81684 0.5227101
+## [2,] 80.8353594 15.319435 31.27126 49.31003 8.3704479
 ```
 
 ```r
@@ -1955,7 +1957,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 166.2857
+## [1] 81.32286
 ```
 
 
@@ -2399,19 +2401,30 @@ Tirs
 
 # Exercice de manipulation des données
 
-- Ouvrir le fichier [ButsResult.csv](./donnees/ButsResult.csv) au moyen de Excel ou d'un éditeur de texte
+- Ouvrir le fichier [ButsResult.csv](./donnees/ButsResult.csv) au moyen de Excel
 - Ouvrir le même fichier au moyen de R
 
 Dans Excel: 
 - Calculer le nombre moyen de buts marqué par le Canadiens de Montréal en fonction des résultats de la partie. 
+- Exprimer le résultat d'un tableau.
 
 Dans R:
-- Vérifier que le fichier a le format approprié
-- Créer un vecteur `ButsMoyen` d'une longueur correspondant au nombre de catégories de résultat d'une partie dans le fichier de données
+- Vérifier que le fichier a le format approprié.
+- Créer un vecteur `ButsMoyen` d'une longueur correspondant au nombre de catégories de résultat d'une partie dans le fichier de données.
+- Attribuer les types de résultats pour chaque entrée de `ButsMoyen`.
 - Enregistrer le fichier sous forme de fichier `csv` et comparer le avec le fichier Excel.
 
 ---
 
+# Exercice de manipulation des données (suite)
+
+Dans Excel:
+- Afin de calculer le nombre moyen de buts marqué en fonction des différents résultats d'une partie sur Excel, nous devons calculer (en exemple, pour les défaites): `Somme` de `Nombre de buts marqué * Nombre de défaites par ce nombre de buts`
+
+Puis diviser cette somme par le nombre total de défaites.
+
+
+---
 # Exercice de manipulation des données (suite)
 
 - Calculer le nombre moyen de buts marqué par le Canadiens de Montréal pour chacun des résultats d'une partie (victoire, Nulle, Défaite). La fonction 'mean' et l'inscrire dans chaque position de `ButsMoyen`
@@ -2511,8 +2524,8 @@ tri
 ```
 
 ```
-##  [1] 28.81343 66.98205 50.38391 12.04372 92.17302 35.48893 87.51373 16.83606
-##  [9] 64.86549 28.69258
+##  [1] 50.40555 75.82701 47.63888 82.98733  4.68747 92.33342 26.03883 98.90604
+##  [9] 88.79556 64.12364
 ```
 
 ```r
@@ -2520,8 +2533,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 12.04372 16.83606 28.69258 28.81343 35.48893 50.38391 64.86549 66.98205
-##  [9] 87.51373 92.17302
+##  [1]  4.68747 26.03883 47.63888 50.40555 64.12364 75.82701 82.98733 88.79556
+##  [9] 92.33342 98.90604
 ```
 
 ---
@@ -2534,8 +2547,8 @@ rang
 ```
 
 ```
-##  [1]  2.114835 37.214142 15.715031  4.933433 19.106664 39.842374  8.402881
-##  [8] 84.919521 30.785726 51.416901
+##  [1] 55.9412565  0.6375208 86.2312336 83.4921177 67.7400158  2.5137262
+##  [7] 50.7722331 91.0927019 94.1788570 17.3267967
 ```
 
 ```r
@@ -2543,7 +2556,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  1  7  4  2  5  8  3 10  6  9
+##  [1]  5  1  8  7  6  2  4  9 10  3
 ```
 
 ---

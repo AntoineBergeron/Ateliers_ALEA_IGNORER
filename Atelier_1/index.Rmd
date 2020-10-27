@@ -1034,7 +1034,7 @@ En temps que directeur d'une école, je souhaite obtenir la moyenne générale d
 
 ---
 
-# Solution de l'exercice 
+# Solution de l'exercice 2
 
 ```
 FOR posL IN 1:5
@@ -1046,21 +1046,22 @@ END FOR
 MOYGEN <- SUM(MOY)/NbEtudiant
 ```
 
-
 ---
 
 
 
-# Une situation qui peut arriver tous les jours
+# Exercice 3
 
 1. On jette en face de vous 5 lettres d'un jeu de scrabble
 2. Un maniac vous demande d'écrire un programme permettant d'ordonner les 5 lettres
 
 Prenez le temps de distinguer les étapes que vous réalisez lorsque vous triez les lettres. Essayez de les décrire sous forme de pseudo-code.
 
+Note: L'utilisation de booléen peut être utile. `is.sort = FALSE` indique que les 5 lettres ne sont pas ordonnées!
+
 ---
 
-# Solutions de l'exercice 
+# Solutions de l'exercice 3 
 
 Ordonner un vecteur `X` composé de 5 lettres de Scrabble
 
@@ -1903,19 +1904,30 @@ Tirs
 
 # Exercice de manipulation des données
 
-- Ouvrir le fichier [ButsResult.csv](./donnees/ButsResult.csv) au moyen de Excel ou d'un éditeur de texte
+- Ouvrir le fichier [ButsResult.csv](./donnees/ButsResult.csv) au moyen de Excel
 - Ouvrir le même fichier au moyen de R
 
 Dans Excel: 
 - Calculer le nombre moyen de buts marqué par le Canadiens de Montréal en fonction des résultats de la partie. 
+- Exprimer le résultat d'un tableau.
 
 Dans R:
-- Vérifier que le fichier a le format approprié
-- Créer un vecteur `ButsMoyen` d'une longueur correspondant au nombre de catégories de résultat d'une partie dans le fichier de données
+- Vérifier que le fichier a le format approprié.
+- Créer un vecteur `ButsMoyen` d'une longueur correspondant au nombre de catégories de résultat d'une partie dans le fichier de données.
+- Attribuer les types de résultats pour chaque entrée de `ButsMoyen`.
 - Enregistrer le fichier sous forme de fichier `csv` et comparer le avec le fichier Excel.
 
 ---
 
+# Exercice de manipulation des données (suite)
+
+Dans Excel:
+- Afin de calculer le nombre moyen de buts marqué en fonction des différents résultats d'une partie sur Excel, nous devons calculer (en exemple, pour les défaites): `Somme` de `Nombre de buts marqué * Nombre de défaites par ce nombre de buts`
+
+Puis diviser cette somme par le nombre total de défaites.
+
+
+---
 # Exercice de manipulation des données (suite)
 
 - Calculer le nombre moyen de buts marqué par le Canadiens de Montréal pour chacun des résultats d'une partie (victoire, Nulle, Défaite). La fonction 'mean' et l'inscrire dans chaque position de `ButsMoyen`
