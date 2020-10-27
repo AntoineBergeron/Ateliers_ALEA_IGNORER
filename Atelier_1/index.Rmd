@@ -1909,7 +1909,7 @@ Tirs
 
 Dans Excel: 
 - Calculer le nombre moyen de buts marqué par le Canadiens de Montréal en fonction des résultats de la partie. 
-- Exprimer le résultat d'un tableau.
+- Exprimer le résultat en un tableau avec titres au colonne.
 
 Dans R:
 - Vérifier que le fichier a le format approprié.
@@ -1922,21 +1922,25 @@ Dans R:
 # Exercice de manipulation des données (suite)
 
 Dans Excel:
-- Afin de calculer le nombre moyen de buts marqué en fonction des différents résultats d'une partie sur Excel, nous devons calculer (en exemple, pour les défaites): `Somme` de `Nombre de buts marqué * Nombre de défaites par ce nombre de buts`
+- Afin de calculer le nombre moyen de buts marqué en fonction des différents résultats d'une partie sur Excel, nous devons calculer (en exemple, pour les défaites): `Somme` de `Nombre de buts marqué * Nombre de défaites par ce nombre de buts`, puis diviser cette somme par le nombre total de défaites. (Répéter pour les égalités et les victoires)
 
-Puis diviser cette somme par le nombre total de défaites.
+Il suffit ensuite d'ajouter `Défaite`, `Égalité` et `Victoire` comme titre de nos trois colonnes.
 
 
 ---
 # Exercice de manipulation des données (suite)
 
-- Calculer le nombre moyen de buts marqué par le Canadiens de Montréal pour chacun des résultats d'une partie (victoire, Nulle, Défaite). La fonction 'mean' et l'inscrire dans chaque position de `ButsMoyen`
-- Convertir ButsMoyen en `data.frame`
-- Attribuer les noms des positions pour chaque entrée de `ButsMoyen`
-- Enregistrer `ButsMoyen` sous forme de fichier `CSV` (séparateur point-virgule)
-- Ouvrir le fichier `CSV` et le comparer au calcul fait aux moyennes d’Excel
+Dans R:
+- D'abord, on importe nos données (`read.table()`).
+- On calcule avec la même méthode que pour le Excel, le nombre moyen de buts en fonction du résultat de la partie.
+- Convertir le vecteur `ButsMoyen` en tableau de données. (`as.data.frame()`)
+- Attribuer les noms des positions pour chaque entrée de `ButsMoyen`. (`Colnames()`)
+- Enregistrer `ButsMoyen` sous forme de fichier `CSV`. (séparateur point-virgule) (`write.table()`)
+- Ouvrir le fichier `CSV` et le comparer au résultat de l'étape 1 dans Excel.
 
-**Note:** vous pouvez explorer les données avec `summary`. Les plus avancés peuvent explorer la commande `apply`...
+**Note1:** La fonction t() vous permet de transposer un tableau. (3 lignes, 1 colonne devient 1 ligne, 3 colonnes)
+**Note2:** Vous pouvez explorer les données avec `summary`. Les plus avancés peuvent explorer la commande `apply`.
+**Note3:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide sur cette fonction.
 
 ---
 class: middle, center, inverse
