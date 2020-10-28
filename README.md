@@ -10,11 +10,11 @@
 
 ## Bienvenue à l'atelier 2
 
-- [Présentation HTML](https://ALEA-UdeS.github.io/Atelier-R/Atelier_1B)
+- [Présentation HTML](https://AntoineBergeron.github.io/Ateliers_ALEA/Atelier_2)
 
 ## Bienvenue à l'atelier 3
 
-- [Présentation HTML](https://ALEA-UdeS.github.io/Atelier-R/Atelier_2)
+- [Présentation HTML](https://AntoineBergeron.github.io/Ateliers_ALEA/Atelier_3)
 
 
 ### Utilisation du diaporama
