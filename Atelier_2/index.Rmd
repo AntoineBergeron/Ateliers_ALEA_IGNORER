@@ -129,13 +129,24 @@ vec1 <- c(10,20,30)
 mat1 <- matrix(c(1:6), nrow = 3, ncol = 2)
 mat1
 vec1 * mat1
-mat1 * vec1
 
 ```
 
-Notons que le calcul est ici possible étant donné que le nombre de colonne (3) de notre vecteur correspond au nombre de ligne (3) de notre matrice. 
-
 ---
+
+# Opérations sur des vecteurs et matrices (suite)
+
+Sur R, il suffit que la longueur de notre vecteur équivaut au nombre de colonnes ou de lignes de la matrice pour que l'opération soit valide. Dans les deux cas, chaque élément du vecteur multiplie les éléments de la matrice dans l'ordre des colonnes.
+
+```{r}
+vec1 <- c(10,20,30)
+mat1 <- matrix(c(1:6), nrow = 3, ncol = 2)
+mat2 <- matrix(c(1:6), nrow = 2, ncol = 3)
+mat2
+vec1 * mat1
+vec1 * mat2
+
+```
 
 # Opérations avancées
 
