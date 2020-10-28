@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.71696300 0.41157828 0.41081299 0.63011321 0.52797914 0.46795682
-##  [7] 0.34822692 0.77591701 0.07755917 0.66176627
+##  [1] 0.35915287 0.03194434 0.23689690 0.63350231 0.66548394 0.03970199
+##  [7] 0.64609424 0.49099604 0.38594650 0.23290185
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.8469876 0.3286627 0.6209769 0.8551171 0.7483372 0.6871514 0.7381199
-##  [8] 0.8954039 0.8664679 0.3722878
+##  [1] 0.84019855 0.50312044 0.03276259 0.61094380 0.69226400 0.40355563
+##  [7] 0.33857974 0.66281008 0.27439638 0.79853384
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.3286627
+## [1] 0.03276259
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.8954039
+## [1] 0.8401985
 ```
 
 ---
@@ -380,8 +380,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.3488924 0.2643905
-## [2,] 0.9251161 0.2732136
+## [1,] 0.9379754 0.4392389
+## [2,] 0.2789323 0.5930483
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 0.6132829 1.1983297
+## [1] 1.3772143 0.8719806
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.274009 0.537604
+## [1] 1.216908 1.032287
 ```
 
 ---
@@ -413,8 +413,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.3488924 0.2643905
-## [2,] 0.9251161 0.2732136
+## [1,] 0.9379754 0.4392389
+## [2,] 0.2789323 0.5930483
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 0.6132829 1.1983297
+## [1] 1.3772143 0.8719806
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.274009 0.537604
+## [1] 1.216908 1.032287
 ```
 
 ---
@@ -472,13 +472,15 @@ class: middle, center, inverse
 
 ---
 
-# Exercice: Abondances relatives
+# Exercice: Abondances relatives (en nourriture et boisson aussi!)
 
-Au moyen du fichier [PositionEquipe.csv](./donnees/PositionEquipe.csv), je vous demande de faire les opérations suivantes:
+Au moyen du fichier [party.csv](./donnees/party.csv), je vous demande de faire les opérations suivantes:
 
-1. Calculer le nombre total de joueurs pour chacune des positions, le nombre moyen de joueurs par équipe pour chacune des positions et le coefficient de variation (CV = Écart-type/Moyenne).
-2. Calculer le nombre total de joueurs pour chacune des positions par équipe.
-3. Transformer les valeurs trouvées en (2) en pourcentage.
+1. Calculer le nombre total d'enfants ayant bu chaque type de boisson gazeuse. 
+2. Calculer en fonction des sacs de chips le nombre moyen d'enfant par type de liqueur. 
+3. Calculer le coefficient de variation. (Écart-type/Moyenne avec sd() et mean())
+4. Calculer le nombre total d'enfants ayant mangé chaque sorte de chips.
+5. Transformer les valeurs du tableau afin d'obtenir le pourcentage d'enfants ayant mangé chaque sorte de chips.
 
 ---
 
@@ -587,12 +589,12 @@ tableau
 ```
 
 ```
-##              x          y
-## 1 -0.615115314  0.6628795
-## 2 -0.009310692 -1.4921021
-## 3 -1.462947468 -0.3597138
-## 4  0.543782025 -0.1771195
-## 5  0.838502098  0.5297989
+##            x          y
+## 1  0.4310361 -0.6077259
+## 2 -0.9739188 -1.3833191
+## 3  0.3742326 -1.8473693
+## 4  0.3063769 -1.0195036
+## 5 -2.7514053 -0.7017923
 ```
 
 ---
@@ -619,9 +621,9 @@ $$
 ```
 
 ```
-## [1] -8.536671
-## [1] -0.009252954
-## [1] -0.288722
+## [1] 1.482552
+## [1] -0.5715335
+## [1] 0.4693018
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -641,11 +643,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] -8.536671
-## [1] -0.009252954
-## [1] -0.288722
-## [1] -0.2626787
-## [1] 0.3246636
+## [1] 1.482552
+## [1] -0.5715335
+## [1] 0.4693018
+## [1] 0.438004
+## [1] -0.5591673
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -808,7 +810,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1] -8.536671024 -0.009252954 -0.288722008 -0.262678698  0.324663563
+## [1]  1.4825516 -0.5715335  0.4693018  0.4380040 -0.5591673
 ```
 
 ```r
@@ -816,7 +818,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1] -8.536671024 -0.009252954 -0.288722008 -0.262678698  0.324663563
+## [1]  1.4825516 -0.5715335  0.4693018  0.4380040 -0.5591673
 ```
 
 ---
@@ -844,7 +846,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1] -8.536671024 -0.009252954 -0.288722008 -0.137521017
+## [1]  1.4825516 -0.5715335  0.4693018  0.7467579
 ```
 
 ```r
@@ -852,7 +854,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1] -8.536671024 -0.009252954 -0.226978732 -0.008845698
+## [1]  1.4825516 -0.5715335  0.5622143 -0.4980950
 ```
 
 ---
@@ -922,12 +924,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##             x          y
-## 1  0.65825027  0.5709194
-## 2 -0.01083394  0.7075210
-## 3  0.35568222 -0.9401088
-## 4  0.39669625 -0.1968258
-## 5  0.06608493  0.0640132
+##            x             y
+## 1 0.01436947  0.0009166279
+## 2 0.05813179 -3.5742965037
+## 3 0.07584680 -8.9742744239
+## 4 0.20062170 -5.4439184245
+## 5 0.16054395  0.7615018812
 ```
 
 ---
@@ -971,13 +973,13 @@ test
 
 ```
 ## $moyenne
-## [1] 1.050881
+## [1] 0.9726365
 ## 
 ## $ecart_type
-## [1] 0.4804314
+## [1] 0.428006
 ## 
 ## $CV
-## [1] 0.4571702
+## [1] 0.4400473
 ```
 
 ---
