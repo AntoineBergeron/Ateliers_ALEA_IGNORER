@@ -51,7 +51,7 @@ class: middle, center, inverse
 
 ---
 
-# Astuce: générer des nombres aléatoires
+# Générer des nombres aléatoires
 
 Il peut souvent être pratique de générer des chiffres au hasard, sur lesquels on souhaite faire des tests. Nous verrons plusieurs exemples dans les capsules de l'atelier 3 et 4, mais pour l'instant, prenez note de la fonction suivante:
 

@@ -2021,7 +2021,7 @@ head(sub_Centres, n=3)
 Le ">=" est utilisé pour le `au moins` (plus grand ou égal) et le symbole "&" pour combiner deux conditions. (agit en tant que ET)
 
 ---
-# Exercice Récapitulatif de l'atelier
+# Exercice récapitulatif de l'atelier
 
 Le fichier [ExerciceRecapitulatif.csv](./donnees/ExerciceRecapitulatif.csv) est un sommaire des données sur le virus qui frappe présentement la planète Erret: Le Divoc-91!
 
