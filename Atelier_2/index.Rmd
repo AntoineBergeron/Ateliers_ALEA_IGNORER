@@ -129,8 +129,11 @@ vec1 <- c(10,20,30)
 mat1 <- matrix(c(1:6), nrow = 3, ncol = 2)
 mat1
 vec1 * mat1
+mat1 * vec1
 
 ```
+
+Notons que le calcul est ici possible étant donné que le nombre de colonne (3) de notre vecteur correspond au nombre de ligne (3) de notre matrice. 
 
 ---
 
