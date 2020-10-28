@@ -146,6 +146,8 @@ vec1 * mat2
 
 ```
 
+---
+
 # Opérations avancées
 
 <b>Logarithme népérien</b>
