@@ -140,10 +140,8 @@ Sur R, il suffit que la longueur de notre vecteur équivaut au nombre de colonne
 
 ```{r}
 vec1 <- c(10,20,30)
-mat1 <- matrix(c(1:6), nrow = 3, ncol = 2)
 mat2 <- matrix(c(1:6), nrow = 2, ncol = 3)
 mat2
-vec1 * mat1
 vec1 * mat2
 
 ```
