@@ -2032,8 +2032,7 @@ De plus, il mentionne que pour tout individu ayant passé **au moins 13 jours à
 M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
 
 ---
-
-Indication:
+# Indications
 
 1. Charger les données "ExerciceRecapitulatif". (vous pouvez modifier le nom des colonnes si nécessaire)
 2. Créer le premier tableau demandé.
@@ -2042,4 +2041,8 @@ Indication:
 4. Combiner les deux tableaux.
 5. Enregistrer les résultats dans un tableau où les étiquettes de rangées correspondent aux nombres de jours passés à l'hôpital (la dernière ligne correspondra au frais totaux par région) et les étiquettes des colonnes correspondent aux régions.
 
+---
+# Suite
+
+À l'aide **seulement** du tableau final obtenu à la question précédente, expliquez comment vous procéderiez (à l'aide d'un pseudo-code) afin de calculer le nombre total d'individu ayant eu besoin d'aller à l'hôpital plus d'une journée.
 
