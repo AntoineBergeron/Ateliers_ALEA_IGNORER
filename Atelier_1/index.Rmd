@@ -2027,7 +2027,7 @@ Le fichier [ExerciceRecapitulatif.csv](./donnees/ExerciceRecapitulatif.csv) est 
 
 À partir de ces données, le docteur Kombucha aimerait avoir un tableau détaillé du nombre de jours qu'un patient à passé à l'hôpital en fonction de sa région. 
 
-De plus, il mentionne que pour tout individu ayant passé **au moins 13 jours à l'hôpital**, on devra charger les individus à des frais différents, selon leur région. Les frais sont les suivants: 10 \$ pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15 \$ par individus, alors que pour les autres régions, les frais s'élèvent à 5 \$ par personne.
+De plus, il mentionne que pour tout individu ayant passé **au moins 13 jours à l'hôpital**, on devra charger les individus à des frais différents, selon leur région. Les frais sont les suivants: 10*$* pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15*$* par individus, alors que pour les autres régions, les frais s'élèvent à 5*$* par personne.
 
 M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
 
