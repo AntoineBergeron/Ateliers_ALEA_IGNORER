@@ -2025,9 +2025,9 @@ Le ">=" est utilisé pour le `au moins` (plus grand ou égal) et le symbole "&" 
 
 Le fichier [ExerciceRecapitulatif.csv](./donnees/ExerciceRecapitulatif.csv) est un sommaire des données sur le virus qui frappe présentement la planète Erret: Le Divoc-91!
 
-À partir de ces données, le docteur Kombucha aimerait avoir un tableau détaillé du nombre de jours qu'un patient à passé à l'hôpital en fonction de sa région. 
+À partir de ces données, le docteur Kombucha aimerait avoir un tableau détaillé du nombre de jours qu'un individu à passé à l'hôpital en fonction de sa région. 
 
-De plus, il mentionne que pour tout individu ayant passé **au moins 13 jours à l'hôpital**, on devra charger les individus à des frais différents, selon leur région. Les frais sont les suivants: 10*$* pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15*$* par individus, alors que pour les autres régions, les frais s'élèvent à 5*$* par personne.
+De plus, il aimerait qu'au bas du premier tableau figure les différents coûts de traitement par région. Les frais sont les suivants: 10*$* pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15*$* par individu, alors que pour les autres régions, les frais s'élèvent à 5*$* par personne.
 
 M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
 
@@ -2036,10 +2036,12 @@ M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces 
 
 1. Charger les données "ExerciceRecapitulatif". (vous pouvez modifier le nom des colonnes si nécessaire)
 2. Créer le premier tableau demandé.
-3. Créer la deuxième partie du tableau.
-*Vous devrez construire un vecteur des coûts en fonction des informations du texte afin de construire le deuxième tableau.
-4. Combiner les deux tableaux.
-5. Enregistrer les résultats dans un tableau où les étiquettes de rangées correspondent aux nombres de jours passés à l'hôpital (la dernière ligne correspondra au frais totaux par région) et les étiquettes des colonnes correspondent aux régions.
+3. Créer un vecteur des frais par région.
+4. Combiner le premier tableau au vecteur, de sorte que les frais soient **au bas** du tableau.
+5. Enregistrer les résultats dans un tableau où les étiquettes de rangées correspondent aux nombres de jours passés à l'hôpital (la dernière ligne correspondra au frais totaux par région) et les étiquettes des colonnes correspondent aux régions. Le tableau final doit avoir la forme de l'image ci-dessous.
+
+<div style='text-align:center;'>
+<img src="assets/img/ExempleRecap.PNG" width="40%"></img>
 
 ---
 # Suite

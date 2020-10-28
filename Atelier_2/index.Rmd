@@ -53,13 +53,15 @@ class: middle, center, inverse
 
 # Astuce: générer des nombres aléatoires
 
-Il peut souvent être pratique de générer des chiffres au hasard, sur lesquels on souhaite faire des tests. Nous verrons plusieurs exemples la semaine prochaine, mais pour l'instant, prenez note de la fonction suivante:
+Il peut souvent être pratique de générer des chiffres au hasard, sur lesquels on souhaite faire des tests. Nous verrons plusieurs exemples dans les capsules de l'atelier 3 et 4, mais pour l'instant, prenez note de la fonction suivante:
 
 ```{r}
 alea <- runif(n = 10, min = 0, max = 1)
 alea
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
+
+alea contient maintenant 10 valeurs entre 0 et 1. Une caractéristique importante à propos de la loi uniforme est que la probabilité d'obtenir n'importe chiffre entre la valeur min et max est la même.
 
 ---
 
