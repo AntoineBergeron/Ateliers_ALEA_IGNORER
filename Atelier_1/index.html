@@ -1948,8 +1948,8 @@ MaPremiereMatrice
 
 ```
 ##          [,1]      [,2]     [,3]     [,4]     [,5]
-## [1,] 15.10103 87.592986 33.52415 25.95844 53.29204
-## [2,] 48.80676  3.479966 16.36170 10.03731 21.35273
+## [1,] 72.75505 49.161790 52.08580 31.52018 53.42153
+## [2,] 14.39443  9.119879 73.11778 63.30560  4.90224
 ```
 
 ```r
@@ -1957,7 +1957,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 63.90779
+## [1] 87.14948
 ```
 
 
@@ -2528,8 +2528,8 @@ tri
 ```
 
 ```
-##  [1] 68.504201 23.344676 71.245758 69.428627 22.856652 42.538731  3.624995
-##  [8] 25.002382 72.095388  6.163943
+##  [1] 93.193389  6.659742 48.148502 32.276480 73.993888 52.691966 57.447844
+##  [8] 65.430572 16.481164 95.578525
 ```
 
 ```r
@@ -2537,8 +2537,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  3.624995  6.163943 22.856652 23.344676 25.002382 42.538731 68.504201
-##  [8] 69.428627 71.245758 72.095388
+##  [1]  6.659742 16.481164 32.276480 48.148502 52.691966 57.447844 65.430572
+##  [8] 73.993888 93.193389 95.578525
 ```
 
 ---
@@ -2551,8 +2551,8 @@ rang
 ```
 
 ```
-##  [1] 74.689349 20.662494 88.847359 52.590711 55.439927  7.473101 78.784941
-##  [8] 69.447146 25.311003 57.609575
+##  [1] 36.212931  4.832370 68.079811 63.569087  4.941475 65.993999 73.212469
+##  [8]  4.766845 64.429249 53.645463
 ```
 
 ```r
@@ -2560,7 +2560,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  8  2 10  4  5  1  9  7  3  6
+##  [1]  4  2  9  6  3  8 10  1  7  5
 ```
 
 ---
@@ -2615,7 +2615,7 @@ Le fichier [ExerciceRecapitulatif.csv](./donnees/ExerciceRecapitulatif.csv) est 
 
 À partir de ces données, le docteur Kombucha aimerait avoir un tableau détaillé du nombre de jours qu'un patient à passé à l'hôpital en fonction de sa région. 
 
-De plus, il mentionne que pour tout individu ayant passé **au moins 13 jours à l'hôpital**, on devra charger les individus à des frais différents, selon leur région. Les frais sont les suivants: 10 \$ pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15 \$ par individus, alors que pour les autres régions, les frais s'élèvent à 5 \$ par personne.
+De plus, il mentionne que pour tout individu ayant passé **au moins 13 jours à l'hôpital**, on devra charger les individus à des frais différents, selon leur région. Les frais sont les suivants: 10*$* pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15*$* par individus, alors que pour les autres régions, les frais s'élèvent à 5*$* par personne.
 
 M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
 
