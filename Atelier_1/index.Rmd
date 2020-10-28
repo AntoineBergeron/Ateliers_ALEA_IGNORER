@@ -1940,7 +1940,7 @@ Dans R:
 
 **Note 1:** La fonction t() vous permet de transposer un tableau. (3 lignes, 1 colonne devient 1 ligne, 3 colonnes)
 
-**Note 2:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide sur cette fonction.
+**Note 2:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide de cette fonction.
 
 ---
 class: middle, center, inverse
