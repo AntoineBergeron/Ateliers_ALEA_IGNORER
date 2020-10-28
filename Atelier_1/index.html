@@ -1947,9 +1947,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 26.79110 23.71971 35.25323 84.96272 49.33783
-## [2,] 23.20004 45.29612 67.81749 42.42392 10.91252
+##          [,1]      [,2]     [,3]     [,4]     [,5]
+## [1,] 72.90035 50.366231 63.74963 61.62212 23.65091
+## [2,] 18.74721  4.815427 80.29881 32.58859 45.53234
 ```
 
 ```r
@@ -1957,7 +1957,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 49.99114
+## [1] 91.64756
 ```
 
 
@@ -2437,7 +2437,7 @@ Dans R:
 
 **Note 1:** La fonction t() vous permet de transposer un tableau. (3 lignes, 1 colonne devient 1 ligne, 3 colonnes)
 
-**Note 2:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide sur cette fonction.
+**Note 2:** ?colnames (par exemple) dans la console permet d'ouvrir la fenêtre d'aide de cette fonction.
 
 ---
 class: middle, center, inverse
@@ -2528,8 +2528,8 @@ tri
 ```
 
 ```
-##  [1] 32.049038  7.523296 32.695978 79.575747 16.123176 17.088659 86.787923
-##  [8] 12.530398  8.762598 63.712635
+##  [1] 21.815108  6.744522 74.933722 98.387104  5.128518 90.840159 37.387759
+##  [8] 50.483172 42.310200 85.755278
 ```
 
 ```r
@@ -2537,8 +2537,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  7.523296  8.762598 12.530398 16.123176 17.088659 32.049038 32.695978
-##  [8] 63.712635 79.575747 86.787923
+##  [1]  5.128518  6.744522 21.815108 37.387759 42.310200 50.483172 74.933722
+##  [8] 85.755278 90.840159 98.387104
 ```
 
 ---
@@ -2551,8 +2551,8 @@ rang
 ```
 
 ```
-##  [1] 57.946307 85.201003 71.322040 72.146612 40.490148 79.012931 23.802571
-##  [8]  9.411808 98.557143 58.890758
+##  [1] 52.804059 54.779756 28.378725 42.993028 92.349859 56.758921 26.354785
+##  [8]  3.582335 97.196853 55.199705
 ```
 
 ```r
@@ -2560,7 +2560,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  4  9  6  7  3  8  2  1 10  5
+##  [1]  5  6  3  4  9  8  2  1 10  7
 ```
 
 ---
@@ -2613,9 +2613,9 @@ Le "&gt;=" est utilisé pour le `au moins` (plus grand ou égal) et le symbole "
 
 Le fichier [ExerciceRecapitulatif.csv](./donnees/ExerciceRecapitulatif.csv) est un sommaire des données sur le virus qui frappe présentement la planète Erret: Le Divoc-91!
 
-À partir de ces données, le docteur Kombucha aimerait avoir un tableau détaillé du nombre de jours qu'un patient à passé à l'hôpital en fonction de sa région. 
+À partir de ces données, le docteur Kombucha aimerait avoir un tableau détaillé du nombre de jours qu'un individu à passé à l'hôpital en fonction de sa région. 
 
-De plus, il mentionne que pour tout individu ayant passé **au moins 13 jours à l'hôpital**, on devra charger les individus à des frais différents, selon leur région. Les frais sont les suivants: 10*$* pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15*$* par individus, alors que pour les autres régions, les frais s'élèvent à 5*$* par personne.
+De plus, il aimerait qu'au bas du premier tableau figure les différents coûts de traitement par région. Les frais sont les suivants: 10*$* pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15*$* par individu, alors que pour les autres régions, les frais s'élèvent à 5*$* par personne.
 
 M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
 
@@ -2624,10 +2624,12 @@ M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces 
 
 1. Charger les données "ExerciceRecapitulatif". (vous pouvez modifier le nom des colonnes si nécessaire)
 2. Créer le premier tableau demandé.
-3. Créer la deuxième partie du tableau.
-*Vous devrez construire un vecteur des coûts en fonction des informations du texte afin de construire le deuxième tableau.
-4. Combiner les deux tableaux.
-5. Enregistrer les résultats dans un tableau où les étiquettes de rangées correspondent aux nombres de jours passés à l'hôpital (la dernière ligne correspondra au frais totaux par région) et les étiquettes des colonnes correspondent aux régions.
+3. Créer un vecteur des frais par région.
+4. Combiner le premier tableau au vecteur, de sorte que les frais soient **au bas** du tableau.
+5. Enregistrer les résultats dans un tableau où les étiquettes de rangées correspondent aux nombres de jours passés à l'hôpital (la dernière ligne correspondra au frais totaux par région) et les étiquettes des colonnes correspondent aux régions. Le tableau final doit avoir la forme de l'image ci-dessous.
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/ExempleRecap.PNG" width="40%"&gt;&lt;/img&gt;
 
 ---
 # Suite
