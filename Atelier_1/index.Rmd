@@ -2021,13 +2021,25 @@ head(sub_Centres, n=3)
 Le ">=" est utilisé pour le `au moins` (plus grand ou égal) et le symbole "&" pour combiner deux conditions. (agit en tant que ET)
 
 ---
-# Exercice 
+# Exercice Récapitulatif de l'atelier
 
-Le fichier [NHL_Complet.csv](./donnees/NHL_Complet.csv) est un sommaire de données individuelles d'environ 100 joueurs de la ligne nationale de hockey. On s'intéresse à connaitre la position jouée par ces joueurs en prenant en compte la division de leur équipe.
+Le fichier [ExerciceRecapitulatif.csv](./donnees/ExerciceRecapitulatif.csv) est un sommaire de données sur le virus qui frappe présentement la planète Erret: Le Divoc-91!
 
-1. Charger les données "NHL_Complet".
-2. Partitionner les données en fonction des divisions.
-3. Pour chacune des divisions, calculer le nombre de joueurs jouant à chacune des positions.
-4. Enregistrer les résultats dans un tableau où les étiquettes de rangées sont les divisions et les étiquettes des colonnes sont les positions.
+À partir de ces données, le docteur Kombucha aimerait avoir un tableau détaillé du nombre de jours qu'un patient à passé à l'hôpital en fonction de sa région. 
 
-On vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
+De plus, il mentionne que pour tout individu ayant passé *au moins 13 jours à l'hôpital*, on devra charger les individus à des frais différents, selon leur région. Les frais sont les suivants: 10\$ pour les résidents de la Capitale-Nationale, du Centre-du-Québec, des Chaudières-Appalaches ainsi que de Lanaudière. Les frais de la Montérégie sont les plus élevés et s'élèvent à 15\$ par individus, alors que pour les autres régions, les frais s'élèvent à 5$ par personne.
+
+M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
+
+---
+
+Indication:
+
+1. Charger les données "ExerciceRecapitulatif". (vous pouvez modifier le nom des colonnes si nécessaire)
+2. Créer le premier tableau demandé.
+3. Créer la deuxième partie du tableau.
+*Vous devrez construire un vecteur des coûts en fonction des informations du texte afin de construire le deuxième tableau.
+4. Combiner les deux tableaux.
+5. Enregistrer les résultats dans un tableau où les étiquettes de rangées correspondent aux nombres de jours passés à l'hôpital (la dernière ligne correspondra au frais totaux par région) et les étiquettes des colonnes correspondent aux régions.
+
+
