@@ -256,13 +256,15 @@ class: middle, center, inverse
 
 ---
 
-# Exercice: Abondances relatives
+# Exercice: Abondances relatives (en nourriture et boisson aussi!)
 
-Au moyen du fichier [PositionEquipe.csv](./donnees/PositionEquipe.csv), je vous demande de faire les opérations suivantes:
+Au moyen du fichier [party.csv](./donnees/party.csv), je vous demande de faire les opérations suivantes:
 
-1. Calculer le nombre total de joueurs pour chacune des positions, le nombre moyen de joueurs par équipe pour chacune des positions et le coefficient de variation (CV = Écart-type/Moyenne).
-2. Calculer le nombre total de joueurs pour chacune des positions par équipe.
-3. Transformer les valeurs trouvées en (2) en pourcentage.
+1. Calculer le nombre total d'enfants ayant bu chaque type de boisson gazeuse. 
+2. Calculer en fonction des sacs de chips le nombre moyen d'enfant par type de liqueur. 
+3. Calculer le coefficient de variation. (Écart-type/Moyenne avec sd() et mean())
+4. Calculer le nombre total d'enfants ayant mangé chaque sorte de chips.
+5. Transformer les valeurs du tableau afin d'obtenir le pourcentage d'enfants ayant mangé chaque sorte de chips.
 
 ---
 
