@@ -3,10 +3,10 @@
   <head>
     <title>: Introduction à la programmation scientifique</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Jean-Philippe Morissette" />
+    <meta name="author" content="Antoine Bergeron" />
     <link href="assets/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="assets/remark-css-0.0.1/hygge.css" rel="stylesheet" />
-    <link rel="stylesheet" href="..\Atelier-R.css" type="text/css" />
+    <link rel="stylesheet" href="../Ateliers_ALEA.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -25,7 +25,7 @@ class: title-slide, middle
   }
 &lt;/style&gt;
 
-# Première journée d'atelier (suite)
+# Bienvenue à l'atelier 2
 
 &lt;hr width="65%" align="left" size="0.3" color="orange" &gt;&lt;/hr&gt;
 
@@ -34,60 +34,10 @@ class: title-slide, middle
 &lt;hr width="65%" align="left" size="0.3" color="orange" style="margin-bottom:40px;" alt="@Martin Sanchez"&gt;&lt;/hr&gt;
 
 .instructors[
-  ***ALÉA R*** - Jean-Philippe Morissette
+  ***ALÉA R*** - Antoine Bergeron
 ]
 
 &lt;img src="assets/img/Rlogo.png" width="8%" style="margin-top:20px;"&gt;&lt;/img&gt;
-
-
----
-class: middle, center, inverse
-
-# Retour sur l'exercice
-
-&lt;hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"&gt;&lt;/hr&gt;
-
----
-# Exercice
-
-Le fichier [NHL_Complet.csv](./donnees/NHL_Complet.csv) est un sommaire de données individuelles d'environ 100 joueurs de la ligne nationale de hockey. On s'intéresse à connaitre la position jouée par ces joueurs en prenant en compte la division de leur équipe.
-
-1. Charger les données "NHL_Complet".
-2. Partitionner les données en fonction des divisions.
-3. Pour chacune des divisions, calculer le nombre de joueurs jouant à chacune des positions.
-4. Enregistrer les résultats dans un tableau où les étiquettes de rangées sont les divisions et les étiquettes des colonnes sont les positions.
-
-On vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
-
----
-# Solution
-
-
-
-```r
-# Créer un tableau où on enregistre les résultats
-resultats &lt;- matrix(nrow = 4, ncol = 4)
-
-# Lire le fichier (en assumant que vous êtes dans le bon dossier)
-NHL &lt;- read.table(file="./donnees/NHL_Complet.csv", header=TRUE, sep = ";")
-
-# Sélectionner les joueurs d'une première division
-DivisionAtlantique &lt;- subset(NHL, NHL$division == "Atlantic")
-
-# Calculer la répartition des positions dans cette division
-table(DivisionAtlantique$pos)
-```
-
-```
-## 
-## C D L R 
-## 9 9 4 1
-```
-
-```r
-# Enregistrer le résultat dans le tableau
-resultats[1,] &lt;- table(DivisionAtlantique$pos)
-```
 
 
 ---
@@ -110,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.9974604 0.3385381 0.1014078 0.9229911 0.8098067 0.1569936 0.6988860
-##  [8] 0.5267658 0.1533002 0.7815901
+##  [1] 0.02613859 0.75417908 0.13330612 0.31822153 0.34426954 0.70262043
+##  [7] 0.60114883 0.25488314 0.30979074 0.52872203
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -327,8 +277,8 @@ alea
 ```
 
 ```
-##  [1] 0.4158788 0.6745312 0.8819218 0.2656673 0.6280368 0.3446457 0.6332759
-##  [8] 0.7320296 0.6540854 0.7201979
+##  [1] 0.002509925 0.964864197 0.436307426 0.729578198 0.555456410 0.616368814
+##  [7] 0.298015651 0.661424355 0.798316043 0.790450163
 ```
 
 ```r
@@ -336,7 +286,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.2656673
+## [1] 0.002509925
 ```
 
 ```r
@@ -344,7 +294,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.8819218
+## [1] 0.9648642
 ```
 
 ---
@@ -398,9 +348,9 @@ mat
 ```
 
 ```
-##           [,1]      [,2]
-## [1,] 0.5257901 0.4488066
-## [2,] 0.6232983 0.3173792
+##           [,1]       [,2]
+## [1,] 0.5698443 0.09106567
+## [2,] 0.9608769 0.10435759
 ```
 
 ```r
@@ -408,7 +358,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 0.9745967 0.9406775
+## [1] 0.660910 1.065234
 ```
 
 ```r
@@ -416,7 +366,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.1490884 0.7661858
+## [1] 1.5307212 0.1954233
 ```
 
 ---
@@ -431,9 +381,9 @@ mat
 ```
 
 ```
-##           [,1]      [,2]
-## [1,] 0.5257901 0.4488066
-## [2,] 0.6232983 0.3173792
+##           [,1]       [,2]
+## [1,] 0.5698443 0.09106567
+## [2,] 0.9608769 0.10435759
 ```
 
 ```r
@@ -441,7 +391,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 0.9745967 0.9406775
+## [1] 0.660910 1.065234
 ```
 
 ```r
@@ -449,7 +399,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.1490884 0.7661858
+## [1] 1.5307212 0.1954233
 ```
 
 ---
@@ -606,12 +556,12 @@ tableau
 ```
 
 ```
-##            x           y
-## 1 -1.2165486 -1.04984562
-## 2 -1.1645806 -0.69374419
-## 3 -0.5256619 -0.91993187
-## 4 -0.2786455 -0.06853807
-## 5  0.7973738  0.30923012
+##             x          y
+## 1 -0.55304561  1.1736853
+## 2  1.30856097  0.7139052
+## 3 -1.09650241  1.7626433
+## 4 -1.45800494 -0.1667131
+## 5  0.09375085  0.9109428
 ```
 
 ---
@@ -638,9 +588,9 @@ $$
 ```
 
 ```
-## [1] -0.5635331
-## [1] -0.4347577
-## [1] -0.3345152
+## [1] -1.045859
+## [1] 0.4619056
+## [1] -2.901402
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -660,11 +610,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] -0.5635331
-## [1] -0.4347577
-## [1] -0.3345152
-## [1] -0.05500786
-## [1] 0.2228187
+## [1] -1.045859
+## [1] 0.4619056
+## [1] -2.901402
+## [1] -0.1496066
+## [1] 0.08500269
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -827,7 +777,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1] -0.56353312 -0.43475771 -0.33451522 -0.05500786  0.22281866
+## [1] -1.04585881  0.46190561 -2.90140216 -0.14960657  0.08500269
 ```
 
 ```r
@@ -835,7 +785,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1] -0.56353312 -0.43475771 -0.33451522 -0.05500786  0.22281866
+## [1] -1.04585881  0.46190561 -2.90140216 -0.14960657  0.08500269
 ```
 
 ---
@@ -853,17 +803,17 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## Warning in x * y: la taille d'un objet plus long n'est pas multiple de la
-## taille d'un objet plus court
+## Warning in x * y: la taille d'un objet plus long n'est pas multiple de la taille
+## d'un objet plus court
 ```
 
 ```
-## Warning in x + y: la taille d'un objet plus long n'est pas multiple de la
-## taille d'un objet plus court
+## Warning in x + y: la taille d'un objet plus long n'est pas multiple de la taille
+## d'un objet plus court
 ```
 
 ```
-## [1] -0.5635331 -0.4347577 -0.3345152 -0.0648827
+## [1] -1.0458588  0.4619056 -2.9014022 -0.1280984
 ```
 
 ```r
@@ -871,7 +821,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1] -0.56353312 -0.43475771 -0.52382497 -0.06472865
+## [1] -1.0458588  0.4619056 -0.8059061 -0.1910537
 ```
 
 ---
@@ -941,12 +891,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##            x          y
-## 1 14.8080391  0.9088105
-## 2 -2.3488974 -1.1024759
-## 3  0.6084132  2.2650720
-## 4 -0.3435974 -0.1437031
-## 5  0.5978147  0.2750498
+##             x           y
+## 1 -0.96833483  0.90897270
+## 2  0.73928319  0.35217506
+## 3  0.14404682  0.16046455
+## 4  9.94990559 -0.26118323
+## 5  0.08291907  0.02813504
 ```
 
 ---
@@ -990,13 +940,13 @@ test
 
 ```
 ## $moyenne
-## [1] 1.03704
+## [1] 0.9619887
 ## 
 ## $ecart_type
-## [1] 0.5415521
+## [1] 0.4570817
 ## 
 ## $CV
-## [1] 0.5222095
+## [1] 0.4751425
 ```
 
 ---
@@ -1077,6 +1027,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1094,17 +1070,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {

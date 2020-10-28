@@ -1,10 +1,10 @@
 ---
 title: ": Introduction à la programmation scientifique"
-author: "Jean-Philippe Morissette"
-date: "H2020"
+author: "Antoine Bergeron"
+date: "A2020"
 output:
   xaringan::moon_reader:
-    css: [default, ../Atelier-R.css, "hygge"]
+    css: [default, ../Ateliers_ALEA.css, "hygge"]
     lib_dir: assets
     seal: false
     nature:
@@ -27,7 +27,7 @@ class: title-slide, middle
   }
 </style>
 
-# Première journée d'atelier (suite)
+# Bienvenue à l'atelier 2
 
 <hr width="65%" align="left" size="0.3" color="orange" ></hr>
 
@@ -36,51 +36,10 @@ class: title-slide, middle
 <hr width="65%" align="left" size="0.3" color="orange" style="margin-bottom:40px;" alt="@Martin Sanchez"></hr>
 
 .instructors[
-  ***ALÉA R*** - Jean-Philippe Morissette
+  ***ALÉA R*** - Antoine Bergeron
 ]
 
 <img src="assets/img/Rlogo.png" width="8%" style="margin-top:20px;"></img>
-
-
----
-class: middle, center, inverse
-
-# Retour sur l'exercice
-
-<hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"></hr>
-
----
-# Exercice
-
-Le fichier [NHL_Complet.csv](./donnees/NHL_Complet.csv) est un sommaire de données individuelles d'environ 100 joueurs de la ligne nationale de hockey. On s'intéresse à connaitre la position jouée par ces joueurs en prenant en compte la division de leur équipe.
-
-1. Charger les données "NHL_Complet".
-2. Partitionner les données en fonction des divisions.
-3. Pour chacune des divisions, calculer le nombre de joueurs jouant à chacune des positions.
-4. Enregistrer les résultats dans un tableau où les étiquettes de rangées sont les divisions et les étiquettes des colonnes sont les positions.
-
-On vous demande de rédiger un script qui réalisera l'ensemble de ces étapes, de la lecture des données à l'enregistrement du tableau final.
-
----
-# Solution
-
-
-```{r}
-# Créer un tableau où on enregistre les résultats
-resultats <- matrix(nrow = 4, ncol = 4)
-
-# Lire le fichier (en assumant que vous êtes dans le bon dossier)
-NHL <- read.table(file="./donnees/NHL_Complet.csv", header=TRUE, sep = ";")
-
-# Sélectionner les joueurs d'une première division
-DivisionAtlantique <- subset(NHL, NHL$division == "Atlantic")
-
-# Calculer la répartition des positions dans cette division
-table(DivisionAtlantique$pos)
-
-# Enregistrer le résultat dans le tableau
-resultats[1,] <- table(DivisionAtlantique$pos)
-```
 
 
 ---
