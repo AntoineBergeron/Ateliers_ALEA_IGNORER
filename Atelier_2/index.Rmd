@@ -61,7 +61,7 @@ alea
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
-alea contient maintenant 10 valeurs entre 0 et 1. Une caractéristique importante à propos de la loi uniforme est que la probabilité d'obtenir n'importe chiffre entre la valeur min et max est la même.
+`alea` contient maintenant 10 valeurs entre 0 et 1. Une caractéristique importante à propos de la loi uniforme est que la probabilité d'obtenir n'importe chiffre entre la valeur min et max est la même.
 
 ---
 
