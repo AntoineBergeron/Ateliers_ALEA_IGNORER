@@ -717,6 +717,10 @@ class: inverse, center, middle
 
 Roger est un apprenti chimiste. (Et nous verrons bientôt qu'il est aussi un apprenti programmeur, contrairement à vous!) À chaque jour, Roger effectue la même expérience. Au bout d'un an, il possède alors 365 données contenant trois variables: la masse en grammes de carbone recueilli, le volume de sa solution en litre ainsi que le pH de sa solution. Il souhaite maintenant calculer la concentration molaire (molarité) moyenne de ces expériences sur le carbone. Les formules à utiliser par Roger sont présentées à la diapositive suivante.
 
+<div style='text-align:center;'>
+<img src="assets/img/roger.PNG" height="200"></img>
+</div>
+
 ---
 
 # Ex 1: suite
@@ -726,6 +730,10 @@ $n = \dfrac{m}{M}$ où m représente la masse (g), n représente le nombre de mo
 $C = \dfrac{n}{V}$ où V représente le volume de solution (L) et C la concentration molaire (mol/L)
 
 Roger m'informe qu'il pensait calculer ses 365 concentrations molaires à bras. En échange d'un morceau de robot, vous lui proposez de vous en occuper à l'aide d'une fonction. Acceptant avec joie, il vous affirme que la masse molaire du carbone est une constante de valeur 12.011 (g/mol) avant de vous laisser.
+
+<div style='text-align:center;'>
+<img src="assets/img/robot.PNG" height="200"></img>
+</div>
 
 ---
 
