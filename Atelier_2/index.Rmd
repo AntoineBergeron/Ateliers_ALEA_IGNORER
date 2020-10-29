@@ -713,13 +713,13 @@ class: inverse, center, middle
 
 ---
 
-# Exercice 1: La chimie des solutions mathématiques
+# Ex 1: La chimie des solutions "mathématiques"
 
 Roger est un apprenti chimiste. (Et nous verrons bientôt qu'il est aussi un apprenti programmeur, contrairement à vous!) À chaque jour, Roger effectue la même expérience. Au bout d'un an, il possède alors 365 données contenant trois variables: la masse en grammes de carbone recueilli, le volume de sa solution en litre ainsi que le pH de sa solution. Il souhaite maintenant calculer la concentration molaire (molarité) moyenne de ces expériences sur le carbone. Les formules à utiliser par Roger sont présentées à la diapositive suivante.
 
 ---
 
-# Exercice 1: suite
+# Ex 1: suite
 
 $n = \dfrac{m}{M}$ où m représente la masse (g), n représente le nombre de moles (mol) et M représente la masse molaire (g/mol)
 
@@ -730,6 +730,20 @@ Roger m'informe qu'il pensait calculer ses 365 concentrations molaires à bras. 
 ---
 
 # Solution de l'exercice 1
+
+```{r}
+roger_tab <- read.table(file = './donnees/chimie.csv', sep=";", header = TRUE)
+
+concen_carb <- function(m,V){  #m représente la masse, V le volume. Notons que même si le pH est donné, il n'est pas nécessaire et n'apparait donc pas dans les arguments de la fonction.
+  M <- 12.011 #La valeur M est une constante.
+  n <- m/M #Premier calcul pour trouver la valeur de n.
+  C <- n/V #Deuxième calcul à partir du n afin de trouver la valeur du C.
+  return(C) #On retourne la valeur d'intérêt (la concentration molaire).
+}
+#La fonction est maintenant crée! Suffit maintenant de remplacer par les valeurs "m" et "V" qui se situe dans la première et deuxième colonne de notre tableau importé.
+result <- concen_carb(roger_tab[,1],roger_tab[,2]) #result possède les 365 concentrations issues des 365 appels de la fonction (une par ligne).
+mean(result) #On s'intéressait à la moyenne des concentrations!
+```
 
 ---
 
