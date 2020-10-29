@@ -251,19 +251,21 @@ On peut donc multiplier des matrices en utilisant l'opérateur `%*%`
 ---
 class: middle, center, inverse
 
-# Exercice
+# Exercices
 <hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"></hr>
 
 ---
 
 #Exercice 1: Coût d'une famille par année
 
-Calculer d'abord les fonctions suivantes: (A) $log_2(57)$ (B) $exp(ln(4.1))$ (C) $2^2\cdot \sqrt{1/3}$ 
+Calculer d'abord les fonctions suivantes:
+
+(A) $log_2(57)$ (B) $exp(ln(4.1))$ (C) $2^2\cdot \sqrt{1/3}$ 
 
 1. Arrondisser la fonction (A). Arrondisser ensuite à la baisse la fonction (B). Arrondisser finalement à la hausse la fonction (C).
-2. Le nombre obtenu en (1) représente le nombre d'enfant qu'un famille souhaite avoir. Créer un vecteur regroupant les trois résultats.
-3. Parmis les trois familles, quel est le nombre maximal d'enfants qu'une famille souhaite avoir?
-4. Les familles (A), (B) et (C) habitent respectivement en Estrie, Montérégie et Mauricie. Sachant que le coût de vie d'un enfant est de 10000*$/*années en Estrie, 12000*$/*années en Montérégie et 11500*$/*années en Mauricie, combien devront débourser chaque famille par année en supposant que leur nombre d'enfants expecter devient réel?
+2. Le nombre obtenu en (1) représente le nombre d'enfants qu'une famille souhaite avoir. Créer un vecteur regroupant les trois résultats.
+3. Parmi les trois familles, quel est le nombre maximal d'enfants qu'une famille souhaite avoir?
+4. Les familles (A), (B) et (C) habitent respectivement en Estrie, Montérégie et Mauricie. Sachant que le coût de vie d'un enfant est de 10000*$/*années en Estrie, 12000*$/*années en Montérégie et 11500*$/*années en Mauricie, combien devront débourser chaque famille par année en supposant que leur nombre d'enfants attendu devient réel?
 
 ---
 
@@ -279,6 +281,10 @@ nouv_res_C <- ceiling(res_C)
 enfants <- c(nouv_res_A,nouv_res_B,nouv_res_C)
 ```
 
+0. `res_A`, `res_B` et `res_C` représentent les résultats de chaque équation: 5.83289, 4.1 et 2.30940
+1. `nouv_res_A`, `nouv_res_B` et `nouv_res_C` représentent les résultats arrondis: 6, 4 et 3
+2. `enfants` représente le vecteur du nombre d'enfants attendu par famille. [6,4,3]
+
 ---
 
 # Solution 3 et 4
@@ -290,6 +296,8 @@ cout_vie <- c(10000,12000,11500)
 montant <- enfants * cout_vie
 ```
 
+3. `enfants_max` représente la valeur maximale du vecteur `enfants`: [6]
+4. On crée d'abord le vecteur du coût de la vie `cout_vie`. On calcule ensuite `montant` qui représente le nombre d'enfants multiplié par le coût de la vie dans chacune des régions respectives.
 
 
 ---
