@@ -260,7 +260,7 @@ class: middle, center, inverse
 
 Calculer d'abord les fonctions suivantes:
 
-(A) $log_2(57)$ (B) $exp(ln(4.1))$ (C) $2^2\cdot \sqrt{1/3}$ 
+(A) $log_2(57)$    (B) $exp(ln(4.1))$    (C) $2^2\cdot \sqrt{1/3}$ 
 
 1. Arrondisser la fonction (A). Arrondisser ensuite à la baisse la fonction (B). Arrondisser finalement à la hausse la fonction (C).
 2. Le nombre obtenu en (1) représente le nombre d'enfants qu'une famille souhaite avoir. Créer un vecteur regroupant les trois résultats.
@@ -281,9 +281,9 @@ nouv_res_C <- ceiling(res_C)
 enfants <- c(nouv_res_A,nouv_res_B,nouv_res_C)
 ```
 
-0. `res_A`, `res_B` et `res_C` représentent les résultats de chaque équation: 5.83289, 4.1 et 2.30940
-1. `nouv_res_A`, `nouv_res_B` et `nouv_res_C` représentent les résultats arrondis: 6, 4 et 3
-2. `enfants` représente le vecteur du nombre d'enfants attendu par famille. [6,4,3]
+0 - `res_A`, `res_B` et `res_C` représentent les résultats de chaque équation: 5.83289, 4.1 et 2.30940
+1 - `nouv_res_A`, `nouv_res_B` et `nouv_res_C` représentent les résultats arrondis: 6, 4 et 3
+2 - `enfants` représente le vecteur du nombre d'enfants attendu par famille. [6,4,3]
 
 ---
 
@@ -296,8 +296,8 @@ cout_vie <- c(10000,12000,11500)
 montant <- enfants * cout_vie
 ```
 
-3. `enfants_max` représente la valeur maximale du vecteur `enfants`: [6]
-4. On crée d'abord le vecteur du coût de la vie `cout_vie`. On calcule ensuite `montant` qui représente le nombre d'enfants multiplié par le coût de la vie dans chacune des régions respectives.
+3 - `enfants_max` représente la valeur maximale du vecteur `enfants`: [6]
+4 - On crée d'abord le vecteur du coût de la vie `cout_vie`. On calcule ensuite `montant` qui représente le nombre d'enfants multiplié par le coût de la vie dans chacune des régions respectives.
 
 
 ---
@@ -326,10 +326,10 @@ Enf_sd_col <- apply(party, 2, sd)
 Enf_cv <- (Enf_sd_col/Enf_moyen_col)
 ```
 
-1. `Enf_total_col`: Total du nombre d'enfants par colonne: [131, 113, 103, 73, 80]
-2. `Enf_total`: Total du nombre d'enfants: [500]
-3. `End_moyen_col`: Moyenne par ligne du nombre d'enfants pour chaque colonne: [8.19, 7.06, 6.44, 4.56, 5]
-4. `Enf_cv`: Coefficient de variation par colonne: [1.153, 0.602, 0.494, 0.698, 0.641]
+1 - `Enf_total_col`: Total du nombre d'enfants par colonne: [131, 113, 103, 73, 80]
+2 - `Enf_total`: Total du nombre d'enfants: [500]
+3 - `End_moyen_col`: Moyenne par ligne du nombre d'enfants pour chaque colonne: [8.19, 7.06, 6.44, 4.56, 5]
+4 - `Enf_cv`: Coefficient de variation par colonne: [1.153, 0.602, 0.494, 0.698, 0.641]
 ---
 
 # Solutions 5 et 6
@@ -340,8 +340,8 @@ party_rel_crou <- round(party/Enf_total_lig, 2)
 head(party_rel_crou)
 ```
 
-5. `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par) [21, 74, 49, 19, ...]
-6. `party_rel_crou`: Le tableau au dessus nous indique le pourcentage relatif à chaque ligne.
+5 - `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par) [21, 74, 49, 19, ...]
+6 - `party_rel_crou`: Le tableau au dessus nous indique le pourcentage relatif à chaque ligne.
 
 ---
 class: middle, center, inverse

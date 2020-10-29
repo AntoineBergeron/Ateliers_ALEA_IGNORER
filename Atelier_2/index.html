@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.97661969 0.27987060 0.40132459 0.60628679 0.01958818 0.19421614
-##  [7] 0.74459617 0.16885268 0.76361473 0.82102280
+##  [1] 0.1953401 0.2824206 0.3810133 0.8331010 0.6849508 0.1181947 0.3154468
+##  [8] 0.6793576 0.4188778 0.6037501
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.89904327 0.02952652 0.48237089 0.20355551 0.36042677 0.84817371
-##  [7] 0.44851497 0.16590380 0.95263008 0.85719943
+##  [1] 0.85747574 0.12481137 0.99961397 0.68164087 0.61299686 0.25572061
+##  [7] 0.97094494 0.07550549 0.13646941 0.42482794
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.02952652
+## [1] 0.07550549
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.9526301
+## [1] 0.999614
 ```
 
 ---
@@ -380,8 +380,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.7492969 0.4012163
-## [2,] 0.2547821 0.6332565
+## [1,] 0.7899321 0.8821044
+## [2,] 0.5859389 0.8770728
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.1505132 0.8880386
+## [1] 1.672037 1.463012
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.004079 1.034473
+## [1] 1.375871 1.759177
 ```
 
 ---
@@ -413,8 +413,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.7492969 0.4012163
-## [2,] 0.2547821 0.6332565
+## [1,] 0.7899321 0.8821044
+## [2,] 0.5859389 0.8770728
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.1505132 0.8880386
+## [1] 1.672037 1.463012
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.004079 1.034473
+## [1] 1.375871 1.759177
 ```
 
 ---
@@ -476,7 +476,7 @@ class: middle, center, inverse
 
 Calculer d'abord les fonctions suivantes:
 
-(A) `\(log_2(57)\)` (B) `\(exp(ln(4.1))\)` (C) `\(2^2\cdot \sqrt{1/3}\)` 
+(A) `\(log_2(57)\)`    (B) `\(exp(ln(4.1))\)`    (C) `\(2^2\cdot \sqrt{1/3}\)` 
 
 1. Arrondisser la fonction (A). Arrondisser ensuite à la baisse la fonction (B). Arrondisser finalement à la hausse la fonction (C).
 2. Le nombre obtenu en (1) représente le nombre d'enfants qu'une famille souhaite avoir. Créer un vecteur regroupant les trois résultats.
@@ -498,9 +498,9 @@ nouv_res_C &lt;- ceiling(res_C)
 enfants &lt;- c(nouv_res_A,nouv_res_B,nouv_res_C)
 ```
 
-0. `res_A`, `res_B` et `res_C` représentent les résultats de chaque équation: 5.83289, 4.1 et 2.30940
-1. `nouv_res_A`, `nouv_res_B` et `nouv_res_C` représentent les résultats arrondis: 6, 4 et 3
-2. `enfants` représente le vecteur du nombre d'enfants attendu par famille. [6,4,3]
+0 - `res_A`, `res_B` et `res_C` représentent les résultats de chaque équation: 5.83289, 4.1 et 2.30940
+1 - `nouv_res_A`, `nouv_res_B` et `nouv_res_C` représentent les résultats arrondis: 6, 4 et 3
+2 - `enfants` représente le vecteur du nombre d'enfants attendu par famille. [6,4,3]
 
 ---
 
@@ -514,8 +514,8 @@ cout_vie &lt;- c(10000,12000,11500)
 montant &lt;- enfants * cout_vie
 ```
 
-3. `enfants_max` représente la valeur maximale du vecteur `enfants`: [6]
-4. On crée d'abord le vecteur du coût de la vie `cout_vie`. On calcule ensuite `montant` qui représente le nombre d'enfants multiplié par le coût de la vie dans chacune des régions respectives.
+3 - `enfants_max` représente la valeur maximale du vecteur `enfants`: [6]
+4 - On crée d'abord le vecteur du coût de la vie `cout_vie`. On calcule ensuite `montant` qui représente le nombre d'enfants multiplié par le coût de la vie dans chacune des régions respectives.
 
 
 ---
@@ -545,10 +545,10 @@ Enf_sd_col &lt;- apply(party, 2, sd)
 Enf_cv &lt;- (Enf_sd_col/Enf_moyen_col)
 ```
 
-1. `Enf_total_col`: Total du nombre d'enfants par colonne: [131, 113, 103, 73, 80]
-2. `Enf_total`: Total du nombre d'enfants: [500]
-3. `End_moyen_col`: Moyenne par ligne du nombre d'enfants pour chaque colonne: [8.19, 7.06, 6.44, 4.56, 5]
-4. `Enf_cv`: Coefficient de variation par colonne: [1.153, 0.602, 0.494, 0.698, 0.641]
+1 - `Enf_total_col`: Total du nombre d'enfants par colonne: [131, 113, 103, 73, 80]
+2 - `Enf_total`: Total du nombre d'enfants: [500]
+3 - `End_moyen_col`: Moyenne par ligne du nombre d'enfants pour chaque colonne: [8.19, 7.06, 6.44, 4.56, 5]
+4 - `Enf_cv`: Coefficient de variation par colonne: [1.153, 0.602, 0.494, 0.698, 0.641]
 ---
 
 # Solutions 5 et 6
@@ -570,8 +570,8 @@ head(party_rel_crou)
 ## Paprika   0.18    0.18 0.27      0.06  0.30
 ```
 
-5. `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par) [21, 74, 49, 19, ...]
-6. `party_rel_crou`: Le tableau au dessus nous indique le pourcentage relatif à chaque ligne.
+5 - `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par) [21, 74, 49, 19, ...]
+6 - `party_rel_crou`: Le tableau au dessus nous indique le pourcentage relatif à chaque ligne.
 
 ---
 class: middle, center, inverse
@@ -646,12 +646,12 @@ tableau
 ```
 
 ```
-##             x          y
-## 1  1.00135213 -1.2361558
-## 2  0.08897651 -0.3816681
-## 3 -0.59698219 -0.1304892
-## 4 -0.13289666 -0.3479604
-## 5  0.08759420 -2.4254969
+##            x          y
+## 1  0.4595592  0.4846405
+## 2  2.1884281  0.4843290
+## 3 -1.1784713 -1.3732587
+## 4 -0.9005113 -0.9015296
+## 5  0.9005807  1.3194269
 ```
 
 ---
@@ -678,9 +678,9 @@ $$
 ```
 
 ```
-## [1] 5.271755
-## [1] 0.1160248
-## [1] -0.1070829
+## [1] 0.2358834
+## [1] 0.396564
+## [1] -0.6342152
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -700,11 +700,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 5.271755
-## [1] 0.1160248
-## [1] -0.1070829
-## [1] -0.0961674
-## [1] 0.09087609
+## [1] 0.2358834
+## [1] 0.396564
+## [1] -0.6342152
+## [1] -0.4505101
+## [1] 0.5352461
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -867,7 +867,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1]  5.27175483  0.11602484 -0.10708286 -0.09616740  0.09087609
+## [1]  0.2358834  0.3965640 -0.6342152 -0.4505101  0.5352461
 ```
 
 ```r
@@ -875,7 +875,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1]  5.27175483  0.11602484 -0.10708286 -0.09616740  0.09087609
+## [1]  0.2358834  0.3965640 -0.6342152 -0.4505101  0.5352461
 ```
 
 ---
@@ -903,7 +903,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1]  5.2717548  0.1160248 -0.1070829 -0.5332648
+## [1]  0.2358834  0.3965640 -0.6342152  0.9374074
 ```
 
 ```r
@@ -911,7 +911,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1]  5.2717548  0.1160248 -0.1500415  0.1195453
+## [1]  0.2358834  0.3965640  0.6907017 -1.5330911
 ```
 
 ---
@@ -981,12 +981,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##             x            y
-## 1  0.32003123   3.05716032
-## 2  0.08338261   0.01305899
-## 3  0.36075258  -1.55522201
-## 4 -0.93307257   0.21452795
-## 5  0.08164781 -31.14858196
+##             x         y
+## 1  0.18775436 0.3882049
+## 2  0.01570194 0.1279380
+## 3 -1.36101133 0.4249499
+## 4 -1.20306478 1.4700641
+## 5  0.76302844 0.8731686
 ```
 
 ---
@@ -1030,13 +1030,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9368952
+## [1] 0.9768952
 ## 
 ## $ecart_type
-## [1] 0.5030231
+## [1] 0.4588683
 ## 
 ## $CV
-## [1] 0.5369044
+## [1] 0.4697211
 ```
 
 ---
