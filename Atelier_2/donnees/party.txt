@@ -1,4 +1,4 @@
-	Pepsi	7up	Coke	Thé glacé	Crush
+	Pepsi	Sevenup	Coke	Thé glacé	Crush
 Piment	3	5	8	3	2
 Barbecue	41	17	5	4	7
 Nature	12	15	13	5	4

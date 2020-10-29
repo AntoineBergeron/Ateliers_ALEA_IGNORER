@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.35915287 0.03194434 0.23689690 0.63350231 0.66548394 0.03970199
-##  [7] 0.64609424 0.49099604 0.38594650 0.23290185
+##  [1] 0.1045585 0.6908757 0.4213894 0.3949840 0.9005896 0.1203037 0.8617686
+##  [8] 0.5718173 0.1273649 0.6185034
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.84019855 0.50312044 0.03276259 0.61094380 0.69226400 0.40355563
-##  [7] 0.33857974 0.66281008 0.27439638 0.79853384
+##  [1] 0.8327242 0.2474337 0.5090988 0.1116338 0.4733628 0.3603216 0.3658792
+##  [8] 0.6772713 0.8281113 0.4200630
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.03276259
+## [1] 0.1116338
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.8401985
+## [1] 0.8327242
 ```
 
 ---
@@ -380,8 +380,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.9379754 0.4392389
-## [2,] 0.2789323 0.5930483
+## [1,] 0.7118850 0.8665873
+## [2,] 0.7094117 0.5748016
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.3772143 0.8719806
+## [1] 1.578472 1.284213
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.216908 1.032287
+## [1] 1.421297 1.441389
 ```
 
 ---
@@ -413,8 +413,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.9379754 0.4392389
-## [2,] 0.2789323 0.5930483
+## [1,] 0.7118850 0.8665873
+## [2,] 0.7094117 0.5748016
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.3772143 0.8719806
+## [1] 1.578472 1.284213
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.216908 1.032287
+## [1] 1.421297 1.441389
 ```
 
 ---
@@ -477,44 +477,53 @@ class: middle, center, inverse
 Au moyen du fichier [party.csv](./donnees/party.csv), je vous demande de faire les opérations suivantes:
 
 1. Calculer le nombre total d'enfants ayant bu chaque type de boisson gazeuse. 
-2. Calculer en fonction des sacs de chips le nombre moyen d'enfant par type de liqueur. 
-3. Calculer le coefficient de variation. (Écart-type/Moyenne avec sd() et mean())
-4. Calculer le nombre total d'enfants ayant mangé chaque sorte de chips.
-5. Transformer les valeurs du tableau afin d'obtenir le pourcentage d'enfants ayant mangé chaque sorte de chips.
+2. Calculer combien d'enfants était présent à la fête.
+3. Calculer en fonction des sacs de croustille le nombre moyen d'enfants par type de liqueur. 
+4. Calculer le coefficient de variation. (Écart-type/Moyenne avec sd() et mean())
+5. Calculer le nombre total d'enfants ayant mangé chaque sorte de croustille.
+6. Transformer les valeurs du tableau afin d'obtenir le pourcentage d'enfants ayant mangé chaque sorte de croustille (avec 2 décimales de précision).
 
 ---
 
-# Solution
+# Solution 1,2,3 et 4
 
 
 ```r
-PositionEquipe &lt;- read.csv(file="./donnees/PositionEquipe.csv", header=TRUE, sep = ";", row.names = 1)
-N_total &lt;- apply(PositionEquipe, 2, sum)
-N_moy &lt;- apply(PositionEquipe, 2, mean)
-N_sd &lt;- apply(PositionEquipe, 2, sd)
-N_CV &lt;- N_sd / N_moy
+party &lt;- read.csv(file="./donnees/party.csv", header=TRUE, sep = ";", row.names = 1)
+Enf_total_col &lt;- apply(party, 2, sum)
+Enf_total &lt;- sum(Enf_total_col)
+Enf_moyen_col &lt;- apply(party, 2, mean)
+Enf_sd_col &lt;- apply(party, 2, sd)
+Enf_cv &lt;- (Enf_sd_col/Enf_moyen_col)
 ```
 
+1. `Enf_total_col`: Total du nombre d'enfants par colonne: 131, 113, 103, 73, 80
+2. `Enf_total`: Total du nombre d'enfants: 500
+3. `End_moyen_col`: Moyenne par ligne du nombre d'enfants pour chaque colonne: 8.19, 7.06, 6.44, 4.56, 5
+4. `Enf_cv`: Coefficient de variation par colonne: 1.153, 0.602, 0.494, 0.698, 0.641
 ---
 
-# Solution
+# Solution 5 et 6
 
 
 ```r
-N_PositionEquipe &lt;- apply(PositionEquipe, 1, sum)
-PositionEquipe_rel &lt;- PositionEquipe / N_PositionEquipe
-head(PositionEquipe_rel)
+Enf_total_lig &lt;- apply(party, 1, sum)
+party_rel_crou &lt;- party/Enf_total_lig
+head(party_rel_crou)
 ```
 
 ```
-##             C         D          L         R
-## ANA 0.2222222 0.3333333 0.22222222 0.2222222
-## BOS 0.5714286 0.2857143 0.14285714 0.0000000
-## CGY 0.3636364 0.3636364 0.09090909 0.1818182
-## CHI 0.0000000 0.5714286 0.28571429 0.1428571
-## DAL 0.7500000 0.0000000 0.00000000 0.2500000
-## EDM 0.3750000 0.2500000 0.25000000 0.1250000
+##              Pepsi   Sevenup       Coke  Thé.glacé      Crush
+## Piment   0.1428571 0.2380952 0.38095238 0.14285714 0.09523810
+## Barbecue 0.5540541 0.2297297 0.06756757 0.05405405 0.09459459
+## Nature   0.2448980 0.3061224 0.26530612 0.10204082 0.08163265
+## Poulet   0.0000000 0.4210526 0.21052632 0.36842105 0.00000000
+## Oignon   0.3200000 0.2000000 0.08000000 0.08000000 0.32000000
+## Paprika  0.1818182 0.1818182 0.27272727 0.06060606 0.30303030
 ```
+
+5. `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par) 21, 74, 49, 19, ...
+6. `party_rel_crou`: Le tableau au dessus nous indique le pourcentage relatif à chaque ligne.
 
 ---
 class: middle, center, inverse
@@ -589,12 +598,12 @@ tableau
 ```
 
 ```
-##            x          y
-## 1  0.4310361 -0.6077259
-## 2 -0.9739188 -1.3833191
-## 3  0.3742326 -1.8473693
-## 4  0.3063769 -1.0195036
-## 5 -2.7514053 -0.7017923
+##             x           y
+## 1 -0.05472076  0.31817410
+## 2  1.60447504  0.02561094
+## 3  1.91684977  1.84301452
+## 4  1.50387128 -0.55250058
+## 5 -0.61855578  0.18903030
 ```
 
 ---
@@ -621,9 +630,9 @@ $$
 ```
 
 ```
-## [1] 1.482552
-## [1] -0.5715335
-## [1] 0.4693018
+## [1] -0.06608658
+## [1] 0.02520856
+## [1] 0.9396036
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -643,11 +652,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 1.482552
-## [1] -0.5715335
-## [1] 0.4693018
-## [1] 0.438004
-## [1] -0.5591673
+## [1] -0.06608658
+## [1] 0.02520856
+## [1] 0.9396036
+## [1] -0.8733607
+## [1] 0.2722208
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -810,7 +819,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1]  1.4825516 -0.5715335  0.4693018  0.4380040 -0.5591673
+## [1] -0.06608658  0.02520856  0.93960358 -0.87336067  0.27222084
 ```
 
 ```r
@@ -818,7 +827,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1]  1.4825516 -0.5715335  0.4693018  0.4380040 -0.5591673
+## [1] -0.06608658  0.02520856  0.93960358 -0.87336067  0.27222084
 ```
 
 ---
@@ -846,7 +855,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1]  1.4825516 -0.5715335  0.4693018  0.7467579
+## [1] -0.06608658  0.02520856  0.93960358 -0.04978951
 ```
 
 ```r
@@ -854,7 +863,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1]  1.4825516 -0.5715335  0.5622143 -0.4980950
+## [1] -0.06608658  0.02520856 -0.05639519 -0.84267577
 ```
 
 ---
@@ -924,12 +933,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##            x             y
-## 1 0.01436947  0.0009166279
-## 2 0.05813179 -3.5742965037
-## 3 0.07584680 -8.9742744239
-## 4 0.20062170 -5.4439184245
-## 5 0.16054395  0.7615018812
+##             x             y
+## 1 -0.15284134  0.2346980114
+## 2  0.33815383  0.0003966908
+## 3  0.18154043  0.0071251315
+## 4  0.05306282 -2.9636177035
+## 5  0.08587576  0.0061899138
 ```
 
 ---
@@ -973,13 +982,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9726365
+## [1] 1.050985
 ## 
 ## $ecart_type
-## [1] 0.428006
+## [1] 0.5342854
 ## 
 ## $CV
-## [1] 0.4400473
+## [1] 0.5083662
 ```
 
 ---
