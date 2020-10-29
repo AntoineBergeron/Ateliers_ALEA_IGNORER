@@ -269,7 +269,7 @@ Au moyen du fichier [party.csv](./donnees/party.csv), je vous demande de faire l
 
 ---
 
-# Solution 1,2,3 et 4
+# Solutions 1, 2, 3 et 4
 
 ```{r}
 party <- read.csv(file="./donnees/party.csv", header=TRUE, sep = ";", row.names = 1)
@@ -280,13 +280,13 @@ Enf_sd_col <- apply(party, 2, sd)
 Enf_cv <- (Enf_sd_col/Enf_moyen_col)
 ```
 
-1. `Enf_total_col`: Total du nombre d'enfants par colonne: 131, 113, 103, 73, 80
-2. `Enf_total`: Total du nombre d'enfants: 500
-3. `End_moyen_col`: Moyenne par ligne du nombre d'enfants pour chaque colonne: 8.19, 7.06, 6.44, 4.56, 5
-4. `Enf_cv`: Coefficient de variation par colonne: 1.153, 0.602, 0.494, 0.698, 0.641
+1. `Enf_total_col`: Total du nombre d'enfants par colonne: [131, 113, 103, 73, 80]
+2. `Enf_total`: Total du nombre d'enfants: [500]
+3. `End_moyen_col`: Moyenne par ligne du nombre d'enfants pour chaque colonne: [8.19, 7.06, 6.44, 4.56, 5]
+4. `Enf_cv`: Coefficient de variation par colonne: [1.153, 0.602, 0.494, 0.698, 0.641]
 ---
 
-# Solution 5 et 6
+# Solutions 5 et 6
 
 ```{r}
 Enf_total_lig <- apply(party, 1, sum)
@@ -294,7 +294,7 @@ party_rel_crou <- party/Enf_total_lig
 head(party_rel_crou)
 ```
 
-5. `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par) 21, 74, 49, 19, ...
+5. `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par) [21, 74, 49, 19, ...]
 6. `party_rel_crou`: Le tableau au dessus nous indique le pourcentage relatif à chaque ligne.
 
 ---
