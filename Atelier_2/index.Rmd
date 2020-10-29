@@ -256,7 +256,45 @@ class: middle, center, inverse
 
 ---
 
-# Exercice: Abondances relatives (en nourriture et boisson aussi!)
+#Exercice 1: Coût d'une famille par année
+
+Calculer d'abord les fonctions suivantes: (A) $log_2(57)$ (B) $exp(ln(4.1))$ (C) $2^2\cdot \sqrt{1/3}$ 
+
+1. Arrondisser la fonction (A). Arrondisser ensuite à la baisse la fonction (B). Arrondisser finalement à la hausse la fonction (C).
+2. Le nombre obtenu en (1) représente le nombre d'enfant qu'un famille souhaite avoir. Créer un vecteur regroupant les trois résultats.
+3. Parmis les trois familles, quel est le nombre maximal d'enfants qu'une famille souhaite avoir?
+4. Les familles (A), (B) et (C) habitent respectivement en Estrie, Montérégie et Mauricie. Sachant que le coût de vie d'un enfant est de 10000*$/*années en Estrie, 12000*$/*années en Montérégie et 11500*$/*années en Mauricie, combien devront débourser chaque famille par année en supposant que leur nombre d'enfants expecter devient réel?
+
+---
+
+# Solutions 1 et 2
+
+```{r}
+res_A <- log(57, base = 2)
+res_B <- exp(log(4.1))
+res_C <- 2^2 * sqrt(1/3)
+nouv_res_A <- round(res_A)
+nouv_res_B <- floor(res_B)
+nouv_res_C <- ceiling(res_C)
+enfants <- c(nouv_res_A,nouv_res_B,nouv_res_C)
+```
+
+---
+
+# Solution 3 et 4
+
+
+```{r}
+enfants_max <- max(enfants)
+cout_vie <- c(10000,12000,11500)
+montant <- enfants * cout_vie
+```
+
+
+
+---
+
+# Exercice 2: Abondances relatives
 
 Au moyen du fichier [party.csv](./donnees/party.csv), je vous demande de faire les opérations suivantes:
 
@@ -290,7 +328,7 @@ Enf_cv <- (Enf_sd_col/Enf_moyen_col)
 
 ```{r}
 Enf_total_lig <- apply(party, 1, sum)
-party_rel_crou <- party/Enf_total_lig
+party_rel_crou <- round(party/Enf_total_lig, 2)
 head(party_rel_crou)
 ```
 
