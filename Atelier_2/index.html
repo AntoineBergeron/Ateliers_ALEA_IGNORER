@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.26580249 0.02920487 0.26859504 0.69185657 0.22327312 0.26925763
-##  [7] 0.65578758 0.38182909 0.44818842 0.19361725
+##  [1] 0.97661969 0.27987060 0.40132459 0.60628679 0.01958818 0.19421614
+##  [7] 0.74459617 0.16885268 0.76361473 0.82102280
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.3697542 0.6259654 0.2713377 0.5722876 0.2012554 0.4499701 0.8917044
-##  [8] 0.4942261 0.3826879 0.5049248
+##  [1] 0.89904327 0.02952652 0.48237089 0.20355551 0.36042677 0.84817371
+##  [7] 0.44851497 0.16590380 0.95263008 0.85719943
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.2012554
+## [1] 0.02952652
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.8917044
+## [1] 0.9526301
 ```
 
 ---
@@ -379,9 +379,9 @@ mat
 ```
 
 ```
-##            [,1]      [,2]
-## [1,] 0.86087543 0.3738585
-## [2,] 0.07140247 0.2183076
+##           [,1]      [,2]
+## [1,] 0.7492969 0.4012163
+## [2,] 0.2547821 0.6332565
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.2347339 0.2897101
+## [1] 1.1505132 0.8880386
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 0.9322779 0.5921660
+## [1] 1.004079 1.034473
 ```
 
 ---
@@ -412,9 +412,9 @@ mat
 ```
 
 ```
-##            [,1]      [,2]
-## [1,] 0.86087543 0.3738585
-## [2,] 0.07140247 0.2183076
+##           [,1]      [,2]
+## [1,] 0.7492969 0.4012163
+## [2,] 0.2547821 0.6332565
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.2347339 0.2897101
+## [1] 1.1505132 0.8880386
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 0.9322779 0.5921660
+## [1] 1.004079 1.034473
 ```
 
 ---
@@ -467,19 +467,21 @@ On peut donc multiplier des matrices en utilisant l'opérateur `%*%`
 ---
 class: middle, center, inverse
 
-# Exercice
+# Exercices
 &lt;hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
 
 #Exercice 1: Coût d'une famille par année
 
-Calculer d'abord les fonctions suivantes: (A) `\(log_2(57)\)` (B) `\(exp(ln(4.1))\)` (C) `\(2^2\cdot \sqrt{1/3}\)` 
+Calculer d'abord les fonctions suivantes:
+
+(A) `\(log_2(57)\)` (B) `\(exp(ln(4.1))\)` (C) `\(2^2\cdot \sqrt{1/3}\)` 
 
 1. Arrondisser la fonction (A). Arrondisser ensuite à la baisse la fonction (B). Arrondisser finalement à la hausse la fonction (C).
-2. Le nombre obtenu en (1) représente le nombre d'enfant qu'un famille souhaite avoir. Créer un vecteur regroupant les trois résultats.
-3. Parmis les trois familles, quel est le nombre maximal d'enfants qu'une famille souhaite avoir?
-4. Les familles (A), (B) et (C) habitent respectivement en Estrie, Montérégie et Mauricie. Sachant que le coût de vie d'un enfant est de 10000*$/*années en Estrie, 12000*$/*années en Montérégie et 11500*$/*années en Mauricie, combien devront débourser chaque famille par année en supposant que leur nombre d'enfants expecter devient réel?
+2. Le nombre obtenu en (1) représente le nombre d'enfants qu'une famille souhaite avoir. Créer un vecteur regroupant les trois résultats.
+3. Parmi les trois familles, quel est le nombre maximal d'enfants qu'une famille souhaite avoir?
+4. Les familles (A), (B) et (C) habitent respectivement en Estrie, Montérégie et Mauricie. Sachant que le coût de vie d'un enfant est de 10000*$/*années en Estrie, 12000*$/*années en Montérégie et 11500*$/*années en Mauricie, combien devront débourser chaque famille par année en supposant que leur nombre d'enfants attendu devient réel?
 
 ---
 
@@ -496,6 +498,10 @@ nouv_res_C &lt;- ceiling(res_C)
 enfants &lt;- c(nouv_res_A,nouv_res_B,nouv_res_C)
 ```
 
+0. `res_A`, `res_B` et `res_C` représentent les résultats de chaque équation: 5.83289, 4.1 et 2.30940
+1. `nouv_res_A`, `nouv_res_B` et `nouv_res_C` représentent les résultats arrondis: 6, 4 et 3
+2. `enfants` représente le vecteur du nombre d'enfants attendu par famille. [6,4,3]
+
 ---
 
 # Solution 3 et 4
@@ -508,6 +514,8 @@ cout_vie &lt;- c(10000,12000,11500)
 montant &lt;- enfants * cout_vie
 ```
 
+3. `enfants_max` représente la valeur maximale du vecteur `enfants`: [6]
+4. On crée d'abord le vecteur du coût de la vie `cout_vie`. On calcule ensuite `montant` qui représente le nombre d'enfants multiplié par le coût de la vie dans chacune des régions respectives.
 
 
 ---
@@ -639,11 +647,11 @@ tableau
 
 ```
 ##             x          y
-## 1  1.57135326 -1.5996646
-## 2  0.79849550  1.8965851
-## 3 -1.54350703 -0.7895866
-## 4  0.00294039  0.1115244
-## 5  0.65358792  0.4000413
+## 1  1.00135213 -1.2361558
+## 2  0.08897651 -0.3816681
+## 3 -0.59698219 -0.1304892
+## 4 -0.13289666 -0.3479604
+## 5  0.08759420 -2.4254969
 ```
 
 ---
@@ -670,9 +678,9 @@ $$
 ```
 
 ```
-## [1] 88.78555
-## [1] 0.5619181
-## [1] -0.5223676
+## [1] 5.271755
+## [1] 0.1160248
+## [1] -0.1070829
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -692,11 +700,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 88.78555
-## [1] 0.5619181
-## [1] -0.5223676
-## [1] 0.002864857
-## [1] 0.2481539
+## [1] 5.271755
+## [1] 0.1160248
+## [1] -0.1070829
+## [1] -0.0961674
+## [1] 0.09087609
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -859,7 +867,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1] 88.785550484  0.561918138 -0.522367560  0.002864857  0.248153858
+## [1]  5.27175483  0.11602484 -0.10708286 -0.09616740  0.09087609
 ```
 
 ```r
@@ -867,7 +875,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1] 88.785550484  0.561918138 -0.522367560  0.002864857  0.248153858
+## [1]  5.27175483  0.11602484 -0.10708286 -0.09616740  0.09087609
 ```
 
 ---
@@ -895,7 +903,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1] 88.7855505  0.5619181 -0.5223676  0.1041337
+## [1]  5.2717548  0.1160248 -0.1070829 -0.5332648
 ```
 
 ```r
@@ -903,7 +911,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1] 88.78555048  0.56191814 -1.58707120  0.09785693
+## [1]  5.2717548  0.1160248 -0.1500415  0.1195453
 ```
 
 ---
@@ -973,12 +981,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##             x          y
-## 1 0.419909931  0.9384014
-## 2 0.457390055  0.0269119
-## 3 0.144380547 -1.1146821
-## 4 0.002921932  0.1032205
-## 5 0.174694559  0.1528300
+##             x            y
+## 1  0.32003123   3.05716032
+## 2  0.08338261   0.01305899
+## 3  0.36075258  -1.55522201
+## 4 -0.93307257   0.21452795
+## 5  0.08164781 -31.14858196
 ```
 
 ---
@@ -1022,13 +1030,13 @@ test
 
 ```
 ## $moyenne
-## [1] 1.059104
+## [1] 0.9368952
 ## 
 ## $ecart_type
-## [1] 0.5212768
+## [1] 0.5030231
 ## 
 ## $CV
-## [1] 0.4921866
+## [1] 0.5369044
 ```
 
 ---
