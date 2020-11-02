@@ -755,6 +755,20 @@ mean(result) #On s'intéressait à la moyenne des concentrations!
 
 ---
 
+# Ex 2: 
+
+Alexis vend des pommes, des oranges et des pamplemousses dans le but de participer à un voyage humanitaire. Présentement, il calcule son montant total à l'aide d'une calculatrice. Cependant, il doit recalculer à chaque jour son total amassé et aimerait avoir une fonction qui lui permettrait de l'obtenir directement, en fonction du nombre de caisse de pommes, d'oranges et de pamplemousses vendus. À la diapositive qui suit, Alexis a eu la gentillesse de nous faire un tableau expliquant les prix.
+
+---
+
+# Ex 2: suite
+
+<div style='text-align:center;'>
+<img src="assets/img/exercice2.PNG" height="400"></img>
+</div>
+
+---
+
 # Distribution des types de joueurs
 
 Toujours à partir du fichier [PositionEquipe.csv](./donnees/PositionEquipe.csv), écriver une fonction qui vous retournera les statistiques descriptives suivantes pour une série de données (une position en l'occurrence) :
