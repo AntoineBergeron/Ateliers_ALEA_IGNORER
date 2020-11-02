@@ -866,6 +866,3 @@ Après avoir visionné le tableau des statistiques, on remarque que le nombre de
 5. Appliquez cette fonction sur l'ensemble des joueurs.
 6. Quelle est la valeur actuelle du joueur la plus élevée?
 
-
----
-
