@@ -813,19 +813,32 @@ On remarque que beaucoup d'arguments ont été utilisé pour notre fonction `mon
 <img src="assets/img/exercice2suite.PNG" height="450"></img>
 </div>
 
-On arriverait simplement à calculer le montant total d'Alexis.
+On arriverait très simplement à calculer le montant total d'Alexis.
 
 ---
 
 # Solution de l'exercice 2: (suite)
 
-Suffit alors de changer le nombre de caisses pour chaque type de fruit ainsi que les trois éléments surlignés en cyan.
+Il Suffirait de changer le nombre de caisses pour chaque type de fruit ainsi que les trois éléments surlignés en cyan.
 
 ```{r}
 montant_total(27,22,20,0.20,23,17,25,0.15,13,42,10,0.10)
 ```
 
 ---
+
+# Exercice récapitulatif
+
+Dans cette exercice récapitulatif, nous travaillerons à partir de deux fichiers (deux jeux de données).
+
+[soccer.csv](./donnees/soccer.csv) : Statistiques de 50 joueurs de soccer professionnels.
+
+[minjoue.csv](./donnees/minjoue.csv) : Statistiques sur le temps de jeu des 50 joueurs sur 20 parties.
+
+Pour cet exercice, nous nous intéresserons à déterminer la valeur actuelle d'un joueur de soccer.
+
+---
+
 
 # Distribution des types de joueurs
 
