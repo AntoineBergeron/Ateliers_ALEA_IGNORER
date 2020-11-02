@@ -845,9 +845,13 @@ La valeur d'un joueur sera calculé à l'aide des quatre critères suivants: l'�
 
 À l'aide de calcul savant, nous avons pu déterminer que la valeur actuelle d'un joueur de soccer était obtenue de la façon suivante:
 
-$Val = (-0.05(x_1 - 30)^2 + 7.5) + (x_2 + \dfrac{5}{100}\cdot x_2) + x_3^* + ( 0.75\cdot x_4 + 0.55 \cdot x_5 + \dfrac{1}{30}\cdot x_6)$
+$Val = (-0.05(x_1 - 30)^2 + 7.5) + (x_2 + \dfrac{5}{100}\cdot x_2) + x_3^* + $
 
-où $x_1$ représente l'âge du joueur, $x_2$ la valeur du contrat, $x_3^*$ la valeur du poste, $x_4$ le nombre de buts, $x_5$ le nombre de passe décisive ainsi que $x_6$ le nombre moyen de minutes jouées par partie. Notons que $x_3^*$ vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur.
+$\hspace{2cm}( 0.75\cdot x_4 + 0.55 \cdot x_5 + \dfrac{1}{30}\cdot x_6)$
+
+où $x_1$ représente l'âge du joueur, $x_2$ la valeur du contrat, $x_3^*$ la valeur du poste, $x_4$ le nombre de buts, $x_5$ le nombre de passe décisive ainsi que $x_6$ le nombre moyen de minutes jouées par partie. 
+
+Notons que $x_3^*$ vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur.
 
 ---
 
@@ -865,16 +869,3 @@ Après avoir visionné le tableau des statistiques, on remarque que le nombre de
 
 ---
 
-
-# Distribution des types de joueurs
-
-Toujours à partir du fichier [PositionEquipe.csv](./donnees/PositionEquipe.csv), écriver une fonction qui vous retournera les statistiques descriptives suivantes pour une série de données (une position en l'occurrence) :
-
-1. Le nombre de joueur moyen par équipe
-2. Le nombre total de joueur
-3. Le coefficent de variation du nombre de joueur
-4. La distribution relative de joueur par équipe
-5. Le pourcentage minimum de joueur dans une équipe
-6. Le pourcentage maximum de joueur dans une équipe
-
-Ensuite, appliquez cette fonction sur l'ensemble des espèces au moyen de la fonction *apply()*

@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.7144954 0.9937453 0.7139638 0.6017147 0.3224290 0.6858898 0.1658608
-##  [8] 0.3380006 0.4155438 0.8466265
+##  [1] 0.30018888 0.09814074 0.91328120 0.01688489 0.26947875 0.73361620
+##  [7] 0.04627751 0.53893887 0.20180257 0.71658623
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.313321957 0.905973928 0.260380478 0.002063518 0.970796183 0.244994170
-##  [7] 0.895730536 0.295821771 0.633558213 0.173919456
+##  [1] 0.6154305199 0.1025362969 0.4852666126 0.1099540682 0.8598017897
+##  [6] 0.5623309999 0.8653885084 0.0004884533 0.9273350786 0.0392297073
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.002063518
+## [1] 0.0004884533
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.9707962
+## [1] 0.9273351
 ```
 
 ---
@@ -379,9 +379,9 @@ mat
 ```
 
 ```
-##           [,1]       [,2]
-## [1,] 0.9361799 0.32466012
-## [2,] 0.1032877 0.09162249
+##           [,1]      [,2]
+## [1,] 0.4144112 0.7719896
+## [2,] 0.5971020 0.7429453
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.2608400 0.1949102
+## [1] 1.186401 1.340047
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.0394676 0.4162826
+## [1] 1.011513 1.514935
 ```
 
 ---
@@ -412,9 +412,9 @@ mat
 ```
 
 ```
-##           [,1]       [,2]
-## [1,] 0.9361799 0.32466012
-## [2,] 0.1032877 0.09162249
+##           [,1]      [,2]
+## [1,] 0.4144112 0.7719896
+## [2,] 0.5971020 0.7429453
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.2608400 0.1949102
+## [1] 1.186401 1.340047
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.0394676 0.4162826
+## [1] 1.011513 1.514935
 ```
 
 ---
@@ -653,12 +653,12 @@ tableau
 ```
 
 ```
-##            x          y
-## 1 -0.4383633  0.1070111
-## 2 -0.8540095  2.4879085
-## 3 -1.1788388  1.3181069
-## 4  0.2902555  0.3570368
-## 5 -1.9514306 -0.4735920
+##             x          y
+## 1 -1.20669145  0.4689414
+## 2  1.15843260 -0.9108665
+## 3  0.55538779 -1.9779091
+## 4 -0.08361616  0.1516874
+## 5 -1.06456345 -1.3005831
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -687,9 +687,9 @@ $$
 ```
 
 ```
-## [1] 0.1415706
-## [1] -1.300385
-## [1] -11.15716
+## [1] 0.7670179
+## [1] -4.262205
+## [1] 0.772225
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -709,11 +709,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 0.1415706
-## [1] -1.300385
-## [1] -11.15716
-## [1] 0.1601006
-## [1] -0.3811024
+## [1] 0.7670179
+## [1] -4.262205
+## [1] 0.772225
+## [1] -0.1863271
+## [1] -0.5853985
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -876,7 +876,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1]   0.1415706  -1.3003848 -11.1571566   0.1601006  -0.3811024
+## [1]  0.7670179 -4.2622050  0.7722250 -0.1863271 -0.5853985
 ```
 
 ```r
@@ -884,7 +884,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1]   0.1415706  -1.3003848 -11.1571566   0.1601006  -0.3811024
+## [1]  0.7670179 -4.2622050  0.7722250 -0.1863271 -0.5853985
 ```
 
 ---
@@ -912,7 +912,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1]   0.1415706  -1.3003848 -11.1571566   1.9244886
+## [1]  0.7670179 -4.2622050  0.7722250  0.1734969
 ```
 
 ---
@@ -927,7 +927,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1]  0.1415706 -1.3003848 -0.6567932  0.6135404
+## [1]  0.7670179 -4.2622050 -0.7494585  0.1341249
 ```
 
 ---
@@ -998,12 +998,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##              x          y
-## 1  -0.50131405 0.09563859
-## 2   0.41384087 0.84546291
-## 3   0.03441004 1.12095469
-## 4   0.20332109 0.26266454
-## 5 -12.49435848 0.21063103
+##             x          y
+## 1  0.46575684  0.3650525
+## 2  0.29941370 -1.8468758
+## 3  0.43030910  0.5413279
+## 4 -0.08556349  0.1184843
+## 5 17.46883663  0.4820728
 ```
 
 ---
@@ -1047,13 +1047,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9876828
+## [1] 1.092713
 ## 
 ## $ecart_type
-## [1] 0.4703205
+## [1] 0.4928058
 ## 
 ## $CV
-## [1] 0.4761858
+## [1] 0.4509929
 ```
 
 ---
@@ -1221,9 +1221,13 @@ La valeur d'un joueur sera calculé à l'aide des quatre critères suivants: l'�
 
 À l'aide de calcul savant, nous avons pu déterminer que la valeur actuelle d'un joueur de soccer était obtenue de la façon suivante:
 
-`\(Val = (-0.05(x_1 - 30)^2 + 7.5) + (x_2 + \dfrac{5}{100}\cdot x_2) + x_3^* + ( 0.75\cdot x_4 + 0.55 \cdot x_5 + \dfrac{1}{30}\cdot x_6)\)`
+$Val = (-0.05(x_1 - 30)^2 + 7.5) + (x_2 + \dfrac{5}{100}\cdot x_2) + x_3^* + $
 
-où `\(x_1\)` représente l'âge du joueur, `\(x_2\)` la valeur du contrat, `\(x_3^*\)` la valeur du poste, `\(x_4\)` le nombre de buts, `\(x_5\)` le nombre de passe décisive ainsi que `\(x_6\)` le nombre moyen de minutes jouées par partie. Notons que `\(x_3^*\)` vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur.
+`\(\hspace{2cm}( 0.75\cdot x_4 + 0.55 \cdot x_5 + \dfrac{1}{30}\cdot x_6)\)`
+
+où `\(x_1\)` représente l'âge du joueur, `\(x_2\)` la valeur du contrat, `\(x_3^*\)` la valeur du poste, `\(x_4\)` le nombre de buts, `\(x_5\)` le nombre de passe décisive ainsi que `\(x_6\)` le nombre moyen de minutes jouées par partie. 
+
+Notons que `\(x_3^*\)` vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur.
 
 ---
 
@@ -1240,20 +1244,6 @@ Après avoir visionné le tableau des statistiques, on remarque que le nombre de
 
 
 ---
-
-
-# Distribution des types de joueurs
-
-Toujours à partir du fichier [PositionEquipe.csv](./donnees/PositionEquipe.csv), écriver une fonction qui vous retournera les statistiques descriptives suivantes pour une série de données (une position en l'occurrence) :
-
-1. Le nombre de joueur moyen par équipe
-2. Le nombre total de joueur
-3. Le coefficent de variation du nombre de joueur
-4. La distribution relative de joueur par équipe
-5. Le pourcentage minimum de joueur dans une équipe
-6. Le pourcentage maximum de joueur dans une équipe
-
-Ensuite, appliquez cette fonction sur l'ensemble des espèces au moyen de la fonction *apply()*
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
