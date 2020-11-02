@@ -774,10 +774,7 @@ Quel est le montant total amassé par Alexis en ce moment?
 # Solution de l'exercice 2
 
 ```{r}
-montant_total <- function(nbOr,prixOran,borneOran,pourcOran,nbPo,prixPomm,bornePomm,pourcPomm,nbPa,prixPamp,bornePamp,pourcPamp){  #nbOr, nbPo et nbPa sont respectivement le nombre de caisses d'oranges, de pommes et de pamplemousses.
-  #prixOran, prixPomm et prixPamp sont respectivement le prix des caisses d'oranges, de pommes et de pamplemousses.
-  #borneOran, bornePomm et bornePamp sont respectivement le nombre de caisses pour chaque fruit avant d'obtenir une bonification.
-  #pourcOran, pourcPomm et pourcPamp sont respectivement le pourcentage supplémentaire à partir de la borne.
+montant_total <- function(nbOr,prixOran,borneOran,pourcOran,nbPo,prixPomm,bornePomm,pourcPomm,nbPa,prixPamp,bornePamp,pourcPamp){  
   if(nbOr > borneOran){
     montant_or <- borneOran * prixOran + (nbOr - borneOran) * prixOran * (1 + pourcOran)
   } else {
@@ -796,8 +793,36 @@ montant_total <- function(nbOr,prixOran,borneOran,pourcOran,nbPo,prixPomm,borneP
   montant_total <- sum(montant_or,montant_po,montant_pa)
   return(montant_total)
 }
-montant_total(21,22,20,0.15,14,20,25,0.15,6,38,10,0.10)
 
+```
+---
+
+# Solution de l'exercice 2: (suite)
+
+```{r}
+montant_total(21,22,20,0.15,14,20,25,0.15,6,38,10,0.10)
+```
+
+On remarque que beaucoup d'arguments ont été utilisé pour notre fonction `montant total`. Gardez en tête qu'effectivement, le temps mis sur l'écriture de la fonction semblera habituellement beaucoup plus long que d'utiliser la calculatrice. Remarquons que j'utilise tout mes arguments dans ma fonction. Remarquons aussi que si Alexis m'indiquait qu'une semaine plus tard, il était rendu à 27 caisses d'oranges, 23 caisses de pommes et 13 caisses de pamplemousses vendus et que le tableau précédent avait changé pour celui-ci:
+
+---
+
+# Solution de l'exercice 2: (suite)
+
+<div style='text-align:center;'>
+<img src="assets/img/exercice2suite.PNG" height="450"></img>
+</div>
+
+On arriverait simplement à calculer le montant total d'Alexis.
+
+---
+
+# Solution de l'exercice 2: (suite)
+
+Suffit alors de changer le nombre de caisses pour chaque type de fruit ainsi que les trois éléments surlignés en cyan.
+
+```{r}
+montant_total(27,22,20,0.20,23,17,25,0.15,13,42,10,0.10)
 ```
 
 ---
