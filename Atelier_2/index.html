@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.66422699 0.16232517 0.05835004 0.41954893 0.30105457 0.39507848
-##  [7] 0.66182793 0.01991851 0.82548497 0.59746175
+##  [1] 0.47753741 0.40801863 0.16355181 0.01263860 0.04466998 0.08406928
+##  [7] 0.62809054 0.30094966 0.49732975 0.32904532
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.48446764 0.98463865 0.85715767 0.34559036 0.93875017 0.09306065
-##  [7] 0.23207213 0.53447888 0.54243994 0.82725441
+##  [1] 0.06839959 0.39577243 0.81494023 0.58039902 0.17930939 0.13975694
+##  [7] 0.75324511 0.11527131 0.74131812 0.39050754
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.09306065
+## [1] 0.06839959
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.9846387
+## [1] 0.8149402
 ```
 
 ---
@@ -380,8 +380,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.6419212 0.4433334
-## [2,] 0.7021891 0.9710408
+## [1,] 0.2871092 0.4392325
+## [2,] 0.5119964 0.8667262
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.085255 1.673230
+## [1] 0.7263417 1.3787227
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.344110 1.414374
+## [1] 0.7991056 1.3059587
 ```
 
 ---
@@ -413,8 +413,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.6419212 0.4433334
-## [2,] 0.7021891 0.9710408
+## [1,] 0.2871092 0.4392325
+## [2,] 0.5119964 0.8667262
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.085255 1.673230
+## [1] 0.7263417 1.3787227
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.344110 1.414374
+## [1] 0.7991056 1.3059587
 ```
 
 ---
@@ -654,11 +654,11 @@ tableau
 
 ```
 ##            x          y
-## 1 -1.3221555 -1.9553258
-## 2 -0.1729461 -1.1252211
-## 3  1.3250265 -0.1450706
-## 4  0.8844939  0.8706252
-## 5  0.5930430  0.7999114
+## 1 -0.3305842 -1.6083803
+## 2  1.6136804  0.3620554
+## 3  1.8827471 -0.4008707
+## 4  0.7243371  1.0623809
+## 5 -0.5777432  1.3423532
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -687,9 +687,9 @@ $$
 ```
 
 ```
-## [1] -0.7887901
-## [1] -0.1499057
-## [1] -0.1629064
+## [1] -0.2742212
+## [1] 0.2957084
+## [1] -0.5093126
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -709,11 +709,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] -0.7887901
-## [1] -0.1499057
-## [1] -0.1629064
-## [1] 0.4387524
-## [1] 0.3405581
+## [1] -0.2742212
+## [1] 0.2957084
+## [1] -0.5093126
+## [1] 0.4306902
+## [1] -1.014289
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -876,7 +876,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1] -0.7887901 -0.1499057 -0.1629064  0.4387524  0.3405581
+## [1] -0.2742212  0.2957084 -0.5093126  0.4306902 -1.0142889
 ```
 
 ```r
@@ -884,7 +884,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1] -0.7887901 -0.1499057 -0.1629064  0.4387524  0.3405581
+## [1] -0.2742212  0.2957084 -0.5093126  0.4306902 -1.0142889
 ```
 
 ---
@@ -912,7 +912,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1] -0.7887901 -0.1499057 -0.1629064  2.5493348
+## [1] -0.2742212  0.2957084 -0.5093126 -0.4799235
 ```
 
 ---
@@ -927,7 +927,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1] -0.7887901 -0.1499057 -0.1307268 -0.2158174
+## [1] -0.2742212  0.2957084 -0.1811753  0.6406218
 ```
 
 ---
@@ -999,11 +999,11 @@ prodsum(tableau, tableau2)
 
 ```
 ##            x           y
-## 1 1.67419938 -5.72858644
-## 2 0.13054661  0.21897052
-## 3 0.07144001  0.02966207
-## 4 0.40609760  0.63948799
-## 5 0.54200663  0.22625320
+## 1 -0.5222887 -3.12054289
+## 2  0.7738960  0.02596966
+## 3  0.2989401 -0.53782825
+## 4  0.3617289  0.43284549
+## 5 -0.8064345  0.81957988
 ```
 
 ---
@@ -1047,13 +1047,13 @@ test
 
 ```
 ## $moyenne
-## [1] 1.024691
+## [1] 0.9678184
 ## 
 ## $ecart_type
-## [1] 0.5150883
+## [1] 0.4735743
 ## 
 ## $CV
-## [1] 0.5026767
+## [1] 0.4893215
 ```
 
 ---
@@ -1121,17 +1121,54 @@ mean(result) #On s'intéressait à la moyenne des concentrations!
 
 ---
 
-# Ex 2: 
+# Ex 2: Le voyage humanitaire d'Alexis
 
-Alexis vend des pommes, des oranges et des pamplemousses dans le but de participer à un voyage humanitaire. Présentement, il calcule son montant total à l'aide d'une calculatrice. Cependant, il doit recalculer à chaque jour son total amassé et aimerait avoir une fonction qui lui permettrait de l'obtenir directement, en fonction du nombre de caisse de pommes, d'oranges et de pamplemousses vendus. À la diapositive qui suit, Alexis a eu la gentillesse de nous faire un tableau expliquant les prix.
+Alexis vend des pommes, des oranges et des pamplemousses dans le but de participer à un voyage humanitaire. Présentement, il calcule son montant total à l'aide d'une calculatrice. Cependant, il doit recalculer à chaque jour son total amassé et aimerait avoir une fonction qui lui permettrait de l'obtenir directement, en fonction du nombre de caisse de pommes, d'oranges et de pamplemousses vendus. Présentement, il a vendu un total de 6 caisses de pamplemousses, 21 caisses d'oranges et 14 caisses de pommes. À la diapositive qui suit, Alexis a eu la gentillesse de nous faire un tableau expliquant les prix.
 
 ---
 
 # Ex 2: suite
 
 &lt;div style='text-align:center;'&gt;
-&lt;img src="assets/img/exercice2.PNG" height="400"&gt;&lt;/img&gt;
+&lt;img src="assets/img/exercice2.PNG" height="600"&gt;&lt;/img&gt;
 &lt;/div&gt;
+
+Quel est le montant total amassé par Alexis en ce moment?
+
+---
+
+# Solution de l'exercice 2
+
+
+```r
+montant_total &lt;- function(nbOr,prixOran,borneOran,pourcOran,nbPo,prixPomm,bornePomm,pourcPomm,nbPa,prixPamp,bornePamp,pourcPamp){  #nbOr, nbPo et nbPa sont respectivement le nombre de caisses d'oranges, de pommes et de pamplemousses.
+  #prixOran, prixPomm et prixPamp sont respectivement le prix des caisses d'oranges, de pommes et de pamplemousses.
+  #borneOran, bornePomm et bornePamp sont respectivement le nombre de caisses pour chaque fruit avant d'obtenir une bonification.
+  #pourcOran, pourcPomm et pourcPamp sont respectivement le pourcentage supplémentaire à partir de la borne.
+  if(nbOr &gt; borneOran){
+    montant_or &lt;- borneOran * prixOran + (nbOr - borneOran) * prixOran * (1 + pourcOran)
+  } else {
+    montant_or &lt;- nbOr * prixOran
+  }
+  if(nbPo &gt; bornePomm){
+    montant_po &lt;- bornePomm * prixPomm + (nbPo - bornePomm) * prixPomm * (1 + pourcPomm)
+  } else {
+    montant_po &lt;- nbPo * prixPomm
+  }
+  if(nbPa &gt; bornePamp){
+    montant_pa &lt;- bornePamp * prixPamp + (nbPa - bornePamp) * prixPamp * (1 + pourcPamp)
+  } else {
+    montant_pa &lt;- nbPa * prixPamp
+  }
+  montant_total &lt;- sum(montant_or,montant_po,montant_pa)
+  return(montant_total)
+}
+montant_total(21,22,20,0.15,14,20,25,0.15,6,38,10,0.10)
+```
+
+```
+## [1] 973.3
+```
 
 ---
 

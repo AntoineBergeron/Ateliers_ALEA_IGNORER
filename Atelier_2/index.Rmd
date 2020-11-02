@@ -755,17 +755,50 @@ mean(result) #On s'intéressait à la moyenne des concentrations!
 
 ---
 
-# Ex 2: 
+# Ex 2: Le voyage humanitaire d'Alexis
 
-Alexis vend des pommes, des oranges et des pamplemousses dans le but de participer à un voyage humanitaire. Présentement, il calcule son montant total à l'aide d'une calculatrice. Cependant, il doit recalculer à chaque jour son total amassé et aimerait avoir une fonction qui lui permettrait de l'obtenir directement, en fonction du nombre de caisse de pommes, d'oranges et de pamplemousses vendus. À la diapositive qui suit, Alexis a eu la gentillesse de nous faire un tableau expliquant les prix.
+Alexis vend des pommes, des oranges et des pamplemousses dans le but de participer à un voyage humanitaire. Présentement, il calcule son montant total à l'aide d'une calculatrice. Cependant, il doit recalculer à chaque jour son total amassé et aimerait avoir une fonction qui lui permettrait de l'obtenir directement, en fonction du nombre de caisse de pommes, d'oranges et de pamplemousses vendus. Présentement, il a vendu un total de 6 caisses de pamplemousses, 21 caisses d'oranges et 14 caisses de pommes. À la diapositive qui suit, Alexis a eu la gentillesse de nous faire un tableau expliquant les prix.
 
 ---
 
 # Ex 2: suite
 
 <div style='text-align:center;'>
-<img src="assets/img/exercice2.PNG" height="400"></img>
+<img src="assets/img/exercice2.PNG" height="600"></img>
 </div>
+
+Quel est le montant total amassé par Alexis en ce moment?
+
+---
+
+# Solution de l'exercice 2
+
+```{r}
+montant_total <- function(nbOr,prixOran,borneOran,pourcOran,nbPo,prixPomm,bornePomm,pourcPomm,nbPa,prixPamp,bornePamp,pourcPamp){  #nbOr, nbPo et nbPa sont respectivement le nombre de caisses d'oranges, de pommes et de pamplemousses.
+  #prixOran, prixPomm et prixPamp sont respectivement le prix des caisses d'oranges, de pommes et de pamplemousses.
+  #borneOran, bornePomm et bornePamp sont respectivement le nombre de caisses pour chaque fruit avant d'obtenir une bonification.
+  #pourcOran, pourcPomm et pourcPamp sont respectivement le pourcentage supplémentaire à partir de la borne.
+  if(nbOr > borneOran){
+    montant_or <- borneOran * prixOran + (nbOr - borneOran) * prixOran * (1 + pourcOran)
+  } else {
+    montant_or <- nbOr * prixOran
+  }
+  if(nbPo > bornePomm){
+    montant_po <- bornePomm * prixPomm + (nbPo - bornePomm) * prixPomm * (1 + pourcPomm)
+  } else {
+    montant_po <- nbPo * prixPomm
+  }
+  if(nbPa > bornePamp){
+    montant_pa <- bornePamp * prixPamp + (nbPa - bornePamp) * prixPamp * (1 + pourcPamp)
+  } else {
+    montant_pa <- nbPa * prixPamp
+  }
+  montant_total <- sum(montant_or,montant_po,montant_pa)
+  return(montant_total)
+}
+montant_total(21,22,20,0.15,14,20,25,0.15,6,38,10,0.10)
+
+```
 
 ---
 
