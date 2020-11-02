@@ -764,7 +764,7 @@ Alexis vend des pommes, des oranges et des pamplemousses dans le but de particip
 # Ex 2: suite
 
 <div style='text-align:center;'>
-<img src="assets/img/exercice2.PNG" height="600"></img>
+<img src="assets/img/exercice2.PNG" height="450"></img>
 </div>
 
 Quel est le montant total amassé par Alexis en ce moment?
