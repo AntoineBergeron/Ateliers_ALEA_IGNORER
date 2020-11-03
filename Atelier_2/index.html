@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.32422877 0.69255556 0.25046756 0.88611465 0.14226154 0.51190021
-##  [7] 0.32946084 0.65865538 0.81460975 0.09335867
+##  [1] 0.75130651 0.24654981 0.35369166 0.83345534 0.07629421 0.78997686
+##  [7] 0.74616003 0.46245085 0.48429903 0.47972380
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.8705608 0.9810328 0.3929108 0.5553408 0.9854131 0.1317560 0.9958501
-##  [8] 0.5857583 0.1016658 0.7111061
+##  [1] 0.005272869 0.206266450 0.023050744 0.178769659 0.769573272 0.095886279
+##  [7] 0.251680447 0.534570824 0.496511969 0.039024913
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.1016658
+## [1] 0.005272869
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.9958501
+## [1] 0.7695733
 ```
 
 ---
@@ -380,8 +380,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.4380047 0.9260838
-## [2,] 0.9513315 0.9802585
+## [1,] 0.5305742 0.6283927
+## [2,] 0.1468604 0.4561144
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.364089 1.931590
+## [1] 1.1589669 0.6029748
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.389336 1.906342
+## [1] 0.6774346 1.0845071
 ```
 
 ---
@@ -413,8 +413,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.4380047 0.9260838
-## [2,] 0.9513315 0.9802585
+## [1,] 0.5305742 0.6283927
+## [2,] 0.1468604 0.4561144
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.364089 1.931590
+## [1] 1.1589669 0.6029748
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.389336 1.906342
+## [1] 0.6774346 1.0845071
 ```
 
 ---
@@ -576,7 +576,7 @@ head(party_rel_crou)
 ## Paprika   0.18    0.18 0.27      0.06  0.30
 ```
 
-5 - `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par) [21, 74, 49, 19, ...]
+5 - `Enf_total_lig`: Total du nombre d'enfants par ligne: (16 résultats débutant par [21, 74, 49, 19, ...])
 
 6 - `party_rel_crou`: Le tableau au dessus nous indique le pourcentage relatif à chaque ligne.
 
@@ -654,11 +654,11 @@ tableau
 
 ```
 ##            x          y
-## 1  0.2152644  0.6423997
-## 2 -2.3618726 -0.9039212
-## 3 -0.0994618 -0.3000491
-## 4  1.5892985 -1.3159134
-## 5 -1.1199032 -0.9503127
+## 1  2.1778638  1.3605082
+## 2 -0.1009734  0.8506195
+## 3  1.1031491 -1.3772790
+## 4 -1.3116450  0.7873394
+## 5 -0.9589761 -0.9630339
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -687,9 +687,9 @@ $$
 ```
 
 ```
-## [1] 0.1612354
-## [1] -0.6537298
-## [1] -0.0746999
+## [1] 0.8373912
+## [1] -0.1145739
+## [1] 5.542425
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -709,11 +709,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 0.1612354
-## [1] -0.6537298
-## [1] -0.0746999
-## [1] -7.649938
-## [1] -0.5140808
+## [1] 0.8373912
+## [1] -0.1145739
+## [1] 5.542425
+## [1] 1.969672
+## [1] -0.4805004
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -876,7 +876,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1]  0.1612354 -0.6537298 -0.0746999 -7.6499383 -0.5140808
+## [1]  0.8373912 -0.1145739  5.5424251  1.9696717 -0.4805004
 ```
 
 ```r
@@ -884,7 +884,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1]  0.1612354 -0.6537298 -0.0746999 -7.6499383 -0.5140808
+## [1]  0.8373912 -0.1145739  5.5424251  1.9696717 -0.4805004
 ```
 
 ---
@@ -912,7 +912,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1]  0.1612354 -0.6537298 -0.0746999  0.2573657
+## [1]  0.8373912 -0.1145739  5.5424251  0.5782801
 ```
 
 ---
@@ -927,7 +927,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1]  0.1612354 -0.6537298  0.7618103 -0.8450790
+## [1]  0.8373912 -0.1145739 -3.7466685 -0.1158278
 ```
 
 ---
@@ -998,12 +998,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##             x           y
-## 1   0.1404145  0.47905157
-## 2 -24.4027027 -3.25459204
-## 3  -0.1118721 -0.68931678
-## 4   0.1049680  1.67596721
-## 5   4.0168198  0.08841328
+##            x          y
+## 1 0.36448772  0.3701897
+## 2 0.09557449  0.6972544
+## 3 0.20427277 -3.6579265
+## 4 0.67860138  0.4959739
+## 5 0.70074701 -4.6415743
 ```
 
 ---
@@ -1047,13 +1047,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9226883
+## [1] 0.9982433
 ## 
 ## $ecart_type
-## [1] 0.4945618
+## [1] 0.5076999
 ## 
 ## $CV
-## [1] 0.5360009
+## [1] 0.5085933
 ```
 
 ---
@@ -1200,6 +1200,87 @@ montant_total(27,22,20,0.20,23,17,25,0.15,13,42,10,0.10)
 ```
 ## [1] 1574.4
 ```
+
+---
+
+# Ex 3: Bonsoir, elle est partie!
+
+Au baseball, la loi de la physique l'emporte toujours. On s'intéresse dans cet exercice a déterminer si la frappe d'un joueur a mené à un coup de circuit ou non. Pour qu'un coup de circuit soit réalisé, il faudra que la distance verticale de la balle avec le sol à 100 mètres de distance horizontale soit plus grande que 3 mètres. Voici une image représentative des variables que nous devons connaître afin d'effectuer nos calculs.
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/trajectoire1.PNG" height="250"&gt;&lt;/img&gt;
+&lt;/div&gt;
+
+---
+
+# Ex 3: suite
+
+Les éléments importants sont les suivants: la vitesse initiale de la balle après le contact du bâton ($v_0$), l'angle de la frappe en radian ($\alpha$) ainsi que la hauteur du bâton au contact de la balle. Remarquons qu'une balle lancée dans les air redescend toujours! C'est à cause de l'accélération de la pesanteur, une valeur constante de 9.81 `\(m/s^2\)` (g). 
+
+Nous pourrons alors calculer la distance verticale avec le sol à 100m de distance horizontale à l'aide de la fonction suivante:
+
+`\(y(100) = \dfrac{-5000g}{cos^2(\alpha)v_0^2} + 100tan(\alpha) + h\)`
+
+Notons que les fonctions `cos()` et `tan()` sur R sont définies pour des angles en radians.
+
+---
+
+# Ex 3: suite
+
+1. Créez une fonction qui retourne la hauteur de la balle à 100m.
+2. Créer une matrice 5x3 contenant les informations des frappeurs. 
+3. Finalement, à l'aide d'un pseudo-code, écrivez la marche à suivre afin d'obtenir les informations suivantes pour chaques frappeurs: La hauteur de la balle à 100m de distance horizontale et la phrase que l'analyste sportif à la télévision a utilisé.
+
+si la distance verticale est supérieur à 10, l'animateur hurle: `Bonsoir, elle est partie!`. Si la balle est à une distance verticale supérieur à 0, mais inférieur ou égale à 10, l'animateur se contente d'affirmer: `C'est un coup sûr!`. Pour une distance verticale négative, on souhaite retourner la valeur 0 ainsi que la phrase: `Retirer!`.
+
+---
+
+# Solution de l'exercice 3
+
+
+```r
+hauteur_balle &lt;- function(v,a,h){
+  g &lt;- 9.81
+  y &lt;- (-5000*g)/(cos(a)^2 * v^2) + 100*tan(a) + h
+  return(y)
+}
+```
+
+
+```r
+donnees &lt;- matrix(c(35,32.5,35.9,27.1,42,1,1.15,1.12,1.9,0.6,1.5,1.52,1.56,1.45,1.51), nrow = 5, ncol = 3)
+donnees
+```
+
+```
+##      [,1] [,2] [,3]
+## [1,] 35.0 1.00 1.50
+## [2,] 32.5 1.15 1.52
+## [3,] 35.9 1.12 1.56
+## [4,] 27.1 1.90 1.45
+## [5,] 42.0 0.60 1.51
+```
+
+---
+
+# Solution de l'exercice 3: (suite)
+
+
+```
+dist_vert &lt;- baseball(v = donnees[,1],a = donnees[,2], h = donnees[,3])
+  FOR i IN 1:nrow(donnees)
+    IF dist_vert &gt; 10
+      TEXTE[i] &lt;- "Bonsoir, elle est partie!"
+    ELSEIF 0 &lt; dist_vert &lt;= 10
+      TEXTE[i] &lt;- "C'est un coup sûr!"
+    ELSE
+      dist_vert &lt;- 0
+      TEXTE[i] &lt;- "Retirer!"
+    END IF
+  END FOR
+res_final &lt;- cbind(dist_vert,TEXTE)
+```
+
 
 ---
 
