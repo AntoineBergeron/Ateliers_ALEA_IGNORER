@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.75130651 0.24654981 0.35369166 0.83345534 0.07629421 0.78997686
-##  [7] 0.74616003 0.46245085 0.48429903 0.47972380
+##  [1] 0.1256909 0.9620893 0.2966440 0.8935621 0.6092288 0.3369902 0.1609410
+##  [8] 0.9809350 0.9504303 0.6411338
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.005272869 0.206266450 0.023050744 0.178769659 0.769573272 0.095886279
-##  [7] 0.251680447 0.534570824 0.496511969 0.039024913
+##  [1] 0.07021057 0.31563763 0.60360474 0.96555728 0.73619396 0.07850317
+##  [7] 0.39842732 0.26181576 0.02815512 0.72507823
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.005272869
+## [1] 0.02815512
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.7695733
+## [1] 0.9655573
 ```
 
 ---
@@ -380,8 +380,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.5305742 0.6283927
-## [2,] 0.1468604 0.4561144
+## [1,] 0.3105455 0.8655168
+## [2,] 0.4156278 0.6864978
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.1589669 0.6029748
+## [1] 1.176062 1.102126
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 0.6774346 1.0845071
+## [1] 0.7261733 1.5520146
 ```
 
 ---
@@ -413,8 +413,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.5305742 0.6283927
-## [2,] 0.1468604 0.4561144
+## [1,] 0.3105455 0.8655168
+## [2,] 0.4156278 0.6864978
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.1589669 0.6029748
+## [1] 1.176062 1.102126
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 0.6774346 1.0845071
+## [1] 0.7261733 1.5520146
 ```
 
 ---
@@ -654,11 +654,11 @@ tableau
 
 ```
 ##            x          y
-## 1  2.1778638  1.3605082
-## 2 -0.1009734  0.8506195
-## 3  1.1031491 -1.3772790
-## 4 -1.3116450  0.7873394
-## 5 -0.9589761 -0.9630339
+## 1  0.6434145  0.6220409
+## 2  1.4514728  0.6802028
+## 3  0.1116941 -0.4096645
+## 4 -0.4666359 -0.3745750
+## 5  1.6749661  0.8076177
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -687,9 +687,9 @@ $$
 ```
 
 ```
-## [1] 0.8373912
-## [1] -0.1145739
-## [1] 5.542425
+## [1] 0.3162736
+## [1] 0.4631549
+## [1] 0.1535626
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -709,11 +709,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 0.8373912
-## [1] -0.1145739
-## [1] 5.542425
-## [1] 1.969672
-## [1] -0.4805004
+## [1] 0.3162736
+## [1] 0.4631549
+## [1] 0.1535626
+## [1] -0.207784
+## [1] 0.5448889
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -876,7 +876,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1]  0.8373912 -0.1145739  5.5424251  1.9696717 -0.4805004
+## [1]  0.3162736  0.4631549  0.1535626 -0.2077840  0.5448889
 ```
 
 ```r
@@ -884,7 +884,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1]  0.8373912 -0.1145739  5.5424251  1.9696717 -0.4805004
+## [1]  0.3162736  0.4631549  0.1535626 -0.2077840  0.5448889
 ```
 
 ---
@@ -912,7 +912,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1]  0.8373912 -0.1145739  5.5424251  0.5782801
+## [1]  0.3162736  0.4631549  0.1535626 -0.8964716
 ```
 
 ---
@@ -927,7 +927,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1]  0.8373912 -0.1145739 -3.7466685 -0.1158278
+## [1]  0.3162736  0.4631549 -1.1276328 -0.5048626
 ```
 
 ---
@@ -998,12 +998,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##            x          y
-## 1 0.36448772  0.3701897
-## 2 0.09557449  0.6972544
-## 3 0.20427277 -3.6579265
-## 4 0.67860138  0.4959739
-## 5 0.70074701 -4.6415743
+##              x         y
+## 1  0.004973701 0.0610567
+## 2  0.889659639 0.5638759
+## 3  0.001934720 0.4834669
+## 4 -1.126826539 1.9662473
+## 5  0.028182613 0.6001333
 ```
 
 ---
@@ -1047,13 +1047,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9982433
+## [1] 1.026603
 ## 
 ## $ecart_type
-## [1] 0.5076999
+## [1] 0.540295
 ## 
 ## $CV
-## [1] 0.5085933
+## [1] 0.5262938
 ```
 
 ---
@@ -1215,7 +1215,9 @@ Au baseball, la loi de la physique l'emporte toujours. On s'intéresse dans cet 
 
 # Ex 3: suite
 
-Les éléments importants sont les suivants: la vitesse initiale de la balle après le contact du bâton ($v_0$), l'angle de la frappe en radian ($\alpha$) ainsi que la hauteur du bâton au contact de la balle. Remarquons qu'une balle lancée dans les air redescend toujours! C'est à cause de l'accélération de la pesanteur, une valeur constante de 9.81 `\(m/s^2\)` (g). 
+Les éléments importants sont les suivants: la vitesse initiale de la balle après le contact du bâton ($v_0$), l'angle de la frappe en radian ($\alpha$) ainsi que la hauteur du bâton au contact de la balle. Remarquons qu'une balle lancée dans les air redescend toujours! C'est à cause de l'accélération de la pesanteur, une valeur constante de 9.81 `\(m/s^2\)` (g). Voici les statistiques de 5 frappeurs (vitesse/angle/hauteur):
+
+(35/1/1.5), (32.5/1.15/1.52), (35.5/1.12/1.56), (27.1/1.9/1.45), (42.1/0.6/1.51)
 
 Nous pourrons alors calculer la distance verticale avec le sol à 100m de distance horizontale à l'aide de la fonction suivante:
 

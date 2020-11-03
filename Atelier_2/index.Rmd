@@ -839,7 +839,9 @@ Au baseball, la loi de la physique l'emporte toujours. On s'intéresse dans cet 
 
 # Ex 3: suite
 
-Les éléments importants sont les suivants: la vitesse initiale de la balle après le contact du bâton ($v_0$), l'angle de la frappe en radian ($\alpha$) ainsi que la hauteur du bâton au contact de la balle. Remarquons qu'une balle lancée dans les air redescend toujours! C'est à cause de l'accélération de la pesanteur, une valeur constante de 9.81 $m/s^2$ (g). 
+Les éléments importants sont les suivants: la vitesse initiale de la balle après le contact du bâton ($v_0$), l'angle de la frappe en radian ($\alpha$) ainsi que la hauteur du bâton au contact de la balle. Remarquons qu'une balle lancée dans les air redescend toujours! C'est à cause de l'accélération de la pesanteur, une valeur constante de 9.81 $m/s^2$ (g). Voici les statistiques de 5 frappeurs (vitesse/angle/hauteur):
+
+(35/1/1.5), (32.5/1.15/1.52), (35.5/1.12/1.56), (27.1/1.9/1.45), (42.1/0.6/1.51)
 
 Nous pourrons alors calculer la distance verticale avec le sol à 100m de distance horizontale à l'aide de la fonction suivante:
 
