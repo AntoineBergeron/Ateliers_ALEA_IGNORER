@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.1256909 0.9620893 0.2966440 0.8935621 0.6092288 0.3369902 0.1609410
-##  [8] 0.9809350 0.9504303 0.6411338
+##  [1] 0.09750510 0.30674919 0.06844732 0.15086535 0.47321135 0.51649604
+##  [7] 0.21116541 0.33425431 0.06620797 0.92082757
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.07021057 0.31563763 0.60360474 0.96555728 0.73619396 0.07850317
-##  [7] 0.39842732 0.26181576 0.02815512 0.72507823
+##  [1] 0.94659925 0.28450347 0.87023320 0.70712047 0.07390839 0.06849969
+##  [7] 0.33523564 0.14899346 0.67099071 0.44600815
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.02815512
+## [1] 0.06849969
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.9655573
+## [1] 0.9465992
 ```
 
 ---
@@ -380,8 +380,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.3105455 0.8655168
-## [2,] 0.4156278 0.6864978
+## [1,] 0.2704291 0.9486650
+## [2,] 0.9000855 0.6463342
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.176062 1.102126
+## [1] 1.219094 1.546420
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 0.7261733 1.5520146
+## [1] 1.170515 1.594999
 ```
 
 ---
@@ -413,8 +413,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.3105455 0.8655168
-## [2,] 0.4156278 0.6864978
+## [1,] 0.2704291 0.9486650
+## [2,] 0.9000855 0.6463342
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.176062 1.102126
+## [1] 1.219094 1.546420
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 0.7261733 1.5520146
+## [1] 1.170515 1.594999
 ```
 
 ---
@@ -653,12 +653,12 @@ tableau
 ```
 
 ```
-##            x          y
-## 1  0.6434145  0.6220409
-## 2  1.4514728  0.6802028
-## 3  0.1116941 -0.4096645
-## 4 -0.4666359 -0.3745750
-## 5  1.6749661  0.8076177
+##             x          y
+## 1  0.78141456 -1.3696387
+## 2 -0.05608156 -0.3134825
+## 3 -0.51010044 -1.2863090
+## 4  0.73875783 -1.0092136
+## 5  0.30213725 -0.7099555
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -687,9 +687,9 @@ $$
 ```
 
 ```
-## [1] 0.3162736
-## [1] 0.4631549
-## [1] 0.1535626
+## [1] 1.819469
+## [1] -0.04757115
+## [1] -0.3652546
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -709,11 +709,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 0.3162736
-## [1] 0.4631549
-## [1] 0.1535626
-## [1] -0.207784
-## [1] 0.5448889
+## [1] 1.819469
+## [1] -0.04757115
+## [1] -0.3652546
+## [1] 2.756696
+## [1] 0.5259794
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -876,7 +876,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1]  0.3162736  0.4631549  0.1535626 -0.2077840  0.5448889
+## [1]  1.81946913 -0.04757115 -0.36525459  2.75669641  0.52597942
 ```
 
 ```r
@@ -884,7 +884,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1]  0.3162736  0.4631549  0.1535626 -0.2077840  0.5448889
+## [1]  1.81946913 -0.04757115 -0.36525459  2.75669641  0.52597942
 ```
 
 ---
@@ -912,7 +912,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1]  0.3162736  0.4631549  0.1535626 -0.8964716
+## [1]  1.81946913 -0.04757115 -0.36525459  3.46188566
 ```
 
 ---
@@ -927,7 +927,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1]  0.3162736  0.4631549 -1.1276328 -0.5048626
+## [1]  1.81946913 -0.04757115  1.99079344 -0.05312919
 ```
 
 ---
@@ -998,12 +998,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##              x         y
-## 1  0.004973701 0.0610567
-## 2  0.889659639 0.5638759
-## 3  0.001934720 0.4834669
-## 4 -1.126826539 1.9662473
-## 5  0.028182613 0.6001333
+##               x            y
+## 1  0.1900297614 -2.567640440
+## 2 -0.0589655759  0.000607502
+## 3 -0.6127316425  0.122411724
+## 4  0.0008626243  0.260147291
+## 5  0.2581694637  0.073256371
 ```
 
 ---
@@ -1047,13 +1047,13 @@ test
 
 ```
 ## $moyenne
-## [1] 1.026603
+## [1] 0.9966574
 ## 
 ## $ecart_type
-## [1] 0.540295
+## [1] 0.5529574
 ## 
 ## $CV
-## [1] 0.5262938
+## [1] 0.5548119
 ```
 
 ---
@@ -1215,7 +1215,7 @@ Au baseball, la loi de la physique l'emporte toujours. On s'intéresse dans cet 
 
 # Ex 3: suite
 
-Les éléments importants sont les suivants: la vitesse initiale de la balle après le contact du bâton ($v_0$), l'angle de la frappe en radian ($\alpha$) ainsi que la hauteur du bâton au contact de la balle. Remarquons qu'une balle lancée dans les air redescend toujours! C'est à cause de l'accélération de la pesanteur, une valeur constante de 9.81 `\(m/s^2\)` (g). Voici les statistiques de 5 frappeurs (vitesse/angle/hauteur):
+Les éléments importants sont les suivants: la vitesse initiale de la balle après le contact du bâton ( `\(v_0\)` ), l'angle de la frappe en radian ( `\(\alpha\)` ) ainsi que la hauteur du bâton au contact de la balle. Remarquons qu'une balle lancée dans les air redescend toujours! C'est à cause de l'accélération de la pesanteur, une valeur constante de 9.81 `\(m/s^2\)` (g). Voici les statistiques de 5 frappeurs (vitesse de la balle/angle en radian/hauteur du bâton):
 
 (35/1/1.5), (32.5/1.15/1.52), (35.5/1.12/1.56), (27.1/1.9/1.45), (42.1/0.6/1.51)
 
@@ -1233,7 +1233,7 @@ Notons que les fonctions `cos()` et `tan()` sur R sont définies pour des angles
 2. Créer une matrice 5x3 contenant les informations des frappeurs. 
 3. Finalement, à l'aide d'un pseudo-code, écrivez la marche à suivre afin d'obtenir les informations suivantes pour chaques frappeurs: La hauteur de la balle à 100m de distance horizontale et la phrase que l'analyste sportif à la télévision a utilisé.
 
-si la distance verticale est supérieur à 10, l'animateur hurle: `Bonsoir, elle est partie!`. Si la balle est à une distance verticale supérieur à 0, mais inférieur ou égale à 10, l'animateur se contente d'affirmer: `C'est un coup sûr!`. Pour une distance verticale négative, on souhaite retourner la valeur 0 ainsi que la phrase: `Retirer!`.
+Si la distance verticale est supérieur à 10, l'animateur hurle: `Bonsoir, elle est partie!` Si la balle est à une distance verticale supérieur à 0, mais inférieur ou égale à 10, l'animateur se contente d'affirmer: `C'est un coup sûr!` Pour une distance verticale négative, on souhaite retourner la valeur 0 ainsi que la phrase: `Retirer!`
 
 ---
 
@@ -1270,16 +1270,18 @@ donnees
 
 ```
 dist_vert &lt;- baseball(v = donnees[,1],a = donnees[,2], h = donnees[,3])
-  FOR i IN 1:nrow(donnees)
-    IF dist_vert &gt; 10
-      TEXTE[i] &lt;- "Bonsoir, elle est partie!"
-    ELSEIF 0 &lt; dist_vert &lt;= 10
-      TEXTE[i] &lt;- "C'est un coup sûr!"
-    ELSE
-      dist_vert &lt;- 0
-      TEXTE[i] &lt;- "Retirer!"
-    END IF
-  END FOR
+
+FOR i IN 1:nrow(donnees)
+  IF dist_vert &gt; 10
+    TEXTE[i] &lt;- "Bonsoir, elle est partie!"
+  ELSEIF 0 &lt; dist_vert &lt;= 10
+    TEXTE[i] &lt;- "C'est un coup sûr!"
+  ELSE
+    dist_vert &lt;- 0
+    TEXTE[i] &lt;- "Retirer!"
+  END IF
+END FOR
+
 res_final &lt;- cbind(dist_vert,TEXTE)
 ```
 
