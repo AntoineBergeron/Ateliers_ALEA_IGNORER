@@ -851,7 +851,7 @@ $\hspace{4cm} + ( 0.75\cdot x_4 + 0.55 \cdot x_5 + \dfrac{1}{30}\cdot x_6)$
 
 où $x_1$ représente l'âge du joueur, $x_2$ la valeur du contrat, $x_3^*$ la valeur du poste, $x_4$ le nombre de buts, $x_5$ le nombre de passe décisive ainsi que $x_6$ le nombre moyen de minutes jouées par partie. 
 
-Notons que $x_3^*$ vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur.
+Notons que $x_3^*$ vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur. Ces valeurs sont inscrites dans la $7^e$ colonne du fichier `soccer.csv`.
 
 ---
 
@@ -860,9 +860,9 @@ Notons que $x_3^*$ vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un g
 Après avoir visionné le tableau des statistiques, on remarque que le nombre de minutes moyennes par match n'est pas déterminer. À l'aide du deuxième tableau, trouvez la moyenne du temps de jeu pour chaque joueur (vecteur). Remplacer ensuite la $6^e$ colonne du premier tableau par votre vecteur obtenu.
 
 1. Calculez le coefficient de variation du nombre de buts marqué
-2. Identifier quel joueur possède le plus de points (buts + passes) à l'aide de la fonction `which.max()`
+2. Identifiez quel joueur possède le plus de points (buts + passes) à l'aide de la fonction `which.max()`
 3. En regardant vos données suite à la question 2, quel est le défaut de la fonction `which.max()`?
-4. Créer une fonction qui permet de calculer la valeur actuelle d'un joueur
+4. Créez une fonction qui permet de calculer la valeur actuelle d'un joueur
 5. Appliquez cette fonction sur l'ensemble des joueurs.
 6. Quelle est la valeur actuelle du joueur la plus élevée?
 
