@@ -36,7 +36,7 @@ class: title-slide, middle
 <hr width="65%" align="left" size="0.3" color="orange" style="margin-bottom:40px;" alt="@Martin Sanchez"></hr>
 
 .instructors[
-  ***ALÉA R*** - Jean-Philippe Morissette
+  ***ALÉA R*** - Antoine Bergeron
 ]
 
 <img src="assets/img/Rlogo.png" width="8%" style="margin-top:20px;"></img>

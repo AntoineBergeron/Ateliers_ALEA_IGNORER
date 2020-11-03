@@ -845,7 +845,7 @@ Les éléments importants sont les suivants: la vitesse initiale de la balle apr
 
 Nous pourrons alors calculer la distance verticale avec le sol à 100m de distance horizontale à l'aide de la fonction suivante:
 
-$y(100) = \dfrac{-5000g}{cos^2(\alpha)v_0^2} + 100tan(\alpha) + h$
+$y = \dfrac{-5000g}{cos^2(\alpha)v_0^2} + 100tan(\alpha) + h$
 
 Notons que les fonctions `cos()` et `tan()` sur R sont définies pour des angles en radians.
 
