@@ -1,10 +1,10 @@
 ---
 title: ": Introduction à la programmation scientifique"
-author: "Jean-Philippe Morissette"
-date: "H2020"
+author: "Antoine Bergeron"
+date: "A2020"
 output:
   xaringan::moon_reader:
-    css: [default, ../Atelier-R.css, "hygge"]
+    css: [default, ../Ateliers_ALEA.css, "hygge"]
     lib_dir: assets
     seal: false
     nature:
@@ -27,7 +27,7 @@ class: title-slide, middle
   }
 </style>
 
-# Deuxième journée d'atelier
+# Bienvenue à l'atelier 3
 
 <hr width="65%" align="left" size="0.3" color="orange"></hr>
 
@@ -36,7 +36,7 @@ class: title-slide, middle
 <hr width="65%" align="left" size="0.3" color="orange" style="margin-bottom:40px;" alt="@Martin Sanchez"></hr>
 
 .instructors[
-  ***ALÉA R*** - Jean-Philippe Morissette
+  ***ALÉA R*** - Antoine Bergeron
 ]
 
 <img src="assets/img/Rlogo.png" width="8%" style="margin-top:20px;"></img>
