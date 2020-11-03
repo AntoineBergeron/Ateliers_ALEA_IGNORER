@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.74755480 0.75782581 0.01933842 0.36913280 0.10625488 0.45134423
-##  [7] 0.88918253 0.23601060 0.75799288 0.27806518
+##  [1] 0.32422877 0.69255556 0.25046756 0.88611465 0.14226154 0.51190021
+##  [7] 0.32946084 0.65865538 0.81460975 0.09335867
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -308,8 +308,8 @@ alea
 ```
 
 ```
-##  [1] 0.78599042 0.21130151 0.62653192 0.63434761 0.09579665 0.67417027
-##  [7] 0.22884502 0.99921600 0.66214687 0.27907411
+##  [1] 0.8705608 0.9810328 0.3929108 0.5553408 0.9854131 0.1317560 0.9958501
+##  [8] 0.5857583 0.1016658 0.7111061
 ```
 
 ```r
@@ -317,7 +317,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.09579665
+## [1] 0.1016658
 ```
 
 ```r
@@ -325,7 +325,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.999216
+## [1] 0.9958501
 ```
 
 ---
@@ -379,9 +379,9 @@ mat
 ```
 
 ```
-##           [,1]       [,2]
-## [1,] 0.8616616 0.01248078
-## [2,] 0.4423919 0.42814559
+##           [,1]      [,2]
+## [1,] 0.4380047 0.9260838
+## [2,] 0.9513315 0.9802585
 ```
 
 ```r
@@ -389,7 +389,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 0.8741423 0.8705375
+## [1] 1.364089 1.931590
 ```
 
 ```r
@@ -397,7 +397,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.3040535 0.4406264
+## [1] 1.389336 1.906342
 ```
 
 ---
@@ -412,9 +412,9 @@ mat
 ```
 
 ```
-##           [,1]       [,2]
-## [1,] 0.8616616 0.01248078
-## [2,] 0.4423919 0.42814559
+##           [,1]      [,2]
+## [1,] 0.4380047 0.9260838
+## [2,] 0.9513315 0.9802585
 ```
 
 ```r
@@ -422,7 +422,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 0.8741423 0.8705375
+## [1] 1.364089 1.931590
 ```
 
 ```r
@@ -430,7 +430,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.3040535 0.4406264
+## [1] 1.389336 1.906342
 ```
 
 ---
@@ -654,11 +654,11 @@ tableau
 
 ```
 ##            x          y
-## 1  0.7123984 -0.8375418
-## 2  1.2000943  0.3463108
-## 3  1.3456987 -1.4850404
-## 4 -0.7401426  0.3898958
-## 5 -0.2299113 -2.5774834
+## 1  0.2152644  0.6423997
+## 2 -2.3618726 -0.9039212
+## 3 -0.0994618 -0.3000491
+## 4  1.5892985 -1.3159134
+## 5 -1.1199032 -0.9503127
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -687,9 +687,9 @@ $$
 ```
 
 ```
-## [1] 4.767836
-## [1] 0.268756
-## [1] 14.34184
+## [1] 0.1612354
+## [1] -0.6537298
+## [1] -0.0746999
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -709,11 +709,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 4.767836
-## [1] 0.268756
-## [1] 14.34184
-## [1] 0.823929
-## [1] -0.2110828
+## [1] 0.1612354
+## [1] -0.6537298
+## [1] -0.0746999
+## [1] -7.649938
+## [1] -0.5140808
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -876,7 +876,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1]  4.7678357  0.2687560 14.3418431  0.8239290 -0.2110828
+## [1]  0.1612354 -0.6537298 -0.0746999 -7.6499383 -0.5140808
 ```
 
 ```r
@@ -884,7 +884,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1]  4.7678357  0.2687560 14.3418431  0.8239290 -0.2110828
+## [1]  0.1612354 -0.6537298 -0.0746999 -7.6499383 -0.5140808
 ```
 
 ---
@@ -912,7 +912,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1]  4.7678357  0.2687560 14.3418431  0.2519846
+## [1]  0.1612354 -0.6537298 -0.0746999  0.2573657
 ```
 
 ---
@@ -927,7 +927,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1] 4.7678357 0.2687560 1.3692503 0.2942859
+## [1]  0.1612354 -0.6537298  0.7618103 -0.8450790
 ```
 
 ---
@@ -998,12 +998,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##             x             y
-## 1  0.62044494 -1.1610668855
-## 2  0.95688194  0.0007674827
-## 3  0.63407429  0.0013984225
-## 4 -1.49893846  0.3392640024
-## 5  0.05146237  0.0394103607
+##             x           y
+## 1   0.1404145  0.47905157
+## 2 -24.4027027 -3.25459204
+## 3  -0.1118721 -0.68931678
+## 4   0.1049680  1.67596721
+## 5   4.0168198  0.08841328
 ```
 
 ---
@@ -1047,13 +1047,13 @@ test
 
 ```
 ## $moyenne
-## [1] 1.031851
+## [1] 0.9226883
 ## 
 ## $ecart_type
-## [1] 0.5367766
+## [1] 0.4945618
 ## 
 ## $CV
-## [1] 0.5202074
+## [1] 0.5360009
 ```
 
 ---
@@ -1227,7 +1227,7 @@ La valeur d'un joueur sera calculé à l'aide des quatre critères suivants: l'�
 
 où `\(x_1\)` représente l'âge du joueur, `\(x_2\)` la valeur du contrat, `\(x_3^*\)` la valeur du poste, `\(x_4\)` le nombre de buts, `\(x_5\)` le nombre de passe décisive ainsi que `\(x_6\)` le nombre moyen de minutes jouées par partie. 
 
-Notons que `\(x_3^*\)` vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur.
+Notons que `\(x_3^*\)` vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur. Ces valeurs sont inscrites dans la `\(7^e\)` colonne du fichier `soccer.csv`.
 
 ---
 
@@ -1236,9 +1236,9 @@ Notons que `\(x_3^*\)` vaut 2 pour un attaquant, 3 pour un milieu de terrain ou 
 Après avoir visionné le tableau des statistiques, on remarque que le nombre de minutes moyennes par match n'est pas déterminer. À l'aide du deuxième tableau, trouvez la moyenne du temps de jeu pour chaque joueur (vecteur). Remplacer ensuite la `\(6^e\)` colonne du premier tableau par votre vecteur obtenu.
 
 1. Calculez le coefficient de variation du nombre de buts marqué
-2. Identifier quel joueur possède le plus de points (buts + passes) à l'aide de la fonction `which.max()`
+2. Identifiez quel joueur possède le plus de points (buts + passes) à l'aide de la fonction `which.max()`
 3. En regardant vos données suite à la question 2, quel est le défaut de la fonction `which.max()`?
-4. Créer une fonction qui permet de calculer la valeur actuelle d'un joueur
+4. Créez une fonction qui permet de calculer la valeur actuelle d'un joueur
 5. Appliquez cette fonction sur l'ensemble des joueurs.
 6. Quelle est la valeur actuelle du joueur la plus élevée?
     </textarea>
