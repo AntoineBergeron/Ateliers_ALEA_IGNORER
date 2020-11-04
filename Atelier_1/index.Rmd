@@ -1000,7 +1000,7 @@ END FOR
 
 # Exercice 2
 
-Bruno et Martin s'entraîne au lancer du poids. Au cours des dernières années, Bruno et Martin ont dû s'affronter 10 fois dans des compétitions. Pour Bruno, son meilleur lancer (en mètres) pour chacune des compétitions est donné par le vecteur B. Les meilleurs lancers de Martin se retrouve dans le vecteur M.
+Bruno et Martin s'entraîne au lancer du poids. Au cours des dernières années, ils ont dû s'affronter 10 fois dans des compétitions. Pour Bruno, son meilleur lancer (en mètres) pour chacune des compétitions est donné par le vecteur B. Les meilleurs lancers de Martin se retrouve dans le vecteur M.
 
 ```{r, echo = FALSE}
 set.seed(5)
@@ -1013,11 +1013,71 @@ B
 M
 ```
 
-Ainsi, pour accéder au résultat de Bruno lors de sa deuxième compétition, il suffit de 
+Ainsi, pour accéder au résultat de Bruno lors de sa deuxième compétition, il suffit de noter l'indexation 2:
 
 ```{r}
 B[2]
 ```
+
+---
+
+# Exercice 2 (suite)
+
+On aimerait écrire le pseudo-code nous permettant de déterminer qui de Bruno ou Martin a obtenu le meilleur lancer pour chacune des compétitions.
+
+---
+
+# Solution de l'exercice 2 (tentative 1)
+
+Une méthode (qui n'est pas la plus optimale) serait de comparer les lancers lors de chaque compétition *manuellement* et d'indiquer en fonction du résultat qui a obtenu le meilleur lancer:
+
+
+.pull-left[
+
+## Compétition 1
+
+```
+IF B[1] < M[1]
+  PRINT "Martin a gagné la compétition 1"
+IF ELSE B[1] > M[1]
+  PRINT "Bruno a gagné la compétition 1"
+ELSE
+  PRINT "Il y a eu égalité à la compétition 1"
+```
+]
+
+.pull-right[
+
+## Compétition 2
+
+```
+IF B[2] < M[2]
+  PRINT "Martin a gagné la compétition 2"
+IF ELSE B[2] > M[2]
+  PRINT "Bruno a gagné la compétition 2"
+ELSE
+  PRINT "Il y a eu égalité à la compétition 2"
+```
+]
+
+Et ainsi de suite... Par contre, on remarque que les seuls choses qui change d'une étape à l'autre est l'indexation des vecteurs B et M, ainsi que la valeur qui suit le mot compétition!
+
+---
+# Solution de l'exercice 2 (tentative 2)
+
+Il est alors possible de passer une boucle `for` où les indexations seront le numéro de la compétition qui augmentera de 1 à 10:
+
+```
+FOR NumCompet in 1:10
+  IF B[NumCompet] < M[NumCompet]
+    PRINT ("Martin a gagné la compétition" NumCompet)
+  IF ELSE B[1] > M[1]
+    PRINT ("Bruno a gagné la compétition" NumCompet)
+  ELSE
+    PRINT ("Il y a eu égalité à la compétition" NumCompet)
+END FOR
+```
+
 
 ---
 # Exercice 3
