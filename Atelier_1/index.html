@@ -1034,7 +1034,43 @@ END FOR
 ```
 
 ---
+
 # Exercice 2
+
+Bruno et Martin s'entraîne au lancer du poids. Au cours des dernières années, Bruno et Martin ont dû s'affronter 10 fois dans des compétitions. Pour Bruno, son meilleur lancer (en mètres) pour chacune des compétitions est donné par le vecteur B. Les meilleurs lancers de Martin se retrouve dans le vecteur M.
+
+
+
+
+```r
+B
+```
+
+```
+##  [1] 11.80 13.74 14.67 12.14 11.42 13.80 13.11 14.23 14.83 11.44
+```
+
+```r
+M
+```
+
+```
+##  [1] 13.23 14.21 13.43 14.52 13.18 12.91 13.74 16.00 14.50 15.79
+```
+
+Ainsi, pour accéder au résultat de Bruno lors de sa deuxième compétition, il suffit de 
+
+
+```r
+B[2]
+```
+
+```
+## [1] 13.74
+```
+
+---
+# Exercice 3
 
 1. On jette en face de vous 5 lettres d'un jeu de scrabble
 2. Un maniac vous demande d'écrire un programme permettant d'ordonner les 5 lettres
@@ -1045,7 +1081,7 @@ Note: L'utilisation de booléen peut être utile. `is.sort = FALSE` indique que 
 
 ---
 
-# Solutions de l'exercice 2 
+# Solutions de l'exercice 3
 
 Ordonner un vecteur `X` composé de 5 lettres de Scrabble
 
@@ -1207,7 +1243,7 @@ ls()
 ```
 
 ```
-## [1] "ButsResult" "can"        "parties"
+## [1] "B"          "ButsResult" "can"        "M"          "parties"
 ```
 
 ---
@@ -1223,7 +1259,8 @@ ls()
 ```
 
 ```
-## [1] "ButsResult" "can"        "parties"    "test"
+## [1] "B"          "ButsResult" "can"        "M"          "parties"   
+## [6] "test"
 ```
 
 ```r
@@ -1232,7 +1269,7 @@ ls()
 ```
 
 ```
-## [1] "ButsResult" "can"        "parties"
+## [1] "B"          "ButsResult" "can"        "M"          "parties"
 ```
 
 ---
@@ -1875,8 +1912,8 @@ MaPremiereMatrice
 
 ```
 ##          [,1]     [,2]     [,3]     [,4]     [,5]
-## [1,] 73.05351 82.80331 70.60344 19.09496 10.64047
-## [2,] 14.65068 65.69417 12.93414 54.74880 10.73441
+## [1,] 89.02071 21.13403 13.99837 43.74119 14.19139
+## [2,] 72.07010 22.57173 47.99139 96.59641 95.49789
 ```
 
 ```r
@@ -1884,7 +1921,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 87.70419
+## [1] 161.0908
 ```
 
 
@@ -2293,14 +2330,15 @@ ls()
 ```
 
 ```
-##  [1] "a"                  "b"                  "ButsResult"        
-##  [4] "c"                  "can"                "Canadiens"         
-##  [7] "collage"            "df"                 "df2"               
-## [10] "faux"               "MaListe"            "MaMatrice"         
-## [13] "MaPremiereMatrice"  "mat"                "MesFacteurs"       
-## [16] "MonDeuxiemeVecteur" "MonPremierVecteur"  "MonVecteur"        
-## [19] "note"               "parties"            "Scol"              
-## [22] "test"               "vrai"
+##  [1] "a"                  "b"                  "B"                 
+##  [4] "ButsResult"         "c"                  "can"               
+##  [7] "Canadiens"          "collage"            "df"                
+## [10] "df2"                "faux"               "M"                 
+## [13] "MaListe"            "MaMatrice"          "MaPremiereMatrice" 
+## [16] "mat"                "MesFacteurs"        "MonDeuxiemeVecteur"
+## [19] "MonPremierVecteur"  "MonVecteur"         "note"              
+## [22] "parties"            "Scol"               "test"              
+## [25] "vrai"
 ```
 
 ---
@@ -2555,8 +2593,8 @@ tri
 ```
 
 ```
-##  [1] 93.54082 61.27637 88.41949 21.49320 58.72349 72.94826 80.32793 95.90598
-##  [9] 95.72212 91.36014
+##  [1] 44.473056  5.936247 27.514918  3.114826  1.448234 48.716903 59.515162
+##  [8] 59.785304 39.768051 39.683040
 ```
 
 ```r
@@ -2564,8 +2602,8 @@ sort(tri)
 ```
 
 ```
-##  [1] 21.49320 58.72349 61.27637 72.94826 80.32793 88.41949 91.36014 93.54082
-##  [9] 95.72212 95.90598
+##  [1]  1.448234  3.114826  5.936247 27.514918 39.683040 39.768051 44.473056
+##  [8] 48.716903 59.515162 59.785304
 ```
 
 ---
@@ -2578,8 +2616,8 @@ rang
 ```
 
 ```
-##  [1]  8.620346 65.956836 78.393890 84.858550 31.226248 32.445007 49.714059
-##  [8] 28.770903 35.445088 36.547924
+##  [1] 81.607607 23.519875 82.687025 53.347593 92.894271 54.979473 76.014253
+##  [8]  6.850976 79.360934 63.280343
 ```
 
 ```r
@@ -2587,7 +2625,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  1  8  9 10  3  4  7  2  5  6
+##  [1]  8  2  9  3 10  4  6  1  7  5
 ```
 
 ---
