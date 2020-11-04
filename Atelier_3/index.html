@@ -41,98 +41,6 @@ class: title-slide, middle
 
 
 ---
-class: middle, center, inverse
-
-# Retour sur les fonctions
-&lt;hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"&gt;&lt;/hr&gt;
-
-
----
-
-# (Exercice de la semaine passée)
-
-Toujours à partir du fichier [PositionEquipe.csv](./donnees/PositionEquipe.csv), écriver une fonction qui vous retournera les statistiques descriptives suivantes pour une série de données (une position en l'occurrence) :
-
-1. Le nombre de joueur moyen par équipe
-2. Le nombre total de joueur
-3. Le coefficent de variation du nombre de joueur
-4. La distribution relative de joueur par équipe
-5. Le pourcentage minimum de joueur dans une équipe
-6. Le pourcentage maximum de joueur dans une équipe
-
-Ensuite, appliquez cette fonction sur l'ensemble des espèces au moyen de la fonction *apply()*
-
----
-
-# Trucs pour essayer de programmer une fonction
-
-Commencer en travaillant localement
-
-
-```r
-X &lt;- PositionEquipe$C
-
-# Nombre de joueur moyen par equipe
-moy &lt;- mean(X)
-# Nombre total de joueur
-tot &lt;- sum(X)
-# Coefficient de variation de l'abondance
-CV &lt;- sd(X)/mean(X)
-# Distribution relative de joueur par equipe
-DistRel &lt;- X/tot  
-# Pourcentage minimum de joueur dans une equipe
-PourcMin &lt;- min(DistRel)
-# Pourcentage maximum de joueur dans une equipe
-PourcMax &lt;- max(DistRel)
-```
-
----
-
-# Trucs pour essayer de programmer une fonction
-
-Tout envelopper dans une fonction
-
-
-```r
-ma_fonction &lt;- function(X) {
-  
-  # Nombre de joueur moyen par equipe
-  moy &lt;- mean(X)
-  # Nombre total de joueur
-  tot &lt;- sum(X)
-  # Coefficient de variation de l'abondance
-  CV &lt;- sd(X)/mean(X)
-  # Distribution relative de joueur par equipe
-  DistRel &lt;- X/tot  
-  # Pourcentage minimum de joueur dans une equipe
-  PourcMin &lt;- min(DistRel)
-  # Pourcentage maximum de joueur dans une equipe
-  PourcMax &lt;- max(DistRel)
-}
-```
-
----
-
-# Trucs pour essayer de programmer une fonction
-
-On fait un essai sur un premier objet que l'on connait
-
-
-```r
-ma_fonction(X)
-```
-
----
-# Trucs pour essayer de programmer une fonction
-
-Ensuite on l'applique sur l'ensemble des données
-
-
-```r
-apply(PositionEquipe, 2, ma_fonction)
-```
-
----
 class: inverse, middle, center
 
 # Les boucles
@@ -142,34 +50,36 @@ class: inverse, middle, center
 
 # Mise en situation
 
-Vous étudiez la démographie de la population de salamandres pourpres dans le ruisseau du massif des monts Sutton. Vos données sont très simples, vous avez une mesure d'abondance à deux points d'échantillonnage au long du ruisseau. Vous devez vérifier si la population est en croissance, stable ou en déclin sur une séquence de 5 ans. Le taux de croissance est donné par l'équation suivante :
+Vous étudiez la démographie de la population humaine sur la planète Terre. Vos données sont très simples, vous avez deux pays dont vous connaissez la talle de la population au 1er janvier 1988, 1989, 1990, 1991, 1992, 1993 et 1994. Vous devez vérifier si la population est en croissance, stable ou en déclin sur cette séquence de 7 ans. Le taux de croissance est donné par l'équation suivante:
+
 
 $$
-\dfrac{N_{t+1} - N_t}{N_t}
+\lambda_{t+1} = \dfrac{N_{t+1} - N_t}{N_t}
 $$
 
 ---
 
 # Mise en situation
 
-Les données ressemblent à ce qui suit:
+Les données (en millions d'habitant) ressemblent à ce qui suit:
 
 
 ```r
-donnees &lt;- matrix(nr = 5, nc = 2)
-donnees[,1] &lt;- c(34,35,32,34,36)
-donnees[,2] &lt;- c(32,36,38,36,40)
-an &lt;- c(2010:2014)
+donnees &lt;- matrix(nr = 7, nc = 2)
+donnees[,1] &lt;- c(11.1,11.4,11.8,12.1,12.5,12.9,13.2) #Cameroun
+donnees[,2] &lt;- c(7.1,7.3,7.3,7.1,6.7,6.3,5.9) #Rwanda
+an &lt;- c(1988:1994)
 head(donnees)
 ```
 
 ```
 ##      [,1] [,2]
-## [1,]   34   32
-## [2,]   35   36
-## [3,]   32   38
-## [4,]   34   36
-## [5,]   36   40
+## [1,] 11.1  7.1
+## [2,] 11.4  7.3
+## [3,] 11.8  7.3
+## [4,] 12.1  7.1
+## [5,] 12.5  6.7
+## [6,] 12.9  6.3
 ```
 
 ---
@@ -180,24 +90,24 @@ Les données ressemblent à ce qui suit:
 
 
 ```r
-plot(an,donnees[,1],type = "l", xlab = "Année",ylab = "Nombre d'individus", ylim=c(32,40),cex=2)
+plot(an,donnees[,1],type = "l", xlab = "Année",ylab = "Nombre d'individus", ylim=c(3,30),cex=2)
 lines(an,donnees[,2], lty = 3)
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" width="42%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-2-1.png" width="42%" style="display: block; margin: auto;" /&gt;
 
 ---
 # Mise en situation
 
-Maintenant, on doit calculer le taux de croissance annuel pour chaque population. Commençons pour l'intervalle entre l'an 1 et l'an 2, sur le site 1 :
+Maintenant, on doit calculer le taux de croissance annuel pour chaque pays. Commençons pour l'intervalle entre l'an 1988 et l'an 1989 pour le Cameroun :
 
 
 ```r
-lambda &lt;- matrix(nrow = 4, ncol = 2)
+lambda &lt;- matrix(nrow = 6, ncol = 2)
 lambda[1,1] &lt;- (donnees[2,1] - donnees[1,1]) / donnees[1,1]
 ```
 
-Ensuite, on fait l'an 2 :
+Ensuite, on fait pour la période de 1989 à 1990 :
 
 
 ```r
@@ -207,9 +117,9 @@ lambda[2,1] &lt;- (donnees[3,1] - donnees[2,1]) / donnees[2,1]
 ---
 # Mise en situation
 
-Très rapidement, on réalise que c'est assez fastidieux de refaire cet exercice à la main, mais c'est faisable.
+Très rapidement, on réalise que c'est assez fastidieux de refaire cet exercice à la main, mais c'est faisable. (12 calculs pour 2 pays et 7 années)
 
-Imaginez cependant que vous découvrez un jour qu'un passionné des salamandres a déjà fait une étude similaire sur ce site, et par miracle vous obtenez des séries temporelles de 50 ans réparties sur 10 points d'échantillonnage. Il faudra changer de technique....
+Imaginez cependant qu'on vous demande d'effectuer une étude similaire sur l'ensemble de tout les pays dans le monde, sur une période de 50 ans. Le nombre de calcul à effectuer deviendrait alors beaucoup trop élevé pour être effectué à la main. Il faudra alors changer de technique....
 
 ---
 # Mise en situation
@@ -470,11 +380,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.9788685
-## [1] 0.6050295
-## [1] 0.8901521
-## [1] 0.9938406
-## [1] 0.8755713
+## [1] 0.1220754
+## [1] 0.1304075
+## [1] 0.2350365
+## [1] 0.6180685
+## [1] 0.1548023
 ```
 
 ---
@@ -667,7 +577,7 @@ mean(res)
 ```
 
 ```
-## [1] 6.0348
+## [1] 6.0031
 ```
 
 ---
@@ -678,7 +588,7 @@ mean(res)
 hist(res)
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-22-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-18-1.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: middle, center, inverse
@@ -742,7 +652,7 @@ for(i in 2:(n_steps+1)) {
 plot(c(1900:2015), N, type = "l", xlab = "Année", ylab = "Population")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-25-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-21-1.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -897,17 +807,17 @@ cbind(X,res)
 
 
 ```
-##       X                   res         
-##  [1,] "0.98121405323036"  "plus grand"
-##  [2,] "0.899149209726602" "plus grand"
-##  [3,] "0.272092379862443" "plus petit"
-##  [4,] "0.764156578341499" "plus grand"
-##  [5,] "0.676336083095521" "plus grand"
-##  [6,] "0.552554192952812" "plus grand"
-##  [7,] "0.574941063532606" "plus grand"
-##  [8,] "0.996291845338419" "plus grand"
-##  [9,] "0.793035421287641" "plus grand"
-## [10,] "0.340491214301437" "plus grand"
+##       X                     res         
+##  [1,] "0.892549330834299"   "plus grand"
+##  [2,] "0.562175328377634"   "plus grand"
+##  [3,] "0.177319031208754"   "plus petit"
+##  [4,] "0.00176995154470205" "plus petit"
+##  [5,] "0.188005365664139"   "plus petit"
+##  [6,] "0.648165624355897"   "plus grand"
+##  [7,] "0.313316871644929"   "plus grand"
+##  [8,] "0.881511828862131"   "plus grand"
+##  [9,] "0.648198558250442"   "plus grand"
+## [10,] "0.850194146158174"   "plus grand"
 ```
 ]
 
@@ -951,17 +861,17 @@ cbind(X,res2)
 
 
 ```
-##       X                   res2 
-##  [1,] "0.98121405323036"  "non"
-##  [2,] "0.899149209726602" "non"
-##  [3,] "0.272092379862443" "oui"
-##  [4,] "0.764156578341499" "non"
-##  [5,] "0.676336083095521" "non"
-##  [6,] "0.552554192952812" "oui"
-##  [7,] "0.574941063532606" "oui"
-##  [8,] "0.996291845338419" "non"
-##  [9,] "0.793035421287641" "non"
-## [10,] "0.340491214301437" "oui"
+##       X                     res2 
+##  [1,] "0.892549330834299"   "non"
+##  [2,] "0.562175328377634"   "oui"
+##  [3,] "0.177319031208754"   "non"
+##  [4,] "0.00176995154470205" "non"
+##  [5,] "0.188005365664139"   "non"
+##  [6,] "0.648165624355897"   "non"
+##  [7,] "0.313316871644929"   "oui"
+##  [8,] "0.881511828862131"   "non"
+##  [9,] "0.648198558250442"   "non"
+## [10,] "0.850194146158174"   "non"
 ```
 ]
 
@@ -987,17 +897,17 @@ cbind(X,res2)
     
 
 ```
-##       X                   res2 
-##  [1,] "0.98121405323036"  "non"
-##  [2,] "0.899149209726602" "non"
-##  [3,] "0.272092379862443" "oui"
-##  [4,] "0.764156578341499" "non"
-##  [5,] "0.676336083095521" "non"
-##  [6,] "0.552554192952812" "oui"
-##  [7,] "0.574941063532606" "oui"
-##  [8,] "0.996291845338419" "non"
-##  [9,] "0.793035421287641" "non"
-## [10,] "0.340491214301437" "oui"
+##       X                     res2 
+##  [1,] "0.892549330834299"   "non"
+##  [2,] "0.562175328377634"   "oui"
+##  [3,] "0.177319031208754"   "non"
+##  [4,] "0.00176995154470205" "non"
+##  [5,] "0.188005365664139"   "non"
+##  [6,] "0.648165624355897"   "non"
+##  [7,] "0.313316871644929"   "oui"
+##  [8,] "0.881511828862131"   "non"
+##  [9,] "0.648198558250442"   "non"
+## [10,] "0.850194146158174"   "non"
 ```
 ]
 
@@ -1090,7 +1000,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "5 - coeur"   "roi - pique" "2 - carreau"
+## [1] "10 - carreau" "7 - coeur"    "roi - pique"
 ```
 
 ---
@@ -1127,7 +1037,7 @@ Plutôt que de tirer un élément d'une série de chiffres ou de caractères, on
 hist(floor(runif(n = 10000, min = 1, max = 50)))
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-38-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-34-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -1148,7 +1058,7 @@ hist(floor(runif(n = 10000, min = 1, max = 50)))
 hist(rnorm(n = 30, mean = 10, sd = 1))
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-39-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-35-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -1168,7 +1078,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 1 0 1 0 0 0 0 1 1 1
+##  [1] 0 0 0 0 1 0 1 1 1 0
 ```
 ]
 
@@ -1191,12 +1101,12 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 
 ```
 ##      [,1] [,2] [,3]
-## [1,]    0    0    1
+## [1,]    0    0    0
 ## [2,]    0    0    0
-## [3,]    0    1    0
-## [4,]    0    0    0
+## [3,]    0    0    1
+## [4,]    1    0    0
 ## [5,]    0    0    0
-## [6,]    1    0    0
+## [6,]    0    1    0
 ```
 ]
 
@@ -1220,7 +1130,7 @@ hist(rexp(n = 1000, rate = 1/6),
 xlab = "Nombre d'essais avant de perdre")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-42-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-38-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -1376,7 +1286,7 @@ for(step in 2:(nsteps+1)) {
 
 
 .pull-right[
-&lt;img src="index_files/figure-html/unnamed-chunk-48-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-44-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -1544,7 +1454,7 @@ for(step in 2:nsteps) {
 ---
 # Solution
 
-&lt;img src="index_files/figure-html/unnamed-chunk-54-1.png" width="55%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-50-1.png" width="55%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -1594,7 +1504,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.27    0.00    0.30
+##    0.23    0.00    0.23
 ```
 
 ---
@@ -1619,7 +1529,7 @@ plot(n,res, type = "l", xlab = "Taille",
 
 .pull-right[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-57-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-53-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -1654,7 +1564,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.05    0.00    0.05
+##    0.07    0.00    0.06
 ```
 
 ```r
@@ -1663,7 +1573,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##    0.02    0.00    0.01
+##       0       0       0
 ```
 ]
 
@@ -1705,7 +1615,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.66    0.00    0.65
+##    0.64    0.00    0.64
 ```
 ]
 

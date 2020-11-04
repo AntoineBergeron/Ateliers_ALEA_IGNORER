@@ -43,102 +43,6 @@ class: title-slide, middle
 
 
 ---
-class: middle, center, inverse
-
-# Retour sur les fonctions
-<hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"></hr>
-
-
----
-
-# (Exercice de la semaine passée)
-
-Toujours à partir du fichier [PositionEquipe.csv](./donnees/PositionEquipe.csv), écriver une fonction qui vous retournera les statistiques descriptives suivantes pour une série de données (une position en l'occurrence) :
-
-1. Le nombre de joueur moyen par équipe
-2. Le nombre total de joueur
-3. Le coefficent de variation du nombre de joueur
-4. La distribution relative de joueur par équipe
-5. Le pourcentage minimum de joueur dans une équipe
-6. Le pourcentage maximum de joueur dans une équipe
-
-Ensuite, appliquez cette fonction sur l'ensemble des espèces au moyen de la fonction *apply()*
-
----
-
-# Trucs pour essayer de programmer une fonction
-
-Commencer en travaillant localement
-
-```{r eval=FALSE}
-
-X <- PositionEquipe$C
-
-# Nombre de joueur moyen par equipe
-moy <- mean(X)
-# Nombre total de joueur
-tot <- sum(X)
-# Coefficient de variation de l'abondance
-CV <- sd(X)/mean(X)
-# Distribution relative de joueur par equipe
-DistRel <- X/tot  
-# Pourcentage minimum de joueur dans une equipe
-PourcMin <- min(DistRel)
-# Pourcentage maximum de joueur dans une equipe
-PourcMax <- max(DistRel)
-
-```
-
----
-
-# Trucs pour essayer de programmer une fonction
-
-Tout envelopper dans une fonction
-
-```{r eval=FALSE}
-
-ma_fonction <- function(X) {
-  
-  # Nombre de joueur moyen par equipe
-  moy <- mean(X)
-  # Nombre total de joueur
-  tot <- sum(X)
-  # Coefficient de variation de l'abondance
-  CV <- sd(X)/mean(X)
-  # Distribution relative de joueur par equipe
-  DistRel <- X/tot  
-  # Pourcentage minimum de joueur dans une equipe
-  PourcMin <- min(DistRel)
-  # Pourcentage maximum de joueur dans une equipe
-  PourcMax <- max(DistRel)
-}
-
-```
-
----
-
-# Trucs pour essayer de programmer une fonction
-
-On fait un essai sur un premier objet que l'on connait
-
-```{r eval=FALSE}
-
-ma_fonction(X)
-
-```
-
----
-# Trucs pour essayer de programmer une fonction
-
-Ensuite on l'applique sur l'ensemble des données
-
-```{r eval=FALSE}
-
-apply(PositionEquipe, 2, ma_fonction)
-
-```
-
----
 class: inverse, middle, center
 
 # Les boucles
@@ -148,23 +52,24 @@ class: inverse, middle, center
 
 # Mise en situation
 
-Vous étudiez la démographie de la population de salamandres pourpres dans le ruisseau du massif des monts Sutton. Vos données sont très simples, vous avez une mesure d'abondance à deux points d'échantillonnage au long du ruisseau. Vous devez vérifier si la population est en croissance, stable ou en déclin sur une séquence de 5 ans. Le taux de croissance est donné par l'équation suivante :
+Vous étudiez la démographie de la population humaine sur la planète Terre. Vos données sont très simples, vous avez deux pays dont vous connaissez la talle de la population au 1er janvier 1988, 1989, 1990, 1991, 1992, 1993 et 1994. Vous devez vérifier si la population est en croissance, stable ou en déclin sur cette séquence de 7 ans. Le taux de croissance est donné par l'équation suivante:
+
 
 $$
-\dfrac{N_{t+1} - N_t}{N_t}
+\lambda_{t+1} = \dfrac{N_{t+1} - N_t}{N_t}
 $$
 
 ---
 
 # Mise en situation
 
-Les données ressemblent à ce qui suit:
+Les données (en millions d'habitant) ressemblent à ce qui suit:
 
 ```{r}
-donnees <- matrix(nr = 5, nc = 2)
-donnees[,1] <- c(34,35,32,34,36)
-donnees[,2] <- c(32,36,38,36,40)
-an <- c(2010:2014)
+donnees <- matrix(nr = 7, nc = 2)
+donnees[,1] <- c(11.1,11.4,11.8,12.1,12.5,12.9,13.2) #Cameroun
+donnees[,2] <- c(7.1,7.3,7.3,7.1,6.7,6.3,5.9) #Rwanda
+an <- c(1988:1994)
 head(donnees)
 ```
 
@@ -175,21 +80,21 @@ head(donnees)
 Les données ressemblent à ce qui suit:
 
 ```{r, out.width = '42%', dpi=300, fig.align="center"}
-plot(an,donnees[,1],type = "l", xlab = "Année",ylab = "Nombre d'individus", ylim=c(32,40),cex=2)
+plot(an,donnees[,1],type = "l", xlab = "Année",ylab = "Nombre d'individus", ylim=c(3,30),cex=2)
 lines(an,donnees[,2], lty = 3)
 ```
 
 ---
 # Mise en situation
 
-Maintenant, on doit calculer le taux de croissance annuel pour chaque population. Commençons pour l'intervalle entre l'an 1 et l'an 2, sur le site 1 :
+Maintenant, on doit calculer le taux de croissance annuel pour chaque pays. Commençons pour l'intervalle entre l'an 1988 et l'an 1989 pour le Cameroun :
 
 ```{r}
-lambda <- matrix(nrow = 4, ncol = 2)
+lambda <- matrix(nrow = 6, ncol = 2)
 lambda[1,1] <- (donnees[2,1] - donnees[1,1]) / donnees[1,1]
 ```
 
-Ensuite, on fait l'an 2 :
+Ensuite, on fait pour la période de 1989 à 1990 :
 
 ```{r}
 lambda[2,1] <- (donnees[3,1] - donnees[2,1]) / donnees[2,1]
@@ -198,9 +103,9 @@ lambda[2,1] <- (donnees[3,1] - donnees[2,1]) / donnees[2,1]
 ---
 # Mise en situation
 
-Très rapidement, on réalise que c'est assez fastidieux de refaire cet exercice à la main, mais c'est faisable.
+Très rapidement, on réalise que c'est assez fastidieux de refaire cet exercice à la main, mais c'est faisable. (12 calculs pour 2 pays et 7 années)
 
-Imaginez cependant que vous découvrez un jour qu'un passionné des salamandres a déjà fait une étude similaire sur ce site, et par miracle vous obtenez des séries temporelles de 50 ans réparties sur 10 points d'échantillonnage. Il faudra changer de technique....
+Imaginez cependant qu'on vous demande d'effectuer une étude similaire sur l'ensemble de tout les pays dans le monde, sur une période de 50 ans. Le nombre de calcul à effectuer deviendrait alors beaucoup trop élevé pour être effectué à la main. Il faudra alors changer de technique....
 
 ---
 # Mise en situation
