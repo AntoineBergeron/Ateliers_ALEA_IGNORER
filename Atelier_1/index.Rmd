@@ -365,7 +365,7 @@ Le programme `DEMO` fait croître une population de taille initiale $n_t$ à un 
 ```
 PROGRAM DEMO
   FOR t IN 1:100 <------------- Opération itérative
-    n_t = n_t + n_t * lambda
+    n_t = n_t + (n_t * lambda)
     PRINT n_t <---------------- Le programme affiche la valeur à l'écran
     IF n_t < 1 <--------------- Opération décisionnelle
       BREAK <------------------ Le programme arrête son exécution
@@ -376,6 +376,8 @@ PROGRAM DEMO
 ```
 
 Le programme `DEMO` fait croitre une population de taille initiale $n_t$ à un taux $\lambda$ et affiche à l'utilisateur si la population est éteinte $n_t<1$ ou vivante $n_t>1$.
+
+**Exemple** : 1000 + (1000 * 0.01) = 1010
 
 
 ---

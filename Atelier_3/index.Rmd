@@ -110,7 +110,7 @@ Imaginez cependant qu'on vous demande d'effectuer une étude similaire sur l'ens
 ---
 # Mise en situation
 
-La semaine dernière, nous avons vu comment généraliser une séquence d'opérations au moyen d'une fonction. Comment est-ce qu'on peut généraliser des opérations qui sont répétées très souvent ? C'est le principe de la boucle.
+Dans les capsules de l'atelier 2, nous avons vu comment généraliser une séquence d'opérations au moyen d'une fonction. Comment est-ce qu'on peut généraliser des opérations qui sont répétées très souvent ? C'est le principe de la boucle.
 
 ---
 # Définition
