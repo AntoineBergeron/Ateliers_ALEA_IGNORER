@@ -380,11 +380,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.3185688
-## [1] 0.5938574
-## [1] 0.5886931
-## [1] 0.3837854
-## [1] 0.267934
+## [1] 0.9841069
+## [1] 0.5891766
+## [1] 0.906871
+## [1] 0.14826
+## [1] 0.2059639
 ```
 
 ---
@@ -548,6 +548,8 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
+## [1] "face-pile"
+## [1] "pile-face"
 ## [1] "face-face"
 ## [1] "pile-pile"
 ```
@@ -578,7 +580,7 @@ mean(res)
 ```
 
 ```
-## [1] 5.8087
+## [1] 6.0687
 ```
 
 ---
@@ -667,7 +669,7 @@ class: middle, center, inverse
 ---
 # Principe
 
-Très souvent en programmation on a à prendre des décisions du type **si la condition X est remplie, alors faire Y, sinon faire Z**. Nous avons déjà vu certains exemples depuis le début du cours.
+Très souvent en programmation on a à prendre des décisions du type **si la condition X est remplie, alors faire Y, sinon faire Z**. Nous avons déjà vu certains exemples depuis le début des ateliers.
 
 La structure de base d'une expression conditionnelle est la suivante:
 
@@ -768,12 +770,12 @@ test = function(jour) {
 
 Les classiques :
 
-- X est égal à Y : `X == Y`
-- X est supérieur à Y : `X &gt; Y`
+- X est égal à Y : `X == Y` ( == )
+- X est supérieur à Y : `X &gt; Y` 
 - X est inférieur à Y : `X &lt; Y`
-- X est supérieur ou égal à Y : `X &gt;= Y`
-- X est inférieur ou égal à Y : `X &lt;= Y`
-- X est différent de Y : `X != Y`
+- X est supérieur ou égal à Y : `X &gt;= Y` ( &gt;= )
+- X est inférieur ou égal à Y : `X &lt;= Y` ( &lt;= )
+- X est différent de Y : `X != Y` ( != )
 
 ---
 # Exercice
@@ -808,17 +810,17 @@ cbind(X,res)
 
 
 ```
-##       X                    res         
-##  [1,] "0.877683413447812"  "plus grand"
-##  [2,] "0.754430321743712"  "plus grand"
-##  [3,] "0.569572923239321"  "plus grand"
-##  [4,] "0.0616075692232698" "plus petit"
-##  [5,] "0.990668662823737"  "plus grand"
-##  [6,] "0.348498925799504"  "plus grand"
-##  [7,] "0.0975033105351031" "plus petit"
-##  [8,] "0.347157719777897"  "plus grand"
-##  [9,] "0.145908302394673"  "plus petit"
-## [10,] "0.525716310366988"  "plus grand"
+##       X                   res         
+##  [1,] "0.292791723972186" "plus petit"
+##  [2,] "0.727756857872009" "plus grand"
+##  [3,] "0.544722019927576" "plus grand"
+##  [4,] "0.140924834646285" "plus petit"
+##  [5,] "0.4431887853425"   "plus grand"
+##  [6,] "0.1224349825643"   "plus petit"
+##  [7,] "0.935744131682441" "plus grand"
+##  [8,] "0.408138800645247" "plus grand"
+##  [9,] "0.690111657604575" "plus grand"
+## [10,] "0.323149269679561" "plus grand"
 ```
 ]
 
@@ -862,17 +864,17 @@ cbind(X,res2)
 
 
 ```
-##       X                    res2 
-##  [1,] "0.877683413447812"  "non"
-##  [2,] "0.754430321743712"  "non"
-##  [3,] "0.569572923239321"  "oui"
-##  [4,] "0.0616075692232698" "non"
-##  [5,] "0.990668662823737"  "non"
-##  [6,] "0.348498925799504"  "oui"
-##  [7,] "0.0975033105351031" "non"
-##  [8,] "0.347157719777897"  "oui"
-##  [9,] "0.145908302394673"  "non"
-## [10,] "0.525716310366988"  "oui"
+##       X                   res2 
+##  [1,] "0.292791723972186" "oui"
+##  [2,] "0.727756857872009" "non"
+##  [3,] "0.544722019927576" "oui"
+##  [4,] "0.140924834646285" "non"
+##  [5,] "0.4431887853425"   "oui"
+##  [6,] "0.1224349825643"   "non"
+##  [7,] "0.935744131682441" "non"
+##  [8,] "0.408138800645247" "oui"
+##  [9,] "0.690111657604575" "non"
+## [10,] "0.323149269679561" "oui"
 ```
 ]
 
@@ -898,17 +900,17 @@ cbind(X,res2)
     
 
 ```
-##       X                    res2 
-##  [1,] "0.877683413447812"  "non"
-##  [2,] "0.754430321743712"  "non"
-##  [3,] "0.569572923239321"  "oui"
-##  [4,] "0.0616075692232698" "non"
-##  [5,] "0.990668662823737"  "non"
-##  [6,] "0.348498925799504"  "oui"
-##  [7,] "0.0975033105351031" "non"
-##  [8,] "0.347157719777897"  "oui"
-##  [9,] "0.145908302394673"  "non"
-## [10,] "0.525716310366988"  "oui"
+##       X                   res2 
+##  [1,] "0.292791723972186" "oui"
+##  [2,] "0.727756857872009" "non"
+##  [3,] "0.544722019927576" "oui"
+##  [4,] "0.140924834646285" "non"
+##  [5,] "0.4431887853425"   "oui"
+##  [6,] "0.1224349825643"   "non"
+##  [7,] "0.935744131682441" "non"
+##  [8,] "0.408138800645247" "oui"
+##  [9,] "0.690111657604575" "non"
+## [10,] "0.323149269679561" "oui"
 ```
 ]
 
@@ -1001,7 +1003,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "2 - trèfle"    "roi - carreau" "6 - carreau"
+## [1] "reine - carreau" "9 - pique"       "valet - pique"
 ```
 
 ---
@@ -1079,7 +1081,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 1 0 0 1 0 0 1 1 1 0
+##  [1] 1 1 1 1 1 1 1 1 0 0
 ```
 ]
 
@@ -1102,12 +1104,12 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 
 ```
 ##      [,1] [,2] [,3]
-## [1,]    0    0    0
+## [1,]    0    0    1
 ## [2,]    0    0    0
-## [3,]    0    0    1
-## [4,]    0    0    0
-## [5,]    0    0    0
-## [6,]    1    1    0
+## [3,]    0    0    0
+## [4,]    0    1    0
+## [5,]    1    0    0
+## [6,]    0    0    0
 ```
 ]
 
@@ -1505,7 +1507,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.26    0.00    0.27
+##    0.28    0.00    0.29
 ```
 
 ---
@@ -1565,7 +1567,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.08    0.00    0.07
+##    0.08    0.00    0.08
 ```
 
 ```r
@@ -1574,7 +1576,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##    0.01    0.00    0.02
+##       0       0       0
 ```
 ]
 
@@ -1616,7 +1618,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.68    0.00    0.68
+##    0.69    0.00    0.68
 ```
 ]
 
