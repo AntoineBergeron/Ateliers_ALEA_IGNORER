@@ -409,7 +409,7 @@ class: middle, center, inverse
 ---
 # Principe
 
-Très souvent en programmation on a à prendre des décisions du type **si la condition X est remplie, alors faire Y, sinon faire Z**. Nous avons déjà vu certains exemples depuis le début du cours.
+Très souvent en programmation on a à prendre des décisions du type **si la condition X est remplie, alors faire Y, sinon faire Z**. Nous avons déjà vu certains exemples depuis le début des ateliers.
 
 La structure de base d'une expression conditionnelle est la suivante:
 
@@ -506,12 +506,12 @@ test = function(jour) {
 
 Les classiques :
 
-- X est égal à Y : `X == Y`
-- X est supérieur à Y : `X > Y`
+- X est égal à Y : `X == Y` ( == )
+- X est supérieur à Y : `X > Y` 
 - X est inférieur à Y : `X < Y`
-- X est supérieur ou égal à Y : `X >= Y`
-- X est inférieur ou égal à Y : `X <= Y`
-- X est différent de Y : `X != Y`
+- X est supérieur ou égal à Y : `X >= Y` ( >= )
+- X est inférieur ou égal à Y : `X <= Y` ( <= )
+- X est différent de Y : `X != Y` ( != )
 
 ---
 # Exercice

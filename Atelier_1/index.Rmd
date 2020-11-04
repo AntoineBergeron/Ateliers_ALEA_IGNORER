@@ -536,7 +536,7 @@ Verite = FALSE
 
 # Dimension 1:  Les vecteurs
 
-Ces objets contiennent un série d'information. Chaque valeur
+Ces objets contiennent une série d'information. Chaque valeur
 possède une position dans le vecteur, laquelle peut être accédée.
 
 ## Exemple
