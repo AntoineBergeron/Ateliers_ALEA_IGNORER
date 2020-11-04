@@ -997,7 +997,30 @@ END FOR
 ```
 
 ---
+
 # Exercice 2
+
+Bruno et Martin s'entraîne au lancer du poids. Au cours des dernières années, Bruno et Martin ont dû s'affronter 10 fois dans des compétitions. Pour Bruno, son meilleur lancer (en mètres) pour chacune des compétitions est donné par le vecteur B. Les meilleurs lancers de Martin se retrouve dans le vecteur M.
+
+```{r, echo = FALSE}
+set.seed(5)
+B <- round(runif(10,min = 11, max = 15), digits = 2)
+M <- round(runif(10,min = 12, max = 16.5), digits = 2)
+```
+
+```{r}
+B
+M
+```
+
+Ainsi, pour accéder au résultat de Bruno lors de sa deuxième compétition, il suffit de 
+
+```{r}
+B[2]
+```
+
+---
+# Exercice 3
 
 1. On jette en face de vous 5 lettres d'un jeu de scrabble
 2. Un maniac vous demande d'écrire un programme permettant d'ordonner les 5 lettres
@@ -1008,7 +1031,7 @@ Note: L'utilisation de booléen peut être utile. `is.sort = FALSE` indique que 
 
 ---
 
-# Solutions de l'exercice 2 
+# Solutions de l'exercice 3
 
 Ordonner un vecteur `X` composé de 5 lettres de Scrabble
 
