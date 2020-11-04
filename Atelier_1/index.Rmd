@@ -972,6 +972,7 @@ Quand quelque chose fonctionne, on ne veut surtout pas le briser. C'est pourquoi
 - `Fonction`: doivent avoir une section de commentaires
 
 ---
+
 class: inverse, middle, center
 
 # Exercices 
@@ -981,78 +982,22 @@ class: inverse, middle, center
 
 # Exercice 1
 
-Soit le tableau suivant:
-
-```{r}
-can <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
-head(can)
-```
-
-1- Étant l'étudiant numéro 2, j'aimerais calculer ma moyenne générale. 
-
-2- Étant le professeur d'anglais, j'aimerais calculer la moyenne de ma classe.
+Julie cherche à calculer la somme des chiffres de 1 à 79 à l'aide d'une boucle `for`. Elle vous demande de l'aide afin d'établir un pseudo-code.
 
 ---
 
-# Solution de l'exercice 1
-
-.pull-left[
-## Solution 1:
+# Solutions de l'exercice 1
 
 ```
-FOR posC IN 1:6
-  SUM Note[2,posC]
+val_som <- 0
+
+FOR (val_chiffre in 1:79)
+  val_som <- val_som + val_chiffre
 END FOR
-MOY <- SUM/NbDeCours
 ```
-
-]
-
-.pull-right[
-
-## Solution 2:
-
-```
-FOR posL IN 1:5
-  SUM Note[posL,3]
-END FOR
-MOY <- SUM/NbEtudiant
-```
-]
-
 
 ---
-
 # Exercice 2
-
-Soit le tableau suivant:
-
-```{r}
-can <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
-head(can)
-```
-
-En temps que directeur d'une école, je souhaite obtenir la moyenne générale de mon établissement scolaire. Ainsi, je souhaiterais obtenir la moyenne des moyennes générales de chaque étudiants. À l'aide de boucle `for`, calculer la moyenne de l'établissement scolaire.
-
----
-
-# Solution de l'exercice 2
-
-```
-FOR posL IN 1:5
-  FOR posC IN 1:6
-    SUM Note[posL,posC]
-  END FOR
-  MOY[posL] <- SUM/NbDeCours
-END FOR
-MOYGEN <- SUM(MOY)/NbEtudiant
-```
-
----
-
-
-
-# Exercice 3
 
 1. On jette en face de vous 5 lettres d'un jeu de scrabble
 2. Un maniac vous demande d'écrire un programme permettant d'ordonner les 5 lettres
@@ -1063,7 +1008,7 @@ Note: L'utilisation de booléen peut être utile. `is.sort = FALSE` indique que 
 
 ---
 
-# Solutions de l'exercice 3 
+# Solutions de l'exercice 2 
 
 Ordonner un vecteur `X` composé de 5 lettres de Scrabble
 
@@ -1725,6 +1670,86 @@ as.data.frame(mat)
 ```
 
 ---
+
+class: inverse, middle, center
+
+# Exercices 
+<hr width="65%" size="0.3" color="orange" style="margin-top:-20px;"></hr>
+
+
+---
+
+# Exercice 1
+
+Soit le tableau suivant:
+
+```{r}
+note <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(note)
+```
+
+1- Étant l'étudiant numéro 2, j'aimerais calculer ma moyenne générale. 
+
+2- Étant le professeur d'anglais, j'aimerais calculer la moyenne de ma classe.
+
+---
+
+# Solution de l'exercice 1
+
+.pull-left[
+## Solution 1:
+
+```
+FOR posC IN 1:6
+  Somme <- SUM Note[2,posC]
+END FOR
+MOY <- Somme/NbDeCours
+```
+
+]
+
+.pull-right[
+
+## Solution 2:
+
+```
+FOR posL IN 1:5
+  SUM Note[posL,3]
+END FOR
+MOY <- SUM/NbEtudiant
+```
+]
+
+
+---
+
+# Exercice 2
+
+Soit le tableau suivant:
+
+```{r}
+can <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(can)
+```
+
+En temps que directeur d'une école, je souhaite obtenir la moyenne générale de mon établissement scolaire. Ainsi, je souhaiterais obtenir la moyenne des moyennes générales de chaque étudiants. À l'aide de boucle `for`, calculer la moyenne de l'établissement scolaire.
+
+---
+
+# Solution de l'exercice 2
+
+```
+FOR posL IN 1:5
+  FOR posC IN 1:6
+    SUM Note[posL,posC]
+  END FOR
+  MOY[posL] <- SUM/NbDeCours
+END FOR
+MOYGEN <- SUM(MOY)/NbEtudiant
+```
+
+---
+
 class: middle, center, inverse
 
 # Interagir avec ses fichiers
