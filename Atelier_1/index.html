@@ -402,7 +402,7 @@ Le programme `DEMO` fait croître une population de taille initiale `\(n_t\)` à
 ```
 PROGRAM DEMO
   FOR t IN 1:100 &lt;------------- Opération itérative
-    n_t = n_t + n_t * lambda
+    n_t = n_t + (n_t * lambda)
     PRINT n_t &lt;---------------- Le programme affiche la valeur à l'écran
     IF n_t &lt; 1 &lt;--------------- Opération décisionnelle
       BREAK &lt;------------------ Le programme arrête son exécution
@@ -413,6 +413,8 @@ PROGRAM DEMO
 ```
 
 Le programme `DEMO` fait croitre une population de taille initiale `\(n_t\)` à un taux `\(\lambda\)` et affiche à l'utilisateur si la population est éteinte `\(n_t&lt;1\)` ou vivante `\(n_t&gt;1\)`.
+
+**Exemple** : 1000 + (1000 * 0.01) = 1010
 
 
 ---
@@ -1947,9 +1949,9 @@ MaPremiereMatrice
 ```
 
 ```
-##          [,1]      [,2]     [,3]     [,4]     [,5]
-## [1,] 72.90035 50.366231 63.74963 61.62212 23.65091
-## [2,] 18.74721  4.815427 80.29881 32.58859 45.53234
+##          [,1]     [,2]      [,3]     [,4]     [,5]
+## [1,] 84.04778 64.32665  7.006782 92.93550 89.89268
+## [2,]  7.18522 94.95951 62.742711 38.25482 86.66689
 ```
 
 ```r
@@ -1957,7 +1959,7 @@ sum(MaPremiereMatrice[,1])
 ```
 
 ```
-## [1] 91.64756
+## [1] 91.233
 ```
 
 
@@ -2528,8 +2530,8 @@ tri
 ```
 
 ```
-##  [1] 21.815108  6.744522 74.933722 98.387104  5.128518 90.840159 37.387759
-##  [8] 50.483172 42.310200 85.755278
+##  [1] 30.464961  9.125927 69.679812 10.132514 48.530743 93.973083 16.875187
+##  [8] 68.250808 83.700833 18.934759
 ```
 
 ```r
@@ -2537,8 +2539,8 @@ sort(tri)
 ```
 
 ```
-##  [1]  5.128518  6.744522 21.815108 37.387759 42.310200 50.483172 74.933722
-##  [8] 85.755278 90.840159 98.387104
+##  [1]  9.125927 10.132514 16.875187 18.934759 30.464961 48.530743 68.250808
+##  [8] 69.679812 83.700833 93.973083
 ```
 
 ---
@@ -2551,8 +2553,8 @@ rang
 ```
 
 ```
-##  [1] 52.804059 54.779756 28.378725 42.993028 92.349859 56.758921 26.354785
-##  [8]  3.582335 97.196853 55.199705
+##  [1]  1.922858 71.127573 60.798432  2.869341 80.827659 14.174838 28.940199
+##  [8] 22.288059 48.749746 88.228826
 ```
 
 ```r
@@ -2560,7 +2562,7 @@ rank(rang)
 ```
 
 ```
-##  [1]  5  6  3  4  9  8  2  1 10  7
+##  [1]  1  8  7  2  9  3  5  4  6 10
 ```
 
 ---
@@ -2609,7 +2611,7 @@ head(sub_Centres, n=3)
 Le "&gt;=" est utilisé pour le `au moins` (plus grand ou égal) et le symbole "&amp;" pour combiner deux conditions. (agit en tant que ET)
 
 ---
-# Exercice Récapitulatif de l'atelier
+# Exercice récapitulatif de l'atelier
 
 Le fichier [ExerciceRecapitulatif.csv](./donnees/ExerciceRecapitulatif.csv) est un sommaire des données sur le virus qui frappe présentement la planète Erret: Le Divoc-91!
 
