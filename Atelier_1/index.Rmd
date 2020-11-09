@@ -43,20 +43,11 @@ class: title-slide, middle
 
 ---
 
-# Présentation
+# Rappel
 
-Cette introduction à la programmation scientifique se fera sous forme de différents ateliers. Plusieurs courtes capsules nous permettront de passer à travers chacun des ateliers. 
+Avez-vous vu le plan des ateliers?
 
-Les connaissances requises pour la programmation scientifique sont
-minimales, l'apprentissage portera davantage sur l'acquisition de
-compétences et le développement de capacités à la résolution de problèmes.
-
-Le sujet des capsules portera sur des notions de base de
-programmation, entre-coupées d'exercices spécifiques
-destinés à pratiquer les éléments enseignés. L'atelier se terminera avec
-la réalisation d'un exercice intégrateur à compléter à la maison.
-
-L'ensemble du matériel du cours sera disponible sur un dépôt Git à l'adresse :
+Matériel du cours à l'adresse :
 https://github.com/AntoineBergeron/Ateliers_ALEA
 
 ---
