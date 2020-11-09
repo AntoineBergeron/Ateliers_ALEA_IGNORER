@@ -61,9 +61,12 @@ class: inverse, middle, center
 # Introduction
 
 <div style='text-align:center;'>
-<img src="assets/img/CovidMonde.PNG" height="400"></img>
+<img src="assets/img/CovidMonde.PNG" height="400"></img> 
 </div>
 
+<div style='text-align:center;'>
+En date du 9 novembre 2020
+</div>
 
 ---
 
