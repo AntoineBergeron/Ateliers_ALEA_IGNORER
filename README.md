@@ -4,6 +4,10 @@
 
 **Collaborateur:** Jean-Philippe Morissette, Pr Dominique Gravel (Version initiale du code)
 
+## Plan des ateliers
+
+- [Présentation HTML](https://AntoineBergeron.github.io/Ateliers_ALEA/Plan_Ateliers)
+
 ## Bienvenue à l'atelier 1
 
 - [Présentation HTML](https://AntoineBergeron.github.io/Ateliers_ALEA/Atelier_1)
