@@ -1070,7 +1070,7 @@ Il est alors possible de passer une boucle `for` où les indexations seront le n
 FOR NumCompet in 1:10
   IF B[NumCompet] < M[NumCompet]
     PRINT ("Martin a gagné la compétition" NumCompet)
-  IF ELSE B[1] > M[1]
+  IF ELSE B[NumCompet] > M[NumCompet]
     PRINT ("Bruno a gagné la compétition" NumCompet)
   ELSE
     PRINT ("Il y a eu égalité à la compétition" NumCompet)
