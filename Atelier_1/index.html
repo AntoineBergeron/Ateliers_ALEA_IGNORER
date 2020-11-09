@@ -108,13 +108,13 @@ head(parties)
 
 ---
 
-# Exercice 1
+# Exemple 1
 
 Ouvrir le fichier [parties](./donnees/parties.xlsx) avec Excel et trouver le nombre de buts marqués par le Canadiens de Montréal en fonction du résultat de la partie.
 
 ---
 
-# Exercice 1: solution sur R
+# Exemple 1: solution sur R
 
 
 ```r
@@ -137,7 +137,7 @@ head(ButsResult)
 
 ---
 
-# Exercice 2
+# Exemple 2
 
 Ouvrir le fichier [ButsResult](./donnees/ButsResult.xlsx) avec Excel et calculer la corrélation entre les différents résultats d'une partie.
 
@@ -149,7 +149,7 @@ Indice: sur Excel, la fonction pour calculer une corrélation est:
 
 ---
 
-# Exercice 2: solution sur R
+# Exemple 2: solution sur R
 
 
 ```r
@@ -578,7 +578,7 @@ lettreTab[2, 1]
 
 # Le `pseudo-code`
 
-## Exemple 1
+## Exercice 1
 
 La caisse dans laquelle je transporte mes oranges a brisé. Ainsi, j'aimerais transférer chacune de mes oranges vers ma nouvelle caisse.
 
@@ -594,9 +594,16 @@ La caisse dans laquelle je transporte mes oranges a brisé. Ainsi, j'aimerais tr
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
 # Le `pseudo-code`
 
-## Exemple 1 (solution)
+## Exercice 1 (solution)
 
 Comme je n'ai aucune idée du nombre d'oranges, il m'est impossible d'utiliser une opération comme le `for`. Le `while` est donc le grand gagnant.
 
@@ -615,7 +622,7 @@ Se termine seulement quand le nombre d'orange de la caisse 1 sera plus petit ou 
 
 # Le `pseudo-code`
 
-## Exemple 2
+## Exercice 2
 
 Juste avant de commencer à transférer mes oranges, je remarque qu'il est indiqué sur ma caisse qu'elle comporte 48 oranges. Je sais donc qu'il y aura 48 oranges à changer de place. Noter d'abord le pseudo-code qui me permet de transferer les 48 oranges d'une caisse à l'autre à l'aide de la fonction `for`. En deuxième temps, je vous informe que comme j'ai un nombre pair d'oranges, je compte les transférer par coup de 2. Que devient alors le pseudo-code?
 
@@ -629,9 +636,16 @@ Juste avant de commencer à transférer mes oranges, je remarque qu'il est indiq
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
 # Le `pseudo-code`
 
-## Exemple 2 (solution 1)
+## Exercice 2 (solution 1)
 
 Je sais maintenant qu'un total de 48 oranges font parties de ma caisse. Je peux donc associer un numéro à chaque orange.
 
@@ -649,7 +663,7 @@ On ajoute une orange dans la caisse 2
 
 # Le `pseudo-code`
 
-## Exemple 2 (solution 2)
+## Exercice 2 (solution 2)
 
 Voulant les transporter par coup de deux, on pourrait se questionner sur combien d'interaction entre chaque caisse je devrai faire. En divisant mon nombre d'oranges à déplacer en 2 (j'en déplace 2 à chaque fois), on obtient le nombre d'interactions qu'il faudra effectuer.
 
@@ -668,7 +682,7 @@ On ajoute deux oranges dans la caisse 2
 
 # Le `pseudo-code`
 
-## Exemple 3
+## Exercice 3
 
 Thomas souhaite lancer un dé équilibré jusqu'attend d'obtenir la valeur 6. Il aimerait précisément savoir en combien de lancer il aura obtenu la valeur 6. 
 
@@ -682,9 +696,16 @@ Thomas souhaite lancer un dé équilibré jusqu'attend d'obtenir la valeur 6. Il
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
 # Le `pseudo-code`
 
-## Exemple 3 (solution)
+## Exercice 3 (solution)
 
 On se trouve à nouveau dans un cas où nous ne savons pas le nombre de lancers à effectuer. L'utilisation du while est alors nécessaire. On peut effectivement s'exprimer ainsi: "Tant que je n'ai pas obtenu la valeur 6, je lance mon dé à nouveau".
 
@@ -704,7 +725,7 @@ Il peut alors dire combien de lancer(s) ça lui a pris
 
 # Le `pseudo-code`
 
-## Exemple 3.1
+## Exercice 3.1
 
 Étant un peu vantard, Thomas aimerait ajouter à ses amis que d'obtenir 6 en lançant un dé n'est pas une expérience aléatoire (seulement dans son cas). Ainsi, s'il obtient la valeur 6 en un seul lancer, il aimerait leur indiquer: "je suis un maître lanceur!", alors que s'il l'obtient en plus d'un lancer, il aimerait leur mentionner que "le dé est forcément truqué!".
 
@@ -718,9 +739,16 @@ Il peut alors dire combien de lancer(s) ça lui a pris
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
 # Le `pseudo-code`
 
-## Exemple 3.1 (solution)
+## Exercice 3.1 (solution)
 
 On cherche premièrement à reproduire le même pseudo-code que l'exemple initial. Puis, à la suite de l'expérience, on peut conclure dépendamment des `2` cas possibles.
 
@@ -744,7 +772,7 @@ Thomas indiquera que c'est forcément un dé truqué
 
 # Le `pseudo-code`
 
-## Exemple 3.2
+## Exercice 3.2
 
 Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer à ses amis qu'il a été chanceux si 1 seul lancer fut nécessaire, qu'il n'est pas chanceux lorsque le nombre de lancers fut entre 2 et 6, et qu'il est extrêmement mal chanceux de l'avoir obtenu en plus de 6 lancers.
 
@@ -758,9 +786,16 @@ Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer 
 &lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
 # Le `pseudo-code`
 
-## Exemple 3.2 (solution)
+## Exercice 3.2 (solution)
 
 Dans ce cas-ci, il y a `3` cas possibles.
 
@@ -980,6 +1015,13 @@ Julie cherche à calculer la somme des chiffres de 1 à 79 à l'aide d'une boucl
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
 # Solutions de l'exercice 1
 
 ```
@@ -1031,6 +1073,13 @@ B[2]
 # Exercice 2 (suite)
 
 On aimerait écrire le pseudo-code nous permettant de déterminer qui de Bruno ou Martin a obtenu le meilleur lancer pour chacune des compétitions.
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
 
@@ -1094,6 +1143,13 @@ END FOR
 Prenez le temps de distinguer les étapes que vous réalisez lorsque vous triez les lettres. Essayez de les décrire sous forme de pseudo-code.
 
 Note: L'utilisation de booléen peut être utile. `is.sort = FALSE` indique que les 5 lettres ne sont pas ordonnées!
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
 
@@ -1656,6 +1712,13 @@ Créez un vecteur contenant les valeurs `[-1,2,5,9]`. Par la suite, calculez la 
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
 # Solution
 
 On obtient un `NaN` lorsqu'on effectue des opérations qui ne font pas de sens ou encore lorsque le résultats de notre opération n'est pas un nombre. 
@@ -1726,6 +1789,13 @@ MonVecteur
 ```
 ## [1] -1  2  5  9
 ```
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
 
@@ -1887,6 +1957,13 @@ Créez une matrice de 2 lignes et 5 colonnes remplies de chiffres tirés au hasa
 ```r
 ?runif()
 ```
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
 
@@ -2141,6 +2218,15 @@ head(note)
 
 2- Étant le professeur d'anglais, j'aimerais calculer la moyenne de ma classe.
 
+À l'aide d'un pseudo-code, répondez à (1) et (2).
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
 ---
 
 # Solution de l'exercice 1
@@ -2191,7 +2277,14 @@ head(can)
 ## 5       95           43      70      89       93    61
 ```
 
-En temps que directeur d'une école, je souhaite obtenir la moyenne générale de mon établissement scolaire. Ainsi, je souhaiterais obtenir la moyenne des moyennes générales de chaque étudiants. À l'aide de boucle `for`, calculer la moyenne de l'établissement scolaire.
+En temps que directeur d'une école, je souhaite obtenir la moyenne générale de mon établissement scolaire. Ainsi, je souhaiterais obtenir la moyenne des moyennes générales de chaque étudiants. À l'aide de boucle `for`, définissez un pseudo-code permettant de calculer la moyenne de l'établissement scolaire.
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
 
 ---
 
@@ -2707,15 +2800,18 @@ M. Kombucha vous demande de rédiger un script qui réalisera l'ensemble de ces 
 2. Créer le premier tableau demandé.
 3. Créer un vecteur des frais par région.
 4. Combiner le premier tableau au vecteur, de sorte que les frais soient **au bas** du tableau.
-5. Enregistrer les résultats dans un tableau où les étiquettes de rangées correspondent aux nombres de jours passés à l'hôpital (la dernière ligne correspondra au frais totaux par région) et les étiquettes des colonnes correspondent aux régions. Le tableau final doit avoir la forme de l'image ci-dessous.
+5. Enregistrer les résultats dans un tableau où les étiquettes de rangées correspondent aux nombres de jours passés à l'hôpital (la dernière ligne correspondra au frais totaux par région) et les étiquettes des colonnes correspondent aux régions.
 
-&lt;div style='text-align:center;'&gt;
-&lt;img src="assets/img/ExempleRecap.PNG" width="40%"&gt;&lt;/img&gt;
 
 ---
 # Suite
 
-À l'aide **seulement** du tableau final obtenu à la question précédente, expliquez comment vous procéderiez (à l'aide d'un pseudo-code) afin de calculer le nombre total d'individu ayant eu besoin d'aller à l'hôpital plus d'une journée.
+Le tableau final doit avoir la forme de l'image ci-dessous.
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/ExempleRecap.PNG" width="70%"&gt;&lt;/img&gt;
+
+En utilisant **seulement** le tableau final obtenu à la question précédente, expliquez comment vous procéderiez (à l'aide d'un pseudo-code) afin de calculer le nombre total d'individu ayant eu besoin d'aller à l'hôpital plus d'une journée.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
