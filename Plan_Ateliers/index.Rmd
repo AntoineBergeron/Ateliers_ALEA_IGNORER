@@ -1,0 +1,62 @@
+---
+title: ": Introduction à la programmation scientifique"
+author: "Antoine Bergeron"
+date: "A2020"
+output:
+  xaringan::moon_reader:
+    css: [default, ../Ateliers_ALEA.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "../macros.js"
+---
+
+class: title-slide, middle
+
+<style type="text/css">
+  .title-slide {
+    background-image: url('assets/img/Coding.png');
+    background-color: #23373B;
+    background-size: contain;
+    border: 0px;
+    background-position: 600px 0;
+    line-height: 1;
+  }
+</style>
+
+# Bienvenue au plan des ateliers!
+
+<hr width="65%" align="left" size="0.3" color="orange"></hr>
+
+### Introduction à la programmation scientifique et au langage R
+
+<hr width="65%" align="left" size="0.3" color="orange" style="margin-bottom:40px;" alt="@Martin Sanchez"></hr>
+
+.instructors[
+  ***ALÉA R*** - Antoine Bergeron
+]
+
+<img src="assets/img/Rlogo.png" width="8%" style="margin-top:20px;"></img>
+
+---
+
+# Présentation
+
+Cette introduction à la programmation scientifique se fera sous forme de différents ateliers. Plusieurs courtes capsules nous permettront de passer à travers chacun des ateliers. 
+
+Les connaissances requises pour la programmation scientifique sont
+minimales, l'apprentissage portera davantage sur l'acquisition de
+compétences et le développement de capacités à la résolution de problèmes.
+
+Le sujet des capsules portera sur des notions de base de
+programmation, entre-coupées d'exercices spécifiques
+destinés à pratiquer les éléments enseignés. L'atelier se terminera avec
+la réalisation d'un exercice intégrateur à compléter à la maison.
+
+L'ensemble du matériel du cours sera disponible sur un dépôt Git à l'adresse :
+https://github.com/AntoineBergeron/Ateliers_ALEA
+
+---
