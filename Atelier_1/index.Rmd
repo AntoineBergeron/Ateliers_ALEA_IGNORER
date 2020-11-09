@@ -61,11 +61,11 @@ class: inverse, middle, center
 # Introduction
 
 <div style='text-align:center;'>
-<img src="assets/img/CovidMonde.PNG" height="400"></img> 
+<img src="assets/img/USA2016.PNG" height="400"></img> 
 </div>
 
 <div style='text-align:center;'>
-En date du 9 novembre 2020
+Résultats de l'élection présidentielle américaine de 2016
 </div>
 
 ---
