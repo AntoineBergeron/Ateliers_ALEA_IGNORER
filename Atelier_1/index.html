@@ -576,250 +576,6 @@ lettreTab[2, 1]
 
 ---
 
-# Le `pseudo-code`
-
-## Exercice 1
-
-La caisse dans laquelle je transporte mes oranges a brisé. Ainsi, j'aimerais transférer chacune de mes oranges vers ma nouvelle caisse.
-
-*Notons qu'ici, je n'ai aucune idée sur la quantité d'oranges dans ma caisse. 
-
-.pull-left[
-&lt;img src="assets/img/CaisseOrange.PNG" width="80%"&gt;&lt;/img&gt;
-]
-
-.pull-right[
-&lt;img src="assets/img/CaisseVide.PNG" width="80%"&gt;&lt;/img&gt;
-]
-
----
-
-class: inverse, middle, center
-
-# Mettre sur pause
-&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
-
----
-
-# Le `pseudo-code`
-
-## Exercice 1 (solution)
-
-Comme je n'ai aucune idée du nombre d'oranges, il m'est impossible d'utiliser une opération comme le `for`. Le `while` est donc le grand gagnant.
-
-```
-WHILE NbOrange_1 &gt; 0
-  NbOrange_1 &lt;- NbOrange_1 - 1
-  NbOrange_2 &lt;- NbOrange_2 + 1
-END WHILE
-
-Tant que le nombre d'orange de la caisse 1 est plus grand que 0
-On enlève une orange de la caisse 1
-On ajoute une orange dans la caisse 2
-Se termine seulement quand le nombre d'orange de la caisse 1 sera plus petit ou égal à 0
-```
----
-
-# Le `pseudo-code`
-
-## Exercice 2
-
-Juste avant de commencer à transférer mes oranges, je remarque qu'il est indiqué sur ma caisse qu'elle comporte 48 oranges. Je sais donc qu'il y aura 48 oranges à changer de place. Noter d'abord le pseudo-code qui me permet de transferer les 48 oranges d'une caisse à l'autre à l'aide de la fonction `for`. En deuxième temps, je vous informe que comme j'ai un nombre pair d'oranges, je compte les transférer par coup de 2. Que devient alors le pseudo-code?
-
-.pull-left[
-&lt;img src="assets/img/CaisseOrange.PNG" width="80%"&gt;&lt;/img&gt;
-]
-
-.pull-right[
-&lt;img src="assets/img/CaisseVide.PNG" width="80%"&gt;&lt;/img&gt;
-]
-
----
-
-class: inverse, middle, center
-
-# Mettre sur pause
-&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
-
----
-
-# Le `pseudo-code`
-
-## Exercice 2 (solution 1)
-
-Je sais maintenant qu'un total de 48 oranges font parties de ma caisse. Je peux donc associer un numéro à chaque orange.
-
-```
-FOR numero_orange_1 IN 1:48 
-  NbOrange_1 &lt;- NbOrange_1 - 1 
-  NbOrange_2 &lt;- NbOrange_2 + 1 
-END FOR  
-
-Pour chacune des oranges (dénotées par un numéro de 1 à 48)
-On enlève une orange de la caisse 1
-On ajoute une orange dans la caisse 2
-```
----
-
-# Le `pseudo-code`
-
-## Exercice 2 (solution 2)
-
-Voulant les transporter par coup de deux, on pourrait se questionner sur combien d'interaction entre chaque caisse je devrai faire. En divisant mon nombre d'oranges à déplacer en 2 (j'en déplace 2 à chaque fois), on obtient le nombre d'interactions qu'il faudra effectuer.
-
-```
-FOR nombre_interaction IN 1:(NbOrange_1/2)
-  NbOrange_1 &lt;- NbOrange_1 - 2 
-  NbOrange_2 &lt;- NbOrange_2 + 2
-END FOR  
-
-Pour un nombre d'interaction de 1 à 24
-On enlève deux oranges de la caisse 1
-On ajoute deux oranges dans la caisse 2
-```
-
----
-
-# Le `pseudo-code`
-
-## Exercice 3
-
-Thomas souhaite lancer un dé équilibré jusqu'attend d'obtenir la valeur 6. Il aimerait précisément savoir en combien de lancer il aura obtenu la valeur 6. 
-
-&lt;div style='text-align:center;'&gt;
-&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
-
----
-
-class: inverse, middle, center
-
-# Mettre sur pause
-&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
-
----
-
-# Le `pseudo-code`
-
-## Exercice 3 (solution)
-
-On se trouve à nouveau dans un cas où nous ne savons pas le nombre de lancers à effectuer. L'utilisation du while est alors nécessaire. On peut effectivement s'exprimer ainsi: "Tant que je n'ai pas obtenu la valeur 6, je lance mon dé à nouveau".
-
-```
-WHILE result_de != 6
-  nb_lancer &lt;- nb_lancer + 1
-END WHILE
-PRINT nb_lancer
-
-Tant qu'il n'a pas obtenu la valeur 6
-Il lance à nouveau le dé
-L'expérience se termine lorsqu'il obtient la valeur 6
-Il peut alors dire combien de lancer(s) ça lui a pris
-```
-
----
-
-# Le `pseudo-code`
-
-## Exercice 3.1
-
-Étant un peu vantard, Thomas aimerait ajouter à ses amis que d'obtenir 6 en lançant un dé n'est pas une expérience aléatoire (seulement dans son cas). Ainsi, s'il obtient la valeur 6 en un seul lancer, il aimerait leur indiquer: "je suis un maître lanceur!", alors que s'il l'obtient en plus d'un lancer, il aimerait leur mentionner que "le dé est forcément truqué!".
-
-&lt;div style='text-align:center;'&gt;
-&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
-
----
-
-class: inverse, middle, center
-
-# Mettre sur pause
-&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
-
----
-
-# Le `pseudo-code`
-
-## Exercice 3.1 (solution)
-
-On cherche premièrement à reproduire le même pseudo-code que l'exemple initial. Puis, à la suite de l'expérience, on peut conclure dépendamment des `2` cas possibles.
-
-```
-WHILE result_de != 6
-  nb_lancer &lt;- nb_lancer + 1
-END WHILE
-IF nb_lancer = 1
-  PRINT "Je suis un maître lanceur"
-ELSE
-  PRINT "Le dé est forcément truqué!"
-ENDIF
-
-Si un seul lancer fut nécessaire afin d'obtenir 6
-Thomas indiquera alors à ses amis qu'il est un maître lanceur
-Dans un cas contraire
-Thomas indiquera que c'est forcément un dé truqué
-```
-
----
-
-# Le `pseudo-code`
-
-## Exercice 3.2
-
-Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer à ses amis qu'il a été chanceux si 1 seul lancer fut nécessaire, qu'il n'est pas chanceux lorsque le nombre de lancers fut entre 2 et 6, et qu'il est extrêmement mal chanceux de l'avoir obtenu en plus de 6 lancers.
-
-
-&lt;div style='text-align:center;'&gt;
-&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
-&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
----
-
-class: inverse, middle, center
-
-# Mettre sur pause
-&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
-
----
-
-# Le `pseudo-code`
-
-## Exercice 3.2 (solution)
-
-Dans ce cas-ci, il y a `3` cas possibles.
-
-```
-WHILE result_de != 6
-  nb_lancer &lt;- nb_lancer + 1
-END WHILE
-IF nb_lancer = 1
-  PRINT "J'ai été chanceux!"
-IF ELSE nb_lancer &gt; 6
-  PRINT "Je suis extrêmement malchanceux..."
-ELSE 
-  PRINT "Je ne suis pas chanceux."
-ENDIF
-
-Si un seul lancer fut nécessaire afin d'obtenir 6
-Thomas indiquera alors à ses amis qu'il a été chanceux
-Si le nombre de lancers nécessaire fut supérieur à 6
-Il indiquera qu'il a été extrêmement malchanceux
-Autrement (2,3,4,5,6)
-Il indiquera qu'il n'a pas été chanceux
-```
-
----
 class: inverse, middle, center
 
 # Les bonnes pratiques en programmation scientifique
@@ -1009,7 +765,253 @@ class: inverse, middle, center
 
 ---
 
-# Exercice 1
+# Le `pseudo-code`
+
+## Exercice 1
+
+La caisse dans laquelle je transporte mes oranges a brisé. Ainsi, j'aimerais transférer chacune de mes oranges vers ma nouvelle caisse.
+
+*Notons qu'ici, je n'ai aucune idée sur la quantité d'oranges dans ma caisse. 
+
+.pull-left[
+&lt;img src="assets/img/CaisseOrange.PNG" width="80%"&gt;&lt;/img&gt;
+]
+
+.pull-right[
+&lt;img src="assets/img/CaisseVide.PNG" width="80%"&gt;&lt;/img&gt;
+]
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
+# Le `pseudo-code`
+
+## Exercice 1 (solution)
+
+Comme je n'ai aucune idée du nombre d'oranges, il m'est impossible d'utiliser une opération comme le `for`. Le `while` est donc le grand gagnant.
+
+```
+WHILE NbOrange_1 &gt; 0
+  NbOrange_1 &lt;- NbOrange_1 - 1
+  NbOrange_2 &lt;- NbOrange_2 + 1
+END WHILE
+
+Tant que le nombre d'orange de la caisse 1 est plus grand que 0
+On enlève une orange de la caisse 1
+On ajoute une orange dans la caisse 2
+Se termine seulement quand le nombre d'orange de la caisse 1 sera plus petit ou égal à 0
+```
+---
+
+# Le `pseudo-code`
+
+## Exercices 1.1 et 1.2
+
+Juste avant de commencer à transférer mes oranges, je remarque qu'il est indiqué sur ma caisse qu'elle comporte 48 oranges. Je sais donc qu'il y aura 48 oranges à changer de place. Noter d'abord le pseudo-code qui me permet de transferer les 48 oranges d'une caisse à l'autre à l'aide de la fonction `for`. En deuxième temps, je vous informe que comme j'ai un nombre pair d'oranges, je compte les transférer par coup de 2. Que devient alors le pseudo-code?
+
+.pull-left[
+&lt;img src="assets/img/CaisseOrange.PNG" width="80%"&gt;&lt;/img&gt;
+]
+
+.pull-right[
+&lt;img src="assets/img/CaisseVide.PNG" width="80%"&gt;&lt;/img&gt;
+]
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
+# Le `pseudo-code`
+
+## Exercice 1.1 (solution)
+
+Je sais maintenant qu'un total de 48 oranges font parties de ma caisse. Je peux donc associer un numéro à chaque orange.
+
+```
+FOR numero_orange_1 IN 1:48 
+  NbOrange_1 &lt;- NbOrange_1 - 1 
+  NbOrange_2 &lt;- NbOrange_2 + 1 
+END FOR  
+
+Pour chacune des oranges (dénotées par un numéro de 1 à 48)
+On enlève une orange de la caisse 1
+On ajoute une orange dans la caisse 2
+```
+---
+
+# Le `pseudo-code`
+
+## Exercice 1.2 (solution)
+
+Voulant les transporter par coup de deux, on pourrait se questionner sur combien d'interaction entre chaque caisse je devrai faire. En divisant mon nombre d'oranges à déplacer en 2 (j'en déplace 2 à chaque fois), on obtient le nombre d'interactions qu'il faudra effectuer.
+
+```
+FOR nombre_interaction IN 1:(NbOrange_1/2)
+  NbOrange_1 &lt;- NbOrange_1 - 2 
+  NbOrange_2 &lt;- NbOrange_2 + 2
+END FOR  
+
+Pour un nombre d'interaction de 1 à 24
+On enlève deux oranges de la caisse 1
+On ajoute deux oranges dans la caisse 2
+```
+
+---
+
+# Le `pseudo-code`
+
+## Exercice 2
+
+Thomas souhaite lancer un dé équilibré jusqu'attend d'obtenir la valeur 6. Il aimerait précisément savoir en combien de lancer il aura obtenu la valeur 6. 
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
+# Le `pseudo-code`
+
+## Exercice 2 (solution)
+
+On se trouve à nouveau dans un cas où nous ne savons pas le nombre de lancers à effectuer. L'utilisation du while est alors nécessaire. On peut effectivement s'exprimer ainsi: "Tant que je n'ai pas obtenu la valeur 6, je lance mon dé à nouveau".
+
+```
+WHILE result_de != 6
+  nb_lancer &lt;- nb_lancer + 1
+END WHILE
+PRINT nb_lancer
+
+Tant qu'il n'a pas obtenu la valeur 6
+Il lance à nouveau le dé
+L'expérience se termine lorsqu'il obtient la valeur 6
+Il peut alors dire combien de lancer(s) ça lui a pris
+```
+
+---
+
+# Le `pseudo-code`
+
+## Exercice 2.1
+
+Étant un peu vantard, Thomas aimerait ajouter à ses amis que d'obtenir 6 en lançant un dé n'est pas une expérience aléatoire (seulement dans son cas). Ainsi, s'il obtient la valeur 6 en un seul lancer, il aimerait leur indiquer: "je suis un maître lanceur!", alors que s'il l'obtient en plus d'un lancer, il aimerait leur mentionner que "le dé est forcément truqué!".
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
+# Le `pseudo-code`
+
+## Exercice 2.1 (solution)
+
+On cherche premièrement à reproduire le même pseudo-code que l'exemple initial. Puis, à la suite de l'expérience, on peut conclure dépendamment des `2` cas possibles.
+
+```
+WHILE result_de != 6
+  nb_lancer &lt;- nb_lancer + 1
+END WHILE
+IF nb_lancer = 1
+  PRINT "Je suis un maître lanceur"
+ELSE
+  PRINT "Le dé est forcément truqué!"
+ENDIF
+
+Si un seul lancer fut nécessaire afin d'obtenir 6
+Thomas indiquera alors à ses amis qu'il est un maître lanceur
+Dans un cas contraire
+Thomas indiquera que c'est forcément un dé truqué
+```
+
+---
+
+# Le `pseudo-code`
+
+## Exercice 2.2
+
+Après quelques essais infructueux, Thomas se ravise. Il préférerait indiquer à ses amis qu'il a été chanceux si 1 seul lancer fut nécessaire, qu'il n'est pas chanceux lorsque le nombre de lancers fut entre 2 et 6, et qu'il est extrêmement mal chanceux de l'avoir obtenu en plus de 6 lancers.
+
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/de5.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de4.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de3.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de2.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de1.PNG" width="10%"&gt;&lt;/img&gt;
+&lt;img src="assets/img/de6.PNG" width="10%"&gt;&lt;/img&gt;
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+---
+
+# Le `pseudo-code`
+
+## Exercice 2.2 (solution)
+
+Dans ce cas-ci, il y a `3` cas possibles.
+
+```
+WHILE result_de != 6
+  nb_lancer &lt;- nb_lancer + 1
+END WHILE
+IF nb_lancer = 1
+  PRINT "J'ai été chanceux!"
+IF ELSE nb_lancer &gt; 6
+  PRINT "Je suis extrêmement malchanceux..."
+ELSE 
+  PRINT "Je ne suis pas chanceux."
+ENDIF
+
+Si un seul lancer fut nécessaire afin d'obtenir 6
+Thomas indiquera alors à ses amis qu'il a été chanceux
+Si le nombre de lancers nécessaire fut supérieur à 6
+Il indiquera qu'il a été extrêmement malchanceux
+Autrement (2,3,4,5,6)
+Il indiquera qu'il n'a pas été chanceux
+```
+
+---
+
+
+# Exercice 3
 
 Julie cherche à calculer la somme des chiffres de 1 à 79 à l'aide d'une boucle `for`. Elle vous demande de l'aide afin d'établir un pseudo-code.
 
@@ -1022,7 +1024,7 @@ class: inverse, middle, center
 
 ---
 
-# Solutions de l'exercice 1
+# Solution de l'exercice 3
 
 ```
 val_som &lt;- 0
@@ -1034,7 +1036,7 @@ END FOR
 
 ---
 
-# Exercice 2
+# Exercice 4
 
 Bruno et Martin s'entraînent au lancer du poids. Au cours des dernières années, ils ont dû s'affronter 10 fois dans des compétitions. Pour Bruno, son meilleur lancer (en mètres) pour chacune des compétitions est donné par le vecteur B. Les meilleurs lancers de Martin se trouvent dans le vecteur M.
 
@@ -1070,7 +1072,7 @@ B[2]
 
 ---
 
-# Exercice 2 (suite)
+# Exercice 4 (suite)
 
 On aimerait écrire le pseudo-code nous permettant de déterminer qui de Bruno ou Martin a obtenu le meilleur lancer pour chacune des compétitions.
 
@@ -1083,7 +1085,7 @@ class: inverse, middle, center
 
 ---
 
-# Solution de l'exercice 2 (tentative 1)
+# Solution de l'exercice 4 (tentative 1)
 
 Une méthode (qui n'est pas la plus optimale) serait de comparer les lancers lors de chaque compétition *manuellement* et d'indiquer en fonction du résultat qui a obtenu le meilleur lancer:
 
@@ -1100,7 +1102,7 @@ ELSE
 ```
 
 ---
-# Solution de l'exercice 2 (tentative 1)
+# Solution de l'exercice 4 (tentative 1)
 
 
 ## Compétition 2
@@ -1118,7 +1120,7 @@ ELSE
 Et ainsi de suite... Par contre, on remarque que les seuls choses qui change d'une étape à l'autre est l'indexation des vecteurs B et M, ainsi que la valeur qui suit le mot compétition!
 
 ---
-# Solution de l'exercice 2 (tentative 2)
+# Solution de l'exercice 4 (tentative 2)
 
 Il est alors possible de passer une boucle `for` où les indexations seront le numéro de la compétition qui augmentera de 1 à 10:
 
@@ -1135,7 +1137,7 @@ END FOR
 
 
 ---
-# Exercice 3
+# Exercice 5
 
 1. On jette en face de vous 5 lettres d'un jeu de scrabble
 2. Un maniac vous demande d'écrire un programme permettant d'ordonner les 5 lettres
@@ -1153,7 +1155,7 @@ class: inverse, middle, center
 
 ---
 
-# Solutions de l'exercice 3
+# Solutions de l'exercice 5
 
 Ordonner un vecteur `X` composé de 5 lettres de Scrabble
 
