@@ -55,15 +55,13 @@ class: inverse, middle, center
 Vous étudiez la démographie de la population humaine sur la planète Terre. Vos données sont très simples, vous avez deux pays dont vous connaissez la talle de la population au 1er janvier 1988, 1989, 1990, 1991, 1992, 1993 et 1994. Vous devez vérifier si la population est en croissance, stable ou en déclin sur cette séquence de 7 ans. Le taux de croissance est donné par l'équation suivante:
 
 
-$$
-\lambda_{t+1} = \dfrac{N_{t+1} - N_t}{N_t}
-$$
+$$\lambda_{t+1} = \dfrac{N_{t+1} - N_t}{N_t}$$
 
 ---
 
 # Mise en situation
 
-Les données (en millions d'habitant) ressemblent à ce qui suit:
+Les données (en millions d'habitants) ressemblent à ce qui suit:
 
 ```{r}
 donnees <- matrix(nr = 7, nc = 2)
@@ -105,7 +103,7 @@ lambda[2,1] <- (donnees[3,1] - donnees[2,1]) / donnees[2,1]
 
 Très rapidement, on réalise que c'est assez fastidieux de refaire cet exercice à la main, mais c'est faisable. (12 calculs pour 2 pays et 7 années)
 
-Imaginez cependant qu'on vous demande d'effectuer une étude similaire sur l'ensemble de tout les pays dans le monde, sur une période de 50 ans. Le nombre de calcul à effectuer deviendrait alors beaucoup trop élevé pour être effectué à la main. Il faudra alors changer de technique....
+Imaginez cependant qu'on vous demande d'effectuer une étude similaire sur l'ensemble de tous les pays dans le monde, sur une période de 50 ans. Le nombre de calculs à effectuer deviendrait alors beaucoup trop élevé pour être effectué à la main. Il faudra alors changer de technique....
 
 ---
 # Mise en situation
@@ -128,7 +126,7 @@ for(etape in depart:fin) {
 }
 ```
 
-L'exécution une fois d'un groupe de commandes dans un boucle s'appelle une itération.
+L'exécution une fois d'un groupe de commandes dans une boucle s'appelle une itération.
 
 ---
 # Quelques exemples simples
@@ -146,7 +144,7 @@ Dans cet exemple, notre séquence contient 3 éléments "Bonjour", "programmeurs
 ---
 # Quelques exemples simples
 
-Par défaut R augmente toujours l'index de 1 unité
+Par défaut, R augmente toujours l'index de 1 unité
 
 ```{r}
 for(etape in 1:5) {
