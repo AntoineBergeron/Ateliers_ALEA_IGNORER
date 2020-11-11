@@ -1336,7 +1336,7 @@ a
 
 # Le concept d'objet
 
-Un objet peut contenir de l'information de toute nature: un tableau de données, les résultats d'une analyse, une figure, une fonction
+Un objet peut contenir de l'information de toute nature: un tableau de données, les résultats d'une analyse, une figure, une fonction, ...
 
 ## La commande pour créer un objet `a` est composé de trois parties:
 
@@ -1350,7 +1350,7 @@ a
 ```
 
 - Notons que les opérateurs `<-` et `=` sont équivalents pour attribuer une valeur à un objet.
-- L'opérateur `<-` peut-être difficile à lire ou confondu avec le signe `-`.
+- L'opérateur `<-` sera toutefois préféré. (<-)
 
 ---
 class: middle, center, inverse
