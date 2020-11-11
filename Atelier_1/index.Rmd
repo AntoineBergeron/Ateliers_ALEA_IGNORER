@@ -562,7 +562,7 @@ class: inverse, middle, center
 \# Ceci peut s'avérer utile afin de détailler notre code. 
 
 <div style='text-align:center;'>
-  <img src="assets/img/Commentaire.PNG" height="300px"></img>
+  <img src="assets/img/Commentaire.PNG" height="200px"></img>
 </div>
 ---
 
