@@ -725,7 +725,7 @@ Quand quelque chose fonctionne, on ne veut surtout pas le briser. C'est pourquoi
 - `Espacement`: placer des espaces autour des opérateurs binaires
 - `Accolades { }`: s'ouvre sur la même ligne, se ferme sur une ligne indépendente (sauf pour `else`)
 - `else` : Entourer `else` avec des accolades (`}else{`)
-- `Affectation`: utiliser `<-`, pas `=`
+- `Affectation`: utiliser `<-`, pas `=`   (<-)
 - `Commentaire`: tous les commentaires sont précédés par `#` et suivit d'un espace
 - `Fonction`: doivent avoir une section de commentaires
 
