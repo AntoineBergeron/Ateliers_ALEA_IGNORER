@@ -578,6 +578,10 @@ class: inverse, middle, center
 
 Tout comme pour la planète, il est important de garder notre environnement de programmation soigné. L'ajout de commentaire peut aider, mais il ne faut pas non-plus exagérer! De plus, dans un fichier de code (tout comme dans n'importe quel fichier informatique), on ne devrait jamais garder les choses qui ne servent à rien. On doit faire du ménage!
 
+<div style='text-align:center;'>
+  <img src="assets/img/Commandement2.PNG" height="200px"></img>
+</div>
+
 ---
 
 # Les 10 commandements de la programmation
@@ -591,6 +595,14 @@ Tout comme pour la planète, il est important de garder notre environnement de p
 
 
 Le pseudo-code est souvent très utile pour répondre à ce commandement. Celui-ci agit à titre de résumer et nous permet de mieux séparer les différentes sections nécessaires dans la réalisation de notre script. N'oublions pas que de programmer, c'est avant tout résoudre des problèmes. De plus, si l'histoire nous a bien appris une chose, c'est bien qu'il vaut mieux diviser pour régner.
+
+.pull-left[
+<img src="assets/img/Commandement3.PNG" width="50%"></img>
+]
+
+.pull-right[
+<img src="assets/img/Commandement31.PNG" width="50%"></img>
+]
 
 ---
 
