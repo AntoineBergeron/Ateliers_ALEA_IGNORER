@@ -936,16 +936,11 @@ WHILE result_de != 6
   READ result_de
 END WHILE
 
-IF nb_lancer = 1
+IF nb_lancer = 1                      # Si un seul lancer fut nécessaire afin d'obtenir 6
   PRINT "Je suis un maître lanceur"
-ELSE
+ELSE                                  # Dans un cas contraire
   PRINT "Le dé est forcément truqué!"
 ENDIF
-
-Si un seul lancer fut nécessaire afin d'obtenir 6
-Thomas indiquera alors à ses amis qu'il est un maître lanceur
-Dans un cas contraire
-Thomas indiquera que c'est forcément un dé truqué
 ```
 
 ---
