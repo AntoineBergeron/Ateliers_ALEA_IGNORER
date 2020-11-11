@@ -155,7 +155,7 @@ for(etape in 1:5) {
 ---
 # Exercice
 
-Transformez en fahrenheit une séquence de température en celsius qui va de -50 à 100, par bond de 1. Rappelez vous que la conversion est $1.8*C + 32$.
+Transformez en Fahrenheit une séquence de température en Celsius qui va de -50 à 100, par bond de 1. Rappelez-vous que la conversion est $1.8*C + 32$.
 
 - Déterminez le point de départ de la séquence
 - Déterminez le point de fin de la séquence
@@ -223,19 +223,18 @@ for(C in -50:100) {
     resultat[n,2] = 1.8*C + 32
     n = n + 1
 }
-head(resultat)
 ```
 
 ---
 # Exercice
 
-On peut aussi utiliser le compteur pour réaliser des opérations mathématiques récursives. Par exemple, la factorielle n! est définie comme :
+On peut aussi utiliser le compteur pour réaliser des opérations mathématiques récursives. Par exemple, la factorielle de **n** est définie comme :
 
 $$
-n! = 1 \times 2 \times 3 \times 4 \times .... n
+n! = 1 \times 2 \times 3 \times \dots \times (n-1) \times n
 $$
 
-Calculez la factorielle 10 au moyen d'une boucle.
+Calculez la factorielle  de 10 au moyen d'une boucle.
 
 ---
 # Solution
@@ -247,7 +246,7 @@ n
 ```
 
 ---
-# On complexifie le problème ....
+# On complexifie le problème ...
 
 Il est possible d'incruster une boucle dans une boucle. On réalise notamment cette opération pour faire des calculs sur des matrices, des listes...
 
@@ -275,7 +274,7 @@ $$
 
 On se souvient que c'est assez fastidieux de refaire cet exercice à la main, mais c'est faisable.
 
-Imaginez cependant que vous découvrez un jour qu'un passionné des salamandres a déjà fait une étude similaire sur ce site, et par miracle vous obtenez des séries temporelles de 50 ans réparties sur 10 points d'échantillonnage. Il faudra changer de technique....
+Imaginez cependant que vous découvrez un jour qu'un passionné des salamandres a déjà fait une étude similaire sur ce site, et par miracle vous obtenez des séries temporelles de 50 ans réparties sur 10 points d'échantillonnage. Il faudra changer de technique...
 
 ---
 # Retour sur la mise en situation
@@ -296,7 +295,7 @@ for(i in 2:n_annees) {
 ---
 # La boucle while
 
-La boucle de type *while*, pour 'pendant', répète une série d'intructions tant qu'une condition n'a pas été atteinte. C'est une version générale de la boucle *for*. Par exemple, on peut tirer deux pièces de monnaie jusqu'à ce que l'on obtienne la combinaison pile-pile.
+La boucle de type *while* répète une série d'intructions tant qu'une condition n'a pas été atteinte. C'est une version générale de la boucle *for*. Par exemple, on peut tirer deux pièces de monnaie jusqu'à ce que l'on obtienne la combinaison pile-pile.
 
 ```{r}
 piece <- c("pile","face")
@@ -407,7 +406,7 @@ class: middle, center, inverse
 ---
 # Principe
 
-Très souvent en programmation on a à prendre des décisions du type **si la condition X est remplie, alors faire Y, sinon faire Z**. Nous avons déjà vu certains exemples depuis le début des ateliers.
+Très souvent en programmation, on doit prendre des décisions du type **si la condition X est remplie, alors faire Y, sinon faire Z**. Nous avons déjà vu certains exemples depuis le début des ateliers.
 
 La structure de base d'une expression conditionnelle est la suivante:
 
