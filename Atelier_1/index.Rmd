@@ -770,6 +770,9 @@ class: inverse, middle, center
 Comme je n'ai aucune idée du nombre d'oranges, il m'est impossible d'utiliser une opération comme le `for`. Le `while` est donc le grand gagnant.
 
 ```
+NbOrange_1 <- round(rnorm(1, mean = 48, sd = 1))  # PAS IMPORTANT À SAVOIR
+NbOrange_2 <- 0
+
 WHILE NbOrange_1 > 0
   NbOrange_1 <- NbOrange_1 - 1
   NbOrange_2 <- NbOrange_2 + 1
@@ -812,7 +815,10 @@ class: inverse, middle, center
 Je sais maintenant qu'un total de 48 oranges font parties de ma caisse. Je peux donc associer un numéro à chaque orange.
 
 ```
-FOR numero_orange_1 IN 1:48 
+NbOrange_1 <- 48
+NbOrange_2 <- 0
+
+FOR numero_orange_1 IN 1:NbOrange_1 
   NbOrange_1 <- NbOrange_1 - 1 
   NbOrange_2 <- NbOrange_2 + 1 
 END FOR  
@@ -830,6 +836,9 @@ On ajoute une orange dans la caisse 2
 Voulant les transporter par coup de deux, on pourrait se questionner sur combien d'interaction entre chaque caisse je devrai faire. En divisant mon nombre d'oranges à déplacer en 2 (j'en déplace 2 à chaque fois), on obtient le nombre d'interactions qu'il faudra effectuer.
 
 ```
+NbOrange_1 <- 48
+NbOrange_2 <- 0
+
 FOR nombre_interaction IN 1:(NbOrange_1/2)
   NbOrange_1 <- NbOrange_1 - 2 
   NbOrange_2 <- NbOrange_2 + 2
@@ -872,8 +881,12 @@ class: inverse, middle, center
 On se trouve à nouveau dans un cas où nous ne savons pas le nombre de lancers à effectuer. L'utilisation du while est alors nécessaire. On peut effectivement s'exprimer ainsi: "Tant que je n'ai pas obtenu la valeur 6, je lance mon dé à nouveau".
 
 ```
+nb_lancer <- 1
+READ result_de
+
 WHILE result_de != 6
   nb_lancer <- nb_lancer + 1
+  READ result_de
 END WHILE
 PRINT nb_lancer
 
@@ -915,8 +928,12 @@ class: inverse, middle, center
 On cherche premièrement à reproduire le même pseudo-code que l'exemple initial. Puis, à la suite de l'expérience, on peut conclure dépendamment des `2` cas possibles.
 
 ```
+nb_lancer <- 1
+READ result_de
+
 WHILE result_de != 6
   nb_lancer <- nb_lancer + 1
+  READ result_de
 END WHILE
 
 IF nb_lancer = 1
@@ -963,8 +980,12 @@ class: inverse, middle, center
 Dans ce cas-ci, il y a `3` cas possibles.
 
 ```
+nb_lancer <- 1
+READ result_de
+
 WHILE result_de != 6
   nb_lancer <- nb_lancer + 1
+  READ result_de
 END WHILE
 
 IF nb_lancer = 1
@@ -975,12 +996,9 @@ ELSE
   PRINT "Je ne suis pas chanceux."
 ENDIF
 
-Si un seul lancer fut nécessaire afin d'obtenir 6
-Thomas indiquera alors à ses amis qu'il a été chanceux
-Si le nombre de lancers nécessaire fut supérieur à 6
-Il indiquera qu'il a été extrêmement malchanceux
-Autrement (2,3,4,5,6)
-Il indiquera qu'il n'a pas été chanceux
+
+ELSE: Autrement (2,3,4,5,6)
+
 ```
 
 ---
