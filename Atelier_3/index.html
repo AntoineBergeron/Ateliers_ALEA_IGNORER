@@ -194,7 +194,7 @@ for(etape in 1:5) {
 ---
 # Exercice
 
-Transformez en fahrenheit une séquence de température en celsius qui va de -50 à 100, par bond de 1. Rappelez vous que la conversion est `\(1.8*C + 32\)`.
+Transformez en Fahrenheit une séquence de température en Celsius qui va de -50 à 100, par bond de 1. Rappelez-vous que la conversion est `\(1.8*C + 32\)`.
 
 - Déterminez le point de départ de la séquence
 - Déterminez le point de fin de la séquence
@@ -378,11 +378,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.3825806
-## [1] 0.04951064
-## [1] 0.4529791
-## [1] 0.861229
-## [1] 0.7424825
+## [1] 0.9857407
+## [1] 0.1867978
+## [1] 0.356966
+## [1] 0.4299258
+## [1] 0.3666816
 ```
 
 ---
@@ -451,19 +451,18 @@ for(C in -50:100) {
     resultat[n,2] = 1.8*C + 32
     n = n + 1
 }
-head(resultat)
 ```
 
 ---
 # Exercice
 
-On peut aussi utiliser le compteur pour réaliser des opérations mathématiques récursives. Par exemple, la factorielle n! est définie comme :
+On peut aussi utiliser le compteur pour réaliser des opérations mathématiques récursives. Par exemple, la factorielle de **n** est définie comme :
 
 $$
-n! = 1 \times 2 \times 3 \times 4 \times .... n
+n! = 1 \times 2 \times 3 \times \dots \times (n-1) \times n
 $$
 
-Calculez la factorielle 10 au moyen d'une boucle.
+Calculez la factorielle  de 10 au moyen d'une boucle.
 
 ---
 # Solution
@@ -480,7 +479,7 @@ n
 ```
 
 ---
-# On complexifie le problème ....
+# On complexifie le problème ...
 
 Il est possible d'incruster une boucle dans une boucle. On réalise notamment cette opération pour faire des calculs sur des matrices, des listes...
 
@@ -509,7 +508,7 @@ $$
 
 On se souvient que c'est assez fastidieux de refaire cet exercice à la main, mais c'est faisable.
 
-Imaginez cependant que vous découvrez un jour qu'un passionné des salamandres a déjà fait une étude similaire sur ce site, et par miracle vous obtenez des séries temporelles de 50 ans réparties sur 10 points d'échantillonnage. Il faudra changer de technique....
+Imaginez cependant que vous découvrez un jour qu'un passionné des salamandres a déjà fait une étude similaire sur ce site, et par miracle vous obtenez des séries temporelles de 50 ans réparties sur 10 points d'échantillonnage. Il faudra changer de technique...
 
 ---
 # Retour sur la mise en situation
@@ -531,7 +530,7 @@ for(i in 2:n_annees) {
 ---
 # La boucle while
 
-La boucle de type *while*, pour 'pendant', répète une série d'intructions tant qu'une condition n'a pas été atteinte. C'est une version générale de la boucle *for*. Par exemple, on peut tirer deux pièces de monnaie jusqu'à ce que l'on obtienne la combinaison pile-pile.
+La boucle de type *while* répète une série d'intructions tant qu'une condition n'a pas été atteinte. C'est une version générale de la boucle *for*. Par exemple, on peut tirer deux pièces de monnaie jusqu'à ce que l'on obtienne la combinaison pile-pile.
 
 
 ```r
@@ -546,8 +545,15 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
+## [1] "pile-face"
+## [1] "face-face"
+## [1] "pile-face"
+## [1] "face-face"
+## [1] "pile-face"
+## [1] "face-face"
+## [1] "face-face"
 ## [1] "face-pile"
-## [1] "face-pile"
+## [1] "face-face"
 ## [1] "pile-pile"
 ```
 
@@ -577,7 +583,7 @@ mean(res)
 ```
 
 ```
-## [1] 5.9818
+## [1] 5.9885
 ```
 
 ---
@@ -666,7 +672,7 @@ class: middle, center, inverse
 ---
 # Principe
 
-Très souvent en programmation on a à prendre des décisions du type **si la condition X est remplie, alors faire Y, sinon faire Z**. Nous avons déjà vu certains exemples depuis le début des ateliers.
+Très souvent en programmation, on doit prendre des décisions du type **si la condition X est remplie, alors faire Y, sinon faire Z**. Nous avons déjà vu certains exemples depuis le début des ateliers.
 
 La structure de base d'une expression conditionnelle est la suivante:
 
@@ -808,16 +814,16 @@ cbind(X,res)
 
 ```
 ##       X                    res         
-##  [1,] "0.783969709416851"  "plus grand"
-##  [2,] "0.378804969135672"  "plus grand"
-##  [3,] "0.789071183884516"  "plus grand"
-##  [4,] "0.110445021418855"  "plus petit"
-##  [5,] "0.784922069171444"  "plus grand"
-##  [6,] "0.0422387244179845" "plus petit"
-##  [7,] "0.494542457861826"  "plus grand"
-##  [8,] "0.382519201142713"  "plus grand"
-##  [9,] "0.331616488751024"  "plus grand"
-## [10,] "0.0599908432923257" "plus petit"
+##  [1,] "0.0481583310756832" "plus petit"
+##  [2,] "0.734754332574084"  "plus grand"
+##  [3,] "0.265626113163307"  "plus petit"
+##  [4,] "0.813713737530634"  "plus grand"
+##  [5,] "0.998320255661383"  "plus grand"
+##  [6,] "0.617680101655424"  "plus grand"
+##  [7,] "0.132359272567555"  "plus petit"
+##  [8,] "0.768528125714511"  "plus grand"
+##  [9,] "0.0610656819771975" "plus petit"
+## [10,] "0.643128432333469"  "plus grand"
 ```
 ]
 
@@ -862,16 +868,16 @@ cbind(X,res2)
 
 ```
 ##       X                    res2 
-##  [1,] "0.783969709416851"  "non"
-##  [2,] "0.378804969135672"  "oui"
-##  [3,] "0.789071183884516"  "non"
-##  [4,] "0.110445021418855"  "non"
-##  [5,] "0.784922069171444"  "non"
-##  [6,] "0.0422387244179845" "non"
-##  [7,] "0.494542457861826"  "oui"
-##  [8,] "0.382519201142713"  "oui"
-##  [9,] "0.331616488751024"  "oui"
-## [10,] "0.0599908432923257" "non"
+##  [1,] "0.0481583310756832" "non"
+##  [2,] "0.734754332574084"  "non"
+##  [3,] "0.265626113163307"  "oui"
+##  [4,] "0.813713737530634"  "non"
+##  [5,] "0.998320255661383"  "non"
+##  [6,] "0.617680101655424"  "non"
+##  [7,] "0.132359272567555"  "non"
+##  [8,] "0.768528125714511"  "non"
+##  [9,] "0.0610656819771975" "non"
+## [10,] "0.643128432333469"  "non"
 ```
 ]
 
@@ -898,16 +904,16 @@ cbind(X,res2)
 
 ```
 ##       X                    res2 
-##  [1,] "0.783969709416851"  "non"
-##  [2,] "0.378804969135672"  "oui"
-##  [3,] "0.789071183884516"  "non"
-##  [4,] "0.110445021418855"  "non"
-##  [5,] "0.784922069171444"  "non"
-##  [6,] "0.0422387244179845" "non"
-##  [7,] "0.494542457861826"  "oui"
-##  [8,] "0.382519201142713"  "oui"
-##  [9,] "0.331616488751024"  "oui"
-## [10,] "0.0599908432923257" "non"
+##  [1,] "0.0481583310756832" "non"
+##  [2,] "0.734754332574084"  "non"
+##  [3,] "0.265626113163307"  "oui"
+##  [4,] "0.813713737530634"  "non"
+##  [5,] "0.998320255661383"  "non"
+##  [6,] "0.617680101655424"  "non"
+##  [7,] "0.132359272567555"  "non"
+##  [8,] "0.768528125714511"  "non"
+##  [9,] "0.0610656819771975" "non"
+## [10,] "0.643128432333469"  "non"
 ```
 ]
 
@@ -1000,7 +1006,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "7 - coeur"   "9 - carreau" "3 - pique"
+## [1] "4 - carreau" "roi - pique" "4 - pique"
 ```
 
 ---
@@ -1078,7 +1084,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 1 0 1 0 0 1 1 0 1 0
+##  [1] 1 0 0 0 1 1 0 0 0 1
 ```
 ]
 
@@ -1102,11 +1108,11 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 ```
 ##      [,1] [,2] [,3]
 ## [1,]    0    0    0
-## [2,]    1    0    0
-## [3,]    0    0    1
-## [4,]    0    0    0
-## [5,]    0    1    0
-## [6,]    0    0    0
+## [2,]    0    0    0
+## [3,]    0    0    0
+## [4,]    1    0    1
+## [5,]    0    0    0
+## [6,]    0    1    0
 ```
 ]
 
@@ -1504,7 +1510,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.28    0.00    0.28
+##    0.25    0.00    0.25
 ```
 
 ---
@@ -1564,7 +1570,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.08    0.00    0.08
+##    0.06    0.00    0.06
 ```
 
 ```r
@@ -1615,7 +1621,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.70    0.00    0.71
+##    0.66    0.00    0.66
 ```
 ]
 
