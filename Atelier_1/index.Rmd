@@ -1859,10 +1859,13 @@ class: inverse, middle, center
 ## Solution 1:
 
 ```
-FOR posC IN 1:6
-  Somme <- SUM Note[2,posC]
+NbCours <- 6
+Somme <- 0
+
+FOR posC IN 1:NbCours
+  Somme <- Somme + note[2,posC]
 END FOR
-MOY <- Somme/NbDeCours
+Moyenne <- Somme/NbCours
 
 
 ET
@@ -1878,10 +1881,13 @@ mean(note[2,])
 ## Solution 2:
 
 ```
-FOR posL IN 1:5
-  SUM Note[posL,3]
+NbEtudiant <- 5
+Somme <- 0
+
+FOR posL IN 1:NbEtudiant
+  Somme <- Somme + note[posL,3]
 END FOR
-MOY <- SUM/NbEtudiant
+Moyenne <- Somme/NbEtudiant
 
 
 ET
@@ -1899,8 +1905,8 @@ mean(note[,3])
 Soit le tableau suivant:
 
 ```{r}
-can <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
-head(can)
+note <- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(note)
 ```
 
 En temps que directeur d'une école, je souhaite obtenir la moyenne générale de mon établissement scolaire. Ainsi, je souhaiterais obtenir la moyenne des moyennes générales de chaque étudiants. À l'aide de boucle `for`, définissez un pseudo-code permettant de calculer la moyenne de l'établissement scolaire.
@@ -1917,13 +1923,16 @@ class: inverse, middle, center
 # Solution de l'exercice 2
 
 ```
-FOR posL IN 1:5
-  FOR posC IN 1:6
-    SUM Note[posL,posC]
+NbEtudiant <- 5
+NbCours <- 6
+Somme <- 0
+
+FOR posL IN 1:NbEtudiant
+  FOR posC IN 1:NbCours
+    Somme <- Somme + note[posL,posC]
   END FOR
-  MOY[posL] <- SUM/NbDeCours
 END FOR
-MOYGEN <- SUM(MOY)/NbEtudiant
+MoyGen <- Somme/(NbEtudiant * NbCours)
 ```
 
 ---
