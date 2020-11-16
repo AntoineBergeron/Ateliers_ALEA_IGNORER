@@ -1933,6 +1933,12 @@ FOR posL IN 1:NbEtudiant
   END FOR
 END FOR
 MoyGen <- Somme/(NbEtudiant * NbCours)
+
+
+ET
+
+
+sum(note)/(NbEtudiant * NbCours)
 ```
 
 ---
