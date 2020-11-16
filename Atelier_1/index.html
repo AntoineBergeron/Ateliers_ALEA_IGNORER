@@ -2269,10 +2269,13 @@ class: inverse, middle, center
 ## Solution 1:
 
 ```
-FOR posC IN 1:6
-  Somme &lt;- SUM Note[2,posC]
+NbCours &lt;- 6
+Somme &lt;- 0
+
+FOR posC IN 1:NbCours
+  Somme &lt;- Somme + note[2,posC]
 END FOR
-MOY &lt;- Somme/NbDeCours
+Moyenne &lt;- Somme/NbCours
 
 
 ET
@@ -2288,10 +2291,13 @@ mean(note[2,])
 ## Solution 2:
 
 ```
-FOR posL IN 1:5
-  SUM Note[posL,3]
+NbEtudiant &lt;- 5
+Somme &lt;- 0
+
+FOR posL IN 1:NbEtudiant
+  Somme &lt;- Somme + note[posL,3]
 END FOR
-MOY &lt;- SUM/NbEtudiant
+Moyenne &lt;- Somme/NbEtudiant
 
 
 ET
@@ -2310,8 +2316,8 @@ Soit le tableau suivant:
 
 
 ```r
-can &lt;- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
-head(can)
+note &lt;- read.table(file = './donnees/NoteEtudiant.txt', sep="\t", header = TRUE)
+head(note)
 ```
 
 ```
@@ -2337,13 +2343,16 @@ class: inverse, middle, center
 # Solution de l'exercice 2
 
 ```
-FOR posL IN 1:5
-  FOR posC IN 1:6
-    SUM Note[posL,posC]
+NbEtudiant &lt;- 5
+NbCours &lt;- 6
+Somme &lt;- 0
+
+FOR posL IN 1:NbEtudiant
+  FOR posC IN 1:NbCours
+    Somme &lt;- Somme + note[posL,posC]
   END FOR
-  MOY[posL] &lt;- SUM/NbDeCours
 END FOR
-MOYGEN &lt;- SUM(MOY)/NbEtudiant
+MoyGen &lt;- Somme/(NbEtudiant * NbCours)
 ```
 
 ---
