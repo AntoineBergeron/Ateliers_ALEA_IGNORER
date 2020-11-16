@@ -1863,6 +1863,12 @@ FOR posC IN 1:6
   Somme <- SUM Note[2,posC]
 END FOR
 MOY <- Somme/NbDeCours
+
+
+ET
+
+
+mean(note[2,])
 ```
 
 ]
@@ -1876,6 +1882,12 @@ FOR posL IN 1:5
   SUM Note[posL,3]
 END FOR
 MOY <- SUM/NbEtudiant
+
+
+ET
+
+
+mean(note[,3])
 ```
 ]
 
