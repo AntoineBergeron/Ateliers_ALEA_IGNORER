@@ -337,7 +337,7 @@ class: inverse, middle, center
 # Solutions 1, 2, 3 et 4
 
 ```{r}
-party <- read.csv(file="./donnees/party.csv", header=TRUE, sep = ";", row.names = 1)
+party <- read.table(file="./donnees/party.csv", header=TRUE, sep = ";", row.names = 1)
 Enf_total_col <- apply(party, 2, sum)
 Enf_total <- sum(Enf_total_col)
 Enf_moyen_col <- apply(party, 2, mean)
