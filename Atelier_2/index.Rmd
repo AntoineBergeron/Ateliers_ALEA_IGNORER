@@ -166,6 +166,7 @@ log(100, base = 10)
 
 <b>Fonction exponentielle</b>
 ```{r}
+exp(4.60517)
 exp(10)
 ```
 
