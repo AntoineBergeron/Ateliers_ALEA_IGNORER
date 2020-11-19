@@ -150,16 +150,17 @@ vec1 * mat2
 
 # Opérations avancées
 
-<b>Logarithme népérien</b>
-```{r}
-log(100)
-```
-
 <b>Logarithme en base 10</b>
 ```{r}
 log10(100)
 log(100, base = 10)
 ```
+
+<b>Logarithme népérien</b>
+```{r}
+log(100)
+```
+
 
 ---
 # Opérations avancées
