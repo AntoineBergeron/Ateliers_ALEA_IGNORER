@@ -271,6 +271,13 @@ Calculer d'abord les fonctions suivantes:
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+---
+
 # Solutions 1 et 2
 
 ```{r}
@@ -317,6 +324,13 @@ Au moyen du fichier [party.csv](./donnees/party.csv), je vous demande de faire l
 4. Calculer le coefficient de variation. (Écart-type/Moyenne avec sd() et mean())
 5. Calculer le nombre total d'enfants ayant mangé chaque sorte de croustille.
 6. Transformer les valeurs du tableau afin d'obtenir le pourcentage d'enfants ayant mangé chaque sorte de croustille (avec 2 décimales de précision).
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
 
 ---
 
