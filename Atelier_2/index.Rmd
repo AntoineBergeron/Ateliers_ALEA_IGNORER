@@ -192,7 +192,7 @@ sqrt(100)
 
 <b>Minimum et maximum</b>
 ```{r}
-alea = runif(10,0,1)
+alea <- runif(10,0,1)
 alea
 min(alea)
 max(alea)
