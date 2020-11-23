@@ -526,7 +526,7 @@ Cette fonction a le défaut de n'être aucunement générale. Elle va toujours d
 
 À noter qu'en utilisant la commande `return()`, on s'assure de renvoyer ce qui se trouve dans l'objet `res` à l'utilisateur.
 
-Une notion importante à avoir lorsqu'on construit une fonction est que tout ce qui se trouve à l'**intérieur** d'une fonction est *entièrement* indépendent de ce qui se trouve à l'**extérieur** d'une fonction.
+Une notion importante à savoir lorsqu'on construit une fonction est que tout ce qui se trouve à l'**intérieur** d'une fonction est *entièrement* indépendent de ce qui se trouve à l'**extérieur** d'une fonction.
 
 Par exemple, l'objet `res` à l'extérieur de la fonction **n'existe pas**. Il a un sens uniquement à l'intérieur de la fonction.
 
