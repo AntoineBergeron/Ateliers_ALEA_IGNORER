@@ -437,7 +437,7 @@ tableau
 
 # La construction d'une fonction
 
-À noter qu'en ayant différents chiffres, la formule vue dans la diapositive 29/53 devient un peu plus générale :
+À noter qu'en ayant différents chiffres, la formule vue dans la diapositive 31/53 devient un peu plus générale :
 
 $$
 \dfrac{x\times y}{x+y}
