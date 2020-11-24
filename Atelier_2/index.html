@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.456249091 0.592353956 0.940631818 0.381460919 0.317944500 0.030486325
-##  [7] 0.001947006 0.494634189 0.318786032 0.327680959
+##  [1] 0.48830508 0.86116049 0.29104426 0.19533088 0.84432463 0.03924844
+##  [7] 0.40559627 0.50930244 0.07885252 0.95094852
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -317,8 +317,8 @@ alea
 ```
 
 ```
-##  [1] 0.9966237 0.1674417 0.4760850 0.8843757 0.2393088 0.8165045 0.1902307
-##  [8] 0.7424313 0.3682089 0.7704828
+##  [1] 0.4084698 0.2743177 0.4986142 0.9517857 0.1344744 0.7122476 0.6871220
+##  [8] 0.9061658 0.1128276 0.5807176
 ```
 
 ```r
@@ -326,7 +326,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.1674417
+## [1] 0.1128276
 ```
 
 ```r
@@ -334,7 +334,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.9966237
+## [1] 0.9517857
 ```
 
 ---
@@ -388,9 +388,9 @@ mat
 ```
 
 ```
-##            [,1]      [,2]
-## [1,] 0.03418102 0.5227532
-## [2,] 0.23696921 0.7171595
+##           [,1]      [,2]
+## [1,] 0.6756649 0.5933544
+## [2,] 0.9476438 0.9588360
 ```
 
 ```r
@@ -398,7 +398,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 0.5569342 0.9541287
+## [1] 1.269019 1.906480
 ```
 
 ```r
@@ -406,7 +406,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 0.2711502 1.2399127
+## [1] 1.623309 1.552190
 ```
 
 ---
@@ -421,9 +421,9 @@ mat
 ```
 
 ```
-##            [,1]      [,2]
-## [1,] 0.03418102 0.5227532
-## [2,] 0.23696921 0.7171595
+##           [,1]      [,2]
+## [1,] 0.6756649 0.5933544
+## [2,] 0.9476438 0.9588360
 ```
 
 ```r
@@ -431,7 +431,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 0.5569342 0.9541287
+## [1] 1.269019 1.906480
 ```
 
 ```r
@@ -439,7 +439,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 0.2711502 1.2399127
+## [1] 1.623309 1.552190
 ```
 
 ---
@@ -677,11 +677,11 @@ tableau
 
 ```
 ##            x          y
-## 1 -0.1980500  0.2449968
-## 2  0.3955070 -0.8886979
-## 3 -0.4529289  0.5439721
-## 4  1.3676855 -0.4568037
-## 5  1.6560346  1.4158342
+## 1 -0.4866036  0.1961328
+## 2 -0.7523889 -0.4965392
+## 3  0.8385201  1.5301267
+## 4  0.8030565 -0.1644479
+## 5  0.5821668 -1.4030676
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -710,9 +710,9 @@ $$
 ```
 
 ```
-## [1] -1.033545
-## [1] 0.7126778
-## [1] -2.706197
+## [1] 0.3285663
+## [1] -0.299129
+## [1] 0.5416772
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -732,11 +732,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] -1.033545
-## [1] 0.7126778
-## [1] -2.706197
-## [1] -0.6858889
-## [1] 0.7632717
+## [1] 0.3285663
+## [1] -0.299129
+## [1] 0.5416772
+## [1] -0.2067948
+## [1] 0.995028
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -899,7 +899,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1] -1.0335448  0.7126778 -2.7061972 -0.6858889  0.7632717
+## [1]  0.3285663 -0.2991290  0.5416772 -0.2067948  0.9950280
 ```
 
 ```r
@@ -907,7 +907,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1] -1.0335448  0.7126778 -2.7061972 -0.6858889  0.7632717
+## [1]  0.3285663 -0.2991290  0.5416772 -0.2067948  0.9950280
 ```
 
 ---
@@ -935,7 +935,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1] -1.0335448  0.7126778 -2.7061972 -0.1381529
+## [1]  0.3285663 -0.2991290  0.5416772 -0.1229103
 ```
 
 ---
@@ -950,7 +950,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1] -1.0335448  0.7126778 -0.3114391  2.9474517
+## [1]  0.3285663 -0.2991290 -0.7135110 -0.1349518
 ```
 
 ---
@@ -1021,12 +1021,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##            x          y
-## 1  0.4537919  0.2248310
-## 2  0.1578297 -2.7729290
-## 3 -0.7521181  0.2413878
-## 4  0.2615352 -4.2801994
-## 5  0.3152543  0.8025661
+##              x          y
+## 1 -2.579333206  0.1591127
+## 2  0.040894957 17.3903679
+## 3  0.003478572  1.0838213
+## 4  0.561370173 -0.1979944
+## 5  0.121945404  0.1252294
 ```
 
 ---
@@ -1070,13 +1070,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9411261
+## [1] 0.9103737
 ## 
 ## $ecart_type
-## [1] 0.5068502
+## [1] 0.4618371
 ## 
 ## $CV
-## [1] 0.5385572
+## [1] 0.507305
 ```
 
 ---
@@ -1099,7 +1099,7 @@ class: inverse, center, middle
 
 # Ex 1: La chimie des solutions "mathématiques"
 
-Roger est un apprenti chimiste. (Et nous verrons bientôt qu'il est aussi un apprenti programmeur, contrairement à vous!) À chaque jour, Roger effectue la même expérience. Au bout d'un an, il possède alors 365 données contenant trois variables: la masse en grammes de carbone recueilli, le volume de sa solution en litre ainsi que le pH de sa solution. Ces données sont disponible ici: [chimie.csv](./donnees/chimie.csv). Il souhaite maintenant calculer la concentration molaire (molarité) moyenne de ces expériences sur le carbone. Les formules à utiliser par Roger sont présentées à la diapositive suivante. 
+Roger est un apprenti chimiste. (Et nous verrons bientôt qu'il est aussi un apprenti programmeur, contrairement à vous!) À chaque jour, Roger effectue la même expérience. Au bout d'un an, il possède alors 365 données contenant trois variables: la masse en grammes de carbone recueilli, le volume de sa solution en litre ainsi que le pH de sa solution. Ces données sont disponibles ici: [chimie.csv](./donnees/chimie.csv). Il souhaite maintenant calculer la concentration molaire (molarité) moyenne de ces expériences sur le carbone. Les formules à utiliser par Roger sont présentées à la diapositive suivante. 
 
 &lt;div style='text-align:center;'&gt;
 &lt;img src="assets/img/roger.PNG" height="200"&gt;&lt;/img&gt;
