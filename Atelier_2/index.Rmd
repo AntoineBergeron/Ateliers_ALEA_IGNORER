@@ -956,12 +956,12 @@ donnees
 dist_vert <- hauteur_balle(v = donnees[,1],a = donnees[,2], h = donnees[,3])
 
 FOR i IN 1:nrow(donnees)
-  IF dist_vert > 3
+  IF dist_vert[i] > 3
     TEXTE[i] <- "Bonsoir, elle est partie!"
-  ELSEIF 0 < dist_vert <= 3
+  ELSEIF 0 < dist_vert[i] <= 3
     TEXTE[i] <- "C'est un coup sûr!"
   ELSE
-    dist_vert <- 0
+    dist_vert[i] <- 0
     TEXTE[i] <- "Retirer!"
   END IF
 END FOR
