@@ -809,7 +809,34 @@ class: inverse, middle, center
 # Solution de l'exercice 2
 
 ```{r}
-montant_total <- function(nbOr,prixOran,borneOran,pourcOran,nbPo,prixPomm,bornePomm,pourcPomm,nbPa,prixPamp,bornePamp,pourcPamp){  
+montant_total_v1 <- function(nbOr,nbPo,nbPa){  
+  if(nbOr > 20){
+    montant_or <- (20 * 22) + ((nbOr - 20) * 22 * (1 + 0.15))
+  } else {
+    montant_or <- nbOr * 22
+  }
+  if(nbPo > 25){
+    montant_po <- (25 * 20) + ((nbPo - 25) * 20 * (1 + 0.15))
+  } else {
+    montant_po <- nbPo * 20
+  }
+  if(nbPa > 10){
+    montant_pa <- (10 * 38) + ((nbPa - 10) * 38 * (1 + 0.10))
+  } else {
+    montant_pa <- nbPa * 38
+  }
+  montant_total <- sum(montant_or,montant_po,montant_pa)
+  return(montant_total)
+}
+
+```
+
+---
+
+# Solution de l'exercice 2
+
+```{r}
+montant_total_v2 <- function(nbOr,prixOran,borneOran,pourcOran,nbPo,prixPomm,bornePomm,pourcPomm,nbPa,prixPamp,bornePamp,pourcPamp){  
   if(nbOr > borneOran){
     montant_or <- borneOran * prixOran + (nbOr - borneOran) * prixOran * (1 + pourcOran)
   } else {
@@ -835,10 +862,11 @@ montant_total <- function(nbOr,prixOran,borneOran,pourcOran,nbPo,prixPomm,borneP
 # Solution de l'exercice 2: (suite)
 
 ```{r}
-montant_total(21,22,20,0.15,14,20,25,0.15,6,38,10,0.10)
+montant_total_v1(21,14,6)
+montant_total_v2(21,22,20,0.15,14,20,25,0.15,6,38,10,0.10)
 ```
 
-On remarque que beaucoup d'arguments ont été utilisé pour notre fonction `montant total`. Gardez en tête qu'effectivement, le temps mis sur l'écriture de la fonction semblera habituellement beaucoup plus long que d'utiliser la calculatrice. Remarquons que j'utilise tout mes arguments dans ma fonction. Remarquons aussi que si Alexis m'indiquait qu'une semaine plus tard, il était rendu à 27 caisses d'oranges, 23 caisses de pommes et 13 caisses de pamplemousses vendus et que le tableau précédent avait changé pour celui-ci:
+On remarque que beaucoup d'arguments ont été utilisé pour notre fonction `montant total_v2`. Gardez en tête qu'effectivement, le temps mis sur l'écriture de la fonction semblera habituellement beaucoup plus long que d'utiliser la calculatrice. Remarquons que j'utilise tout mes arguments dans ma fonction. Remarquons aussi que si Alexis m'indiquait qu'une semaine plus tard, il était rendu à 27 caisses d'oranges, 23 caisses de pommes et 13 caisses de pamplemousses vendus et que le tableau précédent avait changé pour celui-ci:
 
 ---
 
@@ -854,10 +882,11 @@ On arriverait très simplement à calculer le montant total d'Alexis.
 
 # Solution de l'exercice 2: (suite)
 
-Il Suffirait de changer le nombre de caisses pour chaque type de fruit ainsi que les trois éléments surlignés en cyan.
+Il suffirait de changer le nombre de caisses pour chaque type de fruit ainsi que les trois éléments surlignés en cyan.
 
 ```{r}
-montant_total(27,22,20,0.20,23,17,25,0.15,13,42,10,0.10)
+# montant_total_v2(21,22,20,0.15,14,20,25,0.15,6,38,10,0.10) initial
+montant_total_v2(27,22,20,0.20,23,17,25,0.15,13,42,10,0.10) # avec changement
 ```
 
 ---
