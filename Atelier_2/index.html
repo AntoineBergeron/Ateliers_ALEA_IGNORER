@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.60127587 0.05013248 0.09695479 0.47295852 0.49327415 0.16475719
-##  [7] 0.90427663 0.34749050 0.34760144 0.42897110
+##  [1] 0.02498382 0.25544804 0.59232398 0.65429526 0.42542223 0.13226295
+##  [7] 0.47866038 0.87552047 0.71019168 0.22179499
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -317,8 +317,8 @@ alea
 ```
 
 ```
-##  [1] 0.63974960 0.51061585 0.45827815 0.27990380 0.25515365 0.04190995
-##  [7] 0.84116672 0.80641594 0.81994794 0.70515401
+##  [1] 0.08301196 0.99930281 0.68777483 0.93231609 0.75851666 0.80309567
+##  [7] 0.63828756 0.90857111 0.57702808 0.99580732
 ```
 
 ```r
@@ -326,7 +326,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.04190995
+## [1] 0.08301196
 ```
 
 ```r
@@ -334,7 +334,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.8411667
+## [1] 0.9993028
 ```
 
 ---
@@ -388,9 +388,9 @@ mat
 ```
 
 ```
-##           [,1]      [,2]
-## [1,] 0.3149483 0.9960957
-## [2,] 0.1060546 0.8854115
+##            [,1]      [,2]
+## [1,] 0.05299724 0.2191420
+## [2,] 0.23126642 0.8181148
 ```
 
 ```r
@@ -398,7 +398,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.311044 0.991466
+## [1] 0.2721392 1.0493813
 ```
 
 ```r
@@ -406,7 +406,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 0.4210029 1.8815071
+## [1] 0.2842637 1.0372568
 ```
 
 ---
@@ -421,9 +421,9 @@ mat
 ```
 
 ```
-##           [,1]      [,2]
-## [1,] 0.3149483 0.9960957
-## [2,] 0.1060546 0.8854115
+##            [,1]      [,2]
+## [1,] 0.05299724 0.2191420
+## [2,] 0.23126642 0.8181148
 ```
 
 ```r
@@ -431,7 +431,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.311044 0.991466
+## [1] 0.2721392 1.0493813
 ```
 
 ```r
@@ -439,7 +439,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 0.4210029 1.8815071
+## [1] 0.2842637 1.0372568
 ```
 
 ---
@@ -676,12 +676,12 @@ tableau
 ```
 
 ```
-##               x           y
-## 1  1.2795098060 -1.16668115
-## 2 -0.0001242425  2.79167252
-## 3  0.9988598373 -1.82000072
-## 4  0.0075245232  1.06283309
-## 5 -0.8167688212  0.07036935
+##            x          y
+## 1 -0.1647907 -0.3391565
+## 2 -0.7671007  0.5483429
+## 3 -0.2823538  0.7076100
+## 4 -0.4095648 -0.2565819
+## 5  0.4527721  0.7527265
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -710,9 +710,9 @@ $$
 ```
 
 ```
-## [1] -13.2305
-## [1] -0.000124248
-## [1] 2.213902
+## [1] -0.1109042
+## [1] 1.92283
+## [1] -0.4698258
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -732,11 +732,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] -13.2305
-## [1] -0.000124248
-## [1] 2.213902
-## [1] 0.007471626
-## [1] 0.07700367
+## [1] -0.1109042
+## [1] 1.92283
+## [1] -0.4698258
+## [1] -0.1577534
+## [1] 0.2827158
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -899,7 +899,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1] -13.230504106  -0.000124248   2.213902215   0.007471626   0.077003665
+## [1] -0.1109042  1.9228300 -0.4698258 -0.1577534  0.2827158
 ```
 
 ```r
@@ -907,7 +907,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1] -13.230504106  -0.000124248   2.213902215   0.007471626   0.077003665
+## [1] -0.1109042  1.9228300 -0.4698258 -0.1577534  0.2827158
 ```
 
 ---
@@ -935,7 +935,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1] -13.230504106  -0.000124248   2.213902215   0.580574845
+## [1] -0.1109042  1.9228300 -0.4698258 -0.1003442
 ```
 
 ---
@@ -950,7 +950,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1] -13.230504106  -0.000124248   4.308506764  -0.000124257
+## [1] -0.1109042  1.9228300 -0.2148184 -0.1922707
 ```
 
 ---
@@ -1021,12 +1021,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##               x         y
-## 1  0.0228949208 0.3811568
-## 2 -0.0001242494 1.6737408
-## 3  0.0028809380 1.4073063
-## 4  0.0069874729 0.1659740
-## 5  0.4964899221 0.0592022
+##               x            y
+## 1 -2.348550e-01 245.38890066
+## 2  9.733863e-05   0.07446304
+## 3  1.653174e-01   0.44958631
+## 4 -4.401501e-01   1.02085918
+## 5  8.306758e-03   0.26637006
 ```
 
 ---
@@ -1070,13 +1070,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9503244
+## [1] 0.989354
 ## 
 ## $ecart_type
-## [1] 0.5187773
+## [1] 0.5141654
 ## 
 ## $CV
-## [1] 0.545895
+## [1] 0.5196981
 ```
 
 ---
@@ -1311,7 +1311,7 @@ Notons que les fonctions `cos()` et `tan()` sur R sont définies pour des angles
 2. Créer une matrice 5x3 contenant les informations des frappeurs. 
 3. Finalement, à l'aide d'un pseudo-code, écrivez la marche à suivre afin d'obtenir les informations suivantes pour chaques frappeurs: La hauteur de la balle à 100m de distance horizontale et la phrase que l'analyste sportif à la télévision a utilisé.
 
-Si la distance verticale est supérieur à 10, l'animateur hurle: `Bonsoir, elle est partie!` Si la balle est à une distance verticale supérieur à 0, mais inférieur ou égale à 10, l'animateur se contente d'affirmer: `C'est un coup sûr!` Pour une distance verticale négative, on souhaite retourner la valeur 0 ainsi que la phrase: `Retirer!`
+Si la distance verticale est supérieur à 3, l'animateur hurle: `Bonsoir, elle est partie!` Si la balle est à une distance verticale supérieur à 0, mais inférieur ou égale à 3, l'animateur se contente d'affirmer: `C'est un coup sûr!` Pour une distance verticale négative, on souhaite retourner la valeur 0 ainsi que la phrase: `Retirer!`
 
 ---
 
@@ -1357,9 +1357,9 @@ donnees
 dist_vert &lt;- baseball(v = donnees[,1],a = donnees[,2], h = donnees[,3])
 
 FOR i IN 1:nrow(donnees)
-  IF dist_vert &gt; 10
+  IF dist_vert &gt; 3
     TEXTE[i] &lt;- "Bonsoir, elle est partie!"
-  ELSEIF 0 &lt; dist_vert &lt;= 10
+  ELSEIF 0 &lt; dist_vert &lt;= 3
     TEXTE[i] &lt;- "C'est un coup sûr!"
   ELSE
     dist_vert &lt;- 0
