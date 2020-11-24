@@ -753,6 +753,13 @@ Roger m'informe qu'il pensait calculer ses 365 concentrations molaires à bras. 
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+---
+
 # Solution de l'exercice 1
 
 ```{r}
@@ -784,6 +791,13 @@ Alexis vend des pommes, des oranges et des pamplemousses dans le but de particip
 </div>
 
 Quel est le montant total amassé par Alexis en ce moment?
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
 
 ---
 
@@ -874,6 +888,13 @@ Notons que les fonctions `cos()` et `tan()` sur R sont définies pour des angles
 3. Finalement, à l'aide d'un pseudo-code, écrivez la marche à suivre afin d'obtenir les informations suivantes pour chaques frappeurs: La hauteur de la balle à 100m de distance horizontale et la phrase que l'analyste sportif à la télévision a utilisé.
 
 Si la distance verticale est supérieur à 10, l'animateur hurle: `Bonsoir, elle est partie!` Si la balle est à une distance verticale supérieur à 0, mais inférieur ou égale à 10, l'animateur se contente d'affirmer: `C'est un coup sûr!` Pour une distance verticale négative, on souhaite retourner la valeur 0 ainsi que la phrase: `Retirer!`
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
 
 ---
 
