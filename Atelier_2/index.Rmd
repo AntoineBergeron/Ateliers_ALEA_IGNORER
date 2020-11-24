@@ -921,7 +921,7 @@ Notons que les fonctions `cos()` et `tan()` sur R sont définies pour des angles
 2. Créer une matrice 5x3 contenant les informations des frappeurs. 
 3. Finalement, à l'aide d'un pseudo-code, écrivez la marche à suivre afin d'obtenir les informations suivantes pour chaques frappeurs: La hauteur de la balle à 100m de distance horizontale et la phrase que l'analyste sportif à la télévision a utilisé.
 
-Si la distance verticale est supérieur à 10, l'animateur hurle: `Bonsoir, elle est partie!` Si la balle est à une distance verticale supérieur à 0, mais inférieur ou égale à 10, l'animateur se contente d'affirmer: `C'est un coup sûr!` Pour une distance verticale négative, on souhaite retourner la valeur 0 ainsi que la phrase: `Retirer!`
+Si la distance verticale est supérieur à 3, l'animateur hurle: `Bonsoir, elle est partie!` Si la balle est à une distance verticale supérieur à 0, mais inférieur ou égale à 3, l'animateur se contente d'affirmer: `C'est un coup sûr!` Pour une distance verticale négative, on souhaite retourner la valeur 0 ainsi que la phrase: `Retirer!`
 
 ---
 
@@ -956,9 +956,9 @@ donnees
 dist_vert <- baseball(v = donnees[,1],a = donnees[,2], h = donnees[,3])
 
 FOR i IN 1:nrow(donnees)
-  IF dist_vert > 10
+  IF dist_vert > 3
     TEXTE[i] <- "Bonsoir, elle est partie!"
-  ELSEIF 0 < dist_vert <= 10
+  ELSEIF 0 < dist_vert <= 3
     TEXTE[i] <- "C'est un coup sûr!"
   ELSE
     dist_vert <- 0
