@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.48830508 0.86116049 0.29104426 0.19533088 0.84432463 0.03924844
-##  [7] 0.40559627 0.50930244 0.07885252 0.95094852
+##  [1] 0.58613863 0.54414110 0.10068386 0.69319628 0.92063372 0.04829232
+##  [7] 0.57582899 0.85623257 0.15448987 0.27384388
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -317,8 +317,8 @@ alea
 ```
 
 ```
-##  [1] 0.4084698 0.2743177 0.4986142 0.9517857 0.1344744 0.7122476 0.6871220
-##  [8] 0.9061658 0.1128276 0.5807176
+##  [1] 0.004733924 0.652541857 0.940378031 0.949024481 0.528016168 0.992673898
+##  [7] 0.677526549 0.615688419 0.357460542 0.101504576
 ```
 
 ```r
@@ -326,7 +326,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.1128276
+## [1] 0.004733924
 ```
 
 ```r
@@ -334,7 +334,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.9517857
+## [1] 0.9926739
 ```
 
 ---
@@ -388,9 +388,9 @@ mat
 ```
 
 ```
-##           [,1]      [,2]
-## [1,] 0.6756649 0.5933544
-## [2,] 0.9476438 0.9588360
+##            [,1]      [,2]
+## [1,] 0.03672451 0.6620434
+## [2,] 0.28782322 0.5556635
 ```
 
 ```r
@@ -398,7 +398,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.269019 1.906480
+## [1] 0.6987679 0.8434867
 ```
 
 ```r
@@ -406,7 +406,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 1.623309 1.552190
+## [1] 0.3245477 1.2177069
 ```
 
 ---
@@ -421,9 +421,9 @@ mat
 ```
 
 ```
-##           [,1]      [,2]
-## [1,] 0.6756649 0.5933544
-## [2,] 0.9476438 0.9588360
+##            [,1]      [,2]
+## [1,] 0.03672451 0.6620434
+## [2,] 0.28782322 0.5556635
 ```
 
 ```r
@@ -431,7 +431,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.269019 1.906480
+## [1] 0.6987679 0.8434867
 ```
 
 ```r
@@ -439,7 +439,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 1.623309 1.552190
+## [1] 0.3245477 1.2177069
 ```
 
 ---
@@ -676,12 +676,12 @@ tableau
 ```
 
 ```
-##            x          y
-## 1 -0.4866036  0.1961328
-## 2 -0.7523889 -0.4965392
-## 3  0.8385201  1.5301267
-## 4  0.8030565 -0.1644479
-## 5  0.5821668 -1.4030676
+##             x           y
+## 1  0.79757300 -0.05435019
+## 2 -0.60109204 -0.25335664
+## 3  0.43600200 -0.93368601
+## 4 -1.97720594  2.87591883
+## 5 -0.02413147 -0.25053971
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -710,9 +710,9 @@ $$
 ```
 
 ```
-## [1] 0.3285663
-## [1] -0.299129
-## [1] 0.5416772
+## [1] -0.05832469
+## [1] -0.1782327
+## [1] 0.8179667
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -732,11 +732,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] 0.3285663
-## [1] -0.299129
-## [1] 0.5416772
-## [1] -0.2067948
-## [1] 0.995028
+## [1] -0.05832469
+## [1] -0.1782327
+## [1] 0.8179667
+## [1] -6.327142
+## [1] -0.02201138
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -899,7 +899,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1]  0.3285663 -0.2991290  0.5416772 -0.2067948  0.9950280
+## [1] -0.05832469 -0.17823266  0.81796674 -6.32714170 -0.02201138
 ```
 
 ```r
@@ -907,7 +907,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1]  0.3285663 -0.2991290  0.5416772 -0.2067948  0.9950280
+## [1] -0.05832469 -0.17823266  0.81796674 -6.32714170 -0.02201138
 ```
 
 ---
@@ -935,7 +935,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1]  0.3285663 -0.2991290  0.5416772 -0.1229103
+## [1] -0.05832469 -0.17823266  0.81796674  0.62440732
 ```
 
 ---
@@ -950,7 +950,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1]  0.3285663 -0.2991290 -0.7135110 -0.1349518
+## [1] -0.05832469 -0.17823266  5.47106211 -0.75992243
 ```
 
 ---
@@ -1021,12 +1021,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##              x          y
-## 1 -2.579333206  0.1591127
-## 2  0.040894957 17.3903679
-## 3  0.003478572  1.0838213
-## 4  0.561370173 -0.1979944
-## 5  0.121945404  0.1252294
+##             x           y
+## 1  0.18939002  0.04825527
+## 2 -5.77714884 -0.30722773
+## 3  0.33729108  1.10622695
+## 4  2.50678733  0.00876854
+## 5 -0.02455169  0.06036911
 ```
 
 ---
@@ -1070,13 +1070,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9103737
+## [1] 0.9024796
 ## 
 ## $ecart_type
-## [1] 0.4618371
+## [1] 0.5339197
 ## 
 ## $CV
-## [1] 0.507305
+## [1] 0.5916142
 ```
 
 ---
@@ -1134,14 +1134,19 @@ class: inverse, middle, center
 ```r
 roger_tab &lt;- read.table(file = './donnees/chimie.csv', sep=";", header = TRUE)
 
-concen_carb &lt;- function(m,V){  #m représente la masse, V le volume. Notons que même si le pH est donné, il n'est pas nécessaire et n'apparait donc pas dans les arguments de la fonction.
-  M &lt;- 12.011 #La valeur M est une constante.
-  n &lt;- m/M #Premier calcul pour trouver la valeur de n.
-  C &lt;- n/V #Deuxième calcul à partir du n afin de trouver la valeur du C.
-  return(C) #On retourne la valeur d'intérêt (la concentration molaire).
+concen_carb &lt;- function(m,V){  # m représente la masse, V le volume. 
+                               # Notons que même si le pH est donné, il n'est pas 
+                               # nécessaire et n'apparait donc pas dans les arguments de la fonction.
+  M &lt;- 12.011 # La valeur M est une constante.
+  n &lt;- m/M # Premier calcul pour trouver la valeur de n.
+  C &lt;- n/V # Deuxième calcul à partir du n afin de trouver la valeur du C.
+  return(C) # On retourne la valeur d'intérêt (la concentration molaire).
 }
-#La fonction est maintenant crée! Suffit maintenant de remplacer par les valeurs "m" et "V" qui se situe dans la première et deuxième colonne de notre tableau importé.
-result &lt;- concen_carb(roger_tab[,1],roger_tab[,2]) #result possède les 365 concentrations issues des 365 appels de la fonction (une par ligne).
+# La fonction est maintenant crée! Suffit maintenant de remplacer par les valeurs 
+# "m" et "V" qui se situe dans la première et deuxième colonne de notre tableau importé.
+
+result &lt;- concen_carb(roger_tab[,1],roger_tab[,2]) # result possède les 365 concentrations 
+                                                   # issues des 365 appels de la fonction (une par ligne).
 mean(result) #On s'intéressait à la moyenne des concentrations!
 ```
 
