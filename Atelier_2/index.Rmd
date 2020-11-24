@@ -953,7 +953,7 @@ donnees
 
 
 ```
-dist_vert <- baseball(v = donnees[,1],a = donnees[,2], h = donnees[,3])
+dist_vert <- hauteur_balle(v = donnees[,1],a = donnees[,2], h = donnees[,3])
 
 FOR i IN 1:nrow(donnees)
   IF dist_vert > 3
