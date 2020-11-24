@@ -969,6 +969,9 @@ END FOR
 res_final <- cbind(dist_vert,TEXTE)
 ```
 
+<div style='text-align:center;'>
+<img src="assets/img/restraj.PNG" height="130"></img>
+</div>
 
 ---
 
