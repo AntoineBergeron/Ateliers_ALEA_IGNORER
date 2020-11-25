@@ -68,7 +68,7 @@ donnees <- matrix(nr = 7, nc = 2)
 donnees[,1] <- c(11.1,11.4,11.8,12.1,12.5,12.9,13.2) #Cameroun
 donnees[,2] <- c(7.1,7.3,7.3,7.1,6.7,6.3,5.9) #Rwanda
 an <- c(1988:1994)
-head(donnees)
+donnees
 ```
 
 ---
