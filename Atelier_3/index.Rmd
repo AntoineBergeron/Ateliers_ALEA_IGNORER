@@ -52,10 +52,10 @@ class: inverse, middle, center
 
 # Mise en situation
 
-Vous étudiez la démographie de la population humaine sur la planète Terre. Vos données sont très simples, vous avez deux pays dont vous connaissez la talle de la population au 1er janvier 1988, 1989, 1990, 1991, 1992, 1993 et 1994. Vous devez vérifier si la population est en croissance, stable ou en déclin sur cette séquence de 7 ans. Le taux de croissance est donné par l'équation suivante:
+Vous étudiez la démographie de la population humaine sur la planète Terre. Vos données sont très simples, vous avez deux pays dont vous connaissez la taille de la population au 1er janvier 1988, 1989, 1990, 1991, 1992, 1993 et 1994. Vous devez vérifier si l'évolution de la population est stable, en croissance ou en déclin sur cette séquence de 7 ans. Le taux de croissance est donné par l'équation suivante:
 
 
-$$\lambda_{t+1} = \dfrac{N_{t+1} - N_t}{N_t}$$
+$$\lambda_t = \dfrac{N_{t+1} - N_t}{N_t}$$
 
 ---
 
@@ -78,9 +78,21 @@ head(donnees)
 Les données ressemblent à ce qui suit:
 
 ```{r, out.width = '42%', dpi=300, fig.align="center"}
-plot(an,donnees[,1],type = "l", xlab = "Année",ylab = "Nombre d'individus", ylim=c(3,30),cex=2)
-lines(an,donnees[,2], lty = 3)
+plot(an, donnees[,1], type = "l", xlab = "Année", ylab = "Nombre d'individus", ylim=c(3,15), cex=2)
+lines(an, donnees[,2], lty = 3)
 ```
+
+---
+# Mise en situation
+
+Remarquons qu'il nous est seulement possible de trouver 6 valeurs de lambda par pays. Comme on doit utiliser le temps $t$ et le temps $t+1$ pour calculer lambda au temps $t$, une paire de données est associée à chaque lambda:
+
+*(numéro de la première donnée; numéro de la deuxième donnée):*
+
+(1,2) - (2,3) - (3,4) - (4,5) - (5,6) - (6,7) qui nous permettent d'obtenir ( $\lambda_1$; $\lambda_2$; $\lambda_3$; $\lambda_4$; $\lambda_5$; $\lambda_6$)
+
+Il n'est effectivement pas possible d'utiliser (0,1) ou (7,8) pour trouver une valeur de lambda, car les éléments 0 et 8 n'existent pas (sont inconnus).
+
 
 ---
 # Mise en situation
