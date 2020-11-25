@@ -266,6 +266,14 @@ $$
 Calculez la factorielle  de 10 au moyen d'une boucle.
 
 ---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
+---
 # Solution
 
 ```{r}
