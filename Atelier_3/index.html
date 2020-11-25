@@ -50,10 +50,10 @@ class: inverse, middle, center
 
 # Mise en situation
 
-Vous étudiez la démographie de la population humaine sur la planète Terre. Vos données sont très simples, vous avez deux pays dont vous connaissez la talle de la population au 1er janvier 1988, 1989, 1990, 1991, 1992, 1993 et 1994. Vous devez vérifier si la population est en croissance, stable ou en déclin sur cette séquence de 7 ans. Le taux de croissance est donné par l'équation suivante:
+Vous étudiez la démographie de la population humaine sur la planète Terre. Vos données sont très simples, vous avez deux pays dont vous connaissez la taille de la population au 1er janvier 1988, 1989, 1990, 1991, 1992, 1993 et 1994. Vous devez vérifier si l'évolution de la population est stable, en croissance ou en déclin sur cette séquence de 7 ans. Le taux de croissance est donné par l'équation suivante:
 
 
-`$$\lambda_{t+1} = \dfrac{N_{t+1} - N_t}{N_t}$$`
+`$$\lambda_t = \dfrac{N_{t+1} - N_t}{N_t}$$`
 
 ---
 
@@ -88,11 +88,23 @@ Les données ressemblent à ce qui suit:
 
 
 ```r
-plot(an,donnees[,1],type = "l", xlab = "Année",ylab = "Nombre d'individus", ylim=c(3,30),cex=2)
-lines(an,donnees[,2], lty = 3)
+plot(an, donnees[,1], type = "l", xlab = "Année", ylab = "Nombre d'individus", ylim=c(3,15), cex=2)
+lines(an, donnees[,2], lty = 3)
 ```
 
 &lt;img src="index_files/figure-html/unnamed-chunk-2-1.png" width="42%" style="display: block; margin: auto;" /&gt;
+
+---
+# Mise en situation
+
+Remarquons qu'il nous est seulement possible de trouver 6 valeurs de lambda par pays. Comme on doit utiliser le temps `\(t\)` et le temps `\(t+1\)` pour calculer lambda au temps `\(t\)`, une paire de données est associée à chaque lambda:
+
+*(numéro de la première donnée; numéro de la deuxième donnée):*
+
+(1,2) - (2,3) - (3,4) - (4,5) - (5,6) - (6,7) qui nous permettent d'obtenir ( `\(\lambda_1\)`; `\(\lambda_2\)`; `\(\lambda_3\)`; `\(\lambda_4\)`; `\(\lambda_5\)`; `\(\lambda_6\)`)
+
+Il n'est effectivement pas possible d'utiliser (0,1) ou (7,8) pour trouver une valeur de lambda, car les éléments 0 et 8 n'existent pas (sont inconnus).
+
 
 ---
 # Mise en situation
@@ -378,11 +390,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.9857407
-## [1] 0.1867978
-## [1] 0.356966
-## [1] 0.4299258
-## [1] 0.3666816
+## [1] 0.3528379
+## [1] 0.04919008
+## [1] 0.4795948
+## [1] 0.5751644
+## [1] 0.05973934
 ```
 
 ---
@@ -546,14 +558,7 @@ while(combinaison != "pile-pile") {
 
 ```
 ## [1] "pile-face"
-## [1] "face-face"
-## [1] "pile-face"
-## [1] "face-face"
-## [1] "pile-face"
-## [1] "face-face"
-## [1] "face-face"
 ## [1] "face-pile"
-## [1] "face-face"
 ## [1] "pile-pile"
 ```
 
@@ -583,7 +588,7 @@ mean(res)
 ```
 
 ```
-## [1] 5.9885
+## [1] 6.0289
 ```
 
 ---
@@ -814,16 +819,16 @@ cbind(X,res)
 
 ```
 ##       X                    res         
-##  [1,] "0.0481583310756832" "plus petit"
-##  [2,] "0.734754332574084"  "plus grand"
-##  [3,] "0.265626113163307"  "plus petit"
-##  [4,] "0.813713737530634"  "plus grand"
-##  [5,] "0.998320255661383"  "plus grand"
-##  [6,] "0.617680101655424"  "plus grand"
-##  [7,] "0.132359272567555"  "plus petit"
-##  [8,] "0.768528125714511"  "plus grand"
-##  [9,] "0.0610656819771975" "plus petit"
-## [10,] "0.643128432333469"  "plus grand"
+##  [1,] "0.554638733621687"  "plus grand"
+##  [2,] "0.200989998178557"  "plus petit"
+##  [3,] "0.371842302381992"  "plus grand"
+##  [4,] "0.0251980028115213" "plus petit"
+##  [5,] "0.797302332008258"  "plus grand"
+##  [6,] "0.674822506727651"  "plus grand"
+##  [7,] "0.680022223386914"  "plus grand"
+##  [8,] "0.705170786706731"  "plus grand"
+##  [9,] "0.513064682018012"  "plus grand"
+## [10,] "0.878830887842923"  "plus grand"
 ```
 ]
 
@@ -868,16 +873,16 @@ cbind(X,res2)
 
 ```
 ##       X                    res2 
-##  [1,] "0.0481583310756832" "non"
-##  [2,] "0.734754332574084"  "non"
-##  [3,] "0.265626113163307"  "oui"
-##  [4,] "0.813713737530634"  "non"
-##  [5,] "0.998320255661383"  "non"
-##  [6,] "0.617680101655424"  "non"
-##  [7,] "0.132359272567555"  "non"
-##  [8,] "0.768528125714511"  "non"
-##  [9,] "0.0610656819771975" "non"
-## [10,] "0.643128432333469"  "non"
+##  [1,] "0.554638733621687"  "oui"
+##  [2,] "0.200989998178557"  "oui"
+##  [3,] "0.371842302381992"  "oui"
+##  [4,] "0.0251980028115213" "non"
+##  [5,] "0.797302332008258"  "non"
+##  [6,] "0.674822506727651"  "non"
+##  [7,] "0.680022223386914"  "non"
+##  [8,] "0.705170786706731"  "non"
+##  [9,] "0.513064682018012"  "oui"
+## [10,] "0.878830887842923"  "non"
 ```
 ]
 
@@ -904,16 +909,16 @@ cbind(X,res2)
 
 ```
 ##       X                    res2 
-##  [1,] "0.0481583310756832" "non"
-##  [2,] "0.734754332574084"  "non"
-##  [3,] "0.265626113163307"  "oui"
-##  [4,] "0.813713737530634"  "non"
-##  [5,] "0.998320255661383"  "non"
-##  [6,] "0.617680101655424"  "non"
-##  [7,] "0.132359272567555"  "non"
-##  [8,] "0.768528125714511"  "non"
-##  [9,] "0.0610656819771975" "non"
-## [10,] "0.643128432333469"  "non"
+##  [1,] "0.554638733621687"  "oui"
+##  [2,] "0.200989998178557"  "oui"
+##  [3,] "0.371842302381992"  "oui"
+##  [4,] "0.0251980028115213" "non"
+##  [5,] "0.797302332008258"  "non"
+##  [6,] "0.674822506727651"  "non"
+##  [7,] "0.680022223386914"  "non"
+##  [8,] "0.705170786706731"  "non"
+##  [9,] "0.513064682018012"  "oui"
+## [10,] "0.878830887842923"  "non"
 ```
 ]
 
@@ -1006,7 +1011,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "4 - carreau" "roi - pique" "4 - pique"
+## [1] "roi - coeur"  "7 - pique"    "as - carreau"
 ```
 
 ---
@@ -1084,7 +1089,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 1 0 0 0 1 1 0 0 0 1
+##  [1] 1 0 0 1 0 0 1 0 1 0
 ```
 ]
 
@@ -1109,10 +1114,10 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 ##      [,1] [,2] [,3]
 ## [1,]    0    0    0
 ## [2,]    0    0    0
-## [3,]    0    0    0
-## [4,]    1    0    1
-## [5,]    0    0    0
-## [6,]    0    1    0
+## [3,]    1    0    1
+## [4,]    0    0    0
+## [5,]    0    1    0
+## [6,]    0    0    0
 ```
 ]
 
@@ -1510,7 +1515,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.25    0.00    0.25
+##    0.28    0.00    0.28
 ```
 
 ---
@@ -1570,7 +1575,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.06    0.00    0.06
+##    0.07    0.00    0.08
 ```
 
 ```r
@@ -1579,7 +1584,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##       0       0       0
+##    0.01    0.00    0.01
 ```
 ]
 
@@ -1621,7 +1626,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.66    0.00    0.66
+##    0.74    0.00    0.73
 ```
 ]
 
