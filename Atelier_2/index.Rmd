@@ -977,7 +977,7 @@ res_final <- cbind(dist_vert,TEXTE)
 
 # Exercice récapitulatif
 
-Dans cette exercice récapitulatif, nous travaillerons à partir de deux fichiers contenant différentes statistiques de 50 joueurs de soccer.
+Dans cet exercice récapitulatif, nous travaillerons à partir de deux fichiers contenant différentes statistiques de 50 joueurs de soccer.
 
 [soccer.csv](./donnees/soccer.csv) : Statistiques de 50 joueurs de soccer professionnels.
 
@@ -985,7 +985,7 @@ Dans cette exercice récapitulatif, nous travaillerons à partir de deux fichier
 
 Pour cet exercice, nous nous intéresserons à déterminer la valeur actuelle d'un joueur de soccer, c'est-à-dire la valeur pour laquelle il pourrait être échangé sur le marché des transactions.
 
-La valeur d'un joueur sera calculé à l'aide des quatre critères suivants: l'âge, la valeur du contrat actuel, son poste ainsi que ces performances.
+La valeur d'un joueur sera calculée à l'aide des quatre critères suivants: l'âge, la valeur du contrat actuel, son poste ainsi que ces performances.
 
 ---
 
@@ -997,7 +997,7 @@ $Val = (-0.05(x_1 - 30)^2 + 7.5) + (x_2 + \dfrac{5}{100}\cdot x_2) + x_3^*$
 
 $\hspace{4cm} + ( 0.75\cdot x_4 + 0.55 \cdot x_5 + \dfrac{1}{30}\cdot x_6)$
 
-où $x_1$ représente l'âge du joueur, $x_2$ la valeur du contrat, $x_3^*$ la valeur du poste, $x_4$ le nombre de buts, $x_5$ le nombre de passe décisive ainsi que $x_6$ le nombre moyen de minutes jouées par partie. 
+où $x_1$ représente l'âge du joueur, $x_2$ la valeur du contrat, $x_3^*$ la valeur du poste, $x_4$ le nombre de buts, $x_5$ le nombre de passes décisives ainsi que $x_6$ le nombre moyen de minutes jouées par partie. 
 
 Notons que $x_3^*$ vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur. Ces valeurs sont inscrites dans la $7^e$ colonne du fichier `soccer.csv`.
 
@@ -1005,9 +1005,9 @@ Notons que $x_3^*$ vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un g
 
 # Exercice récapitulatif (suite)
 
-Après avoir visionné le tableau des statistiques, on remarque que le nombre de minutes moyennes par match n'est pas déterminer. À l'aide du deuxième tableau, trouvez la moyenne du temps de jeu pour chaque joueur (vecteur). Remplacer ensuite la $6^e$ colonne du premier tableau par votre vecteur obtenu.
+Après avoir visionné le tableau des statistiques, on remarque que le nombre de minutes moyennes par match n'est pas déterminé. À l'aide du deuxième tableau, trouvez la moyenne du temps de jeu pour chaque joueur (vecteur). Remplacer ensuite la $6^e$ colonne du premier tableau par votre vecteur obtenu.
 
-1. Calculez le coefficient de variation du nombre de buts marqué
+1. Calculez le coefficient de variation du nombre de buts marqués
 2. Identifiez quel joueur possède le plus de points (buts + passes) à l'aide de la fonction `which.max()`
 3. En regardant vos données suite à la question 2, quel est le défaut de la fonction `which.max()`?
 4. Créez une fonction qui permet de calculer la valeur actuelle d'un joueur
