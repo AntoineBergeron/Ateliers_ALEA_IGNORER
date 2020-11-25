@@ -233,6 +233,14 @@ for(etape in -2:5) {
 Enregistrez les résultats de votre conversion de température dans une matrice ayant pour première colonne la valeur en Celcius et pour deuxième colonne la valeur en Fahrenheit.
 
 ---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
+---
 # Solution
 
 ```{r  eval=FALSE}
