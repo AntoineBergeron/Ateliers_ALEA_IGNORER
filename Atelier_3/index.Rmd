@@ -197,7 +197,7 @@ for(C in -50:100) {
 Les boucles sont souvent utilisées pour accéder à des positions dans un objet de façon récursive. La variable de la boucle peut alors être utilisée directement comme index pour accéder à l'objet. Par exemple :
 
 ```{r}
-test = runif(5, 0,1)
+test <- runif(5, 0,1)
 for(etape in 1:5) {
     print(test[etape])
 }
@@ -220,7 +220,7 @@ for(etape in 1:8) {
 La séquence ne commence pas toujours par 1, et donc parfois on doit avoir un compteur indépendent pour l'indexation. Il est donc pratique de calculer à quelle position on se situe dans la boucle.
 
 ```{r}
-n = 1
+n <- 1
 for(etape in -2:5) {
     cat("etape = ",etape, " n = ",n, '\n')
     n <- n + 1
@@ -246,7 +246,7 @@ class: inverse, middle, center
 ```{r  eval=FALSE}
 resultat = matrix(nrow = 151, ncol = 2)
 colnames(resultat) = c("C", "F")
-n = 1
+n <- 1
 for(C in -50:100) {
     resultat[n,1] = C
     resultat[n,2] = 1.8*C + 32
