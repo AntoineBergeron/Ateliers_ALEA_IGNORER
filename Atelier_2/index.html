@@ -60,8 +60,8 @@ alea
 ```
 
 ```
-##  [1] 0.8668499 0.8149001 0.7398991 0.1207762 0.6210185 0.2606352 0.5437975
-##  [8] 0.9248873 0.1209406 0.8286212
+##  [1] 0.09123008 0.58163905 0.95430718 0.98870316 0.84917140 0.97904849
+##  [7] 0.51812000 0.55550319 0.32281379 0.64288164
 ```
 Ici la distribution utilisée est la distribution uniforme, toutes les autres distributions en sont dérivées.
 
@@ -317,8 +317,8 @@ alea
 ```
 
 ```
-##  [1] 0.6792302 0.7004370 0.3180033 0.8236281 0.1421882 0.5828673 0.6253920
-##  [8] 0.3453567 0.6988337 0.7747089
+##  [1] 0.75112479 0.01068616 0.27287195 0.12478904 0.91333605 0.11872730
+##  [7] 0.74326577 0.67139548 0.90639823 0.46427242
 ```
 
 ```r
@@ -326,7 +326,7 @@ min(alea)
 ```
 
 ```
-## [1] 0.1421882
+## [1] 0.01068616
 ```
 
 ```r
@@ -334,7 +334,7 @@ max(alea)
 ```
 
 ```
-## [1] 0.8236281
+## [1] 0.9133361
 ```
 
 ---
@@ -389,8 +389,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.5847254 0.6081603
-## [2,] 0.2218935 0.8131034
+## [1,] 0.4170087 0.4433349
+## [2,] 0.2218585 0.8547518
 ```
 
 ```r
@@ -398,7 +398,7 @@ rowSums(mat)
 ```
 
 ```
-## [1] 1.192886 1.034997
+## [1] 0.8603436 1.0766103
 ```
 
 ```r
@@ -406,7 +406,7 @@ colSums(mat)
 ```
 
 ```
-## [1] 0.8066188 1.4212638
+## [1] 0.6388672 1.2980867
 ```
 
 ---
@@ -422,8 +422,8 @@ mat
 
 ```
 ##           [,1]      [,2]
-## [1,] 0.5847254 0.6081603
-## [2,] 0.2218935 0.8131034
+## [1,] 0.4170087 0.4433349
+## [2,] 0.2218585 0.8547518
 ```
 
 ```r
@@ -431,7 +431,7 @@ apply(X = mat, MARGIN = 1, FUN = sum)
 ```
 
 ```
-## [1] 1.192886 1.034997
+## [1] 0.8603436 1.0766103
 ```
 
 ```r
@@ -439,7 +439,7 @@ apply(X = mat, MARGIN = 2, FUN = sum)
 ```
 
 ```
-## [1] 0.8066188 1.4212638
+## [1] 0.6388672 1.2980867
 ```
 
 ---
@@ -676,12 +676,12 @@ tableau
 ```
 
 ```
-##            x             y
-## 1 -0.8401814 -3.542895e-01
-## 2  0.2373151 -1.861409e-06
-## 3  1.3637703  3.858666e-01
-## 4 -1.0751360  8.501683e-01
-## 5 -0.1107651 -4.673870e-01
+##             x           y
+## 1  0.04440118  0.44611592
+## 2  0.23776880 -0.04892972
+## 3 -0.38228222  0.04852715
+## 4 -1.29653801 -1.82194197
+## 5  0.30885609  0.17103031
 ```
 
 *Note: on voit ici apparaître la fonction `rnorm`. Cette fonction renvoie un vecteur de valeurs aléatoirement distribué selon une loi normale. Par défault, `mean` vaut 0 et `sd` vaut 1. La valeur 5 équivaut au nombre de valeurs dans le vecteur que l'on souhaite obtenir.
@@ -710,9 +710,9 @@ $$
 ```
 
 ```
-## [1] -0.2492044
-## [1] -1.861424e-06
-## [1] 0.3007672
+## [1] 0.04038202
+## [1] -0.0616078
+## [1] 0.05558287
 ```
 
 **Problème** - Ce n'est vraiment pas pratique si on a beaucoup de données ou si le format du tableau change.
@@ -732,11 +732,11 @@ for(i in 1:nrow(tableau)){
 ```
 
 ```
-## [1] -0.2492044
-## [1] -1.861424e-06
-## [1] 0.3007672
-## [1] 4.063013
-## [1] -0.08954417
+## [1] 0.04038202
+## [1] -0.0616078
+## [1] 0.05558287
+## [1] -0.7574899
+## [1] 0.1100755
 ```
 
 **Problème** - Qu'est-ce qu'on fait si on veut appliquer ce calcul sur plusieurs tableaux ???
@@ -899,7 +899,7 @@ prodsum(vecA, vecB)
 ```
 
 ```
-## [1] -2.492044e-01 -1.861424e-06  3.007672e-01  4.063013e+00 -8.954417e-02
+## [1]  0.04038202 -0.06160780  0.05558287 -0.75748988  0.11007554
 ```
 
 ```r
@@ -907,7 +907,7 @@ prodsum(tableau[,1], tableau[,2])
 ```
 
 ```
-## [1] -2.492044e-01 -1.861424e-06  3.007672e-01  4.063013e+00 -8.954417e-02
+## [1]  0.04038202 -0.06160780  0.05558287 -0.75748988  0.11007554
 ```
 
 ---
@@ -935,7 +935,7 @@ prodsum(vec3, vec4)
 ```
 
 ```
-## [1] -2.492044e-01 -1.861424e-06  3.007672e-01 -7.152273e+01
+## [1]  0.04038202 -0.06160780  0.05558287  0.04551027
 ```
 
 ---
@@ -950,7 +950,7 @@ prodsum(vec2, vec4)
 ```
 
 ```
-## [1] -2.492044e-01 -1.861424e-06  7.135976e-01  1.855272e-01
+## [1]  0.04038202 -0.06160780  0.02318628  0.27345556
 ```
 
 ---
@@ -1021,12 +1021,12 @@ prodsum(tableau, tableau2)
 ```
 
 ```
-##             x             y
-## 1 -2.49292127  1.038051e-01
-## 2  0.09990953 -1.861410e-06
-## 3  0.63562003  3.653704e-01
-## 4  0.72394050  6.337190e-01
-## 5  0.07953998  7.003599e-02
+##            x             y
+## 1 0.03471108   0.380568964
+## 2 0.06858507   0.036158343
+## 3 0.05898121   0.009951157
+## 4 5.54086524 -33.139796393
+## 5 0.15496729   0.143618419
 ```
 
 ---
@@ -1070,13 +1070,13 @@ test
 
 ```
 ## $moyenne
-## [1] 0.9656866
+## [1] 1.035261
 ## 
 ## $ecart_type
-## [1] 0.4956459
+## [1] 0.5051793
 ## 
 ## $CV
-## [1] 0.5132575
+## [1] 0.487973
 ```
 
 ---
@@ -1378,7 +1378,7 @@ res_final &lt;- cbind(dist_vert,TEXTE)
 
 # Exercice récapitulatif
 
-Dans cette exercice récapitulatif, nous travaillerons à partir de deux fichiers contenant différentes statistiques de 50 joueurs de soccer.
+Dans cet exercice récapitulatif, nous travaillerons à partir de deux fichiers contenant différentes statistiques de 50 joueurs de soccer.
 
 [soccer.csv](./donnees/soccer.csv) : Statistiques de 50 joueurs de soccer professionnels.
 
@@ -1386,7 +1386,7 @@ Dans cette exercice récapitulatif, nous travaillerons à partir de deux fichier
 
 Pour cet exercice, nous nous intéresserons à déterminer la valeur actuelle d'un joueur de soccer, c'est-à-dire la valeur pour laquelle il pourrait être échangé sur le marché des transactions.
 
-La valeur d'un joueur sera calculé à l'aide des quatre critères suivants: l'âge, la valeur du contrat actuel, son poste ainsi que ces performances.
+La valeur d'un joueur sera calculée à l'aide des quatre critères suivants: l'âge, la valeur du contrat actuel, son poste ainsi que ces performances.
 
 ---
 
@@ -1398,7 +1398,7 @@ La valeur d'un joueur sera calculé à l'aide des quatre critères suivants: l'�
 
 `\(\hspace{4cm} + ( 0.75\cdot x_4 + 0.55 \cdot x_5 + \dfrac{1}{30}\cdot x_6)\)`
 
-où `\(x_1\)` représente l'âge du joueur, `\(x_2\)` la valeur du contrat, `\(x_3^*\)` la valeur du poste, `\(x_4\)` le nombre de buts, `\(x_5\)` le nombre de passe décisive ainsi que `\(x_6\)` le nombre moyen de minutes jouées par partie. 
+où `\(x_1\)` représente l'âge du joueur, `\(x_2\)` la valeur du contrat, `\(x_3^*\)` la valeur du poste, `\(x_4\)` le nombre de buts, `\(x_5\)` le nombre de passes décisives ainsi que `\(x_6\)` le nombre moyen de minutes jouées par partie. 
 
 Notons que `\(x_3^*\)` vaut 2 pour un attaquant, 3 pour un milieu de terrain ou un gardien et 4 pour un défenseur. Ces valeurs sont inscrites dans la `\(7^e\)` colonne du fichier `soccer.csv`.
 
@@ -1406,9 +1406,9 @@ Notons que `\(x_3^*\)` vaut 2 pour un attaquant, 3 pour un milieu de terrain ou 
 
 # Exercice récapitulatif (suite)
 
-Après avoir visionné le tableau des statistiques, on remarque que le nombre de minutes moyennes par match n'est pas déterminer. À l'aide du deuxième tableau, trouvez la moyenne du temps de jeu pour chaque joueur (vecteur). Remplacer ensuite la `\(6^e\)` colonne du premier tableau par votre vecteur obtenu.
+Après avoir visionné le tableau des statistiques, on remarque que le nombre de minutes moyennes par match n'est pas déterminé. À l'aide du deuxième tableau, trouvez la moyenne du temps de jeu pour chaque joueur (vecteur). Remplacer ensuite la `\(6^e\)` colonne du premier tableau par votre vecteur obtenu.
 
-1. Calculez le coefficient de variation du nombre de buts marqué
+1. Calculez le coefficient de variation du nombre de buts marqués
 2. Identifiez quel joueur possède le plus de points (buts + passes) à l'aide de la fonction `which.max()`
 3. En regardant vos données suite à la question 2, quel est le défaut de la fonction `which.max()`?
 4. Créez une fonction qui permet de calculer la valeur actuelle d'un joueur
