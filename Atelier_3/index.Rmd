@@ -350,7 +350,7 @@ Calculez en moyenne combien de fois vous avez à tirer un dé à 6 faces pour ob
 
 Pour ce faire, vous devrez utiliser la fonction `sample`. 
 
-Vous pouvez aussi considérer faire 10000 tests. (C'est-à-dire 10000 lancers pour créer la moyenne)
+Vous pouvez aussi considérer faire 10000 tests. (C'est-à-dire 10000 expériences de lancer un dé jusqu'à l'obtention du chiffre 1)
 ---
 
 class: inverse, middle, center
@@ -369,7 +369,7 @@ res <- numeric(n_test)
 for(i in 1:n_test) {
 	n <- 0
 	face <- 0
-	while(face != 6) {
+	while(face != 1) {
 		face <- sample(de,1)
 		n <- n + 1
 	}
