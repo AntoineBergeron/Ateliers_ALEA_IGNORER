@@ -305,9 +305,7 @@ ma_matrice
 
 Vous étudiez la démographie de la population humaine sur la planète Terre. Vos données sont très simples, vous avez deux pays dont vous connaissez la taille de la population au 1er janvier 1988, 1989, 1990, 1991, 1992, 1993 et 1994. Vous devez vérifier si l'évolution de la population est stable, en croissance ou en déclin sur cette séquence de 7 ans. Le taux de croissance est donné par l'équation suivante:
 
-$$
-\lambda_t = \dfrac{N_{t+1} - N_t}{N_t}
-$$
+$$\lambda_t = \dfrac{N_{t+1} - N_t}{N_t}$$
 
 On se souvient que c'est assez fastidieux de refaire cet exercice à la main, mais c'est faisable. (12 calculs pour 2 pays et 7 années)
 
