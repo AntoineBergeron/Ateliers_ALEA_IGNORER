@@ -348,6 +348,9 @@ while(combinaison != "pile-pile") {
 
 Calculez en moyenne combien de fois vous avez à tirer un dé à 6 faces pour obtenir la valeur 1.
 
+Pour ce faire, vous devrez utiliser la fonction `sample`. 
+
+Vous pouvez aussi considérer faire 10000 test. (C'est-à-dire 10000 lancers pour créer la moyenne)
 ---
 # Solution
 
