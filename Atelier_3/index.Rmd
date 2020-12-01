@@ -244,13 +244,13 @@ class: inverse, middle, center
 # Solution
 
 ```{r  eval=FALSE}
-resultat = matrix(nrow = 151, ncol = 2)
-colnames(resultat) = c("C", "F")
+resultat <- matrix(nrow = 151, ncol = 2)
+colnames(resultat) <- c("C", "F")
 n <- 1
 for(C in -50:100) {
-    resultat[n,1] = C
-    resultat[n,2] = 1.8*C + 32
-    n = n + 1
+    resultat[n,1] <- C
+    resultat[n,2] <- 1.8*C + 32
+    n <- n + 1
 }
 ```
 
