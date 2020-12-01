@@ -350,7 +350,15 @@ Calculez en moyenne combien de fois vous avez à tirer un dé à 6 faces pour ob
 
 Pour ce faire, vous devrez utiliser la fonction `sample`. 
 
-Vous pouvez aussi considérer faire 10000 test. (C'est-à-dire 10000 lancers pour créer la moyenne)
+Vous pouvez aussi considérer faire 10000 tests. (C'est-à-dire 10000 lancers pour créer la moyenne)
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
 ---
 # Solution
 
@@ -394,6 +402,14 @@ N_{t+1} = N_t + r \times N_t \times (1 - N_t/K)
 $$
 
 Henri Meunier a importé environ 220 cerfs sur l'île d'Anticosti au début du 20ème siècle et on compte aujourd'hui, en 2015, environ 200 000 bêtes, ce qui correspond à la capacité de support du milieu $K$. Si on fixe le taux de croissance $r$ à 0.3, combien de temps, en années, fut nécessaire à la population pour atteindre 50% de la capacité de support ?
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
 
 ---
 # Solution 1

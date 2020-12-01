@@ -400,11 +400,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.9594775
-## [1] 0.7840652
-## [1] 0.1777415
-## [1] 0.5000639
-## [1] 0.8766126
+## [1] 0.5039607
+## [1] 0.1463198
+## [1] 0.4570858
+## [1] 0.7102908
+## [1] 0.3898779
 ```
 
 ---
@@ -590,6 +590,9 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
+## [1] "face-pile"
+## [1] "face-pile"
+## [1] "pile-face"
 ## [1] "pile-pile"
 ```
 
@@ -600,7 +603,15 @@ Calculez en moyenne combien de fois vous avez à tirer un dé à 6 faces pour ob
 
 Pour ce faire, vous devrez utiliser la fonction `sample`. 
 
-Vous pouvez aussi considérer faire 10000 test. (C'est-à-dire 10000 lancers pour créer la moyenne)
+Vous pouvez aussi considérer faire 10000 tests. (C'est-à-dire 10000 lancers pour créer la moyenne)
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+
 ---
 # Solution
 
@@ -622,7 +633,7 @@ mean(res)
 ```
 
 ```
-## [1] 6.0744
+## [1] 5.9585
 ```
 
 ---
@@ -652,6 +663,14 @@ N_{t+1} = N_t + r \times N_t \times (1 - N_t/K)
 $$
 
 Henri Meunier a importé environ 220 cerfs sur l'île d'Anticosti au début du 20ème siècle et on compte aujourd'hui, en 2015, environ 200 000 bêtes, ce qui correspond à la capacité de support du milieu `\(K\)`. Si on fixe le taux de croissance `\(r\)` à 0.3, combien de temps, en années, fut nécessaire à la population pour atteindre 50% de la capacité de support ?
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
 
 ---
 # Solution 1
@@ -857,17 +876,17 @@ cbind(X,res)
 
 
 ```
-##       X                    res         
-##  [1,] "0.689669070066884"  "plus grand"
-##  [2,] "0.590005776379257"  "plus grand"
-##  [3,] "0.682902451604605"  "plus grand"
-##  [4,] "0.111910965060815"  "plus petit"
-##  [5,] "0.408619895577431"  "plus grand"
-##  [6,] "0.0474209908861667" "plus petit"
-##  [7,] "0.646842692745849"  "plus grand"
-##  [8,] "0.632277468685061"  "plus grand"
-##  [9,] "0.334543304750696"  "plus grand"
-## [10,] "0.16815929627046"   "plus petit"
+##       X                   res         
+##  [1,] "0.239234840963036" "plus petit"
+##  [2,] "0.160721727879718" "plus petit"
+##  [3,] "0.897470384370536" "plus grand"
+##  [4,] "0.738361700437963" "plus grand"
+##  [5,] "0.907480973983184" "plus grand"
+##  [6,] "0.912081558024511" "plus grand"
+##  [7,] "0.161546868970618" "plus petit"
+##  [8,] "0.933942253468558" "plus grand"
+##  [9,] "0.526885607978329" "plus grand"
+## [10,] "0.237985176267102" "plus petit"
 ```
 ]
 
@@ -911,17 +930,17 @@ cbind(X,res2)
 
 
 ```
-##       X                    res2 
-##  [1,] "0.689669070066884"  "non"
-##  [2,] "0.590005776379257"  "oui"
-##  [3,] "0.682902451604605"  "non"
-##  [4,] "0.111910965060815"  "non"
-##  [5,] "0.408619895577431"  "oui"
-##  [6,] "0.0474209908861667" "non"
-##  [7,] "0.646842692745849"  "non"
-##  [8,] "0.632277468685061"  "non"
-##  [9,] "0.334543304750696"  "oui"
-## [10,] "0.16815929627046"   "non"
+##       X                   res2 
+##  [1,] "0.239234840963036" "oui"
+##  [2,] "0.160721727879718" "non"
+##  [3,] "0.897470384370536" "non"
+##  [4,] "0.738361700437963" "non"
+##  [5,] "0.907480973983184" "non"
+##  [6,] "0.912081558024511" "non"
+##  [7,] "0.161546868970618" "non"
+##  [8,] "0.933942253468558" "non"
+##  [9,] "0.526885607978329" "oui"
+## [10,] "0.237985176267102" "oui"
 ```
 ]
 
@@ -947,17 +966,17 @@ cbind(X,res2)
     
 
 ```
-##       X                    res2 
-##  [1,] "0.689669070066884"  "non"
-##  [2,] "0.590005776379257"  "oui"
-##  [3,] "0.682902451604605"  "non"
-##  [4,] "0.111910965060815"  "non"
-##  [5,] "0.408619895577431"  "oui"
-##  [6,] "0.0474209908861667" "non"
-##  [7,] "0.646842692745849"  "non"
-##  [8,] "0.632277468685061"  "non"
-##  [9,] "0.334543304750696"  "oui"
-## [10,] "0.16815929627046"   "non"
+##       X                   res2 
+##  [1,] "0.239234840963036" "oui"
+##  [2,] "0.160721727879718" "non"
+##  [3,] "0.897470384370536" "non"
+##  [4,] "0.738361700437963" "non"
+##  [5,] "0.907480973983184" "non"
+##  [6,] "0.912081558024511" "non"
+##  [7,] "0.161546868970618" "non"
+##  [8,] "0.933942253468558" "non"
+##  [9,] "0.526885607978329" "oui"
+## [10,] "0.237985176267102" "oui"
 ```
 ]
 
@@ -1050,7 +1069,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "3 - coeur"   "5 - carreau" "5 - coeur"
+## [1] "7 - pique"      "10 - pique"     "valet - trèfle"
 ```
 
 ---
@@ -1128,7 +1147,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 0 1 1 0 0 0 1 0 1 1
+##  [1] 0 0 1 0 1 0 1 0 0 1
 ```
 ]
 
@@ -1153,10 +1172,10 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 ##      [,1] [,2] [,3]
 ## [1,]    0    0    0
 ## [2,]    0    0    0
-## [3,]    1    1    1
-## [4,]    0    0    0
-## [5,]    0    0    0
-## [6,]    0    0    0
+## [3,]    0    0    0
+## [4,]    0    1    0
+## [5,]    0    0    1
+## [6,]    1    0    0
 ```
 ]
 
@@ -1554,7 +1573,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.30    0.00    0.29
+##    0.27    0.00    0.26
 ```
 
 ---
@@ -1623,7 +1642,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##    0.01    0.00    0.02
+##       0       0       0
 ```
 ]
 
@@ -1665,7 +1684,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.75    0.00    0.75
+##    0.72    0.00    0.72
 ```
 ]
 
