@@ -480,7 +480,7 @@ else {
 Un exemple,
 
 ```{r eval = FALSE}
-test = function(jour) {
+test <- function(jour) {
     if(jour == "lundi") {
         print("Je dois aller à l'atelier R.")
     }
@@ -500,6 +500,8 @@ test = function(jour) {
 }
 ```
 
+Conditions: (==)
+
 ---
 # Astuce
 
@@ -509,7 +511,7 @@ L'indentation (l'utilisation d'espaces dans le code) est fort utile pour s'y ret
 # Astuce (comparaison)
 
 ```{r eval = FALSE}
-test = function(jour) {
+test <- function(jour) {
 if(jour == "lundi") {
 print("Je dois aller à l'atelier R.")
 }
@@ -533,7 +535,7 @@ print("Bof, j'ai encore du temps !")
 # Astuce (comparaison)
 
 ```{r eval = FALSE}
-test = function(jour) {
+test <- function(jour) {
     if(jour == "lundi") {
         print("Je dois aller à l'atelier R.")
     }
