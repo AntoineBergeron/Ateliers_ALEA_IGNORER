@@ -486,14 +486,14 @@ test = function(jour) {
     }
     else {
         if(jour == "dimanche") {
-        print("Ai-je relus les slides de la présentation de la semaine passée ?")
+        print("Ai-je relus les slides de la présentation de la semaine passée?")
         }
         else {
             if(jour == "samedi") {
                 print("Aujourd'hui c'est la journée gauffres!")
             }
             else {
-                print("Bof, j'ai encore du temps !")
+                print("Bof, j'ai encore du temps!")
             }
         }
     }  
