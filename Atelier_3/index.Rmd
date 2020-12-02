@@ -576,6 +576,14 @@ Les classiques :
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
+---
+
 # Solution
 
 .pull-left[
@@ -625,6 +633,16 @@ On peut aussi combiner plusieurs conditions :
 # Exercice
 
 Reprenez la même séquence de chiffres, mais cette fois-ci déterminez si le chiffre est situé entre les valeurs de 0.2 et 0.6.
+
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
 
 ---
 
@@ -704,6 +722,15 @@ class: middle, inverse, center
 Vous avez tiré au hasard les lettres X = {E, Z, F, C, D}. Écrivez une fonction qui va trier vos lettres automatiquement pour vous, sans utiliser les fonctions `sort()` et `order()` de R. 
 
 ---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
+
+---
 # Solution
 
 
@@ -760,6 +787,14 @@ class: middle, center, inverse
 </div>
 
 ---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
+---
 # Exemple : votre jeu de cartes sur R
 ## La fonction `sample()`
 
@@ -777,6 +812,25 @@ tirage(3, cartes)
 # Exercice
 
 Vous trouverez les lettres du scrabble dans le fichier [lettres.txt](./donnees/lettres.txt). Vous pouvez les charger et programmer votre fonction qui vous pigera au hasard les 7 lettres pour ce jeux.
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
+---
+# Solution
+
+```{r}
+
+scrabble <- read.table(file = "./donnees/lettres.txt", header=TRUE, sep = " ")
+res <- sample(scrabble[,1],7)
+res
+
+```
 
 ---
 class: middle, center, inverse

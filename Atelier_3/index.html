@@ -400,11 +400,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.9103764
-## [1] 0.0008648462
-## [1] 0.3049919
-## [1] 0.996722
-## [1] 0.5508444
+## [1] 0.5463819
+## [1] 0.1460834
+## [1] 0.3669313
+## [1] 0.07814824
+## [1] 0.419554
 ```
 
 ---
@@ -590,6 +590,7 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
+## [1] "pile-face"
 ## [1] "face-pile"
 ## [1] "pile-pile"
 ```
@@ -631,7 +632,7 @@ mean(res)
 ```
 
 ```
-## [1] 6.0621
+## [1] 5.9136
 ```
 
 ---
@@ -852,6 +853,14 @@ Les classiques :
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+
+---
+
 # Solution
 
 .pull-left[
@@ -876,17 +885,17 @@ cbind(X,res)
 
 
 ```
-##       X                   res         
-##  [1,] "0.139386004302651" "plus petit"
-##  [2,] "0.269604756962508" "plus petit"
-##  [3,] "0.637731425696984" "plus grand"
-##  [4,] "0.764285620301962" "plus grand"
-##  [5,] "0.747622636845335" "plus grand"
-##  [6,] "0.57829061569646"  "plus grand"
-##  [7,] "0.826025703921914" "plus grand"
-##  [8,] "0.249765627318993" "plus petit"
-##  [9,] "0.250260618748143" "plus petit"
-## [10,] "0.303305468522012" "plus grand"
+##       X                    res         
+##  [1,] "0.531449430156499"  "plus grand"
+##  [2,] "0.910724875284359"  "plus grand"
+##  [3,] "0.868061052402481"  "plus grand"
+##  [4,] "0.558550476562232"  "plus grand"
+##  [5,] "0.0791965811513364" "plus petit"
+##  [6,] "0.752663175342605"  "plus grand"
+##  [7,] "0.846172309713438"  "plus grand"
+##  [8,] "0.623865024186671"  "plus grand"
+##  [9,] "0.672409589402378"  "plus grand"
+## [10,] "0.47047991422005"   "plus grand"
 ```
 ]
 
@@ -903,6 +912,16 @@ On peut aussi combiner plusieurs conditions :
 # Exercice
 
 Reprenez la même séquence de chiffres, mais cette fois-ci déterminez si le chiffre est situé entre les valeurs de 0.2 et 0.6.
+
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+
 
 ---
 
@@ -930,17 +949,17 @@ cbind(X,res2)
 
 
 ```
-##       X                   res2 
-##  [1,] "0.139386004302651" "non"
-##  [2,] "0.269604756962508" "oui"
-##  [3,] "0.637731425696984" "non"
-##  [4,] "0.764285620301962" "non"
-##  [5,] "0.747622636845335" "non"
-##  [6,] "0.57829061569646"  "oui"
-##  [7,] "0.826025703921914" "non"
-##  [8,] "0.249765627318993" "oui"
-##  [9,] "0.250260618748143" "oui"
-## [10,] "0.303305468522012" "oui"
+##       X                    res2 
+##  [1,] "0.531449430156499"  "oui"
+##  [2,] "0.910724875284359"  "non"
+##  [3,] "0.868061052402481"  "non"
+##  [4,] "0.558550476562232"  "oui"
+##  [5,] "0.0791965811513364" "non"
+##  [6,] "0.752663175342605"  "non"
+##  [7,] "0.846172309713438"  "non"
+##  [8,] "0.623865024186671"  "non"
+##  [9,] "0.672409589402378"  "non"
+## [10,] "0.47047991422005"   "oui"
 ```
 ]
 
@@ -966,17 +985,17 @@ cbind(X,res2)
     
 
 ```
-##       X                   res2 
-##  [1,] "0.139386004302651" "non"
-##  [2,] "0.269604756962508" "oui"
-##  [3,] "0.637731425696984" "non"
-##  [4,] "0.764285620301962" "non"
-##  [5,] "0.747622636845335" "non"
-##  [6,] "0.57829061569646"  "oui"
-##  [7,] "0.826025703921914" "non"
-##  [8,] "0.249765627318993" "oui"
-##  [9,] "0.250260618748143" "oui"
-## [10,] "0.303305468522012" "oui"
+##       X                    res2 
+##  [1,] "0.531449430156499"  "oui"
+##  [2,] "0.910724875284359"  "non"
+##  [3,] "0.868061052402481"  "non"
+##  [4,] "0.558550476562232"  "oui"
+##  [5,] "0.0791965811513364" "non"
+##  [6,] "0.752663175342605"  "non"
+##  [7,] "0.846172309713438"  "non"
+##  [8,] "0.623865024186671"  "non"
+##  [9,] "0.672409589402378"  "non"
+## [10,] "0.47047991422005"   "oui"
 ```
 ]
 
@@ -992,6 +1011,15 @@ class: middle, inverse, center
 # Le retour du scrabble ...
 
 Vous avez tiré au hasard les lettres X = {E, Z, F, C, D}. Écrivez une fonction qui va trier vos lettres automatiquement pour vous, sans utiliser les fonctions `sort()` et `order()` de R. 
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+
 
 ---
 # Solution
@@ -1054,6 +1082,14 @@ class: middle, center, inverse
 &lt;/div&gt;
 
 ---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+
+---
 # Exemple : votre jeu de cartes sur R
 ## La fonction `sample()`
 
@@ -1069,13 +1105,36 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "5 - pique"   "3 - carreau" "5 - carreau"
+## [1] "2 - coeur"    "4 - trèfle"   "as - carreau"
 ```
 
 ---
 # Exercice
 
 Vous trouverez les lettres du scrabble dans le fichier [lettres.txt](./donnees/lettres.txt). Vous pouvez les charger et programmer votre fonction qui vous pigera au hasard les 7 lettres pour ce jeux.
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+
+---
+# Solution
+
+
+```r
+scrabble &lt;- read.table(file = "./donnees/lettres.txt", header=TRUE, sep = " ")
+res &lt;- sample(scrabble[,1],7)
+res
+```
+
+```
+## [1] T N S N A T J
+## Levels: A B C D F G H I J K L M N O P Q R S T U V W X Y Z
+```
 
 ---
 class: middle, center, inverse
@@ -1106,7 +1165,7 @@ Plutôt que de tirer un élément d'une série de chiffres ou de caractères, on
 hist(floor(runif(n = 10000, min = 1, max = 50)))
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-34-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-35-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -1127,7 +1186,7 @@ hist(floor(runif(n = 10000, min = 1, max = 50)))
 hist(rnorm(n = 30, mean = 10, sd = 1))
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-35-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-36-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -1147,7 +1206,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 1 1 1 0 1 1 1 1 0 1
+##  [1] 1 1 0 0 0 1 0 1 1 1
 ```
 ]
 
@@ -1170,10 +1229,10 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 
 ```
 ##      [,1] [,2] [,3]
-## [1,]    1    1    0
-## [2,]    0    0    1
-## [3,]    0    0    0
-## [4,]    0    0    0
+## [1,]    0    0    0
+## [2,]    1    0    0
+## [3,]    0    1    0
+## [4,]    0    0    1
 ## [5,]    0    0    0
 ## [6,]    0    0    0
 ```
@@ -1199,7 +1258,7 @@ hist(rexp(n = 1000, rate = 1/6),
 xlab = "Nombre d'essais avant de perdre")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-38-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-39-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -1355,7 +1414,7 @@ for(step in 2:(nsteps+1)) {
 
 
 .pull-right[
-&lt;img src="index_files/figure-html/unnamed-chunk-44-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-45-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -1523,7 +1582,7 @@ for(step in 2:nsteps) {
 ---
 # Solution
 
-&lt;img src="index_files/figure-html/unnamed-chunk-50-1.png" width="55%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-51-1.png" width="55%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -1573,7 +1632,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.42    0.00    0.43
+##    0.29    0.00    0.28
 ```
 
 ---
@@ -1598,7 +1657,7 @@ plot(n,res, type = "l", xlab = "Taille",
 
 .pull-right[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-53-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-54-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -1633,7 +1692,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.08    0.00    0.08
+##    0.06    0.00    0.06
 ```
 
 ```r
@@ -1684,7 +1743,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.91    0.00    0.91
+##    0.89    0.00    0.90
 ```
 ]
 
