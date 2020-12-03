@@ -803,10 +803,10 @@ class: inverse, middle, center
 ## La fonction `sample()`
 
 ```{r}
-valeurs = c("2", "3", "4", "5", "6", "7", "8", "9", "10", "valet", "reine", "roi", "as")
-couleurs = rep(c("pique", "trèfle", "carreau", "coeur"),each = 13)
-cartes = paste(valeurs,"-",couleurs)
-tirage = function(n, cartes) {
+valeurs <- c("2", "3", "4", "5", "6", "7", "8", "9", "10", "valet", "reine", "roi", "as")
+couleurs <- rep(c("pique", "trèfle", "carreau", "coeur"),each = 13)
+cartes <- paste(valeurs,"-",couleurs)
+tirage <- function(n, cartes) {
     sample(x = cartes, size = n, replace = FALSE)
 }
 tirage(3, cartes)
