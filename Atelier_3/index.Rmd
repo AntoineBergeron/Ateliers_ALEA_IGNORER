@@ -783,8 +783,12 @@ class: middle, center, inverse
 # Exemple : tirer une carte au hasard
 
 <div style='text-align:center;'>
-<img src="assets/img/cartes.jpg" height="450px"></img>
+<img src="assets/img/cartes.jpg" height="250px"></img>
 </div>
+
+1- Créez un vecteur comportant les 52 cartes (sans les jokers) d'un jeu de cartes.
+
+2- Créez une fonction permettant de piger un certain nombre de cartes du jeu de cartes.
 
 ---
 
