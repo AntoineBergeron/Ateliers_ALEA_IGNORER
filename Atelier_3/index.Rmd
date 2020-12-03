@@ -859,12 +859,12 @@ Plutôt que de tirer un élément d'une série de chiffres ou de caractères, on
 </div>
 ]
 
+
 .pull-right[
 ```{r , out.width = '80%', dpi=300, fig.align="center"}
 hist(floor(runif(n = 10000, min = 1, max = 50)))
 ```
 ]
-
 
 ---
 # La taille
