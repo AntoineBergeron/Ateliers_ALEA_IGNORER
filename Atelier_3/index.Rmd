@@ -1163,9 +1163,6 @@ points(xy[,1],xy[,2],pch = 19)
 
 
 ```{r}
-# ChangerDirection = function(DirectionDepart, Probabilite){...}
-# Deplacement = function(PositionCourante, Direction){...}
-
 res <- numeric(50)
 
 set.seed(3)
@@ -1177,10 +1174,8 @@ direction = 0
 probabilite = c(0.5,0.5)
 for(step in 2:(nsteps+1)) {
   
-  # Calcul de la nouvelle direction
   direction = ChangerDirection(direction, probabilite)
  
-  # Calcul des nouvelles coordonnees
   xy[step,] = Deplacement(xy[step-1,], direction)
 }
 dist <- sqrt(xy[21,1]^2 + xy[21,2]^2)
