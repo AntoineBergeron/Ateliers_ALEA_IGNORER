@@ -1027,13 +1027,13 @@ set.seed(1)
 ```{r}
 
 X <- runif(n = 10000, min = 0, max = 1)
-p = 0.2
+p <- 0.2
 res <- numeric(length = 10000)
 res[X<p] <- 1
 sum(res)
 
 X <- runif(n = 10000, min = 0, max = 1)
-p = 0.2
+p <- 0.2
 res <- numeric(length = 10000)
 res[X<p] <- 1
 sum(res)
