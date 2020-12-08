@@ -1045,11 +1045,16 @@ sum(res)
 
 # Un exercice est encore plus efficace...
 
-Vous observez une personne ivre à la sortie d'un bar prendre sa voiture. Vous appelez la police pour l'avertir. Estimez la distance parcourue par ce conducteur en 10 minutes, sachant que :
+Vous observez une personne ivre à la sortie d'un bar prendre sa voiture. Vous appelez la police pour l'avertir. Estimez la distance parcourue (à vol d'oiseau) par ce conducteur en 10 minutes, sachant que :
 
 - Le quartier où vous vous trouvez est un plan cartésien parfait (une grille régulière) composé de blocs de 250 m;
 - À chaque intersection, votre conducteur ivre tourne à gauche ou à droite avec une probabilité de 0.5;
-- Il faut environ 30 secondes à votre conducteur pour parcourir la distance entre deux arrêts.
+- Il faut exactement 30 secondes à votre conducteur pour parcourir la distance entre deux arrêts.
+- Le conducteur débute à la coordonnée (0,0).
+- La distance à vol d'oiseau est calculée de la façon suivante:
+
+$$dist = \sqrt{x_{final}^2 + y_{final}^2}$$
+où $(x_{final},y_{final})$ correspond à la coordonnée finale (x,y) de la personne ivre après 10 minutes de voiture.
 
 ---
 
@@ -1152,6 +1157,39 @@ plot(xy[,1],xy[,2], type = "l",
 points(xy[,1],xy[,2],pch = 19)
 ```
 ]
+
+
+--- 
+
+# Solution (suite)
+
+
+```{r}
+# ChangerDirection = function(DirectionDepart, Probabilite){...}
+# Deplacement = function(PositionCourante, Direction){...}
+
+res <- numeric(50)
+
+set.seed(3)
+for (j in 1:50){
+nsteps = 20
+xy = matrix(0,nrow = 21, ncol = 2)
+xy[1,] = c(0,0)
+direction = 0
+probabilite = c(0.5,0.5)
+for(step in 2:(nsteps+1)) {
+  
+  # Calcul de la nouvelle direction
+  direction = ChangerDirection(direction, probabilite)
+ 
+  # Calcul des nouvelles coordonnees
+  xy[step,] = Deplacement(xy[step-1,], direction)
+}
+dist <- sqrt(xy[21,1]^2 + xy[21,2]^2)
+res[j] <- dist
+}
+mean(res)
+```
 
 
 ---
