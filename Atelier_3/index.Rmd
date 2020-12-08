@@ -968,8 +968,8 @@ Remarquons que dans ce genre de situations, ce n'est pas le comportement d'un in
 **Exemples:**
 
 - Quel est le sexe du nouveau-né?
-- Est-ce qu'une personne susceptible sera contaminée par une virus après avoir été en contact avec une personne infectée?
-- Dans une manufacture, est-ce qu'un pièce pourra passer l'étape du triage?
+- Est-ce qu'une personne susceptible sera contaminée par un virus après avoir été en contact avec une personne infectée?
+- Dans une manufacture, est-ce qu'une pièce pourra passer l'étape du triage?
 - Déterminer si un électeur votera **oui** dans un prochain référendum.
 - Déterminer les parts d'un marché après plusieurs campagnes publicitaires.
 
