@@ -400,11 +400,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.0422894
-## [1] 0.8927502
-## [1] 0.3060979
-## [1] 0.01875911
-## [1] 0.7469814
+## [1] 0.3889809
+## [1] 0.7437694
+## [1] 0.7327897
+## [1] 0.5014387
+## [1] 0.9521854
 ```
 
 ---
@@ -590,18 +590,17 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
-## [1] "face-pile"
-## [1] "pile-face"
 ## [1] "face-face"
 ## [1] "face-pile"
 ## [1] "pile-face"
 ## [1] "face-face"
 ## [1] "pile-face"
-## [1] "face-face"
+## [1] "pile-face"
+## [1] "pile-face"
+## [1] "pile-face"
+## [1] "face-pile"
 ## [1] "face-face"
 ## [1] "pile-face"
-## [1] "face-face"
-## [1] "face-face"
 ## [1] "pile-pile"
 ```
 
@@ -642,7 +641,7 @@ mean(res)
 ```
 
 ```
-## [1] 5.9963
+## [1] 6.0552
 ```
 
 ---
@@ -895,17 +894,17 @@ cbind(X,res)
 
 
 ```
-##       X                   res         
-##  [1,] "0.654355997452512" "plus grand"
-##  [2,] "0.97844264190644"  "plus grand"
-##  [3,] "0.190343929221854" "plus petit"
-##  [4,] "0.240202272776514" "plus petit"
-##  [5,] "0.953993185190484" "plus grand"
-##  [6,] "0.941834930097684" "plus grand"
-##  [7,] "0.100277159595862" "plus petit"
-##  [8,] "0.155503103742376" "plus petit"
-##  [9,] "0.357721908017993" "plus grand"
-## [10,] "0.154810761101544" "plus petit"
+##       X                    res         
+##  [1,] "0.320260653039441"  "plus grand"
+##  [2,] "0.406564605887979"  "plus grand"
+##  [3,] "0.858793519437313"  "plus grand"
+##  [4,] "0.534260702086613"  "plus grand"
+##  [5,] "0.722753489855677"  "plus grand"
+##  [6,] "0.180761387571692"  "plus petit"
+##  [7,] "0.661722345277667"  "plus grand"
+##  [8,] "0.461065654177219"  "plus grand"
+##  [9,] "0.0094212160911411" "plus petit"
+## [10,] "0.066078565781936"  "plus petit"
 ```
 ]
 
@@ -959,17 +958,17 @@ cbind(X,res2)
 
 
 ```
-##       X                   res2 
-##  [1,] "0.654355997452512" "non"
-##  [2,] "0.97844264190644"  "non"
-##  [3,] "0.190343929221854" "non"
-##  [4,] "0.240202272776514" "oui"
-##  [5,] "0.953993185190484" "non"
-##  [6,] "0.941834930097684" "non"
-##  [7,] "0.100277159595862" "non"
-##  [8,] "0.155503103742376" "non"
-##  [9,] "0.357721908017993" "oui"
-## [10,] "0.154810761101544" "non"
+##       X                    res2 
+##  [1,] "0.320260653039441"  "oui"
+##  [2,] "0.406564605887979"  "oui"
+##  [3,] "0.858793519437313"  "non"
+##  [4,] "0.534260702086613"  "oui"
+##  [5,] "0.722753489855677"  "non"
+##  [6,] "0.180761387571692"  "non"
+##  [7,] "0.661722345277667"  "non"
+##  [8,] "0.461065654177219"  "oui"
+##  [9,] "0.0094212160911411" "non"
+## [10,] "0.066078565781936"  "non"
 ```
 ]
 
@@ -995,17 +994,17 @@ cbind(X,res2)
     
 
 ```
-##       X                   res2 
-##  [1,] "0.654355997452512" "non"
-##  [2,] "0.97844264190644"  "non"
-##  [3,] "0.190343929221854" "non"
-##  [4,] "0.240202272776514" "oui"
-##  [5,] "0.953993185190484" "non"
-##  [6,] "0.941834930097684" "non"
-##  [7,] "0.100277159595862" "non"
-##  [8,] "0.155503103742376" "non"
-##  [9,] "0.357721908017993" "oui"
-## [10,] "0.154810761101544" "non"
+##       X                    res2 
+##  [1,] "0.320260653039441"  "oui"
+##  [2,] "0.406564605887979"  "oui"
+##  [3,] "0.858793519437313"  "non"
+##  [4,] "0.534260702086613"  "oui"
+##  [5,] "0.722753489855677"  "non"
+##  [6,] "0.180761387571692"  "non"
+##  [7,] "0.661722345277667"  "non"
+##  [8,] "0.461065654177219"  "oui"
+##  [9,] "0.0094212160911411" "non"
+## [10,] "0.066078565781936"  "non"
 ```
 ]
 
@@ -1119,7 +1118,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "7 - coeur"    "10 - carreau" "2 - carreau"
+## [1] "3 - trèfle"    "3 - carreau"   "reine - coeur"
 ```
 
 ---
@@ -1146,7 +1145,7 @@ res
 ```
 
 ```
-## [1] T U H T U N U
+## [1] A O T I T S R
 ## Levels: A B C D F G H I J K L M N O P Q R S T U V W X Y Z
 ```
 
@@ -1220,7 +1219,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 0 0 0 0 0 1 0 1 0 1
+##  [1] 1 0 0 1 0 0 1 0 1 1
 ```
 ]
 
@@ -1243,12 +1242,12 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 
 ```
 ##      [,1] [,2] [,3]
-## [1,]    0    0    0
+## [1,]    1    0    0
 ## [2,]    0    0    0
 ## [3,]    0    0    0
-## [4,]    1    0    0
-## [5,]    0    0    1
-## [6,]    0    1    0
+## [4,]    0    1    0
+## [5,]    0    0    0
+## [6,]    0    0    1
 ```
 ]
 
@@ -1439,22 +1438,22 @@ class: inverse, middle, center
 
 
 ```r
-# ChangerDirection = function(DirectionDepart, Probabilite){...}
-# Deplacement = function(PositionCourante, Direction){...}
+# ChangerDirection &lt;- function(DirectionDepart, Probabilite){...}
+# Deplacement &lt;- function(PositionCourante, Direction){...}
 
-nsteps = 20
-xy = matrix(0,nrow = 21, ncol = 2)
-xy[1,] = c(0,0)
-direction = 0
-probabilite = c(0.5,0.5)
+nsteps &lt;- 20
+xy &lt;- matrix(0,nrow = 21, ncol = 2)
+xy[1,] &lt;- c(0,0)
+direction &lt;- 0
+probabilite &lt;- c(0.5,0.5)
 set.seed(2)
 for(step in 2:(nsteps+1)) {
   
   # Calcul de la nouvelle direction
-  direction = ChangerDirection(direction, probabilite)
+  direction &lt;- ChangerDirection(direction, probabilite)
  
   # Calcul des nouvelles coordonnees
-  xy[step,] = Deplacement(xy[step-1,], direction)
+  xy[step,] &lt;- Deplacement(xy[step-1,], direction)
 }
 ```
 ]
@@ -1474,16 +1473,16 @@ res &lt;- numeric(50)
 
 set.seed(3)
 for (j in 1:50){
-nsteps = 20
-xy = matrix(0,nrow = 21, ncol = 2)
-xy[1,] = c(0,0)
-direction = 0
-probabilite = c(0.5,0.5)
+nsteps &lt;- 20
+xy &lt;- matrix(0,nrow = 21, ncol = 2)
+xy[1,] &lt;- c(0,0)
+direction &lt;- 0
+probabilite &lt;- c(0.5,0.5)
 for(step in 2:(nsteps+1)) {
   
-  direction = ChangerDirection(direction, probabilite)
+  direction &lt;- ChangerDirection(direction, probabilite)
  
-  xy[step,] = Deplacement(xy[step-1,], direction)
+  xy[step,] &lt;- Deplacement(xy[step-1,], direction)
 }
 dist &lt;- sqrt(xy[21,1]^2 + xy[21,2]^2)
 res[j] &lt;- dist
@@ -1710,7 +1709,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.28    0.00    0.28
+##     0.3     0.0     0.3
 ```
 
 ---
@@ -1770,7 +1769,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.07    0.00    0.06
+##    0.06    0.00    0.06
 ```
 
 ```r
@@ -1779,7 +1778,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##    0.01    0.00    0.01
+##    0.02    0.00    0.02
 ```
 ]
 
@@ -1821,7 +1820,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.75    0.00    0.75
+##    0.71    0.00    0.72
 ```
 ]
 
