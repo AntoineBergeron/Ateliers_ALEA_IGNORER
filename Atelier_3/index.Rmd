@@ -1010,6 +1010,14 @@ Si $U$ est une variable aléatoire distribuée selon la loi uniforme entre 0 et 
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
+---
+
 # Solution
 
 ```{r eval=TRUE, echo=FALSE}
@@ -1050,6 +1058,14 @@ Vous observez une personne ivre à la sortie d'un bar prendre sa voiture. Vous a
 Calculez la distance parcourue en X et en Y, puis reprenez votre calcul une centaine de fois pour estimer la distance moyenne parcourue entre le point de départ et la fin du parcours de notre individu (à vol d'oiseau).
 
 Vous pouvez utiliser le fichier [Deplacement_Grille_Incomplet.R](./donnees/Deplacement_Grille_Incomplet.R) pour vous aider. Ce fichier contient une partie des fonctions qui gèrent le changement de direction et le déplacement de l'individu.
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
 
 ---
 # Solution

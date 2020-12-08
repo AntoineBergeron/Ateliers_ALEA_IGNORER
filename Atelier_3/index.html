@@ -400,11 +400,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.03729948
-## [1] 0.3214837
-## [1] 0.5796875
-## [1] 0.8432906
-## [1] 0.9517826
+## [1] 0.9302337
+## [1] 0.7198859
+## [1] 0.422197
+## [1] 0.4373124
+## [1] 0.2678751
 ```
 
 ---
@@ -591,7 +591,14 @@ while(combinaison != "pile-pile") {
 
 ```
 ## [1] "pile-face"
+## [1] "pile-face"
+## [1] "pile-face"
+## [1] "face-face"
+## [1] "face-face"
 ## [1] "face-pile"
+## [1] "face-pile"
+## [1] "pile-face"
+## [1] "face-face"
 ## [1] "pile-pile"
 ```
 
@@ -632,7 +639,7 @@ mean(res)
 ```
 
 ```
-## [1] 5.8908
+## [1] 6.0254
 ```
 
 ---
@@ -885,17 +892,17 @@ cbind(X,res)
 
 
 ```
-##       X                   res         
-##  [1,] "0.557793471729383" "plus grand"
-##  [2,] "0.451095713069662" "plus grand"
-##  [3,] "0.147807109169662" "plus petit"
-##  [4,] "0.454091773601249" "plus grand"
-##  [5,] "0.670361138181761" "plus grand"
-##  [6,] "0.340380600886419" "plus grand"
-##  [7,] "0.306762318126857" "plus grand"
-##  [8,] "0.988797909813002" "plus grand"
-##  [9,] "0.599433387396857" "plus grand"
-## [10,] "0.424349888460711" "plus grand"
+##       X                     res         
+##  [1,] "0.271238456480205"   "plus petit"
+##  [2,] "0.685996622778475"   "plus grand"
+##  [3,] "0.640640025725588"   "plus grand"
+##  [4,] "0.161422011442482"   "plus petit"
+##  [5,] "0.988444511545822"   "plus grand"
+##  [6,] "0.142061776481569"   "plus petit"
+##  [7,] "0.00920792203396559" "plus petit"
+##  [8,] "0.928352468879893"   "plus grand"
+##  [9,] "0.649471850367263"   "plus grand"
+## [10,] "0.0211246788967401"  "plus petit"
 ```
 ]
 
@@ -949,17 +956,17 @@ cbind(X,res2)
 
 
 ```
-##       X                   res2 
-##  [1,] "0.557793471729383" "oui"
-##  [2,] "0.451095713069662" "oui"
-##  [3,] "0.147807109169662" "non"
-##  [4,] "0.454091773601249" "oui"
-##  [5,] "0.670361138181761" "non"
-##  [6,] "0.340380600886419" "oui"
-##  [7,] "0.306762318126857" "oui"
-##  [8,] "0.988797909813002" "non"
-##  [9,] "0.599433387396857" "oui"
-## [10,] "0.424349888460711" "oui"
+##       X                     res2 
+##  [1,] "0.271238456480205"   "oui"
+##  [2,] "0.685996622778475"   "non"
+##  [3,] "0.640640025725588"   "non"
+##  [4,] "0.161422011442482"   "non"
+##  [5,] "0.988444511545822"   "non"
+##  [6,] "0.142061776481569"   "non"
+##  [7,] "0.00920792203396559" "non"
+##  [8,] "0.928352468879893"   "non"
+##  [9,] "0.649471850367263"   "non"
+## [10,] "0.0211246788967401"  "non"
 ```
 ]
 
@@ -985,17 +992,17 @@ cbind(X,res2)
     
 
 ```
-##       X                   res2 
-##  [1,] "0.557793471729383" "oui"
-##  [2,] "0.451095713069662" "oui"
-##  [3,] "0.147807109169662" "non"
-##  [4,] "0.454091773601249" "oui"
-##  [5,] "0.670361138181761" "non"
-##  [6,] "0.340380600886419" "oui"
-##  [7,] "0.306762318126857" "oui"
-##  [8,] "0.988797909813002" "non"
-##  [9,] "0.599433387396857" "oui"
-## [10,] "0.424349888460711" "oui"
+##       X                     res2 
+##  [1,] "0.271238456480205"   "oui"
+##  [2,] "0.685996622778475"   "non"
+##  [3,] "0.640640025725588"   "non"
+##  [4,] "0.161422011442482"   "non"
+##  [5,] "0.988444511545822"   "non"
+##  [6,] "0.142061776481569"   "non"
+##  [7,] "0.00920792203396559" "non"
+##  [8,] "0.928352468879893"   "non"
+##  [9,] "0.649471850367263"   "non"
+## [10,] "0.0211246788967401"  "non"
 ```
 ]
 
@@ -1109,7 +1116,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "3 - pique"       "6 - pique"       "valet - carreau"
+## [1] "7 - carreau"   "roi - trèfle"  "valet - pique"
 ```
 
 ---
@@ -1136,7 +1143,7 @@ res
 ```
 
 ```
-## [1] A D F D O R T
+## [1] V R A H O N L
 ## Levels: A B C D F G H I J K L M N O P Q R S T U V W X Y Z
 ```
 
@@ -1210,7 +1217,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 1 0 1 1 0 0 1 1 0 1
+##  [1] 1 0 1 0 1 0 0 1 1 1
 ```
 ]
 
@@ -1234,10 +1241,10 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 ```
 ##      [,1] [,2] [,3]
 ## [1,]    0    0    1
-## [2,]    1    1    0
+## [2,]    0    0    0
 ## [3,]    0    0    0
-## [4,]    0    0    0
-## [5,]    0    0    0
+## [4,]    0    1    0
+## [5,]    1    0    0
 ## [6,]    0    0    0
 ```
 ]
@@ -1344,6 +1351,14 @@ Si `\(U\)` est une variable aléatoire distribuée selon la loi uniforme entre 0
 
 ---
 
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
+
+---
+
 # Solution
 
 
@@ -1398,6 +1413,14 @@ Vous observez une personne ivre à la sortie d'un bar prendre sa voiture. Vous a
 Calculez la distance parcourue en X et en Y, puis reprenez votre calcul une centaine de fois pour estimer la distance moyenne parcourue entre le point de départ et la fin du parcours de notre individu (à vol d'oiseau).
 
 Vous pouvez utiliser le fichier [Deplacement_Grille_Incomplet.R](./donnees/Deplacement_Grille_Incomplet.R) pour vous aider. Ce fichier contient une partie des fonctions qui gèrent le changement de direction et le déplacement de l'individu.
+
+---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+&lt;hr width="65%" size="0.3" color="red" style="margin-top:-20px;"&gt;&lt;/hr&gt;
+
 
 ---
 # Solution
@@ -1648,7 +1671,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.32    0.00    0.31
+##    0.26    0.00    0.27
 ```
 
 ---
@@ -1708,7 +1731,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.06    0.00    0.06
+##    0.04    0.01    0.06
 ```
 
 ```r
@@ -1717,7 +1740,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##       0       0       0
+##    0.01    0.00    0.02
 ```
 ]
 
@@ -1759,7 +1782,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.72    0.00    0.71
+##    0.70    0.00    0.71
 ```
 ]
 
