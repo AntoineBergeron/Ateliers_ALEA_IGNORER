@@ -1158,9 +1158,7 @@ points(xy[,1],xy[,2],pch = 19)
 ```
 ]
 
-
---- 
-
+---
 # Solution (suite)
 
 
@@ -1191,13 +1189,13 @@ res[j] <- dist
 mean(res)
 ```
 
-
 ---
 # La loi multinomiale
 
 La situation se complique lorsqu'il y a plus que 2 résultats possibles à notre épreuve aléatoire. Par exemple, le conducteur peut tourner à gauche avec une probabilité de 0.25, poursuivre en ligne droite avec une probabilité de 0.5 ou encore tourner à droite avec une probabilité de 0.25.
 
 La loi multinomiale est une généralisation de la loi binomiale qui permet d'avoir plus de 2 résultats possibles
+
 
 ---
 # La loi multinomiale
