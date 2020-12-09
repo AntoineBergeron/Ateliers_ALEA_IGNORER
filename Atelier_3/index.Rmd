@@ -1343,7 +1343,7 @@ matres[21,]
 ---
 # Solution
 
-```{r,out.width = '45%', dpi=300, fig.align="center"}
+```{r, out.width = '45%', dpi=300, fig.align="center"}
 # Illustration des résultats
 colo <- c("red","yellow", "green", "black")
 plot(c(1:(nsteps+1)), matres[,1], type = "l", ylim = c(0,ntotalcorde),
