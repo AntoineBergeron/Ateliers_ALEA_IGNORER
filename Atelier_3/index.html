@@ -400,11 +400,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.4009773
-## [1] 0.7056471
-## [1] 0.3867804
-## [1] 0.01060455
-## [1] 0.9131503
+## [1] 0.1441958
+## [1] 0.5988199
+## [1] 0.1349426
+## [1] 0.842209
+## [1] 0.7561751
 ```
 
 ---
@@ -590,13 +590,7 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
-## [1] "face-face"
 ## [1] "face-pile"
-## [1] "face-face"
-## [1] "face-face"
-## [1] "pile-face"
-## [1] "face-pile"
-## [1] "pile-face"
 ## [1] "pile-pile"
 ```
 
@@ -637,7 +631,7 @@ mean(res)
 ```
 
 ```
-## [1] 5.968
+## [1] 5.953
 ```
 
 ---
@@ -890,17 +884,17 @@ cbind(X,res)
 
 
 ```
-##       X                   res         
-##  [1,] "0.532436039764434" "plus grand"
-##  [2,] "0.658779497025535" "plus grand"
-##  [3,] "0.640526621835306" "plus grand"
-##  [4,] "0.971024822909385" "plus grand"
-##  [5,] "0.244599423604086" "plus petit"
-##  [6,] "0.833117112284526" "plus grand"
-##  [7,] "0.688257592031732" "plus grand"
-##  [8,] "0.117770789423957" "plus petit"
-##  [9,] "0.123887915164232" "plus petit"
-## [10,] "0.350762396585196" "plus grand"
+##       X                     res         
+##  [1,] "0.685319215524942"   "plus grand"
+##  [2,] "0.578169355867431"   "plus grand"
+##  [3,] "0.109360039001331"   "plus petit"
+##  [4,] "0.996298114070669"   "plus grand"
+##  [5,] "0.304845609003678"   "plus grand"
+##  [6,] "0.00606779265217483" "plus petit"
+##  [7,] "0.334209420718253"   "plus grand"
+##  [8,] "0.0873478257562965"  "plus petit"
+##  [9,] "0.0357693308033049"  "plus petit"
+## [10,] "0.224281281931326"   "plus petit"
 ```
 ]
 
@@ -954,17 +948,17 @@ cbind(X,res2)
 
 
 ```
-##       X                   res2 
-##  [1,] "0.532436039764434" "oui"
-##  [2,] "0.658779497025535" "non"
-##  [3,] "0.640526621835306" "non"
-##  [4,] "0.971024822909385" "non"
-##  [5,] "0.244599423604086" "oui"
-##  [6,] "0.833117112284526" "non"
-##  [7,] "0.688257592031732" "non"
-##  [8,] "0.117770789423957" "non"
-##  [9,] "0.123887915164232" "non"
-## [10,] "0.350762396585196" "oui"
+##       X                     res2 
+##  [1,] "0.685319215524942"   "non"
+##  [2,] "0.578169355867431"   "oui"
+##  [3,] "0.109360039001331"   "non"
+##  [4,] "0.996298114070669"   "non"
+##  [5,] "0.304845609003678"   "oui"
+##  [6,] "0.00606779265217483" "non"
+##  [7,] "0.334209420718253"   "oui"
+##  [8,] "0.0873478257562965"  "non"
+##  [9,] "0.0357693308033049"  "non"
+## [10,] "0.224281281931326"   "oui"
 ```
 ]
 
@@ -990,17 +984,17 @@ cbind(X,res2)
     
 
 ```
-##       X                   res2 
-##  [1,] "0.532436039764434" "oui"
-##  [2,] "0.658779497025535" "non"
-##  [3,] "0.640526621835306" "non"
-##  [4,] "0.971024822909385" "non"
-##  [5,] "0.244599423604086" "oui"
-##  [6,] "0.833117112284526" "non"
-##  [7,] "0.688257592031732" "non"
-##  [8,] "0.117770789423957" "non"
-##  [9,] "0.123887915164232" "non"
-## [10,] "0.350762396585196" "oui"
+##       X                     res2 
+##  [1,] "0.685319215524942"   "non"
+##  [2,] "0.578169355867431"   "oui"
+##  [3,] "0.109360039001331"   "non"
+##  [4,] "0.996298114070669"   "non"
+##  [5,] "0.304845609003678"   "oui"
+##  [6,] "0.00606779265217483" "non"
+##  [7,] "0.334209420718253"   "oui"
+##  [8,] "0.0873478257562965"  "non"
+##  [9,] "0.0357693308033049"  "non"
+## [10,] "0.224281281931326"   "oui"
 ```
 ]
 
@@ -1114,7 +1108,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "as - carreau" "roi - coeur"  "as - coeur"
+## [1] "5 - trèfle"    "valet - coeur" "roi - trèfle"
 ```
 
 ---
@@ -1141,7 +1135,7 @@ res
 ```
 
 ```
-## [1] R I L I I B U
+## [1] A O H M L R F
 ## Levels: A B C D F G H I J K L M N O P Q R S T U V W X Y Z
 ```
 
@@ -1215,7 +1209,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 1 1 1 0 1 0 1 1 0 1
+##  [1] 1 1 0 0 1 1 1 1 0 1
 ```
 ]
 
@@ -1238,12 +1232,12 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 
 ```
 ##      [,1] [,2] [,3]
-## [1,]    1    0    0
+## [1,]    0    0    0
 ## [2,]    0    0    0
-## [3,]    0    0    0
-## [4,]    0    1    0
-## [5,]    0    0    1
-## [6,]    0    0    0
+## [3,]    0    0    1
+## [4,]    0    0    0
+## [5,]    0    0    0
+## [6,]    1    1    0
 ```
 ]
 
@@ -1705,7 +1699,7 @@ class: middle, center, inverse
 ---
 # Optimisation
 
-R est un langage de programmation et peut donc faire à peu près tout ce que l'on fera avec d'autres langages de programmation. Mais il a d'abord et surtout été développé pour l'analyse statistique de données. Par conséquent, il peut être assez lent pour réaliser certaines opérations.
+R est un langage de programmation et il est donc possible de faire à peu près tout ce que l'on fera avec d'autres langages de programmation. Mais, notons qu'il a d'abord et surtout été développé pour l'analyse statistique de données. Par conséquent, il peut être assez lent pour réaliser certaines opérations.
 
 **L'optimisation de code peut être réalisée de différentes façons:**
 
@@ -1743,7 +1737,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##     0.3     0.0     0.3
+##    0.26    0.00    0.27
 ```
 
 ---
@@ -1803,7 +1797,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.06    0.00    0.07
+##    0.06    0.00    0.06
 ```
 
 ```r
@@ -1812,7 +1806,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##       0       0       0
+##    0.02    0.00    0.01
 ```
 ]
 
@@ -1854,7 +1848,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.72    0.00    0.72
+##    0.70    0.00    0.72
 ```
 ]
 
