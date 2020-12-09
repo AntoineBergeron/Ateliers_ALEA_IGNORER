@@ -400,11 +400,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.2390699
-## [1] 0.8504087
-## [1] 0.5687331
-## [1] 0.03618407
-## [1] 0.5168981
+## [1] 0.3623595
+## [1] 0.267772
+## [1] 0.4498479
+## [1] 0.680038
+## [1] 0.0003288733
 ```
 
 ---
@@ -590,8 +590,6 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
-## [1] "face-pile"
-## [1] "face-pile"
 ## [1] "pile-pile"
 ```
 
@@ -632,7 +630,7 @@ mean(res)
 ```
 
 ```
-## [1] 5.9544
+## [1] 5.9689
 ```
 
 ---
@@ -885,17 +883,17 @@ cbind(X,res)
 
 
 ```
-##       X                   res         
-##  [1,] "0.414045449346304" "plus grand"
-##  [2,] "0.353222907055169" "plus grand"
-##  [3,] "0.486250693444163" "plus grand"
-##  [4,] "0.837647112784907" "plus grand"
-##  [5,] "0.392882842570543" "plus grand"
-##  [6,] "0.764370578574017" "plus grand"
-##  [7,] "0.958754768129438" "plus grand"
-##  [8,] "0.215871705673635" "plus petit"
-##  [9,] "0.87130454974249"  "plus grand"
-## [10,] "0.724553326144814" "plus grand"
+##       X                    res         
+##  [1,] "0.759205270558596"  "plus grand"
+##  [2,] "0.41418093862012"   "plus grand"
+##  [3,] "0.0166229286696762" "plus petit"
+##  [4,] "0.35737221268937"   "plus grand"
+##  [5,] "0.397398174507543"  "plus grand"
+##  [6,] "0.30564767238684"   "plus grand"
+##  [7,] "0.745149703230709"  "plus grand"
+##  [8,] "0.456044868100435"  "plus grand"
+##  [9,] "0.531176035059616"  "plus grand"
+## [10,] "0.518309533596039"  "plus grand"
 ```
 ]
 
@@ -949,17 +947,17 @@ cbind(X,res2)
 
 
 ```
-##       X                   res2 
-##  [1,] "0.414045449346304" "oui"
-##  [2,] "0.353222907055169" "oui"
-##  [3,] "0.486250693444163" "oui"
-##  [4,] "0.837647112784907" "non"
-##  [5,] "0.392882842570543" "oui"
-##  [6,] "0.764370578574017" "non"
-##  [7,] "0.958754768129438" "non"
-##  [8,] "0.215871705673635" "oui"
-##  [9,] "0.87130454974249"  "non"
-## [10,] "0.724553326144814" "non"
+##       X                    res2 
+##  [1,] "0.759205270558596"  "non"
+##  [2,] "0.41418093862012"   "oui"
+##  [3,] "0.0166229286696762" "non"
+##  [4,] "0.35737221268937"   "oui"
+##  [5,] "0.397398174507543"  "oui"
+##  [6,] "0.30564767238684"   "oui"
+##  [7,] "0.745149703230709"  "non"
+##  [8,] "0.456044868100435"  "oui"
+##  [9,] "0.531176035059616"  "oui"
+## [10,] "0.518309533596039"  "oui"
 ```
 ]
 
@@ -985,17 +983,17 @@ cbind(X,res2)
     
 
 ```
-##       X                   res2 
-##  [1,] "0.414045449346304" "oui"
-##  [2,] "0.353222907055169" "oui"
-##  [3,] "0.486250693444163" "oui"
-##  [4,] "0.837647112784907" "non"
-##  [5,] "0.392882842570543" "oui"
-##  [6,] "0.764370578574017" "non"
-##  [7,] "0.958754768129438" "non"
-##  [8,] "0.215871705673635" "oui"
-##  [9,] "0.87130454974249"  "non"
-## [10,] "0.724553326144814" "non"
+##       X                    res2 
+##  [1,] "0.759205270558596"  "non"
+##  [2,] "0.41418093862012"   "oui"
+##  [3,] "0.0166229286696762" "non"
+##  [4,] "0.35737221268937"   "oui"
+##  [5,] "0.397398174507543"  "oui"
+##  [6,] "0.30564767238684"   "oui"
+##  [7,] "0.745149703230709"  "non"
+##  [8,] "0.456044868100435"  "oui"
+##  [9,] "0.531176035059616"  "oui"
+## [10,] "0.518309533596039"  "oui"
 ```
 ]
 
@@ -1109,7 +1107,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "8 - coeur"   "3 - carreau" "3 - pique"
+## [1] "10 - coeur"      "reine - carreau" "reine - pique"
 ```
 
 ---
@@ -1136,7 +1134,7 @@ res
 ```
 
 ```
-## [1] F O Z K G U N
+## [1] U I R B F F K
 ## Levels: A B C D F G H I J K L M N O P Q R S T U V W X Y Z
 ```
 
@@ -1210,7 +1208,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 0 0 0 0 1 1 1 1 1 1
+##  [1] 1 1 1 0 1 0 1 1 1 1
 ```
 ]
 
@@ -1233,11 +1231,11 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 
 ```
 ##      [,1] [,2] [,3]
-## [1,]    0    0    0
-## [2,]    0    1    0
-## [3,]    1    0    0
-## [4,]    0    0    0
-## [5,]    0    0    1
+## [1,]    1    0    0
+## [2,]    0    0    0
+## [3,]    0    0    0
+## [4,]    0    1    1
+## [5,]    0    0    0
 ## [6,]    0    0    0
 ```
 ]
@@ -1579,44 +1577,67 @@ tirage(p)
 ```
 
 ---
-# Exemple intégrateur
+# Exemple: La corde à linge colorée
 
-Le modèle de lotterie est à la base de nombreuses théories en écologie. Le travail final suggéré à la fin de cet atelier en sera d'ailleurs fortement inspiré.
+Le modèle de lotterie est à la base de nombreuses théories. Le travail final suggéré à la fin de cet atelier en sera d'ailleurs fortement inspiré.
 
-Imaginez une forêt où un nombre limité d'arbres peuvent atteindre la canopée. Ce nombre est constant dans le temps puisque, lorsque survient une petite perturbation qui crée une ouverture, un seul individu viendra remplacer l'arbre qui est mort.
-
----
-# Exemple intégrateur
-
-Le nom de "lotterie" vient de la façon dont s'effectue le recrutement. Imaginez que l'on place une trappe à graines au centre de l'ouverture et que l'on pige une semence au hasard dans cette trappe, pour la placer ensuite dans le sol. La probabilité de recrutement d'une espèce, `\(p_i\)`, est tout simplement égale à son abondance relative dans la forêt avoisinante, soit `\(N_i /K\)`, où `\(N_i\)` est le nombre d'individus de l'espèce `\(i\)` et `\(K\)` est le nombre total d'individus dans la forêt.
-
+Sur ma corde à linge, un nombre limité de morceaux de linge peuvent y être suspendus. Toutes les 5 minutes, lorsque je retourne voir mon linge sécher sur la corde, un seul morceau est manquant. (Le vent l'a apporté dans un pays lointain) Ainsi, je pige dans mon sac de linge mouillé (qui attend patiemment d'être étendu sur la corde) et je remplace le morceau manquant par un nouveau.
 
 ---
-# Exemple intégrateur
+# Exemple: La corde à linge colorée
 
-Le vecteur `\(N\)` représente le nombre d'individu de chaque espèce. Les étapes de la simulation du modèle de lotterie sont les suivantes, à chaque pas de temps
+Le nom de "lotterie" vient de la façon dont s'effectue le recrutement. Pour ce qui est du problème, nous nous intéresserons seulement à la couleur du morceau pigée. Initialement, 25 morceaux sont étendus sur la corde, dont 5 de chacune des couleurs suivantes: bleu, rouge, vert, jaune, noir. Ces 25 morceaux ont tous la même probabilité d'être décrochés. Par la suite, je pige au hasard dans le sac, sans regarder, et je pige un morceau. Le sac comporte 20 morceaux bleus et rouges, ainsi que 30 morceaux jaunes, verts et noirs (donc un total de 130 morceaux). J'installe par la suite le morceau à l'espace souhaité.
 
-- Identification de quel arbre meurt (on en pige un seul au hasard parmi les `\(K\)` arbres)
-- Retrait d'un individu de cette espèce `\(N_i-1\)`
-- Calcul de l'abondance relative de chaque espèce `\(N_i/K\)`.
-- Identification de l'espèce recrutée
-- Ajout d'un individu de cette espèce `\(N_i+1\)`
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/cordelinge.PNG" width="50%"&gt;&lt;/img&gt;
+&lt;/div&gt;
+
+&lt;div style='text-align:center;'&gt;
+&lt;img src="assets/img/cordelinge2.PNG" width="50%"&gt;&lt;/img&gt;
+&lt;/div&gt;
+
+
+---
+# Exemple: La corde à linge colorée
+
+Le vecteur N représente le nombre de morceaux sur la corde de chaque couleur. Les étapes de la simulation du modèle de loterie sont les suivantes:
+
+À chaque pas de temps;
+
+- Calcul de l'abondance relative des morceaux prêt à être pigés en fonction des couleurs. (envol)
+
+- Identification de quel morceau (couleur) s'envole (on en pige un seul au hasard parmi les K morceaux sur la corde).
+
+- Retrait d'une de ces couleurs sur la corde.
+
+- Calcul de l'abondance relative des morceaux prêt à être pigés en fonction des couleurs. (nouveau)
+
+- Identification du morceau pigé recrutée
+
+- Ajout de ce morceau à la corde à linge.
+
+- Après 20 changements de morceaux, à quoi ressemblera la corde à linge en termes de couleur?
+
 
 ---
 # Solution
 
 
 ```r
-nsteps &lt;- 1000
-S &lt;- 5
-K &lt;- 100
-N &lt;- matrix(nr = nsteps, nc = S)
+nsteps &lt;- 20
+nsac &lt;- 130
+couleursac &lt;- c(rep(20,2),rep(30,3))
+ncorde &lt;- 5
+ntotalcorde &lt;- 25
+matres &lt;- matrix(nr = nsteps+1, nc = ncorde)
+matres[1,] &lt;- rep(5,5)
+colnames(matres) &lt;- c("bleu", "rouge", "jaune", "vert", "noir")
 
 # Une fonction utile pour faire des tirages
-# Elle retourne la position de l'espèce pigée au hasard
+# Elle retourne la position de la couleur pigée au hasard
 tirage  &lt;- function(p) {
-    res &lt;- rmultinom(n=1,size=1,prob=p)
-    return(which(res==1))
+  res &lt;- rmultinom(n=1,size=1,prob=p)
+  return(which(res==1))
 }
 ```
 
@@ -1625,30 +1646,36 @@ tirage  &lt;- function(p) {
 
 
 ```r
-# On démarre la simulation avec 20 individus par espèce
-N[1,] =rep(K/S, S)
-
 # La boucle principale
-for(step in 2:nsteps) {
-
-    # Calcul de l'abondance relative
-    p &lt;- N[step-1,] / K
-
-    # On tire l'identité de l'espèce qui meurt
-    ID_mort &lt;- tirage(p)
-
-    # On applique le changement
-    N[step,] &lt;- N[step-1,]
-    N[step,ID_mort] &lt;- N[step,ID_mort] - 1
-
-    # On tire l'identité de la recrue
-    ID_recrue &lt;- tirage(p)
-    N[step,ID_recrue] &lt;- N[step,ID_recrue] + 1
+for(step in 2:(nsteps+1)) {
+  # Calcul de l'abondance relative
+  p &lt;- matres[step-1,] / ntotalcorde
+  # On tire l'identité du morceau qui s'envole
+  ID_envol &lt;- tirage(p)
+  # On applique le changement
+  matres[step,] &lt;- matres[step-1,]
+  matres[step,ID_envol] &lt;- matres[step,ID_envol] - 1
+  # On tire l'identité de la recrue
+  # Calcul de l'abondance relative
+  p &lt;- couleursac/nsac
+  ID_recrue &lt;- tirage(p)
+  matres[step,ID_recrue] &lt;- matres[step,ID_recrue] + 1
+  couleursac[ID_recrue] &lt;- couleursac[ID_recrue] - 1
+  nsac &lt;- nsac - 1
 }
 ```
 
 ---
 # Solution
+
+
+```r
+# Illustration des résultats
+colo &lt;- c("red","yellow", "green", "black")
+plot(c(1:(nsteps+1)), matres[,1], type = "l", ylim = c(0,ntotalcorde),
+     xlab = "Temps", ylab = "Densité", col = "blue")
+for(i in 2:(ncorde)) lines(c(1:(nsteps+1)), matres[,i], col = colo[i-1])
+```
 
 &lt;img src="index_files/figure-html/unnamed-chunk-52-1.png" width="55%" style="display: block; margin: auto;" /&gt;
 
@@ -1700,7 +1727,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.29    0.00    0.30
+##    0.27    0.00    0.27
 ```
 
 ---
@@ -1760,7 +1787,7 @@ system.time(f1(x))
 
 ```
 ##    user  system elapsed 
-##    0.05    0.00    0.05
+##    0.06    0.00    0.06
 ```
 
 ```r
@@ -1769,7 +1796,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##    0.01    0.00    0.02
+##    0.00    0.02    0.01
 ```
 ]
 
@@ -1811,7 +1838,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.75    0.00    0.75
+##    0.74    0.00    0.73
 ```
 ]
 
