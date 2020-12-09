@@ -1337,6 +1337,7 @@ for(step in 2:(nsteps+1)) {
   couleursac[ID_recrue] <- couleursac[ID_recrue] - 1
   nsac <- nsac - 1
 }
+matres[21,]
 ```
 
 ---
