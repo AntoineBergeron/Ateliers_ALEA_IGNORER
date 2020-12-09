@@ -1464,7 +1464,7 @@ f1 <- function(x) {
 	res <- numeric(ncol(x))
 	for(j in 1:ncol(x)) {
 		for(i in 1:nrow(x)){
-			res[j] <- res[j] + x[i,j]
+			res[x] <- res[j] + x[i,j]
 		}
 	}
 }
