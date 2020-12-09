@@ -1254,12 +1254,12 @@ tirage(p)
 
 Le modèle de lotterie est à la base de nombreuses théories. Le travail final suggéré à la fin de cet atelier en sera d'ailleurs fortement inspiré.
 
-Sur ma corde à linge, un nombre limité de morceaux de linge peuvent y être suspendus. Toutes les 5 minutes, lorsque je retourne voir mon linge sécher sur la corde, un seul morceau est manquant. (Le vent l'a apporté dans un pays lointain) Ainsi, je pige dans mon sac de linge mouillé (qui attend patiemment d'être étendu sur la corde) et je remplace le morceau manquant par un nouveau.
+Sur ma corde à linge, un nombre limité de morceaux de linge peuvent y être suspendus. Toutes les 5 minutes, lorsque je retourne voir mon linge sécher sur la corde, un seul morceau est manquant (le vent l'a apporté dans un pays lointain). Ainsi, je pige dans mon sac de linge mouillé (qui attend patiemment d'être étendu sur la corde) et je remplace le morceau manquant par un nouveau.
 
 ---
 # Exemple: La corde à linge colorée
 
-Le nom de "lotterie" vient de la façon dont s'effectue le recrutement. Pour ce qui est du problème, nous nous intéresserons seulement à la couleur du morceau pigée. Initialement, 25 morceaux sont étendus sur la corde, dont 5 de chacune des couleurs suivantes: bleu, rouge, vert, jaune, noir. Ces 25 morceaux ont tous la même probabilité d'être décrochés. Par la suite, je pige au hasard dans le sac, sans regarder, et je pige un morceau. Le sac comporte 20 morceaux bleus et rouges, ainsi que 30 morceaux jaunes, verts et noirs (donc un total de 130 morceaux). J'installe par la suite le morceau à l'espace souhaité.
+Le nom de "lotterie" vient de la façon dont s'effectue le recrutement. Pour ce qui est du problème, nous nous intéresserons seulement à la couleur du morceau pigée. Initialement, 25 morceaux sont étendus sur la corde. On y retrouve 5 morceaux de chacune des couleurs suivantes: bleu, rouge, vert, jaune, noir. Ces 25 morceaux ont tous la même probabilité d'être décrochés par le vent. Par la suite, je pige au hasard dans le sac, sans regarder, un morceau à placer sur la corde. Le sac comporte 20 morceaux bleus et rouges, ainsi que 30 morceaux jaunes, verts et noirs (donc un total de 130 morceaux). J'installe par la suite le morceau dans l'espace vide.
 
 <div style='text-align:center;'>
 <img src="assets/img/cordelinge.PNG" width="50%"></img>
@@ -1278,17 +1278,11 @@ Le vecteur N représente le nombre de morceaux sur la corde de chaque couleur. L
 À chaque pas de temps;
 
 - Calcul de l'abondance relative des morceaux prêt à être pigés en fonction des couleurs. (envol)
-
 - Identification de quel morceau (couleur) s'envole (on en pige un seul au hasard parmi les K morceaux sur la corde).
-
 - Retrait d'une de ces couleurs sur la corde.
-
 - Calcul de l'abondance relative des morceaux prêt à être pigés en fonction des couleurs. (nouveau)
-
 - Identification du morceau pigé recrutée
-
 - Ajout de ce morceau à la corde à linge.
-
 - Après 20 changements de morceaux, à quoi ressemblera la corde à linge en termes de couleur?
 
 

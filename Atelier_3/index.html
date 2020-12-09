@@ -400,11 +400,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.118714
-## [1] 0.06829295
-## [1] 0.2881282
-## [1] 0.8402126
-## [1] 0.9676136
+## [1] 0.991282
+## [1] 0.1023269
+## [1] 0.8783038
+## [1] 0.4227777
+## [1] 0.4434554
 ```
 
 ---
@@ -590,6 +590,7 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
+## [1] "face-pile"
 ## [1] "pile-pile"
 ```
 
@@ -630,7 +631,7 @@ mean(res)
 ```
 
 ```
-## [1] 5.9909
+## [1] 6
 ```
 
 ---
@@ -884,16 +885,16 @@ cbind(X,res)
 
 ```
 ##       X                   res         
-##  [1,] "0.949671601643786" "plus grand"
-##  [2,] "0.493419178295881" "plus grand"
-##  [3,] "0.991401929175481" "plus grand"
-##  [4,] "0.178629200905561" "plus petit"
-##  [5,] "0.440593243809417" "plus grand"
-##  [6,] "0.443862813524902" "plus grand"
-##  [7,] "0.729696071241051" "plus grand"
-##  [8,] "0.998705972917378" "plus grand"
-##  [9,] "0.215988075826317" "plus petit"
-## [10,] "0.196072180522606" "plus petit"
+##  [1,] "0.73294368898496"  "plus grand"
+##  [2,] "0.320628892164677" "plus grand"
+##  [3,] "0.709535023197532" "plus grand"
+##  [4,] "0.188024447066709" "plus petit"
+##  [5,] "0.838966619689018" "plus grand"
+##  [6,] "0.865616166964173" "plus grand"
+##  [7,] "0.714887437643483" "plus grand"
+##  [8,] "0.75617147074081"  "plus grand"
+##  [9,] "0.719095634529367" "plus grand"
+## [10,] "0.830308036180213" "plus grand"
 ```
 ]
 
@@ -948,16 +949,16 @@ cbind(X,res2)
 
 ```
 ##       X                   res2 
-##  [1,] "0.949671601643786" "non"
-##  [2,] "0.493419178295881" "oui"
-##  [3,] "0.991401929175481" "non"
-##  [4,] "0.178629200905561" "non"
-##  [5,] "0.440593243809417" "oui"
-##  [6,] "0.443862813524902" "oui"
-##  [7,] "0.729696071241051" "non"
-##  [8,] "0.998705972917378" "non"
-##  [9,] "0.215988075826317" "oui"
-## [10,] "0.196072180522606" "non"
+##  [1,] "0.73294368898496"  "non"
+##  [2,] "0.320628892164677" "oui"
+##  [3,] "0.709535023197532" "non"
+##  [4,] "0.188024447066709" "non"
+##  [5,] "0.838966619689018" "non"
+##  [6,] "0.865616166964173" "non"
+##  [7,] "0.714887437643483" "non"
+##  [8,] "0.75617147074081"  "non"
+##  [9,] "0.719095634529367" "non"
+## [10,] "0.830308036180213" "non"
 ```
 ]
 
@@ -984,16 +985,16 @@ cbind(X,res2)
 
 ```
 ##       X                   res2 
-##  [1,] "0.949671601643786" "non"
-##  [2,] "0.493419178295881" "oui"
-##  [3,] "0.991401929175481" "non"
-##  [4,] "0.178629200905561" "non"
-##  [5,] "0.440593243809417" "oui"
-##  [6,] "0.443862813524902" "oui"
-##  [7,] "0.729696071241051" "non"
-##  [8,] "0.998705972917378" "non"
-##  [9,] "0.215988075826317" "oui"
-## [10,] "0.196072180522606" "non"
+##  [1,] "0.73294368898496"  "non"
+##  [2,] "0.320628892164677" "oui"
+##  [3,] "0.709535023197532" "non"
+##  [4,] "0.188024447066709" "non"
+##  [5,] "0.838966619689018" "non"
+##  [6,] "0.865616166964173" "non"
+##  [7,] "0.714887437643483" "non"
+##  [8,] "0.75617147074081"  "non"
+##  [9,] "0.719095634529367" "non"
+## [10,] "0.830308036180213" "non"
 ```
 ]
 
@@ -1107,7 +1108,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "reine - coeur" "roi - pique"   "4 - coeur"
+## [1] "reine - coeur" "8 - carreau"   "4 - carreau"
 ```
 
 ---
@@ -1134,7 +1135,7 @@ res
 ```
 
 ```
-## [1] R L P A Q F G
+## [1] R C D O N O L
 ## Levels: A B C D F G H I J K L M N O P Q R S T U V W X Y Z
 ```
 
@@ -1208,7 +1209,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 0 0 1 0 0 0 0 0 1 1
+##  [1] 0 1 0 0 1 1 0 0 1 0
 ```
 ]
 
@@ -1233,9 +1234,9 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 ##      [,1] [,2] [,3]
 ## [1,]    0    0    0
 ## [2,]    0    0    0
-## [3,]    0    1    0
-## [4,]    1    0    0
-## [5,]    0    0    0
+## [3,]    0    0    0
+## [4,]    0    1    0
+## [5,]    1    0    0
 ## [6,]    0    0    1
 ```
 ]
@@ -1581,12 +1582,12 @@ tirage(p)
 
 Le modèle de lotterie est à la base de nombreuses théories. Le travail final suggéré à la fin de cet atelier en sera d'ailleurs fortement inspiré.
 
-Sur ma corde à linge, un nombre limité de morceaux de linge peuvent y être suspendus. Toutes les 5 minutes, lorsque je retourne voir mon linge sécher sur la corde, un seul morceau est manquant. (Le vent l'a apporté dans un pays lointain) Ainsi, je pige dans mon sac de linge mouillé (qui attend patiemment d'être étendu sur la corde) et je remplace le morceau manquant par un nouveau.
+Sur ma corde à linge, un nombre limité de morceaux de linge peuvent y être suspendus. Toutes les 5 minutes, lorsque je retourne voir mon linge sécher sur la corde, un seul morceau est manquant (le vent l'a apporté dans un pays lointain). Ainsi, je pige dans mon sac de linge mouillé (qui attend patiemment d'être étendu sur la corde) et je remplace le morceau manquant par un nouveau.
 
 ---
 # Exemple: La corde à linge colorée
 
-Le nom de "lotterie" vient de la façon dont s'effectue le recrutement. Pour ce qui est du problème, nous nous intéresserons seulement à la couleur du morceau pigée. Initialement, 25 morceaux sont étendus sur la corde, dont 5 de chacune des couleurs suivantes: bleu, rouge, vert, jaune, noir. Ces 25 morceaux ont tous la même probabilité d'être décrochés. Par la suite, je pige au hasard dans le sac, sans regarder, et je pige un morceau. Le sac comporte 20 morceaux bleus et rouges, ainsi que 30 morceaux jaunes, verts et noirs (donc un total de 130 morceaux). J'installe par la suite le morceau à l'espace souhaité.
+Le nom de "lotterie" vient de la façon dont s'effectue le recrutement. Pour ce qui est du problème, nous nous intéresserons seulement à la couleur du morceau pigée. Initialement, 25 morceaux sont étendus sur la corde. On y retrouve 5 morceaux de chacune des couleurs suivantes: bleu, rouge, vert, jaune, noir. Ces 25 morceaux ont tous la même probabilité d'être décrochés par le vent. Par la suite, je pige au hasard dans le sac, sans regarder, un morceau à placer sur la corde. Le sac comporte 20 morceaux bleus et rouges, ainsi que 30 morceaux jaunes, verts et noirs (donc un total de 130 morceaux). J'installe par la suite le morceau dans l'espace vide.
 
 &lt;div style='text-align:center;'&gt;
 &lt;img src="assets/img/cordelinge.PNG" width="50%"&gt;&lt;/img&gt;
@@ -1605,17 +1606,11 @@ Le vecteur N représente le nombre de morceaux sur la corde de chaque couleur. L
 À chaque pas de temps;
 
 - Calcul de l'abondance relative des morceaux prêt à être pigés en fonction des couleurs. (envol)
-
 - Identification de quel morceau (couleur) s'envole (on en pige un seul au hasard parmi les K morceaux sur la corde).
-
 - Retrait d'une de ces couleurs sur la corde.
-
 - Calcul de l'abondance relative des morceaux prêt à être pigés en fonction des couleurs. (nouveau)
-
 - Identification du morceau pigé recrutée
-
 - Ajout de ce morceau à la corde à linge.
-
 - Après 20 changements de morceaux, à quoi ressemblera la corde à linge en termes de couleur?
 
 
@@ -1736,7 +1731,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##    0.27    0.00    0.27
+##    0.28    0.00    0.28
 ```
 
 ---
@@ -1805,7 +1800,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##    0.02    0.00    0.01
+##       0       0       0
 ```
 ]
 
@@ -1847,7 +1842,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.73    0.00    0.73
+##    0.72    0.00    0.72
 ```
 ]
 
