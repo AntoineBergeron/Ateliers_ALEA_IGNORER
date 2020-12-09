@@ -1293,6 +1293,15 @@ Le vecteur N représente le nombre de morceaux sur la corde de chaque couleur. L
 
 
 ---
+
+class: inverse, middle, center
+
+# Mettre sur pause
+<hr width="65%" size="0.3" color="red" style="margin-top:-20px;"></hr>
+
+
+
+---
 # Solution
 
 ```{r}
