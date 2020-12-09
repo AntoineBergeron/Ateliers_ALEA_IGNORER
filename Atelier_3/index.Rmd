@@ -1209,7 +1209,7 @@ La loi multinomiale est une généralisation de la loi binomiale qui permet d'av
 
 ```{r}
 etats <- c("A", "B", "C", "D", "E")
-p = c(0.1, 0.5, 0.2, 0.05, 0.15)
+p <- c(0.1, 0.5, 0.2, 0.05, 0.15)
 sum(p)
 
 # On utilise cumsum pour calculer la probabilité cumulative
@@ -1226,11 +1226,11 @@ alea
 n_etats <- 5; i = 1; plus_petit = FALSE
 while(plus_petit == FALSE) {
     if(alea < cump[i]) {
-        decision = etats[i]
-        plus_petit = TRUE
+        decision <- etats[i]
+        plus_petit <- TRUE
     }
     else {
-        i = i + 1
+        i <- i + 1
     }
 }
 decision
@@ -1301,18 +1301,18 @@ N[1,] =rep(K/S, S)
 for(step in 2:nsteps) {
 
     # Calcul de l'abondance relative
-    p = N[step-1,] / K
+    p <- N[step-1,] / K
 
     # On tire l'identité de l'espèce qui meurt
-    ID_mort = tirage(p)
+    ID_mort <- tirage(p)
 
     # On applique le changement
-    N[step,] = N[step-1,]
-    N[step,ID_mort] = N[step,ID_mort] - 1
+    N[step,] <- N[step-1,]
+    N[step,ID_mort] <- N[step,ID_mort] - 1
 
     # On tire l'identité de la recrue
-    ID_recrue = tirage(p)
-    N[step,ID_recrue] = N[step,ID_recrue] + 1
+    ID_recrue <- tirage(p)
+    N[step,ID_recrue] <- N[step,ID_recrue] + 1
 }
 ```
 
@@ -1358,7 +1358,7 @@ La fonction `system.time()` est un minimum pour tester la performance d'un code.
 
 
 ```{r}
-x = runif(1000)
+x <- runif(1000)
 system.time(sort(x))
 system.time(tri(x))
 
@@ -1371,11 +1371,11 @@ Certaines opérations peuvent dépendre de la taille de l'objet (ci-dessous, `re
 
 .pull-left[
 ```{r eval=FALSE}
-n = 2*10^seq(1,3,0.1)
-res = numeric(length(n))
+n <- 2*10^seq(1,3,0.1)
+res <- numeric(length(n))
 for(i in 1:length(res)) {
-	x = runif(n[i])
-	res[i] = system.time(tri(x))[3]
+	x <- runif(n[i])
+	res[i] <- system.time(tri(x))[3]
 }
 plot(n,res, type = "l", xlab = "Taille",
 	ylab = "Temps")
@@ -1386,11 +1386,11 @@ plot(n,res, type = "l", xlab = "Taille",
 .pull-right[
 
 ```{r echo=FALSE, echo=FALSE,out.width = '100%', dpi=300, fig.align="center"}
-n = 2*10^seq(1,3,0.1)
-res = numeric(length(n))
+n <- 2*10^seq(1,3,0.1)
+res <- numeric(length(n))
 for(i in 1:length(res)) {
-	x = runif(n[i])
-	res[i] = system.time(tri(x))[3]
+	x <- runif(n[i])
+	res[i] <- system.time(tri(x))[3]
 }
 plot(n,res, type = "l", xlab = "Taille", ylab = "Temps")
 ```
@@ -1420,7 +1420,7 @@ f2 <- function(x) {
 
 .pull-right[
 ```{r}
-x = runif(1000000)
+x <- runif(1000000)
 system.time(f1(x))
 system.time(f2(x))
 ```
@@ -1438,11 +1438,11 @@ f1 <- function(x) {
 	res <- numeric(ncol(x))
 	for(j in 1:ncol(x)) {
 		for(i in 1:nrow(x)){
-			res[x] = res[j] + x[i,j]
+			res[x] <- res[j] + x[i,j]
 		}
 	}
 }
-X = matrix(runif(100*100),nr=100,nc=100)
+X <- matrix(runif(100*100),nr=100,nc=100)
 ```
 
 ]

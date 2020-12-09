@@ -400,11 +400,11 @@ for(etape in 1:5) {
 ```
 
 ```
-## [1] 0.3889809
-## [1] 0.7437694
-## [1] 0.7327897
-## [1] 0.5014387
-## [1] 0.9521854
+## [1] 0.2390699
+## [1] 0.8504087
+## [1] 0.5687331
+## [1] 0.03618407
+## [1] 0.5168981
 ```
 
 ---
@@ -590,17 +590,8 @@ while(combinaison != "pile-pile") {
 ```
 
 ```
-## [1] "face-face"
 ## [1] "face-pile"
-## [1] "pile-face"
-## [1] "face-face"
-## [1] "pile-face"
-## [1] "pile-face"
-## [1] "pile-face"
-## [1] "pile-face"
 ## [1] "face-pile"
-## [1] "face-face"
-## [1] "pile-face"
 ## [1] "pile-pile"
 ```
 
@@ -641,7 +632,7 @@ mean(res)
 ```
 
 ```
-## [1] 6.0552
+## [1] 5.9544
 ```
 
 ---
@@ -894,17 +885,17 @@ cbind(X,res)
 
 
 ```
-##       X                    res         
-##  [1,] "0.320260653039441"  "plus grand"
-##  [2,] "0.406564605887979"  "plus grand"
-##  [3,] "0.858793519437313"  "plus grand"
-##  [4,] "0.534260702086613"  "plus grand"
-##  [5,] "0.722753489855677"  "plus grand"
-##  [6,] "0.180761387571692"  "plus petit"
-##  [7,] "0.661722345277667"  "plus grand"
-##  [8,] "0.461065654177219"  "plus grand"
-##  [9,] "0.0094212160911411" "plus petit"
-## [10,] "0.066078565781936"  "plus petit"
+##       X                   res         
+##  [1,] "0.414045449346304" "plus grand"
+##  [2,] "0.353222907055169" "plus grand"
+##  [3,] "0.486250693444163" "plus grand"
+##  [4,] "0.837647112784907" "plus grand"
+##  [5,] "0.392882842570543" "plus grand"
+##  [6,] "0.764370578574017" "plus grand"
+##  [7,] "0.958754768129438" "plus grand"
+##  [8,] "0.215871705673635" "plus petit"
+##  [9,] "0.87130454974249"  "plus grand"
+## [10,] "0.724553326144814" "plus grand"
 ```
 ]
 
@@ -958,17 +949,17 @@ cbind(X,res2)
 
 
 ```
-##       X                    res2 
-##  [1,] "0.320260653039441"  "oui"
-##  [2,] "0.406564605887979"  "oui"
-##  [3,] "0.858793519437313"  "non"
-##  [4,] "0.534260702086613"  "oui"
-##  [5,] "0.722753489855677"  "non"
-##  [6,] "0.180761387571692"  "non"
-##  [7,] "0.661722345277667"  "non"
-##  [8,] "0.461065654177219"  "oui"
-##  [9,] "0.0094212160911411" "non"
-## [10,] "0.066078565781936"  "non"
+##       X                   res2 
+##  [1,] "0.414045449346304" "oui"
+##  [2,] "0.353222907055169" "oui"
+##  [3,] "0.486250693444163" "oui"
+##  [4,] "0.837647112784907" "non"
+##  [5,] "0.392882842570543" "oui"
+##  [6,] "0.764370578574017" "non"
+##  [7,] "0.958754768129438" "non"
+##  [8,] "0.215871705673635" "oui"
+##  [9,] "0.87130454974249"  "non"
+## [10,] "0.724553326144814" "non"
 ```
 ]
 
@@ -994,17 +985,17 @@ cbind(X,res2)
     
 
 ```
-##       X                    res2 
-##  [1,] "0.320260653039441"  "oui"
-##  [2,] "0.406564605887979"  "oui"
-##  [3,] "0.858793519437313"  "non"
-##  [4,] "0.534260702086613"  "oui"
-##  [5,] "0.722753489855677"  "non"
-##  [6,] "0.180761387571692"  "non"
-##  [7,] "0.661722345277667"  "non"
-##  [8,] "0.461065654177219"  "oui"
-##  [9,] "0.0094212160911411" "non"
-## [10,] "0.066078565781936"  "non"
+##       X                   res2 
+##  [1,] "0.414045449346304" "oui"
+##  [2,] "0.353222907055169" "oui"
+##  [3,] "0.486250693444163" "oui"
+##  [4,] "0.837647112784907" "non"
+##  [5,] "0.392882842570543" "oui"
+##  [6,] "0.764370578574017" "non"
+##  [7,] "0.958754768129438" "non"
+##  [8,] "0.215871705673635" "oui"
+##  [9,] "0.87130454974249"  "non"
+## [10,] "0.724553326144814" "non"
 ```
 ]
 
@@ -1118,7 +1109,7 @@ tirage(3, cartes)
 ```
 
 ```
-## [1] "3 - trèfle"    "3 - carreau"   "reine - coeur"
+## [1] "8 - coeur"   "3 - carreau" "3 - pique"
 ```
 
 ---
@@ -1145,7 +1136,7 @@ res
 ```
 
 ```
-## [1] A O T I T S R
+## [1] F O Z K G U N
 ## Levels: A B C D F G H I J K L M N O P Q R S T U V W X Y Z
 ```
 
@@ -1219,7 +1210,7 @@ rbinom(n = 10, size = 1, prob = 0.5)
 ```
 
 ```
-##  [1] 1 0 0 1 0 0 1 0 1 1
+##  [1] 0 0 0 0 1 1 1 1 1 1
 ```
 ]
 
@@ -1242,12 +1233,12 @@ rmultinom(n = 3, size = 1, prob = rep(1/6, 6))
 
 ```
 ##      [,1] [,2] [,3]
-## [1,]    1    0    0
-## [2,]    0    0    0
-## [3,]    0    0    0
-## [4,]    0    1    0
-## [5,]    0    0    0
-## [6,]    0    0    1
+## [1,]    0    0    0
+## [2,]    0    1    0
+## [3,]    1    0    0
+## [4,]    0    0    0
+## [5,]    0    0    1
+## [6,]    0    0    0
 ```
 ]
 
@@ -1520,7 +1511,7 @@ La loi multinomiale est une généralisation de la loi binomiale qui permet d'av
 
 ```r
 etats &lt;- c("A", "B", "C", "D", "E")
-p = c(0.1, 0.5, 0.2, 0.05, 0.15)
+p &lt;- c(0.1, 0.5, 0.2, 0.05, 0.15)
 sum(p)
 ```
 
@@ -1555,11 +1546,11 @@ alea
 n_etats &lt;- 5; i = 1; plus_petit = FALSE
 while(plus_petit == FALSE) {
     if(alea &lt; cump[i]) {
-        decision = etats[i]
-        plus_petit = TRUE
+        decision &lt;- etats[i]
+        plus_petit &lt;- TRUE
     }
     else {
-        i = i + 1
+        i &lt;- i + 1
     }
 }
 decision
@@ -1641,18 +1632,18 @@ N[1,] =rep(K/S, S)
 for(step in 2:nsteps) {
 
     # Calcul de l'abondance relative
-    p = N[step-1,] / K
+    p &lt;- N[step-1,] / K
 
     # On tire l'identité de l'espèce qui meurt
-    ID_mort = tirage(p)
+    ID_mort &lt;- tirage(p)
 
     # On applique le changement
-    N[step,] = N[step-1,]
-    N[step,ID_mort] = N[step,ID_mort] - 1
+    N[step,] &lt;- N[step-1,]
+    N[step,ID_mort] &lt;- N[step,ID_mort] - 1
 
     # On tire l'identité de la recrue
-    ID_recrue = tirage(p)
-    N[step,ID_recrue] = N[step,ID_recrue] + 1
+    ID_recrue &lt;- tirage(p)
+    N[step,ID_recrue] &lt;- N[step,ID_recrue] + 1
 }
 ```
 
@@ -1694,7 +1685,7 @@ La fonction `system.time()` est un minimum pour tester la performance d'un code.
 
 
 ```r
-x = runif(1000)
+x &lt;- runif(1000)
 system.time(sort(x))
 ```
 
@@ -1709,7 +1700,7 @@ system.time(tri(x))
 
 ```
 ##    user  system elapsed 
-##     0.3     0.0     0.3
+##    0.29    0.00    0.30
 ```
 
 ---
@@ -1720,11 +1711,11 @@ Certaines opérations peuvent dépendre de la taille de l'objet (ci-dessous, `re
 .pull-left[
 
 ```r
-n = 2*10^seq(1,3,0.1)
-res = numeric(length(n))
+n &lt;- 2*10^seq(1,3,0.1)
+res &lt;- numeric(length(n))
 for(i in 1:length(res)) {
-	x = runif(n[i])
-	res[i] = system.time(tri(x))[3]
+	x &lt;- runif(n[i])
+	res[i] &lt;- system.time(tri(x))[3]
 }
 plot(n,res, type = "l", xlab = "Taille",
 	ylab = "Temps")
@@ -1763,13 +1754,13 @@ f2 &lt;- function(x) {
 .pull-right[
 
 ```r
-x = runif(1000000)
+x &lt;- runif(1000000)
 system.time(f1(x))
 ```
 
 ```
 ##    user  system elapsed 
-##    0.06    0.00    0.06
+##    0.05    0.00    0.05
 ```
 
 ```r
@@ -1778,7 +1769,7 @@ system.time(f2(x))
 
 ```
 ##    user  system elapsed 
-##    0.02    0.00    0.02
+##    0.01    0.00    0.02
 ```
 ]
 
@@ -1795,11 +1786,11 @@ f1 &lt;- function(x) {
 	res &lt;- numeric(ncol(x))
 	for(j in 1:ncol(x)) {
 		for(i in 1:nrow(x)){
-			res[x] = res[j] + x[i,j]
+			res[x] &lt;- res[j] + x[i,j]
 		}
 	}
 }
-X = matrix(runif(100*100),nr=100,nc=100)
+X &lt;- matrix(runif(100*100),nr=100,nc=100)
 ```
 
 ]
@@ -1820,7 +1811,7 @@ system.time(f1(X))
 ##    user  system elapsed 
 ##       0       0       0 
 ##    user  system elapsed 
-##    0.71    0.00    0.72
+##    0.75    0.00    0.75
 ```
 ]
 
